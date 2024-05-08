@@ -30,7 +30,7 @@ public class TokenPoolCreatedLogEventProcessor : AElfLogEventProcessorBase<Token
 
     public override string GetContractAddress(string chainId)
     {
-        return _contractInfoOptions.ContractInfos.First(c => c.ChainId == chainId).EcoEarnContractAddress;
+        return _contractInfoOptions.ContractInfos.First(c => c.ChainId == chainId).EcoEarnTokenContractAddress;
     }
 
     protected override async Task HandleEventAsync(TokensPoolCreated eventValue, LogEventContext context)

@@ -8,6 +8,7 @@ public class ContractInfoOptions
 public class ContractInfo
 {
     public string ChainId { get; set; }
-    public string EcoEarnContractAddress { get; set; }
+    public string EcoEarnPointsContractAddress { get; set; }
+    public string EcoEarnTokenContractAddress { get; set; }
     public string AElfTokenContractAddress { get; set; }
 }

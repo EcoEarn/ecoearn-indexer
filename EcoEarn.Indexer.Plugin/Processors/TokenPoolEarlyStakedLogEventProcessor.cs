@@ -36,7 +36,7 @@ public class TokenPoolEarlyStakedLogEventProcessor : AElfLogEventProcessorBase<E
 
     public override string GetContractAddress(string chainId)
     {
-        return _contractInfoOptions.ContractInfos.First(c => c.ChainId == chainId).EcoEarnContractAddress;
+        return _contractInfoOptions.ContractInfos.First(c => c.ChainId == chainId).EcoEarnTokenContractAddress;
     }
 
     protected override async Task HandleEventAsync(EarlyStaked eventValue, LogEventContext context)
@@ -53,29 +53,34 @@ public class TokenPoolEarlyStakedLogEventProcessor : AElfLogEventProcessorBase<E
                 return;
             }
 
-            var user = new TokenStakedIndex
+            var tokenStakedIndex = new TokenStakedIndex
             {
                 Id = id,
                 StakeId = eventValue.StakeInfo.StakeId.ToHex(),
                 PoolId = eventValue.StakeInfo.PoolId.ToHex(),
                 StakingToken = eventValue.StakeInfo.StakingToken,
                 StakedAmount = eventValue.StakeInfo.StakedAmount,
+                EarlyStakedAmount = eventValue.StakeInfo.EarlyStakedAmount,
+                ClaimedAmount = eventValue.StakeInfo.ClaimedAmount,
                 StakedBlockNumber = eventValue.StakeInfo.StakedBlockNumber,
-                StakedTime = eventValue.StakeInfo.StakedTime,
+                StakedTime = eventValue.StakeInfo.StakedTime.ToDateTime().ToUtcMilliSeconds(),
                 Period = eventValue.StakeInfo.Period,
                 Account = eventValue.StakeInfo.Account.ToBase58(),
                 BoostedAmount = eventValue.StakeInfo.BoostedAmount,
                 RewardDebt = eventValue.StakeInfo.RewardDebt,
-                WithdrawTime = eventValue.StakeInfo.WithdrawTime,
+                WithdrawTime = eventValue.StakeInfo.WithdrawTime.ToDateTime().ToUtcMilliSeconds(),
                 RewardAmount = eventValue.StakeInfo.RewardAmount,
                 LockedRewardAmount = eventValue.StakeInfo.LockedRewardAmount,
-                LastOperationTime = eventValue.StakeInfo.LastOperationTime,
+                LastOperationTime = eventValue.StakeInfo.LastOperationTime.ToDateTime().ToUtcMilliSeconds(),
                 CreateTime = context.BlockTime.ToUtcMilliSeconds(),
                 UpdateTime = context.BlockTime.ToUtcMilliSeconds()
             };
 
-            _objectMapper.Map(context, user);
-            await _tokenStakeRepository.AddOrUpdateAsync(user);
+            var tokenPool =
+                await _tokenPoolRepository.GetFromBlockStateSetAsync(tokenStakedIndex.PoolId, context.ChainId);
+            tokenStakedIndex.PoolType = tokenPool.PoolType;
+            _objectMapper.Map(context, tokenStakedIndex);
+            await _tokenStakeRepository.AddOrUpdateAsync(tokenStakedIndex);
 
             foreach (var claimInfo in eventValue.ClaimInfos.Data)
             {
@@ -92,13 +97,13 @@ public class TokenPoolEarlyStakedLogEventProcessor : AElfLogEventProcessorBase<E
                         ClaimedAmount = claimInfo.ClaimedAmount.ToString(),
                         ClaimedSymbol = claimInfo.ClaimedSymbol,
                         ClaimedBlockNumber = claimInfo.ClaimedBlockNumber,
-                        ClaimedTime = claimInfo.ClaimedTime,
-                        UnlockTime = claimInfo.UnlockTime,
-                        WithdrawTime = claimInfo.WithdrawTime,
+                        ClaimedTime = claimInfo.ClaimedTime.ToDateTime().ToUtcMilliSeconds(),
+                        UnlockTime = claimInfo.UnlockTime.ToDateTime().ToUtcMilliSeconds(),
+                        WithdrawTime = claimInfo.WithdrawTime.ToDateTime().ToUtcMilliSeconds(),
                         Account = claimInfo.Account.ToString(),
-                        EarlyStakeTime = claimInfo.EarlyStakeTime,
+                        EarlyStakeTime = claimInfo.EarlyStakeTime.ToDateTime().ToUtcMilliSeconds(),
                     };
-                    
+
                     var tokenPoolIndex =
                         await _tokenPoolRepository.GetFromBlockStateSetAsync(rewardsClaim.PoolId, context.ChainId);
                     rewardsClaim.PoolType = tokenPoolIndex.PoolType;

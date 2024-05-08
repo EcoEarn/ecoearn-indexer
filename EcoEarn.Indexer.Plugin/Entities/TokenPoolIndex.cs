@@ -30,5 +30,4 @@ public class TokenPoolConfig
     [Keyword] public string RewardTokenContract { get; set; }
     [Keyword] public string StakeTokenContract { get; set; }
     public long MinimumClaimAmount { get; set; }
-
 }

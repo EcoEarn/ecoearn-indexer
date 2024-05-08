@@ -31,7 +31,7 @@ public class PointsPoolWithdrawnLogEventProcessor : AElfLogEventProcessorBase<Wi
 
     public override string GetContractAddress(string chainId)
     {
-        return _contractInfoOptions.ContractInfos.First(c => c.ChainId == chainId).EcoEarnContractAddress;
+        return _contractInfoOptions.ContractInfos.First(c => c.ChainId == chainId).EcoEarnPointsContractAddress;
     }
 
     protected override async Task HandleEventAsync(Withdrawn eventValue, LogEventContext context)
@@ -53,11 +53,11 @@ public class PointsPoolWithdrawnLogEventProcessor : AElfLogEventProcessorBase<Wi
                     ClaimedAmount = claimInfo.ClaimedAmount.ToString(),
                     ClaimedSymbol = claimInfo.ClaimedSymbol,
                     ClaimedBlockNumber = claimInfo.ClaimedBlockNumber,
-                    ClaimedTime = claimInfo.ClaimedTime,
-                    UnlockTime = claimInfo.UnlockTime,
-                    WithdrawTime = claimInfo.WithdrawTime,
+                    ClaimedTime = claimInfo.ClaimedTime.ToDateTime().ToUtcMilliSeconds(),
+                    UnlockTime = claimInfo.UnlockTime.ToDateTime().ToUtcMilliSeconds(),
+                    WithdrawTime = claimInfo.WithdrawTime.ToDateTime().ToUtcMilliSeconds(),
                     Account = claimInfo.Account.ToString(),
-                    EarlyStakeTime = claimInfo.EarlyStakeTime,
+                    EarlyStakeTime = claimInfo.EarlyStakeTime.ToDateTime().ToUtcMilliSeconds(),
                     PoolType = PoolType.Points
                 };
 

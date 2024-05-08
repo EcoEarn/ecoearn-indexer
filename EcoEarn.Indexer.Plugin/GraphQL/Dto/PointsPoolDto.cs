@@ -2,6 +2,7 @@ namespace EcoEarn.Indexer.Plugin.GraphQL.Dto;
 
 public class PointsPoolDto
 {
+    public string Id { get; set; }
     public string DappId { get; set; }
     public string PoolId { get; set; }
     public string PointsName { get; set; }

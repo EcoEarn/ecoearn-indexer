@@ -38,12 +38,19 @@ public partial class Query
     }
 
     [Name("getTokenPoolList")]
-    public static async Task<PointsPoolDtoList> GetTokenPoolList(
+    public static async Task<TokenPoolDtoList> GetTokenPoolList(
         [FromServices] IAElfIndexerClientEntityRepository<TokenPoolIndex, LogEventInfo> repository,
         [FromServices] IObjectMapper objectMapper,
-        GetPointsPoolListInput input)
+        GetTokenPoolListInput input)
     {
         var mustQuery = new List<Func<QueryContainerDescriptor<TokenPoolIndex>, QueryContainer>>();
+
+        mustQuery.Add(q => q.Term(i => i.Field(f => f.PoolType).Value(input.PoolType)));
+
+        if (!string.IsNullOrEmpty(input.TokenName))
+        {
+            mustQuery.Add(q => q.Term(i => i.Field(f => f.TokenPoolConfig.RewardToken).Value(input.TokenName)));
+        }
 
         QueryContainer Filter(QueryContainerDescriptor<TokenPoolIndex> f) =>
             f.Bool(b => b.Must(mustQuery));
@@ -51,8 +58,77 @@ public partial class Query
         var recordList = await repository.GetListAsync(Filter, skip: input.SkipCount, limit: input.MaxResultCount);
 
         var dataList =
-            objectMapper.Map<List<TokenPoolIndex>, List<PointsPoolDto>>(recordList.Item2);
-        return new PointsPoolDtoList
+            objectMapper.Map<List<TokenPoolIndex>, List<TokenPoolDto>>(recordList.Item2);
+        return new TokenPoolDtoList
+        {
+            Data = dataList,
+            TotalCount = recordList.Item1
+        };
+    }
+
+    [Name("getStakedInfoList")]
+    public static async Task<StakedInfoDtoList> GetStakedInfoList(
+        [FromServices] IAElfIndexerClientEntityRepository<TokenStakedIndex, LogEventInfo> repository,
+        [FromServices] IObjectMapper objectMapper,
+        GetStakedInfoListInput input)
+    {
+        var mustQuery = new List<Func<QueryContainerDescriptor<TokenStakedIndex>, QueryContainer>>();
+
+
+        if (!string.IsNullOrEmpty(input.TokenName))
+        {
+            mustQuery.Add(q => q.Term(i => i.Field(f => f.StakingToken).Value(input.TokenName)));
+        }
+
+        if (!string.IsNullOrEmpty(input.Address))
+        {
+            mustQuery.Add(q => q.Term(i => i.Field(f => f.Account).Value(input.Address)));
+        }
+
+        if (!input.PoolIds.IsNullOrEmpty())
+        {
+            mustQuery.Add(q => q.Terms(i => i.Field(f => f.PoolId).Terms(input.PoolIds)));
+        }
+
+
+        QueryContainer Filter(QueryContainerDescriptor<TokenStakedIndex> f) =>
+            f.Bool(b => b.Must(mustQuery));
+
+        var recordList = await repository.GetListAsync(Filter, skip: input.SkipCount, limit: input.MaxResultCount);
+
+        var dataList =
+            objectMapper.Map<List<TokenStakedIndex>, List<StakedInfoDto>>(recordList.Item2);
+        return new StakedInfoDtoList
+        {
+            Data = dataList,
+            TotalCount = recordList.Item1
+        };
+    }
+
+    [Name("getClaimInfoList")]
+    public static async Task<ClaimInfoDtoList> GetClaimInfoList(
+        [FromServices] IAElfIndexerClientEntityRepository<RewardsClaimIndex, LogEventInfo> repository,
+        [FromServices] IObjectMapper objectMapper,
+        GetClaimInfoInput input)
+    {
+        var mustQuery = new List<Func<QueryContainerDescriptor<RewardsClaimIndex>, QueryContainer>>();
+
+        mustQuery.Add(q => q.Term(i => i.Field(f => f.PoolType).Value(input.PoolType)));
+
+        if (input.FilterUnlock)
+        {
+            mustQuery.Add(q =>
+                q.LongRange(i => i.Field(f => f.UnlockTime).LessThan(DateTime.UtcNow.ToUtcMilliSeconds())));
+        }
+
+        QueryContainer Filter(QueryContainerDescriptor<RewardsClaimIndex> f) =>
+            f.Bool(b => b.Must(mustQuery));
+
+        var recordList = await repository.GetListAsync(Filter, skip: input.SkipCount, limit: input.MaxResultCount);
+
+        var dataList =
+            objectMapper.Map<List<RewardsClaimIndex>, List<ClaimInfoDto>>(recordList.Item2);
+        return new ClaimInfoDtoList
         {
             Data = dataList,
             TotalCount = recordList.Item1

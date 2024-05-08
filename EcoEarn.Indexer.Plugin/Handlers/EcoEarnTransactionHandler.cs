@@ -7,7 +7,7 @@ using Volo.Abp.ObjectMapping;
 
 namespace EcoEarn.Indexer.Plugin.Handlers;
 
-public class EcoEarnTransactionHandler: TransactionDataHandler
+public class EcoEarnTransactionHandler : TransactionDataHandler
 {
     public EcoEarnTransactionHandler(IClusterClient clusterClient, IObjectMapper objectMapper,
         IAElfIndexerClientInfoProvider aelfIndexerClientInfoProvider, IDAppDataProvider dAppDataProvider,
@@ -18,6 +18,7 @@ public class EcoEarnTransactionHandler: TransactionDataHandler
         dAppDataProvider, blockStateSetProvider, dAppDataIndexManagerProvider, processors, logger)
     {
     }
+
     protected override Task ProcessTransactionsAsync(List<TransactionInfo> transactions)
     {
         return Task.CompletedTask;

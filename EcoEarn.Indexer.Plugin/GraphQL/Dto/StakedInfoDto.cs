@@ -1,14 +1,13 @@
-using AElf.Indexing.Elasticsearch;
-using AElfIndexer.Client;
-using Nest;
+using EcoEarn.Indexer.Plugin.Entities;
 
-namespace EcoEarn.Indexer.Plugin.Entities;
+namespace EcoEarn.Indexer.Plugin.GraphQL.Dto;
 
-public class TokenStakedIndex : AElfIndexerClientEntity<string>, IIndexBuild
+public class StakedInfoDto
 {
-    [Keyword] public string StakeId { get; set; }
-    [Keyword] public string PoolId { get; set; }
-    [Keyword] public string StakingToken { get; set; }
+    public string Id { get; set; }
+    public string StakeId { get; set; }
+    public string PoolId { get; set; }
+    public string StakingToken { get; set; }
     public long StakedAmount { get; set; }
 
     public long EarlyStakedAmount { get; set; }
@@ -16,7 +15,7 @@ public class TokenStakedIndex : AElfIndexerClientEntity<string>, IIndexBuild
     public long StakedBlockNumber { get; set; }
     public long StakedTime { get; set; }
     public long Period { get; set; }
-    [Keyword] public string Account { get; set; }
+    public string Account { get; set; }
     public long BoostedAmount { get; set; }
     public long RewardDebt { get; set; }
     public long WithdrawTime { get; set; }
@@ -26,4 +25,11 @@ public class TokenStakedIndex : AElfIndexerClientEntity<string>, IIndexBuild
     public long CreateTime { get; set; }
     public long UpdateTime { get; set; }
     public PoolType PoolType { get; set; }
+}
+
+public class StakedInfoDtoList
+{
+    public long TotalCount { get; set; }
+
+    public List<StakedInfoDto> Data { get; set; }
 }

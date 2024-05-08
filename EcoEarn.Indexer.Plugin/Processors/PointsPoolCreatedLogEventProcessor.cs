@@ -32,7 +32,7 @@ public class PointsPoolCreatedLogEventProcessor : AElfLogEventProcessorBase<Poin
 
     public override string GetContractAddress(string chainId)
     {
-        return _contractInfoOptions.ContractInfos.First(c => c.ChainId == chainId).EcoEarnContractAddress;
+        return _contractInfoOptions.ContractInfos.First(c => c.ChainId == chainId).EcoEarnPointsContractAddress;
     }
 
     protected override async Task HandleEventAsync(PointsPoolCreated eventValue, LogEventContext context)

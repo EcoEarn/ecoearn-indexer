@@ -31,7 +31,7 @@ public class PointsPoolClaimedLogEventProcessor : AElfLogEventProcessorBase<Clai
 
     public override string GetContractAddress(string chainId)
     {
-        return _contractInfoOptions.ContractInfos.First(c => c.ChainId == chainId).EcoEarnContractAddress;
+        return _contractInfoOptions.ContractInfos.First(c => c.ChainId == chainId).EcoEarnPointsContractAddress;
     }
 
     protected override async Task HandleEventAsync(Claimed eventValue, LogEventContext context)
@@ -42,7 +42,7 @@ public class PointsPoolClaimedLogEventProcessor : AElfLogEventProcessorBase<Clai
                 JsonConvert.SerializeObject(context));
             var id = IdGenerateHelper.GetId(eventValue.ClaimInfo.ClaimId.ToHex(), eventValue.ClaimInfo.PoolId.ToHex());
 
-            var user = new RewardsClaimIndex
+            var rewardsClaimIndex = new RewardsClaimIndex
             {
                 Id = id,
                 ClaimId = eventValue.ClaimInfo.ClaimId.ToHex(),
@@ -50,16 +50,16 @@ public class PointsPoolClaimedLogEventProcessor : AElfLogEventProcessorBase<Clai
                 ClaimedAmount = eventValue.ClaimInfo.ClaimedAmount.ToString(),
                 ClaimedSymbol = eventValue.ClaimInfo.ClaimedSymbol,
                 ClaimedBlockNumber = eventValue.ClaimInfo.ClaimedBlockNumber,
-                ClaimedTime = eventValue.ClaimInfo.ClaimedTime,
-                UnlockTime = eventValue.ClaimInfo.UnlockTime,
-                WithdrawTime = eventValue.ClaimInfo.WithdrawTime,
+                ClaimedTime = eventValue.ClaimInfo.ClaimedTime.ToDateTime().ToUtcMilliSeconds(),
+                UnlockTime = eventValue.ClaimInfo.UnlockTime.ToDateTime().ToUtcMilliSeconds(),
+                WithdrawTime = eventValue.ClaimInfo.WithdrawTime.ToDateTime().ToUtcMilliSeconds(),
                 Account = eventValue.ClaimInfo.Account.ToString(),
-                EarlyStakeTime = eventValue.ClaimInfo.EarlyStakeTime,
+                EarlyStakeTime = eventValue.ClaimInfo.EarlyStakeTime.ToDateTime().ToUtcMilliSeconds(),
                 PoolType = PoolType.Points
             };
 
-            _objectMapper.Map(context, user);
-            await _repository.AddOrUpdateAsync(user);
+            _objectMapper.Map(context, rewardsClaimIndex);
+            await _repository.AddOrUpdateAsync(rewardsClaimIndex);
         }
         catch (Exception e)
         {
