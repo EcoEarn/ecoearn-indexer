@@ -48,7 +48,6 @@ namespace EcoEarn.Contracts.Tokens {
         DappId = DappId,
         Config = Config,
         PoolId = PoolId,
-        PoolAddress = PoolAddress,
         Amount = Amount,
       };
     }
@@ -226,7 +225,8 @@ namespace EcoEarn.Contracts.Tokens {
       return new Unlocked
       {
         StakeId = StakeId,
-        Amount = Amount,
+        StakedAmount = StakedAmount,
+        EarlyStakedAmount = EarlyStakedAmount,
         PoolData = PoolData,
       };
     }
@@ -401,7 +401,7 @@ namespace EcoEarn.Contracts.Tokens {
     static readonly aelf::Marshaller<global::EcoEarn.Contracts.Tokens.SetTokensPoolStakeConfigInput> __Marshaller_SetTokensPoolStakeConfigInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Tokens.SetTokensPoolStakeConfigInput.Parser.ParseFrom);
     static readonly aelf::Marshaller<global::EcoEarn.Contracts.Tokens.GetPoolInfoOutput> __Marshaller_GetPoolInfoOutput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Tokens.GetPoolInfoOutput.Parser.ParseFrom);
     static readonly aelf::Marshaller<global::EcoEarn.Contracts.Tokens.PoolData> __Marshaller_PoolData = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Tokens.PoolData.Parser.ParseFrom);
-    static readonly aelf::Marshaller<global::AElf.Types.Address> __Marshaller_aelf_Address = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::AElf.Types.Address.Parser.ParseFrom);
+    static readonly aelf::Marshaller<global::EcoEarn.Contracts.Tokens.GetPoolAddressOutput> __Marshaller_GetPoolAddressOutput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Tokens.GetPoolAddressOutput.Parser.ParseFrom);
     static readonly aelf::Marshaller<global::Google.Protobuf.WellKnownTypes.Int64Value> __Marshaller_google_protobuf_Int64Value = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Int64Value.Parser.ParseFrom);
     static readonly aelf::Marshaller<global::EcoEarn.Contracts.Tokens.StakeInput> __Marshaller_StakeInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Tokens.StakeInput.Parser.ParseFrom);
     static readonly aelf::Marshaller<global::EcoEarn.Contracts.Tokens.EarlyStakeInput> __Marshaller_EarlyStakeInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Tokens.EarlyStakeInput.Parser.ParseFrom);
@@ -415,6 +415,7 @@ namespace EcoEarn.Contracts.Tokens {
     static readonly aelf::Marshaller<global::EcoEarn.Contracts.Tokens.UpdateStakeInfoInput> __Marshaller_UpdateStakeInfoInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Tokens.UpdateStakeInfoInput.Parser.ParseFrom);
     static readonly aelf::Marshaller<global::EcoEarn.Contracts.Tokens.InitializeInput> __Marshaller_InitializeInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Tokens.InitializeInput.Parser.ParseFrom);
     static readonly aelf::Marshaller<global::EcoEarn.Contracts.Tokens.Config> __Marshaller_Config = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Tokens.Config.Parser.ParseFrom);
+    static readonly aelf::Marshaller<global::AElf.Types.Address> __Marshaller_aelf_Address = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::AElf.Types.Address.Parser.ParseFrom);
     #endregion
 
     #region Methods
@@ -502,12 +503,12 @@ namespace EcoEarn.Contracts.Tokens {
         __Marshaller_aelf_Hash,
         __Marshaller_PoolData);
 
-    static readonly aelf::Method<global::AElf.Types.Hash, global::AElf.Types.Address> __Method_GetPoolAddress = new aelf::Method<global::AElf.Types.Hash, global::AElf.Types.Address>(
+    static readonly aelf::Method<global::AElf.Types.Hash, global::EcoEarn.Contracts.Tokens.GetPoolAddressOutput> __Method_GetPoolAddress = new aelf::Method<global::AElf.Types.Hash, global::EcoEarn.Contracts.Tokens.GetPoolAddressOutput>(
         aelf::MethodType.View,
         __ServiceName,
         "GetPoolAddress",
         __Marshaller_aelf_Hash,
-        __Marshaller_aelf_Address);
+        __Marshaller_GetPoolAddressOutput);
 
     static readonly aelf::Method<global::AElf.Types.Hash, global::Google.Protobuf.WellKnownTypes.Int64Value> __Method_GetPoolCount = new aelf::Method<global::AElf.Types.Hash, global::Google.Protobuf.WellKnownTypes.Int64Value>(
         aelf::MethodType.View,
@@ -733,7 +734,7 @@ namespace EcoEarn.Contracts.Tokens {
     //     throw new global::System.NotImplementedException();
     //   }
     //
-    //   public virtual global::AElf.Types.Address GetPoolAddress(global::AElf.Types.Hash input)
+    //   public virtual global::EcoEarn.Contracts.Tokens.GetPoolAddressOutput GetPoolAddress(global::AElf.Types.Hash input)
     //   {
     //     throw new global::System.NotImplementedException();
     //   }

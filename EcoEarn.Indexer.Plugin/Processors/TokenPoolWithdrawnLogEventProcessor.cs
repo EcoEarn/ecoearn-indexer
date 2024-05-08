@@ -52,6 +52,7 @@ public class TokenPoolWithdrawnLogEventProcessor : AElfLogEventProcessorBase<Wit
                 {
                     Id = id,
                     ClaimId = claimInfo.ClaimId.ToHex(),
+                    StakeId = claimInfo.StakeId.ToHex(),
                     PoolId = claimInfo.PoolId.ToHex(),
                     ClaimedAmount = claimInfo.ClaimedAmount.ToString(),
                     ClaimedSymbol = claimInfo.ClaimedSymbol,

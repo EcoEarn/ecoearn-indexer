@@ -46,6 +46,7 @@ public class PointsPoolClaimedLogEventProcessor : AElfLogEventProcessorBase<Clai
             {
                 Id = id,
                 ClaimId = eventValue.ClaimInfo.ClaimId.ToHex(),
+                StakeId = eventValue.ClaimInfo.StakeId.ToHex(),
                 PoolId = eventValue.ClaimInfo.PoolId.ToHex(),
                 ClaimedAmount = eventValue.ClaimInfo.ClaimedAmount.ToString(),
                 ClaimedSymbol = eventValue.ClaimInfo.ClaimedSymbol,

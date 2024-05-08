@@ -54,7 +54,6 @@ public class TokenPoolCreatedLogEventProcessor : AElfLogEventProcessorBase<Token
                 Id = id,
                 DappId = eventValue.DappId.ToHex(),
                 PoolId = eventValue.PoolId.ToHex(),
-                PoolAddress = eventValue.PoolAddress.ToBase58(),
                 Amount = eventValue.Amount.ToString(),
                 TokenPoolConfig = new TokenPoolConfig()
                 {

@@ -55,7 +55,6 @@ public class PointsPoolCreatedLogEventProcessor : AElfLogEventProcessorBase<Poin
                 DappId = eventValue.DappId.ToHex(),
                 PoolId = eventValue.PoolId.ToHex(),
                 PointsName = eventValue.PointsName,
-                PoolAddress = eventValue.PoolAddress.ToBase58(),
                 Amount = eventValue.Amount.ToString(),
                 PointsPoolConfig = new PointsPoolConfig()
                 {

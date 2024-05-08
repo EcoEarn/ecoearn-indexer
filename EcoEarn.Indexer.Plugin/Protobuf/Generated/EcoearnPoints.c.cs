@@ -104,7 +104,6 @@ namespace EcoEarn.Contracts.Points {
         Config = Config,
         PoolId = PoolId,
         PointsName = PointsName,
-        PoolAddress = PoolAddress,
         Amount = Amount,
       };
     }

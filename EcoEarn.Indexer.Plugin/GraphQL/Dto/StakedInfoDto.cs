@@ -9,7 +9,6 @@ public class StakedInfoDto
     public string PoolId { get; set; }
     public string StakingToken { get; set; }
     public long StakedAmount { get; set; }
-
     public long EarlyStakedAmount { get; set; }
     public long ClaimedAmount { get; set; }
     public long StakedBlockNumber { get; set; }

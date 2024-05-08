@@ -31,6 +31,6 @@ public class EcoEarnIndexerPluginModule : AElfIndexerClientPluginBaseModule<EcoE
         serviceCollection.AddSingleton<IBlockChainDataHandler, EcoEarnTransactionHandler>();
     }
 
-    protected override string ClientId => "";
-    protected override string Version => "";
+    protected override string ClientId => "AElfIndexer_EcoEarn";
+    protected override string Version => "3fa0a8f592b8452b99c9da70ee7761e6";
 }
