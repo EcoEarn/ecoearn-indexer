@@ -74,8 +74,8 @@ public class TokenPoolCreatedLogEventProcessor : AElfLogEventProcessorBase<Token
                 CreateTime = context.BlockTime.ToUtcMilliSeconds()
             };
             tokenPoolIndex.PoolType = tokenPoolIndex.TokenPoolConfig.StakeTokenContract == tokenContractAddress
-                ? PoolType.Lp
-                : PoolType.Token;
+                ? PoolType.Token
+                : PoolType.Lp;
 
             _objectMapper.Map(context, tokenPoolIndex);
             await _tokenPoolRepository.AddOrUpdateAsync(tokenPoolIndex);

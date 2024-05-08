@@ -61,11 +61,11 @@ public class TokenPoolClaimedLogEventProcessor : AElfLogEventProcessorBase<Claim
                 ClaimedAmount = eventValue.ClaimInfo.ClaimedAmount.ToString(),
                 ClaimedSymbol = eventValue.ClaimInfo.ClaimedSymbol,
                 ClaimedBlockNumber = eventValue.ClaimInfo.ClaimedBlockNumber,
-                ClaimedTime = eventValue.ClaimInfo.ClaimedTime.ToDateTime().ToUtcMilliSeconds(),
-                UnlockTime = eventValue.ClaimInfo.UnlockTime.ToDateTime().ToUtcMilliSeconds(),
-                WithdrawTime = eventValue.ClaimInfo.WithdrawTime.ToDateTime().ToUtcMilliSeconds(),
-                Account = eventValue.ClaimInfo.Account.ToString(),
-                EarlyStakeTime = eventValue.ClaimInfo.EarlyStakeTime.ToDateTime().ToUtcMilliSeconds(),
+                ClaimedTime = eventValue.ClaimInfo.ClaimedTime == null ? 0 : eventValue.ClaimInfo.ClaimedTime.ToDateTime().ToUtcMilliSeconds(),
+                UnlockTime = eventValue.ClaimInfo.UnlockTime == null ? 0 : eventValue.ClaimInfo.UnlockTime.ToDateTime().ToUtcMilliSeconds(),
+                WithdrawTime = eventValue.ClaimInfo.WithdrawTime == null ? 0 : eventValue.ClaimInfo.WithdrawTime.ToDateTime().ToUtcMilliSeconds(),
+                Account = eventValue.ClaimInfo.Account.ToBase58(),
+                EarlyStakeTime = eventValue.ClaimInfo.EarlyStakeTime == null ? 0 : eventValue.ClaimInfo.EarlyStakeTime.ToDateTime().ToUtcMilliSeconds(),
             };
 
             var tokenPoolIndex =

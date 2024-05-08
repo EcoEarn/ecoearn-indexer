@@ -60,16 +60,15 @@ public class TokenPoolStakedLogEventProcessor : AElfLogEventProcessorBase<Staked
                 EarlyStakedAmount = eventValue.StakeInfo.EarlyStakedAmount,
                 ClaimedAmount = eventValue.StakeInfo.ClaimedAmount,
                 StakedBlockNumber = eventValue.StakeInfo.StakedBlockNumber,
-                StakedTime = eventValue.StakeInfo.StakedTime.ToDateTime().ToUtcMilliSeconds(),
+                StakedTime = eventValue.StakeInfo.StakedTime == null ? 0 : eventValue.StakeInfo.StakedTime.ToDateTime().ToUtcMilliSeconds(),
                 Period = eventValue.StakeInfo.Period,
                 Account = eventValue.StakeInfo.Account.ToBase58(),
                 BoostedAmount = eventValue.StakeInfo.BoostedAmount,
                 RewardDebt = eventValue.StakeInfo.RewardDebt,
-                WithdrawTime = eventValue.StakeInfo.WithdrawTime.ToDateTime().ToUtcMilliSeconds(),
+                WithdrawTime = eventValue.StakeInfo.WithdrawTime == null ? 0 : eventValue.StakeInfo.WithdrawTime.ToDateTime().ToUtcMilliSeconds(),
                 RewardAmount = eventValue.StakeInfo.RewardAmount,
                 LockedRewardAmount = eventValue.StakeInfo.LockedRewardAmount,
-                LastOperationTime = eventValue.StakeInfo.LastOperationTime.ToDateTime().ToUtcMilliSeconds(),
-                CreateTime = context.BlockTime.ToUtcMilliSeconds(),
+                LastOperationTime = eventValue.StakeInfo.LastOperationTime == null ? 0 : eventValue.StakeInfo.LastOperationTime.ToDateTime().ToUtcMilliSeconds(),
                 UpdateTime = context.BlockTime.ToUtcMilliSeconds()
             };
             var tokenPoolIndex =
