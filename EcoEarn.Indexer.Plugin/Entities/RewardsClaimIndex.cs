@@ -22,7 +22,8 @@ public class RewardsClaimIndex : AElfIndexerClientEntity<string>, IIndexBuild
 
 public enum PoolType
 {
-    Points,
-    Token,
-    Lp
+    Points = 0,
+    Token = 1,
+    Lp = 2,
+    All = -1,
 }

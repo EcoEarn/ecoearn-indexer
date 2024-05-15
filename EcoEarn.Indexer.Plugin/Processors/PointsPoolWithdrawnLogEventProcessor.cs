@@ -48,9 +48,9 @@ public class PointsPoolWithdrawnLogEventProcessor : AElfLogEventProcessorBase<Wi
                 var rewardsClaim = new RewardsClaimIndex
                 {
                     Id = id,
-                    ClaimId = claimInfo.ClaimId.ToHex(),
-                    StakeId = claimInfo.StakeId.ToHex(),
-                    PoolId = claimInfo.PoolId.ToHex(),
+                    ClaimId = claimInfo.ClaimId == null ? "" : claimInfo.ClaimId.ToHex(),
+                    StakeId = claimInfo.StakeId == null ? "" : claimInfo.StakeId.ToHex(),
+                    PoolId = claimInfo.PoolId == null ? "" : claimInfo.PoolId.ToHex(),
                     ClaimedAmount = claimInfo.ClaimedAmount.ToString(),
                     ClaimedSymbol = claimInfo.ClaimedSymbol,
                     ClaimedBlockNumber = claimInfo.ClaimedBlockNumber,

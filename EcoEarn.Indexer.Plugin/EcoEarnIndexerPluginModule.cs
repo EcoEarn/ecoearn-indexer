@@ -28,9 +28,10 @@ public class EcoEarnIndexerPluginModule : AElfIndexerClientPluginBaseModule<EcoE
         serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, TokenPoolEarlyStakedLogEventProcessor>();
         serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, TokenPoolStakedLogEventProcessor>();
         serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, TokenPoolWithdrawnLogEventProcessor>();
+        serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, PointsPoolRestartedLogEventProcessor>();
         serviceCollection.AddSingleton<IBlockChainDataHandler, EcoEarnTransactionHandler>();
     }
 
     protected override string ClientId => "AElfIndexer_EcoEarn";
-    protected override string Version => "3fa0a8f592b8452b99c9da70ee7761e6";
+    protected override string Version => "e09fe829c3c0478482aefd3d2af7ba8f";
 }

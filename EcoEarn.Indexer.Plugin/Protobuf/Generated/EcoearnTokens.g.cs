@@ -32,7 +32,7 @@ namespace EcoEarn.Contracts.Tokens {
             "B2RhcHBfaWQYASABKAsyCi5hZWxmLkhhc2gSHAoFYWRtaW4YAiABKAsyDS5h",
             "ZWxmLkFkZHJlc3MiVwoVQ3JlYXRlVG9rZW5zUG9vbElucHV0EhsKB2RhcHBf",
             "aWQYASABKAsyCi5hZWxmLkhhc2gSIQoGY29uZmlnGAIgASgLMhEuVG9rZW5z",
-            "UG9vbENvbmZpZyKbAwoQVG9rZW5zUG9vbENvbmZpZxIUCgxyZXdhcmRfdG9r",
+            "UG9vbENvbmZpZyK7AwoQVG9rZW5zUG9vbENvbmZpZxIUCgxyZXdhcmRfdG9r",
             "ZW4YASABKAkSGgoSc3RhcnRfYmxvY2tfbnVtYmVyGAIgASgDEhgKEGVuZF9i",
             "bG9ja19udW1iZXIYAyABKAMSGAoQcmV3YXJkX3Blcl9ibG9jaxgEIAEoAxIl",
             "Cg51cGRhdGVfYWRkcmVzcxgFIAEoCzINLmFlbGYuQWRkcmVzcxIVCg1zdGFr",
@@ -41,179 +41,186 @@ namespace EcoEarn.Contracts.Tokens {
             "AxIeChZtYXhpbXVtX3N0YWtlX2R1cmF0aW9uGAogASgDEiwKFXJld2FyZF90",
             "b2tlbl9jb250cmFjdBgLIAEoCzINLmFlbGYuQWRkcmVzcxIrChRzdGFrZV90",
             "b2tlbl9jb250cmFjdBgMIAEoCzINLmFlbGYuQWRkcmVzcxIcChRtaW5pbXVt",
-            "X2NsYWltX2Ftb3VudBgNIAEoAyJZCiBTZXRUb2tlbnNQb29sRW5kQmxvY2tO",
-            "dW1iZXJJbnB1dBIbCgdwb29sX2lkGAEgASgLMgouYWVsZi5IYXNoEhgKEGVu",
-            "ZF9ibG9ja19udW1iZXIYAiABKAMiWAoWUmVzdGFydFRva2Vuc1Bvb2xJbnB1",
-            "dBIbCgdwb29sX2lkGAEgASgLMgouYWVsZi5IYXNoEiEKBmNvbmZpZxgCIAEo",
-            "CzIRLlRva2Vuc1Bvb2xDb25maWciZQofU2V0VG9rZW5zUG9vbFVwZGF0ZUFk",
-            "ZHJlc3NJbnB1dBIbCgdwb29sX2lkGAEgASgLMgouYWVsZi5IYXNoEiUKDnVw",
-            "ZGF0ZV9hZGRyZXNzGAIgASgLMg0uYWVsZi5BZGRyZXNzIlwKJVNldFRva2Vu",
-            "c1Bvb2xSZXdhcmRSZWxlYXNlUGVyaW9kSW5wdXQSGwoHcG9vbF9pZBgBIAEo",
-            "CzIKLmFlbGYuSGFzaBIWCg5yZWxlYXNlX3BlcmlvZBgCIAEoAyKSAQodU2V0",
-            "VG9rZW5zUG9vbFN0YWtlQ29uZmlnSW5wdXQSGwoHcG9vbF9pZBgBIAEoCzIK",
-            "LmFlbGYuSGFzaBIWCg5taW5pbXVtX2Ftb3VudBgCIAEoAxIeChZtYXhpbXVt",
-            "X3N0YWtlX2R1cmF0aW9uGAMgASgDEhwKFG1pbmltdW1fY2xhaW1fYW1vdW50",
-            "GAQgASgDIkEKEUdldFBvb2xJbmZvT3V0cHV0EhwKCXBvb2xfaW5mbxgBIAEo",
-            "CzIJLlBvb2xJbmZvEg4KBnN0YXR1cxgCIAEoCCJnCghQb29sSW5mbxIbCgdk",
-            "YXBwX2lkGAEgASgLMgouYWVsZi5IYXNoEhsKB3Bvb2xfaWQYAiABKAsyCi5h",
-            "ZWxmLkhhc2gSIQoGY29uZmlnGAMgASgLMhEuVG9rZW5zUG9vbENvbmZpZyJ8",
-            "CghQb29sRGF0YRIbCgdwb29sX2lkGAEgASgLMgouYWVsZi5IYXNoEhsKE2Fj",
-            "Y190b2tlbl9wZXJfc2hhcmUYAiABKAMSGQoRbGFzdF9yZXdhcmRfYmxvY2sY",
-            "AyABKAMSGwoTdG90YWxfc3Rha2VkX2Ftb3VudBgEIAEoAyJJCgpTdGFrZUlu",
-            "cHV0EhsKB3Bvb2xfaWQYASABKAsyCi5hZWxmLkhhc2gSDgoGYW1vdW50GAIg",
-            "ASgDEg4KBnBlcmlvZBgDIAEoAyL1AwoJU3Rha2VJbmZvEhwKCHN0YWtlX2lk",
-            "GAEgASgLMgouYWVsZi5IYXNoEhsKB3Bvb2xfaWQYAiABKAsyCi5hZWxmLkhh",
-            "c2gSFQoNc3Rha2VkX2Ftb3VudBgDIAEoAxIbChNlYXJseV9zdGFrZWRfYW1v",
-            "dW50GAQgASgDEhsKE3N0YWtlZF9ibG9ja19udW1iZXIYBSABKAMSLwoLc3Rh",
-            "a2VkX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEg4K",
-            "BnBlcmlvZBgHIAEoAxIeCgdhY2NvdW50GAggASgLMg0uYWVsZi5BZGRyZXNz",
-            "EhYKDmJvb3N0ZWRfYW1vdW50GAkgASgDEhMKC3Jld2FyZF9kZWJ0GAogASgD",
-            "EjEKDXdpdGhkcmF3X3RpbWUYCyABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wEhUKDXJld2FyZF9hbW91bnQYDCABKAMSHAoUbG9ja2VkX3Jld2Fy",
-            "ZF9hbW91bnQYDSABKAMSFgoOY2xhaW1lZF9hbW91bnQYDiABKAMSFQoNc3Rh",
-            "a2luZ190b2tlbhgPIAEoCRI3ChNsYXN0X29wZXJhdGlvbl90aW1lGBAgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCJdCg9FYXJseVN0YWtlSW5w",
-            "dXQSGwoHcG9vbF9pZBgBIAEoCzIKLmFlbGYuSGFzaBIOCgZwZXJpb2QYAiAB",
-            "KAMSHQoJY2xhaW1faWRzGAMgAygLMgouYWVsZi5IYXNoIp4DCglDbGFpbUlu",
-            "Zm8SHAoIY2xhaW1faWQYASABKAsyCi5hZWxmLkhhc2gSGwoHcG9vbF9pZBgC",
-            "IAEoCzIKLmFlbGYuSGFzaBIWCg5jbGFpbWVkX2Ftb3VudBgDIAEoAxIWCg5j",
-            "bGFpbWVkX3N5bWJvbBgEIAEoCRIcChRjbGFpbWVkX2Jsb2NrX251bWJlchgF",
-            "IAEoAxIwCgxjbGFpbWVkX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wEi8KC3VubG9ja190aW1lGAcgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcBIxCg13aXRoZHJhd190aW1lGAggASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcBIeCgdhY2NvdW50GAkgASgLMg0uYWVsZi5B",
-            "ZGRyZXNzEjQKEGVhcmx5X3N0YWtlX3RpbWUYCiABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wEhwKCHN0YWtlX2lkGAsgASgLMgouYWVsZi5IYXNo",
-            "IiYKCkNsYWltSW5mb3MSGAoEZGF0YRgBIAMoCzIKLkNsYWltSW5mbyKRAQoN",
-            "U3Rha2VGb3JJbnB1dBIbCgdwb29sX2lkGAEgASgLMgouYWVsZi5IYXNoEg4K",
-            "BmFtb3VudBgCIAEoAxIOCgZwZXJpb2QYAyABKAMSHgoHYWRkcmVzcxgEIAEo",
-            "CzINLmFlbGYuQWRkcmVzcxIjCgxmcm9tX2FkZHJlc3MYBSABKAsyDS5hZWxm",
-            "LkFkZHJlc3MibwoPR2V0UmV3YXJkT3V0cHV0EhwKCHN0YWtlX2lkGAEgASgL",
-            "MgouYWVsZi5IYXNoEh4KB2FjY291bnQYAiABKAsyDS5hZWxmLkFkZHJlc3MS",
-            "DgoGc3ltYm9sGAMgASgJEg4KBmFtb3VudBgEIAEoAyIuCg1XaXRoZHJhd0lu",
-            "cHV0Eh0KCWNsYWltX2lkcxgBIAMoCzIKLmFlbGYuSGFzaCJhChFSZWNvdmVy",
-            "VG9rZW5JbnB1dBIbCgdwb29sX2lkGAEgASgLMgouYWVsZi5IYXNoEg0KBXRv",
-            "a2VuGAIgASgJEiAKCXJlY2lwaWVudBgDIAEoCzINLmFlbGYuQWRkcmVzcyI1",
-            "ChRVcGRhdGVTdGFrZUluZm9JbnB1dBIdCglzdGFrZV9pZHMYASADKAsyCi5h",
-            "ZWxmLkhhc2giJAoISGFzaExpc3QSGAoEZGF0YRgBIAMoCzIKLmFlbGYuSGFz",
-            "aCIkCglQb29sRGF0YXMSFwoEZGF0YRgBIAMoCzIJLlBvb2xEYXRhIroBCg9J",
-            "bml0aWFsaXplSW5wdXQSHAoFYWRtaW4YASABKAsyDS5hZWxmLkFkZHJlc3MS",
-            "LgoXZWNvZWFybl9wb2ludHNfY29udHJhY3QYAiABKAsyDS5hZWxmLkFkZHJl",
-            "c3MSFwoPY29tbWlzc2lvbl9yYXRlGAMgASgDEiAKCXJlY2lwaWVudBgEIAEo",
-            "CzINLmFlbGYuQWRkcmVzcxIeChZpc19yZWdpc3Rlcl9yZXN0cmljdGVkGAUg",
-            "ASgIImMKBkNvbmZpZxIXCg9jb21taXNzaW9uX3JhdGUYASABKAMSIAoJcmVj",
-            "aXBpZW50GAIgASgLMg0uYWVsZi5BZGRyZXNzEh4KFmlzX3JlZ2lzdGVyX3Jl",
-            "c3RyaWN0ZWQYAyABKAgiTgoRU2V0RGFwcEFkbWluSW5wdXQSGwoHZGFwcF9p",
-            "ZBgBIAEoCzIKLmFlbGYuSGFzaBIcCgVhZG1pbhgCIAEoCzINLmFlbGYuQWRk",
-            "cmVzcyJVChZHZXRVc2VyU3Rha2VDb3VudElucHV0EhsKB3Bvb2xfaWQYASAB",
-            "KAsyCi5hZWxmLkhhc2gSHgoHYWNjb3VudBgCIAEoCzINLmFlbGYuQWRkcmVz",
-            "cyJmCg5FYXJseVN0YWtlSW5mbxInCgRkYXRhGAEgAygLMhkuRWFybHlTdGFr",
-            "ZUluZm8uRGF0YUVudHJ5GisKCURhdGFFbnRyeRILCgNrZXkYASABKAkSDQoF",
-            "dmFsdWUYAiABKAM6AjgBImMKFEdldFBvb2xBZGRyZXNzT3V0cHV0EiQKDXN0",
-            "YWtlX2FkZHJlc3MYASABKAsyDS5hZWxmLkFkZHJlc3MSJQoOcmV3YXJkX2Fk",
-            "ZHJlc3MYAiABKAsyDS5hZWxmLkFkZHJlc3MiTQoKUmVnaXN0ZXJlZBIbCgdk",
-            "YXBwX2lkGAEgASgLMgouYWVsZi5IYXNoEhwKBWFkbWluGAIgASgLMg0uYWVs",
-            "Zi5BZGRyZXNzOgSguxgBIoYBChFUb2tlbnNQb29sQ3JlYXRlZBIbCgdkYXBw",
-            "X2lkGAEgASgLMgouYWVsZi5IYXNoEiEKBmNvbmZpZxgCIAEoCzIRLlRva2Vu",
-            "c1Bvb2xDb25maWcSGwoHcG9vbF9pZBgDIAEoCzIKLmFlbGYuSGFzaBIOCgZh",
-            "bW91bnQYBCABKAM6BKC7GAEiWAoQVG9rZW5zUG9vbENsb3NlZBIbCgdwb29s",
-            "X2lkGAEgASgLMgouYWVsZi5IYXNoEiEKBmNvbmZpZxgCIAEoCzIRLlRva2Vu",
-            "c1Bvb2xDb25maWc6BKC7GAEiagobVG9rZW5zUG9vbEVuZEJsb2NrTnVtYmVy",
-            "U2V0EhsKB3Bvb2xfaWQYASABKAsyCi5hZWxmLkhhc2gSGAoQZW5kX2Jsb2Nr",
-            "X251bWJlchgCIAEoAxIOCgZhbW91bnQYAyABKAM6BKC7GAEiawoTVG9rZW5z",
-            "UG9vbFJlc3RhcnRlZBIbCgdwb29sX2lkGAEgASgLMgouYWVsZi5IYXNoEiEK",
-            "BmNvbmZpZxgCIAEoCzIRLlRva2Vuc1Bvb2xDb25maWcSDgoGYW1vdW50GAMg",
-            "ASgDOgSguxgBImYKGlRva2Vuc1Bvb2xVcGRhdGVBZGRyZXNzU2V0EhsKB3Bv",
-            "b2xfaWQYASABKAsyCi5hZWxmLkhhc2gSJQoOdXBkYXRlX2FkZHJlc3MYAiAB",
-            "KAsyDS5hZWxmLkFkZHJlc3M6BKC7GAEiXQogVG9rZW5zUG9vbFJld2FyZFJl",
-            "bGVhc2VQZXJpb2RTZXQSGwoHcG9vbF9pZBgBIAEoCzIKLmFlbGYuSGFzaBIW",
-            "Cg5yZWxlYXNlX3BlcmlvZBgCIAEoAzoEoLsYASKTAQoYVG9rZW5zUG9vbFN0",
-            "YWtlQ29uZmlnU2V0EhsKB3Bvb2xfaWQYASABKAsyCi5hZWxmLkhhc2gSFgoO",
-            "bWluaW11bV9hbW91bnQYAiABKAMSHgoWbWF4aW11bV9zdGFrZV9kdXJhdGlv",
-            "bhgDIAEoAxIcChRtaW5pbXVtX2NsYWltX2Ftb3VudBgEIAEoAzoEoLsYASJM",
-            "CgZTdGFrZWQSHgoKc3Rha2VfaW5mbxgBIAEoCzIKLlN0YWtlSW5mbxIcCglw",
-            "b29sX2RhdGEYAiABKAsyCS5Qb29sRGF0YToEoLsYASKQAQoLRWFybHlTdGFr",
-            "ZWQSGwoHcG9vbF9pZBgBIAEoCzIKLmFlbGYuSGFzaBIeCgpzdGFrZV9pbmZv",
-            "GAIgASgLMgouU3Rha2VJbmZvEhwKCXBvb2xfZGF0YRgDIAEoCzIJLlBvb2xE",
-            "YXRhEiAKC2NsYWltX2luZm9zGAQgASgLMgsuQ2xhaW1JbmZvczoEoLsYASKA",
-            "AQoIVW5sb2NrZWQSHAoIc3Rha2VfaWQYASABKAsyCi5hZWxmLkhhc2gSFQoN",
-            "c3Rha2VkX2Ftb3VudBgCIAEoAxIbChNlYXJseV9zdGFrZWRfYW1vdW50GAMg",
-            "ASgDEhwKCXBvb2xfZGF0YRgEIAEoCzIJLlBvb2xEYXRhOgSguxgBIk0KB0Ns",
-            "YWltZWQSHAoIc3Rha2VfaWQYASABKAsyCi5hZWxmLkhhc2gSHgoKY2xhaW1f",
-            "aW5mbxgCIAEoCzIKLkNsYWltSW5mbzoEoLsYASIzCglXaXRoZHJhd24SIAoL",
-            "Y2xhaW1faW5mb3MYASABKAsyCy5DbGFpbUluZm9zOgSguxgBInIKDlRva2Vu",
-            "UmVjb3ZlcmVkEhsKB3Bvb2xfaWQYASABKAsyCi5hZWxmLkhhc2gSDQoFdG9r",
-            "ZW4YAiABKAkSDgoGYW1vdW50GAMgASgDEh4KB2FjY291bnQYBCABKAsyDS5h",
-            "ZWxmLkFkZHJlc3M6BKC7GAEiVgoQU3Rha2VJbmZvVXBkYXRlZBIcCglzdGFr",
-            "ZV9pZHMYASABKAsyCS5IYXNoTGlzdBIeCgpwb29sX2RhdGFzGAIgASgLMgou",
-            "UG9vbERhdGFzOgSguxgBIioKCUNvbmZpZ1NldBIXCgZjb25maWcYASABKAsy",
-            "By5Db25maWc6BKC7GAEiLgoIQWRtaW5TZXQSHAoFYWRtaW4YASABKAsyDS5h",
-            "ZWxmLkFkZHJlc3M6BKC7GAEiTwoMRGFwcEFkbWluU2V0EhsKB2RhcHBfaWQY",
-            "ASABKAsyCi5hZWxmLkhhc2gSHAoFYWRtaW4YAiABKAsyDS5hZWxmLkFkZHJl",
-            "c3M6BKC7GAEiSQoRQ29udHJhY3RDb25maWdTZXQSLgoXZWNvZWFybl9wb2lu",
-            "dHNfY29udHJhY3QYASABKAsyDS5hZWxmLkFkZHJlc3M6BKC7GAEyuBAKFUVj",
-            "b0Vhcm5Ub2tlbnNDb250cmFjdBI0CghSZWdpc3RlchIOLlJlZ2lzdGVySW5w",
-            "dXQaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiABI8CgxTZXREYXBwQWRtaW4S",
-            "Ei5TZXREYXBwQWRtaW5JbnB1dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIA",
-            "EisKC0dldERhcHBJbmZvEgouYWVsZi5IYXNoGgkuRGFwcEluZm8iBYiJ9wEB",
-            "EkQKEENyZWF0ZVRva2Vuc1Bvb2wSFi5DcmVhdGVUb2tlbnNQb29sSW5wdXQa",
-            "Fi5nb29nbGUucHJvdG9idWYuRW1wdHkiABI3Cg9DbG9zZVRva2Vuc1Bvb2wS",
-            "Ci5hZWxmLkhhc2gaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiABJaChtTZXRU",
-            "b2tlbnNQb29sRW5kQmxvY2tOdW1iZXISIS5TZXRUb2tlbnNQb29sRW5kQmxv",
-            "Y2tOdW1iZXJJbnB1dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIAEkYKEVJl",
-            "c3RhcnRUb2tlbnNQb29sEhcuUmVzdGFydFRva2Vuc1Bvb2xJbnB1dBoWLmdv",
-            "b2dsZS5wcm90b2J1Zi5FbXB0eSIAElgKGlNldFRva2Vuc1Bvb2xVcGRhdGVB",
-            "ZGRyZXNzEiAuU2V0VG9rZW5zUG9vbFVwZGF0ZUFkZHJlc3NJbnB1dBoWLmdv",
-            "b2dsZS5wcm90b2J1Zi5FbXB0eSIAEmQKIFNldFRva2Vuc1Bvb2xSZXdhcmRS",
-            "ZWxlYXNlUGVyaW9kEiYuU2V0VG9rZW5zUG9vbFJld2FyZFJlbGVhc2VQZXJp",
-            "b2RJbnB1dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIAElQKGFNldFRva2Vu",
-            "c1Bvb2xTdGFrZUNvbmZpZxIeLlNldFRva2Vuc1Bvb2xTdGFrZUNvbmZpZ0lu",
-            "cHV0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IgASNAoLR2V0UG9vbEluZm8S",
-            "Ci5hZWxmLkhhc2gaEi5HZXRQb29sSW5mb091dHB1dCIFiIn3AQESKwoLR2V0",
-            "UG9vbERhdGESCi5hZWxmLkhhc2gaCS5Qb29sRGF0YSIFiIn3AQESOgoOR2V0",
-            "UG9vbEFkZHJlc3MSCi5hZWxmLkhhc2gaFS5HZXRQb29sQWRkcmVzc091dHB1",
-            "dCIFiIn3AQESPgoMR2V0UG9vbENvdW50EgouYWVsZi5IYXNoGhsuZ29vZ2xl",
-            "LnByb3RvYnVmLkludDY0VmFsdWUiBYiJ9wEBEi4KBVN0YWtlEgsuU3Rha2VJ",
-            "bnB1dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIAEjgKCkVhcmx5U3Rha2US",
-            "EC5FYXJseVN0YWtlSW5wdXQaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiABI0",
-            "CghTdGFrZUZvchIOLlN0YWtlRm9ySW5wdXQaFi5nb29nbGUucHJvdG9idWYu",
-            "RW1wdHkiABItCgxHZXRTdGFrZUluZm8SCi5hZWxmLkhhc2gaCi5TdGFrZUlu",
-            "Zm8iBYiJ9wEBEjAKCUdldFJld2FyZBIKLmFlbGYuSGFzaBoQLkdldFJld2Fy",
-            "ZE91dHB1dCIFiIn3AQESLgoGVW5sb2NrEgouYWVsZi5IYXNoGhYuZ29vZ2xl",
-            "LnByb3RvYnVmLkVtcHR5IgASSwoRR2V0VXNlclN0YWtlQ291bnQSFy5HZXRV",
-            "c2VyU3Rha2VDb3VudElucHV0GhsuZ29vZ2xlLnByb3RvYnVmLkludDY0VmFs",
-            "dWUiABItCgVDbGFpbRIKLmFlbGYuSGFzaBoWLmdvb2dsZS5wcm90b2J1Zi5F",
-            "bXB0eSIAEigKDEdldENsYWltSW5mbxIKLmFlbGYuSGFzaBoKLkNsYWltSW5m",
-            "byIAEjQKCFdpdGhkcmF3Eg4uV2l0aGRyYXdJbnB1dBoWLmdvb2dsZS5wcm90",
-            "b2J1Zi5FbXB0eSIAEjwKDFJlY292ZXJUb2tlbhISLlJlY292ZXJUb2tlbklu",
-            "cHV0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IgASQgoPVXBkYXRlU3Rha2VJ",
-            "bmZvEhUuVXBkYXRlU3Rha2VJbmZvSW5wdXQaFi5nb29nbGUucHJvdG9idWYu",
-            "RW1wdHkiABI4CgpJbml0aWFsaXplEhAuSW5pdGlhbGl6ZUlucHV0GhYuZ29v",
-            "Z2xlLnByb3RvYnVmLkVtcHR5IgASLgoJU2V0Q29uZmlnEgcuQ29uZmlnGhYu",
-            "Z29vZ2xlLnByb3RvYnVmLkVtcHR5IgASMwoJR2V0Q29uZmlnEhYuZ29vZ2xl",
-            "LnByb3RvYnVmLkVtcHR5GgcuQ29uZmlnIgWIifcBARIzCghTZXRBZG1pbhIN",
-            "LmFlbGYuQWRkcmVzcxoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIAEjgKCEdl",
-            "dEFkbWluEhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5Gg0uYWVsZi5BZGRyZXNz",
-            "IgWIifcBARI8ChFTZXRDb250cmFjdENvbmZpZxINLmFlbGYuQWRkcmVzcxoW",
-            "Lmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIAEkEKEUdldENvbnRyYWN0Q29uZmln",
-            "EhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5Gg0uYWVsZi5BZGRyZXNzIgWIifcB",
-            "ARpIysr2AQthY3MxMi5wcm90b7LM9gEzRWNvRWFybi5Db250cmFjdHMuVG9r",
-            "ZW5zLkVjb0Vhcm5Ub2tlbnNDb250cmFjdFN0YXRlQhuqAhhFY29FYXJuLkNv",
-            "bnRyYWN0cy5Ub2tlbnNiBnByb3RvMw=="));
+            "X2NsYWltX2Ftb3VudBgNIAEoAxIeChZtaW5pbXVtX3N0YWtlX2R1cmF0aW9u",
+            "GA4gASgDIlkKIFNldFRva2Vuc1Bvb2xFbmRCbG9ja051bWJlcklucHV0EhsK",
+            "B3Bvb2xfaWQYASABKAsyCi5hZWxmLkhhc2gSGAoQZW5kX2Jsb2NrX251bWJl",
+            "chgCIAEoAyJlCh9TZXRUb2tlbnNQb29sVXBkYXRlQWRkcmVzc0lucHV0EhsK",
+            "B3Bvb2xfaWQYASABKAsyCi5hZWxmLkhhc2gSJQoOdXBkYXRlX2FkZHJlc3MY",
+            "AiABKAsyDS5hZWxmLkFkZHJlc3MiXAolU2V0VG9rZW5zUG9vbFJld2FyZFJl",
+            "bGVhc2VQZXJpb2RJbnB1dBIbCgdwb29sX2lkGAEgASgLMgouYWVsZi5IYXNo",
+            "EhYKDnJlbGVhc2VfcGVyaW9kGAIgASgDIrIBCh1TZXRUb2tlbnNQb29sU3Rh",
+            "a2VDb25maWdJbnB1dBIbCgdwb29sX2lkGAEgASgLMgouYWVsZi5IYXNoEhYK",
+            "Dm1pbmltdW1fYW1vdW50GAIgASgDEh4KFm1heGltdW1fc3Rha2VfZHVyYXRp",
+            "b24YAyABKAMSHAoUbWluaW11bV9jbGFpbV9hbW91bnQYBCABKAMSHgoWbWlu",
+            "aW11bV9zdGFrZV9kdXJhdGlvbhgFIAEoAyJdCiJTZXRUb2tlbnNQb29sRml4",
+            "ZWRCb29zdEZhY3RvcklucHV0EhsKB3Bvb2xfaWQYASABKAsyCi5hZWxmLkhh",
+            "c2gSGgoSZml4ZWRfYm9vc3RfZmFjdG9yGAIgASgDIkEKEUdldFBvb2xJbmZv",
+            "T3V0cHV0EhwKCXBvb2xfaW5mbxgBIAEoCzIJLlBvb2xJbmZvEg4KBnN0YXR1",
+            "cxgCIAEoCCKBAQoIUG9vbEluZm8SGwoHZGFwcF9pZBgBIAEoCzIKLmFlbGYu",
+            "SGFzaBIbCgdwb29sX2lkGAIgASgLMgouYWVsZi5IYXNoEiEKBmNvbmZpZxgD",
+            "IAEoCzIRLlRva2Vuc1Bvb2xDb25maWcSGAoQcHJlY2lzaW9uX2ZhY3RvchgE",
+            "IAEoAyKPAQoIUG9vbERhdGESGwoHcG9vbF9pZBgBIAEoCzIKLmFlbGYuSGFz",
+            "aBIuChNhY2NfdG9rZW5fcGVyX3NoYXJlGAIgASgLMhEuYWVsZi5CaWdJbnRW",
+            "YWx1ZRIZChFsYXN0X3Jld2FyZF9ibG9jaxgDIAEoAxIbChN0b3RhbF9zdGFr",
+            "ZWRfYW1vdW50GAQgASgDIkkKClN0YWtlSW5wdXQSGwoHcG9vbF9pZBgBIAEo",
+            "CzIKLmFlbGYuSGFzaBIOCgZhbW91bnQYAiABKAMSDgoGcGVyaW9kGAMgASgD",
+            "IvUDCglTdGFrZUluZm8SHAoIc3Rha2VfaWQYASABKAsyCi5hZWxmLkhhc2gS",
+            "GwoHcG9vbF9pZBgCIAEoCzIKLmFlbGYuSGFzaBIVCg1zdGFrZWRfYW1vdW50",
+            "GAMgASgDEhsKE2Vhcmx5X3N0YWtlZF9hbW91bnQYBCABKAMSGwoTc3Rha2Vk",
+            "X2Jsb2NrX251bWJlchgFIAEoAxIvCgtzdGFrZWRfdGltZRgGIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASDgoGcGVyaW9kGAcgASgDEh4KB2Fj",
+            "Y291bnQYCCABKAsyDS5hZWxmLkFkZHJlc3MSFgoOYm9vc3RlZF9hbW91bnQY",
+            "CSABKAMSEwoLcmV3YXJkX2RlYnQYCiABKAMSMQoNd2l0aGRyYXdfdGltZRgL",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASFQoNcmV3YXJkX2Ft",
+            "b3VudBgMIAEoAxIcChRsb2NrZWRfcmV3YXJkX2Ftb3VudBgNIAEoAxIWCg5j",
+            "bGFpbWVkX2Ftb3VudBgOIAEoAxIVCg1zdGFraW5nX3Rva2VuGA8gASgJEjcK",
+            "E2xhc3Rfb3BlcmF0aW9uX3RpbWUYECABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wIl0KD0Vhcmx5U3Rha2VJbnB1dBIbCgdwb29sX2lkGAEgASgL",
+            "MgouYWVsZi5IYXNoEg4KBnBlcmlvZBgCIAEoAxIdCgljbGFpbV9pZHMYAyAD",
+            "KAsyCi5hZWxmLkhhc2gingMKCUNsYWltSW5mbxIcCghjbGFpbV9pZBgBIAEo",
+            "CzIKLmFlbGYuSGFzaBIbCgdwb29sX2lkGAIgASgLMgouYWVsZi5IYXNoEhYK",
+            "DmNsYWltZWRfYW1vdW50GAMgASgDEhYKDmNsYWltZWRfc3ltYm9sGAQgASgJ",
+            "EhwKFGNsYWltZWRfYmxvY2tfbnVtYmVyGAUgASgDEjAKDGNsYWltZWRfdGlt",
+            "ZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoLdW5sb2Nr",
+            "X3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjEKDXdp",
+            "dGhkcmF3X3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "Eh4KB2FjY291bnQYCSABKAsyDS5hZWxmLkFkZHJlc3MSNAoQZWFybHlfc3Rh",
+            "a2VfdGltZRgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASHAoI",
+            "c3Rha2VfaWQYCyABKAsyCi5hZWxmLkhhc2giJgoKQ2xhaW1JbmZvcxIYCgRk",
+            "YXRhGAEgAygLMgouQ2xhaW1JbmZvIpEBCg1TdGFrZUZvcklucHV0EhsKB3Bv",
+            "b2xfaWQYASABKAsyCi5hZWxmLkhhc2gSDgoGYW1vdW50GAIgASgDEg4KBnBl",
+            "cmlvZBgDIAEoAxIeCgdhZGRyZXNzGAQgASgLMg0uYWVsZi5BZGRyZXNzEiMK",
+            "DGZyb21fYWRkcmVzcxgFIAEoCzINLmFlbGYuQWRkcmVzcyJvCg9HZXRSZXdh",
+            "cmRPdXRwdXQSHAoIc3Rha2VfaWQYASABKAsyCi5hZWxmLkhhc2gSHgoHYWNj",
+            "b3VudBgCIAEoCzINLmFlbGYuQWRkcmVzcxIOCgZzeW1ib2wYAyABKAkSDgoG",
+            "YW1vdW50GAQgASgDIi4KDVdpdGhkcmF3SW5wdXQSHQoJY2xhaW1faWRzGAEg",
+            "AygLMgouYWVsZi5IYXNoImEKEVJlY292ZXJUb2tlbklucHV0EhsKB3Bvb2xf",
+            "aWQYASABKAsyCi5hZWxmLkhhc2gSDQoFdG9rZW4YAiABKAkSIAoJcmVjaXBp",
+            "ZW50GAMgASgLMg0uYWVsZi5BZGRyZXNzIjUKFFVwZGF0ZVN0YWtlSW5mb0lu",
+            "cHV0Eh0KCXN0YWtlX2lkcxgBIAMoCzIKLmFlbGYuSGFzaCIkCghIYXNoTGlz",
+            "dBIYCgRkYXRhGAEgAygLMgouYWVsZi5IYXNoIiQKCVBvb2xEYXRhcxIXCgRk",
+            "YXRhGAEgAygLMgkuUG9vbERhdGEiugEKD0luaXRpYWxpemVJbnB1dBIcCgVh",
+            "ZG1pbhgBIAEoCzINLmFlbGYuQWRkcmVzcxIuChdlY29lYXJuX3BvaW50c19j",
+            "b250cmFjdBgCIAEoCzINLmFlbGYuQWRkcmVzcxIXCg9jb21taXNzaW9uX3Jh",
+            "dGUYAyABKAMSIAoJcmVjaXBpZW50GAQgASgLMg0uYWVsZi5BZGRyZXNzEh4K",
+            "FmlzX3JlZ2lzdGVyX3Jlc3RyaWN0ZWQYBSABKAgiYwoGQ29uZmlnEhcKD2Nv",
+            "bW1pc3Npb25fcmF0ZRgBIAEoAxIgCglyZWNpcGllbnQYAiABKAsyDS5hZWxm",
+            "LkFkZHJlc3MSHgoWaXNfcmVnaXN0ZXJfcmVzdHJpY3RlZBgDIAEoCCJOChFT",
+            "ZXREYXBwQWRtaW5JbnB1dBIbCgdkYXBwX2lkGAEgASgLMgouYWVsZi5IYXNo",
+            "EhwKBWFkbWluGAIgASgLMg0uYWVsZi5BZGRyZXNzIlIKE0dldFVzZXJTdGFr",
+            "ZUlkSW5wdXQSGwoHcG9vbF9pZBgBIAEoCzIKLmFlbGYuSGFzaBIeCgdhY2Nv",
+            "dW50GAIgASgLMg0uYWVsZi5BZGRyZXNzIlUKFkdldFVzZXJTdGFrZUNvdW50",
+            "SW5wdXQSGwoHcG9vbF9pZBgBIAEoCzIKLmFlbGYuSGFzaBIeCgdhY2NvdW50",
+            "GAIgASgLMg0uYWVsZi5BZGRyZXNzImYKDkVhcmx5U3Rha2VJbmZvEicKBGRh",
+            "dGEYASADKAsyGS5FYXJseVN0YWtlSW5mby5EYXRhRW50cnkaKwoJRGF0YUVu",
+            "dHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoAzoCOAEiYwoUR2V0UG9v",
+            "bEFkZHJlc3NPdXRwdXQSJAoNc3Rha2VfYWRkcmVzcxgBIAEoCzINLmFlbGYu",
+            "QWRkcmVzcxIlCg5yZXdhcmRfYWRkcmVzcxgCIAEoCzINLmFlbGYuQWRkcmVz",
+            "cyJNCgpSZWdpc3RlcmVkEhsKB2RhcHBfaWQYASABKAsyCi5hZWxmLkhhc2gS",
+            "HAoFYWRtaW4YAiABKAsyDS5hZWxmLkFkZHJlc3M6BKC7GAEihgEKEVRva2Vu",
+            "c1Bvb2xDcmVhdGVkEhsKB2RhcHBfaWQYASABKAsyCi5hZWxmLkhhc2gSIQoG",
+            "Y29uZmlnGAIgASgLMhEuVG9rZW5zUG9vbENvbmZpZxIbCgdwb29sX2lkGAMg",
+            "ASgLMgouYWVsZi5IYXNoEg4KBmFtb3VudBgEIAEoAzoEoLsYASJYChBUb2tl",
+            "bnNQb29sQ2xvc2VkEhsKB3Bvb2xfaWQYASABKAsyCi5hZWxmLkhhc2gSIQoG",
+            "Y29uZmlnGAIgASgLMhEuVG9rZW5zUG9vbENvbmZpZzoEoLsYASJqChtUb2tl",
+            "bnNQb29sRW5kQmxvY2tOdW1iZXJTZXQSGwoHcG9vbF9pZBgBIAEoCzIKLmFl",
+            "bGYuSGFzaBIYChBlbmRfYmxvY2tfbnVtYmVyGAIgASgDEg4KBmFtb3VudBgD",
+            "IAEoAzoEoLsYASJmChpUb2tlbnNQb29sVXBkYXRlQWRkcmVzc1NldBIbCgdw",
+            "b29sX2lkGAEgASgLMgouYWVsZi5IYXNoEiUKDnVwZGF0ZV9hZGRyZXNzGAIg",
+            "ASgLMg0uYWVsZi5BZGRyZXNzOgSguxgBIl0KIFRva2Vuc1Bvb2xSZXdhcmRS",
+            "ZWxlYXNlUGVyaW9kU2V0EhsKB3Bvb2xfaWQYASABKAsyCi5hZWxmLkhhc2gS",
+            "FgoOcmVsZWFzZV9wZXJpb2QYAiABKAM6BKC7GAEiswEKGFRva2Vuc1Bvb2xT",
+            "dGFrZUNvbmZpZ1NldBIbCgdwb29sX2lkGAEgASgLMgouYWVsZi5IYXNoEhYK",
+            "Dm1pbmltdW1fYW1vdW50GAIgASgDEh4KFm1heGltdW1fc3Rha2VfZHVyYXRp",
+            "b24YAyABKAMSHAoUbWluaW11bV9jbGFpbV9hbW91bnQYBCABKAMSHgoWbWlu",
+            "aW11bV9zdGFrZV9kdXJhdGlvbhgFIAEoAzoEoLsYASJMCgZTdGFrZWQSHgoK",
+            "c3Rha2VfaW5mbxgBIAEoCzIKLlN0YWtlSW5mbxIcCglwb29sX2RhdGEYAiAB",
+            "KAsyCS5Qb29sRGF0YToEoLsYASKQAQoLRWFybHlTdGFrZWQSGwoHcG9vbF9p",
+            "ZBgBIAEoCzIKLmFlbGYuSGFzaBIeCgpzdGFrZV9pbmZvGAIgASgLMgouU3Rh",
+            "a2VJbmZvEhwKCXBvb2xfZGF0YRgDIAEoCzIJLlBvb2xEYXRhEiAKC2NsYWlt",
+            "X2luZm9zGAQgASgLMgsuQ2xhaW1JbmZvczoEoLsYASKAAQoIVW5sb2NrZWQS",
+            "HAoIc3Rha2VfaWQYASABKAsyCi5hZWxmLkhhc2gSFQoNc3Rha2VkX2Ftb3Vu",
+            "dBgCIAEoAxIbChNlYXJseV9zdGFrZWRfYW1vdW50GAMgASgDEhwKCXBvb2xf",
+            "ZGF0YRgEIAEoCzIJLlBvb2xEYXRhOgSguxgBIk0KB0NsYWltZWQSHAoIc3Rh",
+            "a2VfaWQYASABKAsyCi5hZWxmLkhhc2gSHgoKY2xhaW1faW5mbxgCIAEoCzIK",
+            "LkNsYWltSW5mbzoEoLsYASIzCglXaXRoZHJhd24SIAoLY2xhaW1faW5mb3MY",
+            "ASABKAsyCy5DbGFpbUluZm9zOgSguxgBInIKDlRva2VuUmVjb3ZlcmVkEhsK",
+            "B3Bvb2xfaWQYASABKAsyCi5hZWxmLkhhc2gSDQoFdG9rZW4YAiABKAkSDgoG",
+            "YW1vdW50GAMgASgDEh4KB2FjY291bnQYBCABKAsyDS5hZWxmLkFkZHJlc3M6",
+            "BKC7GAEiVgoQU3Rha2VJbmZvVXBkYXRlZBIcCglzdGFrZV9pZHMYASABKAsy",
+            "CS5IYXNoTGlzdBIeCgpwb29sX2RhdGFzGAIgASgLMgouUG9vbERhdGFzOgSg",
+            "uxgBIioKCUNvbmZpZ1NldBIXCgZjb25maWcYASABKAsyBy5Db25maWc6BKC7",
+            "GAEiLgoIQWRtaW5TZXQSHAoFYWRtaW4YASABKAsyDS5hZWxmLkFkZHJlc3M6",
+            "BKC7GAEiTwoMRGFwcEFkbWluU2V0EhsKB2RhcHBfaWQYASABKAsyCi5hZWxm",
+            "Lkhhc2gSHAoFYWRtaW4YAiABKAsyDS5hZWxmLkFkZHJlc3M6BKC7GAEiSQoR",
+            "Q29udHJhY3RDb25maWdTZXQSLgoXZWNvZWFybl9wb2ludHNfY29udHJhY3QY",
+            "ASABKAsyDS5hZWxmLkFkZHJlc3M6BKC7GAEiXgodVG9rZW5zUG9vbEZpeGVk",
+            "Qm9vc3RGYWN0b3JTZXQSGwoHcG9vbF9pZBgBIAEoCzIKLmFlbGYuSGFzaBIa",
+            "ChJmaXhlZF9ib29zdF9mYWN0b3IYAiABKAM6BKC7GAEylREKFUVjb0Vhcm5U",
+            "b2tlbnNDb250cmFjdBI0CghSZWdpc3RlchIOLlJlZ2lzdGVySW5wdXQaFi5n",
+            "b29nbGUucHJvdG9idWYuRW1wdHkiABI8CgxTZXREYXBwQWRtaW4SEi5TZXRE",
+            "YXBwQWRtaW5JbnB1dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIAEisKC0dl",
+            "dERhcHBJbmZvEgouYWVsZi5IYXNoGgkuRGFwcEluZm8iBYiJ9wEBEkQKEENy",
+            "ZWF0ZVRva2Vuc1Bvb2wSFi5DcmVhdGVUb2tlbnNQb29sSW5wdXQaFi5nb29n",
+            "bGUucHJvdG9idWYuRW1wdHkiABI3Cg9DbG9zZVRva2Vuc1Bvb2wSCi5hZWxm",
+            "Lkhhc2gaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiABJaChtTZXRUb2tlbnNQ",
+            "b29sRW5kQmxvY2tOdW1iZXISIS5TZXRUb2tlbnNQb29sRW5kQmxvY2tOdW1i",
+            "ZXJJbnB1dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIAElgKGlNldFRva2Vu",
+            "c1Bvb2xVcGRhdGVBZGRyZXNzEiAuU2V0VG9rZW5zUG9vbFVwZGF0ZUFkZHJl",
+            "c3NJbnB1dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIAEmQKIFNldFRva2Vu",
+            "c1Bvb2xSZXdhcmRSZWxlYXNlUGVyaW9kEiYuU2V0VG9rZW5zUG9vbFJld2Fy",
+            "ZFJlbGVhc2VQZXJpb2RJbnB1dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIA",
+            "ElQKGFNldFRva2Vuc1Bvb2xTdGFrZUNvbmZpZxIeLlNldFRva2Vuc1Bvb2xT",
+            "dGFrZUNvbmZpZ0lucHV0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IgASNAoL",
+            "R2V0UG9vbEluZm8SCi5hZWxmLkhhc2gaEi5HZXRQb29sSW5mb091dHB1dCIF",
+            "iIn3AQESKwoLR2V0UG9vbERhdGESCi5hZWxmLkhhc2gaCS5Qb29sRGF0YSIF",
+            "iIn3AQESOgoOR2V0UG9vbEFkZHJlc3MSCi5hZWxmLkhhc2gaFS5HZXRQb29s",
+            "QWRkcmVzc091dHB1dCIFiIn3AQESPgoMR2V0UG9vbENvdW50EgouYWVsZi5I",
+            "YXNoGhsuZ29vZ2xlLnByb3RvYnVmLkludDY0VmFsdWUiBYiJ9wEBEl4KHVNl",
+            "dFRva2Vuc1Bvb2xGaXhlZEJvb3N0RmFjdG9yEiMuU2V0VG9rZW5zUG9vbEZp",
+            "eGVkQm9vc3RGYWN0b3JJbnB1dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIA",
+            "Ei4KBVN0YWtlEgsuU3Rha2VJbnB1dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0",
+            "eSIAEjgKCkVhcmx5U3Rha2USEC5FYXJseVN0YWtlSW5wdXQaFi5nb29nbGUu",
+            "cHJvdG9idWYuRW1wdHkiABI0CghTdGFrZUZvchIOLlN0YWtlRm9ySW5wdXQa",
+            "Fi5nb29nbGUucHJvdG9idWYuRW1wdHkiABItCgxHZXRTdGFrZUluZm8SCi5h",
+            "ZWxmLkhhc2gaCi5TdGFrZUluZm8iBYiJ9wEBEjAKCUdldFJld2FyZBIKLmFl",
+            "bGYuSGFzaBoQLkdldFJld2FyZE91dHB1dCIFiIn3AQESLgoGVW5sb2NrEgou",
+            "YWVsZi5IYXNoGhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IgASOQoOR2V0VXNl",
+            "clN0YWtlSWQSFC5HZXRVc2VyU3Rha2VJZElucHV0GgouYWVsZi5IYXNoIgWI",
+            "ifcBARJQChFHZXRVc2VyU3Rha2VDb3VudBIXLkdldFVzZXJTdGFrZUNvdW50",
+            "SW5wdXQaGy5nb29nbGUucHJvdG9idWYuSW50NjRWYWx1ZSIFiIn3AQESLQoF",
+            "Q2xhaW0SCi5hZWxmLkhhc2gaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiABIt",
+            "CgxHZXRDbGFpbUluZm8SCi5hZWxmLkhhc2gaCi5DbGFpbUluZm8iBYiJ9wEB",
+            "EjQKCFdpdGhkcmF3Eg4uV2l0aGRyYXdJbnB1dBoWLmdvb2dsZS5wcm90b2J1",
+            "Zi5FbXB0eSIAEjwKDFJlY292ZXJUb2tlbhISLlJlY292ZXJUb2tlbklucHV0",
+            "GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IgASQgoPVXBkYXRlU3Rha2VJbmZv",
+            "EhUuVXBkYXRlU3Rha2VJbmZvSW5wdXQaFi5nb29nbGUucHJvdG9idWYuRW1w",
+            "dHkiABI4CgpJbml0aWFsaXplEhAuSW5pdGlhbGl6ZUlucHV0GhYuZ29vZ2xl",
+            "LnByb3RvYnVmLkVtcHR5IgASLgoJU2V0Q29uZmlnEgcuQ29uZmlnGhYuZ29v",
+            "Z2xlLnByb3RvYnVmLkVtcHR5IgASMwoJR2V0Q29uZmlnEhYuZ29vZ2xlLnBy",
+            "b3RvYnVmLkVtcHR5GgcuQ29uZmlnIgWIifcBARIzCghTZXRBZG1pbhINLmFl",
+            "bGYuQWRkcmVzcxoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIAEjgKCEdldEFk",
+            "bWluEhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5Gg0uYWVsZi5BZGRyZXNzIgWI",
+            "ifcBARI8ChFTZXRDb250cmFjdENvbmZpZxINLmFlbGYuQWRkcmVzcxoWLmdv",
+            "b2dsZS5wcm90b2J1Zi5FbXB0eSIAEkEKEUdldENvbnRyYWN0Q29uZmlnEhYu",
+            "Z29vZ2xlLnByb3RvYnVmLkVtcHR5Gg0uYWVsZi5BZGRyZXNzIgWIifcBARpI",
+            "ysr2AQthY3MxMi5wcm90b7LM9gEzRWNvRWFybi5Db250cmFjdHMuVG9rZW5z",
+            "LkVjb0Vhcm5Ub2tlbnNDb250cmFjdFN0YXRlQhuqAhhFY29FYXJuLkNvbnRy",
+            "YWN0cy5Ub2tlbnNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::AElf.Types.CoreReflection.Descriptor, global::AElf.OptionsReflection.Descriptor, global::AElf.Standards.ACS12.Acs12Reflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.RegisterInput), global::EcoEarn.Contracts.Tokens.RegisterInput.Parser, new[]{ "DappId", "Admin" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.DappInfo), global::EcoEarn.Contracts.Tokens.DappInfo.Parser, new[]{ "DappId", "Admin" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.CreateTokensPoolInput), global::EcoEarn.Contracts.Tokens.CreateTokensPoolInput.Parser, new[]{ "DappId", "Config" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.TokensPoolConfig), global::EcoEarn.Contracts.Tokens.TokensPoolConfig.Parser, new[]{ "RewardToken", "StartBlockNumber", "EndBlockNumber", "RewardPerBlock", "UpdateAddress", "StakingToken", "FixedBoostFactor", "MinimumAmount", "ReleasePeriod", "MaximumStakeDuration", "RewardTokenContract", "StakeTokenContract", "MinimumClaimAmount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.TokensPoolConfig), global::EcoEarn.Contracts.Tokens.TokensPoolConfig.Parser, new[]{ "RewardToken", "StartBlockNumber", "EndBlockNumber", "RewardPerBlock", "UpdateAddress", "StakingToken", "FixedBoostFactor", "MinimumAmount", "ReleasePeriod", "MaximumStakeDuration", "RewardTokenContract", "StakeTokenContract", "MinimumClaimAmount", "MinimumStakeDuration" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.SetTokensPoolEndBlockNumberInput), global::EcoEarn.Contracts.Tokens.SetTokensPoolEndBlockNumberInput.Parser, new[]{ "PoolId", "EndBlockNumber" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.RestartTokensPoolInput), global::EcoEarn.Contracts.Tokens.RestartTokensPoolInput.Parser, new[]{ "PoolId", "Config" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.SetTokensPoolUpdateAddressInput), global::EcoEarn.Contracts.Tokens.SetTokensPoolUpdateAddressInput.Parser, new[]{ "PoolId", "UpdateAddress" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.SetTokensPoolRewardReleasePeriodInput), global::EcoEarn.Contracts.Tokens.SetTokensPoolRewardReleasePeriodInput.Parser, new[]{ "PoolId", "ReleasePeriod" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.SetTokensPoolStakeConfigInput), global::EcoEarn.Contracts.Tokens.SetTokensPoolStakeConfigInput.Parser, new[]{ "PoolId", "MinimumAmount", "MaximumStakeDuration", "MinimumClaimAmount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.SetTokensPoolStakeConfigInput), global::EcoEarn.Contracts.Tokens.SetTokensPoolStakeConfigInput.Parser, new[]{ "PoolId", "MinimumAmount", "MaximumStakeDuration", "MinimumClaimAmount", "MinimumStakeDuration" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.SetTokensPoolFixedBoostFactorInput), global::EcoEarn.Contracts.Tokens.SetTokensPoolFixedBoostFactorInput.Parser, new[]{ "PoolId", "FixedBoostFactor" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.GetPoolInfoOutput), global::EcoEarn.Contracts.Tokens.GetPoolInfoOutput.Parser, new[]{ "PoolInfo", "Status" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.PoolInfo), global::EcoEarn.Contracts.Tokens.PoolInfo.Parser, new[]{ "DappId", "PoolId", "Config" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.PoolInfo), global::EcoEarn.Contracts.Tokens.PoolInfo.Parser, new[]{ "DappId", "PoolId", "Config", "PrecisionFactor" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.PoolData), global::EcoEarn.Contracts.Tokens.PoolData.Parser, new[]{ "PoolId", "AccTokenPerShare", "LastRewardBlock", "TotalStakedAmount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.StakeInput), global::EcoEarn.Contracts.Tokens.StakeInput.Parser, new[]{ "PoolId", "Amount", "Period" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.StakeInfo), global::EcoEarn.Contracts.Tokens.StakeInfo.Parser, new[]{ "StakeId", "PoolId", "StakedAmount", "EarlyStakedAmount", "StakedBlockNumber", "StakedTime", "Period", "Account", "BoostedAmount", "RewardDebt", "WithdrawTime", "RewardAmount", "LockedRewardAmount", "ClaimedAmount", "StakingToken", "LastOperationTime" }, null, null, null, null),
@@ -230,6 +237,7 @@ namespace EcoEarn.Contracts.Tokens {
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.InitializeInput), global::EcoEarn.Contracts.Tokens.InitializeInput.Parser, new[]{ "Admin", "EcoearnPointsContract", "CommissionRate", "Recipient", "IsRegisterRestricted" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.Config), global::EcoEarn.Contracts.Tokens.Config.Parser, new[]{ "CommissionRate", "Recipient", "IsRegisterRestricted" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.SetDappAdminInput), global::EcoEarn.Contracts.Tokens.SetDappAdminInput.Parser, new[]{ "DappId", "Admin" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.GetUserStakeIdInput), global::EcoEarn.Contracts.Tokens.GetUserStakeIdInput.Parser, new[]{ "PoolId", "Account" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.GetUserStakeCountInput), global::EcoEarn.Contracts.Tokens.GetUserStakeCountInput.Parser, new[]{ "PoolId", "Account" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.EarlyStakeInfo), global::EcoEarn.Contracts.Tokens.EarlyStakeInfo.Parser, new[]{ "Data" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.GetPoolAddressOutput), global::EcoEarn.Contracts.Tokens.GetPoolAddressOutput.Parser, new[]{ "StakeAddress", "RewardAddress" }, null, null, null, null),
@@ -237,10 +245,9 @@ namespace EcoEarn.Contracts.Tokens {
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.TokensPoolCreated), global::EcoEarn.Contracts.Tokens.TokensPoolCreated.Parser, new[]{ "DappId", "Config", "PoolId", "Amount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.TokensPoolClosed), global::EcoEarn.Contracts.Tokens.TokensPoolClosed.Parser, new[]{ "PoolId", "Config" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.TokensPoolEndBlockNumberSet), global::EcoEarn.Contracts.Tokens.TokensPoolEndBlockNumberSet.Parser, new[]{ "PoolId", "EndBlockNumber", "Amount" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.TokensPoolRestarted), global::EcoEarn.Contracts.Tokens.TokensPoolRestarted.Parser, new[]{ "PoolId", "Config", "Amount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.TokensPoolUpdateAddressSet), global::EcoEarn.Contracts.Tokens.TokensPoolUpdateAddressSet.Parser, new[]{ "PoolId", "UpdateAddress" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.TokensPoolRewardReleasePeriodSet), global::EcoEarn.Contracts.Tokens.TokensPoolRewardReleasePeriodSet.Parser, new[]{ "PoolId", "ReleasePeriod" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.TokensPoolStakeConfigSet), global::EcoEarn.Contracts.Tokens.TokensPoolStakeConfigSet.Parser, new[]{ "PoolId", "MinimumAmount", "MaximumStakeDuration", "MinimumClaimAmount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.TokensPoolStakeConfigSet), global::EcoEarn.Contracts.Tokens.TokensPoolStakeConfigSet.Parser, new[]{ "PoolId", "MinimumAmount", "MaximumStakeDuration", "MinimumClaimAmount", "MinimumStakeDuration" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.Staked), global::EcoEarn.Contracts.Tokens.Staked.Parser, new[]{ "StakeInfo", "PoolData" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.EarlyStaked), global::EcoEarn.Contracts.Tokens.EarlyStaked.Parser, new[]{ "PoolId", "StakeInfo", "PoolData", "ClaimInfos" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.Unlocked), global::EcoEarn.Contracts.Tokens.Unlocked.Parser, new[]{ "StakeId", "StakedAmount", "EarlyStakedAmount", "PoolData" }, null, null, null, null),
@@ -251,7 +258,8 @@ namespace EcoEarn.Contracts.Tokens {
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.ConfigSet), global::EcoEarn.Contracts.Tokens.ConfigSet.Parser, new[]{ "Config" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.AdminSet), global::EcoEarn.Contracts.Tokens.AdminSet.Parser, new[]{ "Admin" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.DappAdminSet), global::EcoEarn.Contracts.Tokens.DappAdminSet.Parser, new[]{ "DappId", "Admin" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.ContractConfigSet), global::EcoEarn.Contracts.Tokens.ContractConfigSet.Parser, new[]{ "EcoearnPointsContract" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.ContractConfigSet), global::EcoEarn.Contracts.Tokens.ContractConfigSet.Parser, new[]{ "EcoearnPointsContract" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Tokens.TokensPoolFixedBoostFactorSet), global::EcoEarn.Contracts.Tokens.TokensPoolFixedBoostFactorSet.Parser, new[]{ "PoolId", "FixedBoostFactor" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1037,6 +1045,7 @@ namespace EcoEarn.Contracts.Tokens {
       rewardTokenContract_ = other.rewardTokenContract_ != null ? other.rewardTokenContract_.Clone() : null;
       stakeTokenContract_ = other.stakeTokenContract_ != null ? other.stakeTokenContract_.Clone() : null;
       minimumClaimAmount_ = other.minimumClaimAmount_;
+      minimumStakeDuration_ = other.minimumStakeDuration_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1202,6 +1211,18 @@ namespace EcoEarn.Contracts.Tokens {
       }
     }
 
+    /// <summary>Field number for the "minimum_stake_duration" field.</summary>
+    public const int MinimumStakeDurationFieldNumber = 14;
+    private long minimumStakeDuration_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long MinimumStakeDuration {
+      get { return minimumStakeDuration_; }
+      set {
+        minimumStakeDuration_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1230,6 +1251,7 @@ namespace EcoEarn.Contracts.Tokens {
       if (!object.Equals(RewardTokenContract, other.RewardTokenContract)) return false;
       if (!object.Equals(StakeTokenContract, other.StakeTokenContract)) return false;
       if (MinimumClaimAmount != other.MinimumClaimAmount) return false;
+      if (MinimumStakeDuration != other.MinimumStakeDuration) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1250,6 +1272,7 @@ namespace EcoEarn.Contracts.Tokens {
       if (rewardTokenContract_ != null) hash ^= RewardTokenContract.GetHashCode();
       if (stakeTokenContract_ != null) hash ^= StakeTokenContract.GetHashCode();
       if (MinimumClaimAmount != 0L) hash ^= MinimumClaimAmount.GetHashCode();
+      if (MinimumStakeDuration != 0L) hash ^= MinimumStakeDuration.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1320,6 +1343,10 @@ namespace EcoEarn.Contracts.Tokens {
         output.WriteRawTag(104);
         output.WriteInt64(MinimumClaimAmount);
       }
+      if (MinimumStakeDuration != 0L) {
+        output.WriteRawTag(112);
+        output.WriteInt64(MinimumStakeDuration);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1382,6 +1409,10 @@ namespace EcoEarn.Contracts.Tokens {
         output.WriteRawTag(104);
         output.WriteInt64(MinimumClaimAmount);
       }
+      if (MinimumStakeDuration != 0L) {
+        output.WriteRawTag(112);
+        output.WriteInt64(MinimumStakeDuration);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1430,6 +1461,9 @@ namespace EcoEarn.Contracts.Tokens {
       }
       if (MinimumClaimAmount != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(MinimumClaimAmount);
+      }
+      if (MinimumStakeDuration != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(MinimumStakeDuration);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1490,6 +1524,9 @@ namespace EcoEarn.Contracts.Tokens {
       }
       if (other.MinimumClaimAmount != 0L) {
         MinimumClaimAmount = other.MinimumClaimAmount;
+      }
+      if (other.MinimumStakeDuration != 0L) {
+        MinimumStakeDuration = other.MinimumStakeDuration;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1567,6 +1604,10 @@ namespace EcoEarn.Contracts.Tokens {
             MinimumClaimAmount = input.ReadInt64();
             break;
           }
+          case 112: {
+            MinimumStakeDuration = input.ReadInt64();
+            break;
+          }
         }
       }
     #endif
@@ -1641,6 +1682,10 @@ namespace EcoEarn.Contracts.Tokens {
           }
           case 104: {
             MinimumClaimAmount = input.ReadInt64();
+            break;
+          }
+          case 112: {
+            MinimumStakeDuration = input.ReadInt64();
             break;
           }
         }
@@ -1885,250 +1930,6 @@ namespace EcoEarn.Contracts.Tokens {
 
   }
 
-  public sealed partial class RestartTokensPoolInput : pb::IMessage<RestartTokensPoolInput>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<RestartTokensPoolInput> _parser = new pb::MessageParser<RestartTokensPoolInput>(() => new RestartTokensPoolInput());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<RestartTokensPoolInput> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::EcoEarn.Contracts.Tokens.EcoearnTokensReflection.Descriptor.MessageTypes[5]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public RestartTokensPoolInput() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public RestartTokensPoolInput(RestartTokensPoolInput other) : this() {
-      poolId_ = other.poolId_ != null ? other.poolId_.Clone() : null;
-      config_ = other.config_ != null ? other.config_.Clone() : null;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public RestartTokensPoolInput Clone() {
-      return new RestartTokensPoolInput(this);
-    }
-
-    /// <summary>Field number for the "pool_id" field.</summary>
-    public const int PoolIdFieldNumber = 1;
-    private global::AElf.Types.Hash poolId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::AElf.Types.Hash PoolId {
-      get { return poolId_; }
-      set {
-        poolId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "config" field.</summary>
-    public const int ConfigFieldNumber = 2;
-    private global::EcoEarn.Contracts.Tokens.TokensPoolConfig config_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EcoEarn.Contracts.Tokens.TokensPoolConfig Config {
-      get { return config_; }
-      set {
-        config_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as RestartTokensPoolInput);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(RestartTokensPoolInput other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (!object.Equals(PoolId, other.PoolId)) return false;
-      if (!object.Equals(Config, other.Config)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (poolId_ != null) hash ^= PoolId.GetHashCode();
-      if (config_ != null) hash ^= Config.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (poolId_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(PoolId);
-      }
-      if (config_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(Config);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (poolId_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(PoolId);
-      }
-      if (config_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(Config);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (poolId_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PoolId);
-      }
-      if (config_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Config);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(RestartTokensPoolInput other) {
-      if (other == null) {
-        return;
-      }
-      if (other.poolId_ != null) {
-        if (poolId_ == null) {
-          PoolId = new global::AElf.Types.Hash();
-        }
-        PoolId.MergeFrom(other.PoolId);
-      }
-      if (other.config_ != null) {
-        if (config_ == null) {
-          Config = new global::EcoEarn.Contracts.Tokens.TokensPoolConfig();
-        }
-        Config.MergeFrom(other.Config);
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            if (poolId_ == null) {
-              PoolId = new global::AElf.Types.Hash();
-            }
-            input.ReadMessage(PoolId);
-            break;
-          }
-          case 18: {
-            if (config_ == null) {
-              Config = new global::EcoEarn.Contracts.Tokens.TokensPoolConfig();
-            }
-            input.ReadMessage(Config);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            if (poolId_ == null) {
-              PoolId = new global::AElf.Types.Hash();
-            }
-            input.ReadMessage(PoolId);
-            break;
-          }
-          case 18: {
-            if (config_ == null) {
-              Config = new global::EcoEarn.Contracts.Tokens.TokensPoolConfig();
-            }
-            input.ReadMessage(Config);
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
   public sealed partial class SetTokensPoolUpdateAddressInput : pb::IMessage<SetTokensPoolUpdateAddressInput>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2143,7 +1944,7 @@ namespace EcoEarn.Contracts.Tokens {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::EcoEarn.Contracts.Tokens.EcoearnTokensReflection.Descriptor.MessageTypes[6]; }
+      get { return global::EcoEarn.Contracts.Tokens.EcoearnTokensReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2387,7 +2188,7 @@ namespace EcoEarn.Contracts.Tokens {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::EcoEarn.Contracts.Tokens.EcoearnTokensReflection.Descriptor.MessageTypes[7]; }
+      get { return global::EcoEarn.Contracts.Tokens.EcoearnTokensReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2622,7 +2423,7 @@ namespace EcoEarn.Contracts.Tokens {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::EcoEarn.Contracts.Tokens.EcoearnTokensReflection.Descriptor.MessageTypes[8]; }
+      get { return global::EcoEarn.Contracts.Tokens.EcoearnTokensReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2646,6 +2447,7 @@ namespace EcoEarn.Contracts.Tokens {
       minimumAmount_ = other.minimumAmount_;
       maximumStakeDuration_ = other.maximumStakeDuration_;
       minimumClaimAmount_ = other.minimumClaimAmount_;
+      minimumStakeDuration_ = other.minimumStakeDuration_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2703,6 +2505,18 @@ namespace EcoEarn.Contracts.Tokens {
       }
     }
 
+    /// <summary>Field number for the "minimum_stake_duration" field.</summary>
+    public const int MinimumStakeDurationFieldNumber = 5;
+    private long minimumStakeDuration_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long MinimumStakeDuration {
+      get { return minimumStakeDuration_; }
+      set {
+        minimumStakeDuration_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2722,6 +2536,7 @@ namespace EcoEarn.Contracts.Tokens {
       if (MinimumAmount != other.MinimumAmount) return false;
       if (MaximumStakeDuration != other.MaximumStakeDuration) return false;
       if (MinimumClaimAmount != other.MinimumClaimAmount) return false;
+      if (MinimumStakeDuration != other.MinimumStakeDuration) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2733,6 +2548,7 @@ namespace EcoEarn.Contracts.Tokens {
       if (MinimumAmount != 0L) hash ^= MinimumAmount.GetHashCode();
       if (MaximumStakeDuration != 0L) hash ^= MaximumStakeDuration.GetHashCode();
       if (MinimumClaimAmount != 0L) hash ^= MinimumClaimAmount.GetHashCode();
+      if (MinimumStakeDuration != 0L) hash ^= MinimumStakeDuration.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2767,6 +2583,10 @@ namespace EcoEarn.Contracts.Tokens {
         output.WriteRawTag(32);
         output.WriteInt64(MinimumClaimAmount);
       }
+      if (MinimumStakeDuration != 0L) {
+        output.WriteRawTag(40);
+        output.WriteInt64(MinimumStakeDuration);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2793,6 +2613,10 @@ namespace EcoEarn.Contracts.Tokens {
         output.WriteRawTag(32);
         output.WriteInt64(MinimumClaimAmount);
       }
+      if (MinimumStakeDuration != 0L) {
+        output.WriteRawTag(40);
+        output.WriteInt64(MinimumStakeDuration);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2814,6 +2638,9 @@ namespace EcoEarn.Contracts.Tokens {
       }
       if (MinimumClaimAmount != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(MinimumClaimAmount);
+      }
+      if (MinimumStakeDuration != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(MinimumStakeDuration);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2841,6 +2668,9 @@ namespace EcoEarn.Contracts.Tokens {
       }
       if (other.MinimumClaimAmount != 0L) {
         MinimumClaimAmount = other.MinimumClaimAmount;
+      }
+      if (other.MinimumStakeDuration != 0L) {
+        MinimumStakeDuration = other.MinimumStakeDuration;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2876,6 +2706,10 @@ namespace EcoEarn.Contracts.Tokens {
             MinimumClaimAmount = input.ReadInt64();
             break;
           }
+          case 40: {
+            MinimumStakeDuration = input.ReadInt64();
+            break;
+          }
         }
       }
     #endif
@@ -2908,6 +2742,245 @@ namespace EcoEarn.Contracts.Tokens {
           }
           case 32: {
             MinimumClaimAmount = input.ReadInt64();
+            break;
+          }
+          case 40: {
+            MinimumStakeDuration = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class SetTokensPoolFixedBoostFactorInput : pb::IMessage<SetTokensPoolFixedBoostFactorInput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SetTokensPoolFixedBoostFactorInput> _parser = new pb::MessageParser<SetTokensPoolFixedBoostFactorInput>(() => new SetTokensPoolFixedBoostFactorInput());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SetTokensPoolFixedBoostFactorInput> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::EcoEarn.Contracts.Tokens.EcoearnTokensReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SetTokensPoolFixedBoostFactorInput() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SetTokensPoolFixedBoostFactorInput(SetTokensPoolFixedBoostFactorInput other) : this() {
+      poolId_ = other.poolId_ != null ? other.poolId_.Clone() : null;
+      fixedBoostFactor_ = other.fixedBoostFactor_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SetTokensPoolFixedBoostFactorInput Clone() {
+      return new SetTokensPoolFixedBoostFactorInput(this);
+    }
+
+    /// <summary>Field number for the "pool_id" field.</summary>
+    public const int PoolIdFieldNumber = 1;
+    private global::AElf.Types.Hash poolId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::AElf.Types.Hash PoolId {
+      get { return poolId_; }
+      set {
+        poolId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "fixed_boost_factor" field.</summary>
+    public const int FixedBoostFactorFieldNumber = 2;
+    private long fixedBoostFactor_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long FixedBoostFactor {
+      get { return fixedBoostFactor_; }
+      set {
+        fixedBoostFactor_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SetTokensPoolFixedBoostFactorInput);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SetTokensPoolFixedBoostFactorInput other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(PoolId, other.PoolId)) return false;
+      if (FixedBoostFactor != other.FixedBoostFactor) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (poolId_ != null) hash ^= PoolId.GetHashCode();
+      if (FixedBoostFactor != 0L) hash ^= FixedBoostFactor.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (poolId_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(PoolId);
+      }
+      if (FixedBoostFactor != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(FixedBoostFactor);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (poolId_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(PoolId);
+      }
+      if (FixedBoostFactor != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(FixedBoostFactor);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (poolId_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PoolId);
+      }
+      if (FixedBoostFactor != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(FixedBoostFactor);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SetTokensPoolFixedBoostFactorInput other) {
+      if (other == null) {
+        return;
+      }
+      if (other.poolId_ != null) {
+        if (poolId_ == null) {
+          PoolId = new global::AElf.Types.Hash();
+        }
+        PoolId.MergeFrom(other.PoolId);
+      }
+      if (other.FixedBoostFactor != 0L) {
+        FixedBoostFactor = other.FixedBoostFactor;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (poolId_ == null) {
+              PoolId = new global::AElf.Types.Hash();
+            }
+            input.ReadMessage(PoolId);
+            break;
+          }
+          case 16: {
+            FixedBoostFactor = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (poolId_ == null) {
+              PoolId = new global::AElf.Types.Hash();
+            }
+            input.ReadMessage(PoolId);
+            break;
+          }
+          case 16: {
+            FixedBoostFactor = input.ReadInt64();
             break;
           }
         }
@@ -3189,6 +3262,7 @@ namespace EcoEarn.Contracts.Tokens {
       dappId_ = other.dappId_ != null ? other.dappId_.Clone() : null;
       poolId_ = other.poolId_ != null ? other.poolId_.Clone() : null;
       config_ = other.config_ != null ? other.config_.Clone() : null;
+      precisionFactor_ = other.precisionFactor_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3234,6 +3308,18 @@ namespace EcoEarn.Contracts.Tokens {
       }
     }
 
+    /// <summary>Field number for the "precision_factor" field.</summary>
+    public const int PrecisionFactorFieldNumber = 4;
+    private long precisionFactor_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long PrecisionFactor {
+      get { return precisionFactor_; }
+      set {
+        precisionFactor_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3252,6 +3338,7 @@ namespace EcoEarn.Contracts.Tokens {
       if (!object.Equals(DappId, other.DappId)) return false;
       if (!object.Equals(PoolId, other.PoolId)) return false;
       if (!object.Equals(Config, other.Config)) return false;
+      if (PrecisionFactor != other.PrecisionFactor) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3262,6 +3349,7 @@ namespace EcoEarn.Contracts.Tokens {
       if (dappId_ != null) hash ^= DappId.GetHashCode();
       if (poolId_ != null) hash ^= PoolId.GetHashCode();
       if (config_ != null) hash ^= Config.GetHashCode();
+      if (PrecisionFactor != 0L) hash ^= PrecisionFactor.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3292,6 +3380,10 @@ namespace EcoEarn.Contracts.Tokens {
         output.WriteRawTag(26);
         output.WriteMessage(Config);
       }
+      if (PrecisionFactor != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(PrecisionFactor);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3314,6 +3406,10 @@ namespace EcoEarn.Contracts.Tokens {
         output.WriteRawTag(26);
         output.WriteMessage(Config);
       }
+      if (PrecisionFactor != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(PrecisionFactor);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3332,6 +3428,9 @@ namespace EcoEarn.Contracts.Tokens {
       }
       if (config_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Config);
+      }
+      if (PrecisionFactor != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(PrecisionFactor);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3362,6 +3461,9 @@ namespace EcoEarn.Contracts.Tokens {
           Config = new global::EcoEarn.Contracts.Tokens.TokensPoolConfig();
         }
         Config.MergeFrom(other.Config);
+      }
+      if (other.PrecisionFactor != 0L) {
+        PrecisionFactor = other.PrecisionFactor;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3399,6 +3501,10 @@ namespace EcoEarn.Contracts.Tokens {
             input.ReadMessage(Config);
             break;
           }
+          case 32: {
+            PrecisionFactor = input.ReadInt64();
+            break;
+          }
         }
       }
     #endif
@@ -3433,6 +3539,10 @@ namespace EcoEarn.Contracts.Tokens {
               Config = new global::EcoEarn.Contracts.Tokens.TokensPoolConfig();
             }
             input.ReadMessage(Config);
+            break;
+          }
+          case 32: {
+            PrecisionFactor = input.ReadInt64();
             break;
           }
         }
@@ -3477,7 +3587,7 @@ namespace EcoEarn.Contracts.Tokens {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PoolData(PoolData other) : this() {
       poolId_ = other.poolId_ != null ? other.poolId_.Clone() : null;
-      accTokenPerShare_ = other.accTokenPerShare_;
+      accTokenPerShare_ = other.accTokenPerShare_ != null ? other.accTokenPerShare_.Clone() : null;
       lastRewardBlock_ = other.lastRewardBlock_;
       totalStakedAmount_ = other.totalStakedAmount_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -3503,13 +3613,13 @@ namespace EcoEarn.Contracts.Tokens {
 
     /// <summary>Field number for the "acc_token_per_share" field.</summary>
     public const int AccTokenPerShareFieldNumber = 2;
-    private long accTokenPerShare_;
+    private global::AElf.Types.BigIntValue accTokenPerShare_;
     /// <summary>
     /// Accrued token per share
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long AccTokenPerShare {
+    public global::AElf.Types.BigIntValue AccTokenPerShare {
       get { return accTokenPerShare_; }
       set {
         accTokenPerShare_ = value;
@@ -3562,7 +3672,7 @@ namespace EcoEarn.Contracts.Tokens {
         return true;
       }
       if (!object.Equals(PoolId, other.PoolId)) return false;
-      if (AccTokenPerShare != other.AccTokenPerShare) return false;
+      if (!object.Equals(AccTokenPerShare, other.AccTokenPerShare)) return false;
       if (LastRewardBlock != other.LastRewardBlock) return false;
       if (TotalStakedAmount != other.TotalStakedAmount) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -3573,7 +3683,7 @@ namespace EcoEarn.Contracts.Tokens {
     public override int GetHashCode() {
       int hash = 1;
       if (poolId_ != null) hash ^= PoolId.GetHashCode();
-      if (AccTokenPerShare != 0L) hash ^= AccTokenPerShare.GetHashCode();
+      if (accTokenPerShare_ != null) hash ^= AccTokenPerShare.GetHashCode();
       if (LastRewardBlock != 0L) hash ^= LastRewardBlock.GetHashCode();
       if (TotalStakedAmount != 0L) hash ^= TotalStakedAmount.GetHashCode();
       if (_unknownFields != null) {
@@ -3598,9 +3708,9 @@ namespace EcoEarn.Contracts.Tokens {
         output.WriteRawTag(10);
         output.WriteMessage(PoolId);
       }
-      if (AccTokenPerShare != 0L) {
-        output.WriteRawTag(16);
-        output.WriteInt64(AccTokenPerShare);
+      if (accTokenPerShare_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(AccTokenPerShare);
       }
       if (LastRewardBlock != 0L) {
         output.WriteRawTag(24);
@@ -3624,9 +3734,9 @@ namespace EcoEarn.Contracts.Tokens {
         output.WriteRawTag(10);
         output.WriteMessage(PoolId);
       }
-      if (AccTokenPerShare != 0L) {
-        output.WriteRawTag(16);
-        output.WriteInt64(AccTokenPerShare);
+      if (accTokenPerShare_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(AccTokenPerShare);
       }
       if (LastRewardBlock != 0L) {
         output.WriteRawTag(24);
@@ -3649,8 +3759,8 @@ namespace EcoEarn.Contracts.Tokens {
       if (poolId_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PoolId);
       }
-      if (AccTokenPerShare != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(AccTokenPerShare);
+      if (accTokenPerShare_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AccTokenPerShare);
       }
       if (LastRewardBlock != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(LastRewardBlock);
@@ -3676,8 +3786,11 @@ namespace EcoEarn.Contracts.Tokens {
         }
         PoolId.MergeFrom(other.PoolId);
       }
-      if (other.AccTokenPerShare != 0L) {
-        AccTokenPerShare = other.AccTokenPerShare;
+      if (other.accTokenPerShare_ != null) {
+        if (accTokenPerShare_ == null) {
+          AccTokenPerShare = new global::AElf.Types.BigIntValue();
+        }
+        AccTokenPerShare.MergeFrom(other.AccTokenPerShare);
       }
       if (other.LastRewardBlock != 0L) {
         LastRewardBlock = other.LastRewardBlock;
@@ -3707,8 +3820,11 @@ namespace EcoEarn.Contracts.Tokens {
             input.ReadMessage(PoolId);
             break;
           }
-          case 16: {
-            AccTokenPerShare = input.ReadInt64();
+          case 18: {
+            if (accTokenPerShare_ == null) {
+              AccTokenPerShare = new global::AElf.Types.BigIntValue();
+            }
+            input.ReadMessage(AccTokenPerShare);
             break;
           }
           case 24: {
@@ -3741,8 +3857,11 @@ namespace EcoEarn.Contracts.Tokens {
             input.ReadMessage(PoolId);
             break;
           }
-          case 16: {
-            AccTokenPerShare = input.ReadInt64();
+          case 18: {
+            if (accTokenPerShare_ == null) {
+              AccTokenPerShare = new global::AElf.Types.BigIntValue();
+            }
+            input.ReadMessage(AccTokenPerShare);
             break;
           }
           case 24: {
@@ -8455,6 +8574,250 @@ namespace EcoEarn.Contracts.Tokens {
 
   }
 
+  public sealed partial class GetUserStakeIdInput : pb::IMessage<GetUserStakeIdInput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GetUserStakeIdInput> _parser = new pb::MessageParser<GetUserStakeIdInput>(() => new GetUserStakeIdInput());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GetUserStakeIdInput> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::EcoEarn.Contracts.Tokens.EcoearnTokensReflection.Descriptor.MessageTypes[27]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetUserStakeIdInput() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetUserStakeIdInput(GetUserStakeIdInput other) : this() {
+      poolId_ = other.poolId_ != null ? other.poolId_.Clone() : null;
+      account_ = other.account_ != null ? other.account_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetUserStakeIdInput Clone() {
+      return new GetUserStakeIdInput(this);
+    }
+
+    /// <summary>Field number for the "pool_id" field.</summary>
+    public const int PoolIdFieldNumber = 1;
+    private global::AElf.Types.Hash poolId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::AElf.Types.Hash PoolId {
+      get { return poolId_; }
+      set {
+        poolId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "account" field.</summary>
+    public const int AccountFieldNumber = 2;
+    private global::AElf.Types.Address account_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::AElf.Types.Address Account {
+      get { return account_; }
+      set {
+        account_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GetUserStakeIdInput);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GetUserStakeIdInput other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(PoolId, other.PoolId)) return false;
+      if (!object.Equals(Account, other.Account)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (poolId_ != null) hash ^= PoolId.GetHashCode();
+      if (account_ != null) hash ^= Account.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (poolId_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(PoolId);
+      }
+      if (account_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Account);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (poolId_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(PoolId);
+      }
+      if (account_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Account);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (poolId_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PoolId);
+      }
+      if (account_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Account);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GetUserStakeIdInput other) {
+      if (other == null) {
+        return;
+      }
+      if (other.poolId_ != null) {
+        if (poolId_ == null) {
+          PoolId = new global::AElf.Types.Hash();
+        }
+        PoolId.MergeFrom(other.PoolId);
+      }
+      if (other.account_ != null) {
+        if (account_ == null) {
+          Account = new global::AElf.Types.Address();
+        }
+        Account.MergeFrom(other.Account);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (poolId_ == null) {
+              PoolId = new global::AElf.Types.Hash();
+            }
+            input.ReadMessage(PoolId);
+            break;
+          }
+          case 18: {
+            if (account_ == null) {
+              Account = new global::AElf.Types.Address();
+            }
+            input.ReadMessage(Account);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (poolId_ == null) {
+              PoolId = new global::AElf.Types.Hash();
+            }
+            input.ReadMessage(PoolId);
+            break;
+          }
+          case 18: {
+            if (account_ == null) {
+              Account = new global::AElf.Types.Address();
+            }
+            input.ReadMessage(Account);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
   public sealed partial class GetUserStakeCountInput : pb::IMessage<GetUserStakeCountInput>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8469,7 +8832,7 @@ namespace EcoEarn.Contracts.Tokens {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::EcoEarn.Contracts.Tokens.EcoearnTokensReflection.Descriptor.MessageTypes[27]; }
+      get { return global::EcoEarn.Contracts.Tokens.EcoearnTokensReflection.Descriptor.MessageTypes[28]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8713,7 +9076,7 @@ namespace EcoEarn.Contracts.Tokens {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::EcoEarn.Contracts.Tokens.EcoearnTokensReflection.Descriptor.MessageTypes[28]; }
+      get { return global::EcoEarn.Contracts.Tokens.EcoearnTokensReflection.Descriptor.MessageTypes[29]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8891,7 +9254,7 @@ namespace EcoEarn.Contracts.Tokens {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::EcoEarn.Contracts.Tokens.EcoearnTokensReflection.Descriptor.MessageTypes[29]; }
+      get { return global::EcoEarn.Contracts.Tokens.EcoearnTokensReflection.Descriptor.MessageTypes[30]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9138,7 +9501,7 @@ namespace EcoEarn.Contracts.Tokens {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::EcoEarn.Contracts.Tokens.EcoearnTokensReflection.Descriptor.MessageTypes[30]; }
+      get { return global::EcoEarn.Contracts.Tokens.EcoearnTokensReflection.Descriptor.MessageTypes[31]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9382,7 +9745,7 @@ namespace EcoEarn.Contracts.Tokens {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::EcoEarn.Contracts.Tokens.EcoearnTokensReflection.Descriptor.MessageTypes[31]; }
+      get { return global::EcoEarn.Contracts.Tokens.EcoearnTokensReflection.Descriptor.MessageTypes[32]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9709,7 +10072,7 @@ namespace EcoEarn.Contracts.Tokens {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::EcoEarn.Contracts.Tokens.EcoearnTokensReflection.Descriptor.MessageTypes[32]; }
+      get { return global::EcoEarn.Contracts.Tokens.EcoearnTokensReflection.Descriptor.MessageTypes[33]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9953,7 +10316,7 @@ namespace EcoEarn.Contracts.Tokens {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::EcoEarn.Contracts.Tokens.EcoearnTokensReflection.Descriptor.MessageTypes[33]; }
+      get { return global::EcoEarn.Contracts.Tokens.EcoearnTokensReflection.Descriptor.MessageTypes[34]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10198,287 +10561,6 @@ namespace EcoEarn.Contracts.Tokens {
           }
           case 16: {
             EndBlockNumber = input.ReadInt64();
-            break;
-          }
-          case 24: {
-            Amount = input.ReadInt64();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  public sealed partial class TokensPoolRestarted : pb::IMessage<TokensPoolRestarted>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<TokensPoolRestarted> _parser = new pb::MessageParser<TokensPoolRestarted>(() => new TokensPoolRestarted());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<TokensPoolRestarted> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::EcoEarn.Contracts.Tokens.EcoearnTokensReflection.Descriptor.MessageTypes[34]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public TokensPoolRestarted() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public TokensPoolRestarted(TokensPoolRestarted other) : this() {
-      poolId_ = other.poolId_ != null ? other.poolId_.Clone() : null;
-      config_ = other.config_ != null ? other.config_.Clone() : null;
-      amount_ = other.amount_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public TokensPoolRestarted Clone() {
-      return new TokensPoolRestarted(this);
-    }
-
-    /// <summary>Field number for the "pool_id" field.</summary>
-    public const int PoolIdFieldNumber = 1;
-    private global::AElf.Types.Hash poolId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::AElf.Types.Hash PoolId {
-      get { return poolId_; }
-      set {
-        poolId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "config" field.</summary>
-    public const int ConfigFieldNumber = 2;
-    private global::EcoEarn.Contracts.Tokens.TokensPoolConfig config_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EcoEarn.Contracts.Tokens.TokensPoolConfig Config {
-      get { return config_; }
-      set {
-        config_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "amount" field.</summary>
-    public const int AmountFieldNumber = 3;
-    private long amount_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long Amount {
-      get { return amount_; }
-      set {
-        amount_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as TokensPoolRestarted);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(TokensPoolRestarted other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (!object.Equals(PoolId, other.PoolId)) return false;
-      if (!object.Equals(Config, other.Config)) return false;
-      if (Amount != other.Amount) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (poolId_ != null) hash ^= PoolId.GetHashCode();
-      if (config_ != null) hash ^= Config.GetHashCode();
-      if (Amount != 0L) hash ^= Amount.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (poolId_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(PoolId);
-      }
-      if (config_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(Config);
-      }
-      if (Amount != 0L) {
-        output.WriteRawTag(24);
-        output.WriteInt64(Amount);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (poolId_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(PoolId);
-      }
-      if (config_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(Config);
-      }
-      if (Amount != 0L) {
-        output.WriteRawTag(24);
-        output.WriteInt64(Amount);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (poolId_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PoolId);
-      }
-      if (config_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Config);
-      }
-      if (Amount != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Amount);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(TokensPoolRestarted other) {
-      if (other == null) {
-        return;
-      }
-      if (other.poolId_ != null) {
-        if (poolId_ == null) {
-          PoolId = new global::AElf.Types.Hash();
-        }
-        PoolId.MergeFrom(other.PoolId);
-      }
-      if (other.config_ != null) {
-        if (config_ == null) {
-          Config = new global::EcoEarn.Contracts.Tokens.TokensPoolConfig();
-        }
-        Config.MergeFrom(other.Config);
-      }
-      if (other.Amount != 0L) {
-        Amount = other.Amount;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            if (poolId_ == null) {
-              PoolId = new global::AElf.Types.Hash();
-            }
-            input.ReadMessage(PoolId);
-            break;
-          }
-          case 18: {
-            if (config_ == null) {
-              Config = new global::EcoEarn.Contracts.Tokens.TokensPoolConfig();
-            }
-            input.ReadMessage(Config);
-            break;
-          }
-          case 24: {
-            Amount = input.ReadInt64();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            if (poolId_ == null) {
-              PoolId = new global::AElf.Types.Hash();
-            }
-            input.ReadMessage(PoolId);
-            break;
-          }
-          case 18: {
-            if (config_ == null) {
-              Config = new global::EcoEarn.Contracts.Tokens.TokensPoolConfig();
-            }
-            input.ReadMessage(Config);
             break;
           }
           case 24: {
@@ -11009,6 +11091,7 @@ namespace EcoEarn.Contracts.Tokens {
       minimumAmount_ = other.minimumAmount_;
       maximumStakeDuration_ = other.maximumStakeDuration_;
       minimumClaimAmount_ = other.minimumClaimAmount_;
+      minimumStakeDuration_ = other.minimumStakeDuration_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -11066,6 +11149,18 @@ namespace EcoEarn.Contracts.Tokens {
       }
     }
 
+    /// <summary>Field number for the "minimum_stake_duration" field.</summary>
+    public const int MinimumStakeDurationFieldNumber = 5;
+    private long minimumStakeDuration_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long MinimumStakeDuration {
+      get { return minimumStakeDuration_; }
+      set {
+        minimumStakeDuration_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -11085,6 +11180,7 @@ namespace EcoEarn.Contracts.Tokens {
       if (MinimumAmount != other.MinimumAmount) return false;
       if (MaximumStakeDuration != other.MaximumStakeDuration) return false;
       if (MinimumClaimAmount != other.MinimumClaimAmount) return false;
+      if (MinimumStakeDuration != other.MinimumStakeDuration) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -11096,6 +11192,7 @@ namespace EcoEarn.Contracts.Tokens {
       if (MinimumAmount != 0L) hash ^= MinimumAmount.GetHashCode();
       if (MaximumStakeDuration != 0L) hash ^= MaximumStakeDuration.GetHashCode();
       if (MinimumClaimAmount != 0L) hash ^= MinimumClaimAmount.GetHashCode();
+      if (MinimumStakeDuration != 0L) hash ^= MinimumStakeDuration.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -11130,6 +11227,10 @@ namespace EcoEarn.Contracts.Tokens {
         output.WriteRawTag(32);
         output.WriteInt64(MinimumClaimAmount);
       }
+      if (MinimumStakeDuration != 0L) {
+        output.WriteRawTag(40);
+        output.WriteInt64(MinimumStakeDuration);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -11156,6 +11257,10 @@ namespace EcoEarn.Contracts.Tokens {
         output.WriteRawTag(32);
         output.WriteInt64(MinimumClaimAmount);
       }
+      if (MinimumStakeDuration != 0L) {
+        output.WriteRawTag(40);
+        output.WriteInt64(MinimumStakeDuration);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -11177,6 +11282,9 @@ namespace EcoEarn.Contracts.Tokens {
       }
       if (MinimumClaimAmount != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(MinimumClaimAmount);
+      }
+      if (MinimumStakeDuration != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(MinimumStakeDuration);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -11204,6 +11312,9 @@ namespace EcoEarn.Contracts.Tokens {
       }
       if (other.MinimumClaimAmount != 0L) {
         MinimumClaimAmount = other.MinimumClaimAmount;
+      }
+      if (other.MinimumStakeDuration != 0L) {
+        MinimumStakeDuration = other.MinimumStakeDuration;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -11239,6 +11350,10 @@ namespace EcoEarn.Contracts.Tokens {
             MinimumClaimAmount = input.ReadInt64();
             break;
           }
+          case 40: {
+            MinimumStakeDuration = input.ReadInt64();
+            break;
+          }
         }
       }
     #endif
@@ -11271,6 +11386,10 @@ namespace EcoEarn.Contracts.Tokens {
           }
           case 32: {
             MinimumClaimAmount = input.ReadInt64();
+            break;
+          }
+          case 40: {
+            MinimumStakeDuration = input.ReadInt64();
             break;
           }
         }
@@ -14011,6 +14130,241 @@ namespace EcoEarn.Contracts.Tokens {
               EcoearnPointsContract = new global::AElf.Types.Address();
             }
             input.ReadMessage(EcoearnPointsContract);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class TokensPoolFixedBoostFactorSet : pb::IMessage<TokensPoolFixedBoostFactorSet>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TokensPoolFixedBoostFactorSet> _parser = new pb::MessageParser<TokensPoolFixedBoostFactorSet>(() => new TokensPoolFixedBoostFactorSet());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<TokensPoolFixedBoostFactorSet> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::EcoEarn.Contracts.Tokens.EcoearnTokensReflection.Descriptor.MessageTypes[49]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TokensPoolFixedBoostFactorSet() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TokensPoolFixedBoostFactorSet(TokensPoolFixedBoostFactorSet other) : this() {
+      poolId_ = other.poolId_ != null ? other.poolId_.Clone() : null;
+      fixedBoostFactor_ = other.fixedBoostFactor_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TokensPoolFixedBoostFactorSet Clone() {
+      return new TokensPoolFixedBoostFactorSet(this);
+    }
+
+    /// <summary>Field number for the "pool_id" field.</summary>
+    public const int PoolIdFieldNumber = 1;
+    private global::AElf.Types.Hash poolId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::AElf.Types.Hash PoolId {
+      get { return poolId_; }
+      set {
+        poolId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "fixed_boost_factor" field.</summary>
+    public const int FixedBoostFactorFieldNumber = 2;
+    private long fixedBoostFactor_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long FixedBoostFactor {
+      get { return fixedBoostFactor_; }
+      set {
+        fixedBoostFactor_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as TokensPoolFixedBoostFactorSet);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(TokensPoolFixedBoostFactorSet other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(PoolId, other.PoolId)) return false;
+      if (FixedBoostFactor != other.FixedBoostFactor) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (poolId_ != null) hash ^= PoolId.GetHashCode();
+      if (FixedBoostFactor != 0L) hash ^= FixedBoostFactor.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (poolId_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(PoolId);
+      }
+      if (FixedBoostFactor != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(FixedBoostFactor);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (poolId_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(PoolId);
+      }
+      if (FixedBoostFactor != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(FixedBoostFactor);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (poolId_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PoolId);
+      }
+      if (FixedBoostFactor != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(FixedBoostFactor);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(TokensPoolFixedBoostFactorSet other) {
+      if (other == null) {
+        return;
+      }
+      if (other.poolId_ != null) {
+        if (poolId_ == null) {
+          PoolId = new global::AElf.Types.Hash();
+        }
+        PoolId.MergeFrom(other.PoolId);
+      }
+      if (other.FixedBoostFactor != 0L) {
+        FixedBoostFactor = other.FixedBoostFactor;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (poolId_ == null) {
+              PoolId = new global::AElf.Types.Hash();
+            }
+            input.ReadMessage(PoolId);
+            break;
+          }
+          case 16: {
+            FixedBoostFactor = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (poolId_ == null) {
+              PoolId = new global::AElf.Types.Hash();
+            }
+            input.ReadMessage(PoolId);
+            break;
+          }
+          case 16: {
+            FixedBoostFactor = input.ReadInt64();
             break;
           }
         }

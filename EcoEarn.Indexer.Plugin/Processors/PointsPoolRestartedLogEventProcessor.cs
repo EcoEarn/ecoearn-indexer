@@ -12,15 +12,15 @@ using PointsPoolConfig = EcoEarn.Indexer.Plugin.Entities.PointsPoolConfig;
 
 namespace EcoEarn.Indexer.Plugin.Processors;
 
-public class PointsPoolCreatedLogEventProcessor : AElfLogEventProcessorBase<PointsPoolCreated, LogEventInfo>
+public class PointsPoolRestartedLogEventProcessor : AElfLogEventProcessorBase<PointsPoolRestarted, LogEventInfo>
 {
     private readonly IObjectMapper _objectMapper;
     private readonly ContractInfoOptions _contractInfoOptions;
-    private readonly ILogger<PointsPoolCreatedLogEventProcessor> _logger;
+    private readonly ILogger<PointsPoolRestartedLogEventProcessor> _logger;
     private readonly IAElfIndexerClientEntityRepository<PointsPoolIndex, LogEventInfo> _pointsPoolRepository;
 
 
-    public PointsPoolCreatedLogEventProcessor(ILogger<PointsPoolCreatedLogEventProcessor> logger,
+    public PointsPoolRestartedLogEventProcessor(ILogger<PointsPoolRestartedLogEventProcessor> logger,
         IObjectMapper objectMapper, IOptionsSnapshot<ContractInfoOptions> contractInfoOptions,
         IAElfIndexerClientEntityRepository<PointsPoolIndex, LogEventInfo> pointsPoolRepository) : base(logger)
     {
@@ -35,26 +35,21 @@ public class PointsPoolCreatedLogEventProcessor : AElfLogEventProcessorBase<Poin
         return _contractInfoOptions.ContractInfos.First(c => c.ChainId == chainId).EcoEarnPointsContractAddress;
     }
 
-    protected override async Task HandleEventAsync(PointsPoolCreated eventValue, LogEventContext context)
+    protected override async Task HandleEventAsync(PointsPoolRestarted eventValue, LogEventContext context)
     {
         try
         {
-            _logger.Debug("PointsPoolCreated: {eventValue} context: {context}", JsonConvert.SerializeObject(eventValue),
+            _logger.Debug("PointsPoolRestarted: {eventValue} context: {context}", JsonConvert.SerializeObject(eventValue),
                 JsonConvert.SerializeObject(context));
             var id = IdGenerateHelper.GetId(eventValue.PoolId.ToHex());
-            if (await _pointsPoolRepository.GetAsync(id) != null)
-            {
-                _logger.LogWarning("Points Pool {id} of {DApp} exists", eventValue.PoolId.ToHex(),
-                    eventValue.DappId.ToHex());
-                return;
-            }
-
-            var user = new PointsPoolIndex
+            var pointsPoolIndex = await _pointsPoolRepository.GetAsync(id);
+          
+            var pointsPool = new PointsPoolIndex
             {
                 Id = id,
-                DappId = eventValue.DappId.ToHex(),
+                DappId = pointsPoolIndex.DappId,
                 PoolId = eventValue.PoolId.ToHex(),
-                PointsName = eventValue.PointsName,
+                PointsName = pointsPoolIndex.PointsName,
                 Amount = eventValue.Amount.ToString(),
                 PointsPoolConfig = new PointsPoolConfig()
                 {
@@ -67,13 +62,13 @@ public class PointsPoolCreatedLogEventProcessor : AElfLogEventProcessorBase<Poin
                 },
                 CreateTime = context.BlockTime.ToUtcMilliSeconds()
             };
-
-            _objectMapper.Map(context, user);
-            await _pointsPoolRepository.AddOrUpdateAsync(user);
+            
+            _objectMapper.Map(context, pointsPool);
+            await _pointsPoolRepository.AddOrUpdateAsync(pointsPool);
         }
         catch (Exception e)
         {
-            _logger.LogError(e, "PointsPoolCreated HandleEventAsync error.");
+            _logger.LogError(e, "PointsPoolRestarted HandleEventAsync error.");
         }
     }
 }

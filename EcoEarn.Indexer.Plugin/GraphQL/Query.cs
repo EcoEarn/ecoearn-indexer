@@ -23,6 +23,11 @@ public partial class Query
             mustQuery.Add(q => q.Term(i => i.Field(f => f.PointsName).Value(input.Name)));
         }
 
+        if (!input.PoolIds.IsNullOrEmpty())
+        {
+            mustQuery.Add(q => q.Terms(i => i.Field(f => f.PoolId).Terms(input.PoolIds)));
+        }
+
         QueryContainer Filter(QueryContainerDescriptor<PointsPoolIndex> f) =>
             f.Bool(b => b.Must(mustQuery));
 
@@ -45,13 +50,21 @@ public partial class Query
     {
         var mustQuery = new List<Func<QueryContainerDescriptor<TokenPoolIndex>, QueryContainer>>();
 
-        mustQuery.Add(q => q.Term(i => i.Field(f => f.PoolType).Value(input.PoolType)));
-
+        if (input.PoolType != PoolType.All)
+        {
+            mustQuery.Add(q => q.Term(i => i.Field(f => f.PoolType).Value(input.PoolType)));
+        }
+        
         if (!string.IsNullOrEmpty(input.TokenName))
         {
-            mustQuery.Add(q => q.Term(i => i.Field(f => f.TokenPoolConfig.RewardToken).Value(input.TokenName)));
+            mustQuery.Add(q => q.Term(i => i.Field(f => f.TokenPoolConfig.StakingToken).Value(input.TokenName)));
         }
-
+        
+        if (!input.PoolIds.IsNullOrEmpty())
+        {
+            mustQuery.Add(q => q.Terms(i => i.Field(f => f.PoolId).Terms(input.PoolIds)));
+        }
+        
         QueryContainer Filter(QueryContainerDescriptor<TokenPoolIndex> f) =>
             f.Bool(b => b.Must(mustQuery));
 
@@ -113,12 +126,22 @@ public partial class Query
     {
         var mustQuery = new List<Func<QueryContainerDescriptor<RewardsClaimIndex>, QueryContainer>>();
 
-        mustQuery.Add(q => q.Term(i => i.Field(f => f.PoolType).Value(input.PoolType)));
+        mustQuery.Add(q => q.Term(i => i.Field(f => f.Account).Value(input.Address)));
+
+        if (input.PoolType != PoolType.All)
+        {
+            mustQuery.Add(q => q.Term(i => i.Field(f => f.PoolType).Value(input.PoolType)));
+        }
 
         if (input.FilterUnlock)
         {
             mustQuery.Add(q =>
                 q.LongRange(i => i.Field(f => f.UnlockTime).LessThan(DateTime.UtcNow.ToUtcMilliSeconds())));
+        }
+
+        if (input.FilterWithdraw)
+        {
+            mustQuery.Add(q => q.Term(i => i.Field(f => f.WithdrawTime).Value(0)));
         }
 
         QueryContainer Filter(QueryContainerDescriptor<RewardsClaimIndex> f) =>
@@ -133,5 +156,37 @@ public partial class Query
             Data = dataList,
             TotalCount = recordList.Item1
         };
+    }
+
+    [Name("getUnLockedStakeIdsAsync")]
+    public static async Task<List<string>> GetUnLockedStakeIdsAsync(
+        [FromServices] IAElfIndexerClientEntityRepository<TokenStakedIndex, LogEventInfo> repository,
+        [FromServices] IObjectMapper objectMapper,
+        GetUnLockedStakeIdsInput input)
+    {
+        var mustQuery = new List<Func<QueryContainerDescriptor<TokenStakedIndex>, QueryContainer>>();
+
+        if (!string.IsNullOrEmpty(input.Address))
+        {
+            mustQuery.Add(q => q.Term(i => i.Field(f => f.Account).Value(input.Address)));
+        }
+
+        if (!input.StakeIds.IsNullOrEmpty())
+        {
+            mustQuery.Add(q => q.Terms(i => i.Field(f => f.StakeId).Terms(input.StakeIds)));
+        }
+
+
+        QueryContainer Filter(QueryContainerDescriptor<TokenStakedIndex> f) =>
+            f.Bool(b => b.Must(mustQuery));
+
+        var recordList = await repository.GetListAsync(Filter, skip: input.SkipCount, limit: input.MaxResultCount);
+
+        var dataList =
+            objectMapper.Map<List<TokenStakedIndex>, List<StakedInfoDto>>(recordList.Item2);
+
+        return dataList.Where(x => x.StakedTime + x.Period * 1000 < DateTime.UtcNow.ToUtcMilliSeconds())
+            .Select(x => x.StakeId)
+            .ToList();
     }
 }

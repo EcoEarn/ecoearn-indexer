@@ -43,18 +43,12 @@ public class TokenPoolStakedLogEventProcessor : AElfLogEventProcessorBase<Staked
             _logger.Debug("TokenStaked: {eventValue} context: {context}", JsonConvert.SerializeObject(eventValue),
                 JsonConvert.SerializeObject(context));
             var id = IdGenerateHelper.GetId(eventValue.StakeInfo.PoolId.ToHex(), eventValue.StakeInfo.StakeId.ToHex());
-            if (await _tokenStakeRepository.GetAsync(id) != null)
-            {
-                _logger.LogWarning("Token Pool {id} of {Staked} exists", eventValue.StakeInfo.PoolId.ToHex(),
-                    eventValue.StakeInfo.StakeId.ToHex());
-                return;
-            }
-
+            
             var tokenStakedIndex = new TokenStakedIndex
             {
                 Id = id,
-                StakeId = eventValue.StakeInfo.StakeId.ToHex(),
-                PoolId = eventValue.StakeInfo.PoolId.ToHex(),
+                StakeId = eventValue.StakeInfo.StakeId == null ? "" : eventValue.StakeInfo.StakeId.ToHex(),
+                PoolId = eventValue.StakeInfo.PoolId == null ? "" : eventValue.StakeInfo.PoolId.ToHex(),
                 StakingToken = eventValue.StakeInfo.StakingToken,
                 StakedAmount = eventValue.StakeInfo.StakedAmount,
                 EarlyStakedAmount = eventValue.StakeInfo.EarlyStakedAmount,

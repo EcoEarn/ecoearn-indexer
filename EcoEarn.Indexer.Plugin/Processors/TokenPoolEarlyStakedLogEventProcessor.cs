@@ -91,9 +91,9 @@ public class TokenPoolEarlyStakedLogEventProcessor : AElfLogEventProcessorBase<E
                     var rewardsClaim = new RewardsClaimIndex
                     {
                         Id = claimId,
-                        ClaimId = claimInfo.ClaimId.ToHex(),
-                        StakeId = claimInfo.StakeId.ToHex(),
-                        PoolId = claimInfo.PoolId.ToHex(),
+                        ClaimId = claimInfo.ClaimId == null ? "" : claimInfo.ClaimId.ToHex(),
+                        StakeId = claimInfo.StakeId == null ? "" : claimInfo.StakeId.ToHex(),
+                        PoolId = claimInfo.PoolId == null ? "" : claimInfo.PoolId.ToHex(),
                         ClaimedAmount = claimInfo.ClaimedAmount.ToString(),
                         ClaimedSymbol = claimInfo.ClaimedSymbol,
                         ClaimedBlockNumber = claimInfo.ClaimedBlockNumber,

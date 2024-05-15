@@ -7,4 +7,5 @@ public class GetTokenPoolListInput : PagedResultRequestDto
 {
     public string TokenName { get; set; }
     public PoolType PoolType { get; set; }
+    public List<string> PoolIds { get; set; }
 }

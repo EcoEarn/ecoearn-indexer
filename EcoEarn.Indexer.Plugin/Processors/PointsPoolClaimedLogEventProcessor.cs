@@ -46,7 +46,7 @@ public class PointsPoolClaimedLogEventProcessor : AElfLogEventProcessorBase<Clai
             {
                 Id = id,
                 ClaimId = eventValue.ClaimInfo.ClaimId.ToHex(),
-                StakeId = eventValue.ClaimInfo.StakeId.ToHex(),
+                StakeId = eventValue.ClaimInfo.StakeId == null ? "" : eventValue.ClaimInfo.StakeId.ToHex(),
                 PoolId = eventValue.ClaimInfo.PoolId.ToHex(),
                 ClaimedAmount = eventValue.ClaimInfo.ClaimedAmount.ToString(),
                 ClaimedSymbol = eventValue.ClaimInfo.ClaimedSymbol,
@@ -54,7 +54,7 @@ public class PointsPoolClaimedLogEventProcessor : AElfLogEventProcessorBase<Clai
                 ClaimedTime = eventValue.ClaimInfo.ClaimedTime == null ? 0 : eventValue.ClaimInfo.ClaimedTime.ToDateTime().ToUtcMilliSeconds(),
                 UnlockTime = eventValue.ClaimInfo.UnlockTime == null ? 0 : eventValue.ClaimInfo.UnlockTime.ToDateTime().ToUtcMilliSeconds(),
                 WithdrawTime = eventValue.ClaimInfo.WithdrawTime == null ? 0 : eventValue.ClaimInfo.WithdrawTime.ToDateTime().ToUtcMilliSeconds(),
-                Account = eventValue.ClaimInfo.Account.ToString(),
+                Account = eventValue.ClaimInfo.Account.ToBase58(),
                 EarlyStakeTime = eventValue.ClaimInfo.EarlyStakeTime == null ? 0 : eventValue.ClaimInfo.EarlyStakeTime.ToDateTime().ToUtcMilliSeconds(),
                 PoolType = PoolType.Points
             };
