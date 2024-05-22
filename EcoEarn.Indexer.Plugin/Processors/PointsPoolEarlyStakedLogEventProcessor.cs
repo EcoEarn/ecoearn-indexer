@@ -57,7 +57,7 @@ public class PointsPoolEarlyStakedLogEventProcessor : AElfLogEventProcessorBase<
                     ClaimedTime = claimInfo.ClaimedTime == null ? 0 : claimInfo.ClaimedTime.ToDateTime().ToUtcMilliSeconds(),
                     UnlockTime = claimInfo.UnlockTime == null ? 0 : claimInfo.UnlockTime.ToDateTime().ToUtcMilliSeconds(),
                     WithdrawTime = claimInfo.WithdrawTime == null ? 0 : claimInfo.WithdrawTime.ToDateTime().ToUtcMilliSeconds(),
-                    Account = claimInfo.Account.ToString(),
+                    Account = claimInfo.Account.ToBase58(),
                     EarlyStakeTime = claimInfo.EarlyStakeTime == null ? 0 : claimInfo.EarlyStakeTime.ToDateTime().ToUtcMilliSeconds(),
                     PoolType = PoolType.Points
                 };

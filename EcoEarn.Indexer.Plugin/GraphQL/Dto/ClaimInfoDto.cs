@@ -17,6 +17,7 @@ public class ClaimInfoDto
     public long EarlyStakeTime { get; set; }
     public string Account { get; set; }
     public PoolType PoolType { get; set; }
+    public LockState LockState { get; set; }
 }
 
 public class ClaimInfoDtoList

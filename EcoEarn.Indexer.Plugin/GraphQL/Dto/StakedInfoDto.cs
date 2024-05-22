@@ -24,6 +24,7 @@ public class StakedInfoDto
     public long CreateTime { get; set; }
     public long UpdateTime { get; set; }
     public PoolType PoolType { get; set; }
+    public LockState LockState { get; set; }
 }
 
 public class StakedInfoDtoList

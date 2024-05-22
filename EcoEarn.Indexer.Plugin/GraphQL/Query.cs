@@ -1,15 +1,34 @@
 using AElfIndexer.Client;
+using AElfIndexer.Client.Providers;
+using AElfIndexer.Grains;
+using AElfIndexer.Grains.Grain.Client;
 using AElfIndexer.Grains.State.Client;
 using EcoEarn.Indexer.Plugin.Entities;
 using EcoEarn.Indexer.Plugin.GraphQL.Dto;
 using GraphQL;
 using Nest;
+using Orleans;
 using Volo.Abp.ObjectMapping;
 
 namespace EcoEarn.Indexer.Plugin.GraphQL;
 
 public partial class Query
 {
+    [Name("getConfirmedBlockHeight")]
+    public static async Task<SyncStateDto> GetConfirmedBlockHeight([FromServices] IClusterClient clusterClient,
+        [FromServices] IAElfIndexerClientInfoProvider clientInfoProvider, SyncStateInput input)
+    {
+        var version = clientInfoProvider.GetVersion();
+        var clientId = clientInfoProvider.GetClientId();
+        var blockStateSetInfoGrain =
+            clusterClient.GetGrain<IBlockStateSetInfoGrain>(
+                GrainIdHelper.GenerateGrainId("BlockStateSetInfo", clientId, input.ChainId, version));
+        return new SyncStateDto
+        {
+            ConfirmedBlockHeight = await blockStateSetInfoGrain.GetConfirmedBlockHeight(input.FilterType)
+        };
+    }
+
     [Name("getPointsPoolList")]
     public static async Task<PointsPoolDtoList> GetPointsPoolList(
         [FromServices] IAElfIndexerClientEntityRepository<PointsPoolIndex, LogEventInfo> repository,
@@ -54,17 +73,17 @@ public partial class Query
         {
             mustQuery.Add(q => q.Term(i => i.Field(f => f.PoolType).Value(input.PoolType)));
         }
-        
+
         if (!string.IsNullOrEmpty(input.TokenName))
         {
             mustQuery.Add(q => q.Term(i => i.Field(f => f.TokenPoolConfig.StakingToken).Value(input.TokenName)));
         }
-        
+
         if (!input.PoolIds.IsNullOrEmpty())
         {
             mustQuery.Add(q => q.Terms(i => i.Field(f => f.PoolId).Terms(input.PoolIds)));
         }
-        
+
         QueryContainer Filter(QueryContainerDescriptor<TokenPoolIndex> f) =>
             f.Bool(b => b.Must(mustQuery));
 
@@ -87,6 +106,7 @@ public partial class Query
     {
         var mustQuery = new List<Func<QueryContainerDescriptor<TokenStakedIndex>, QueryContainer>>();
 
+        mustQuery.Add(q => q.Term(i => i.Field(f => f.LockState).Value(input.LockState)));
 
         if (!string.IsNullOrEmpty(input.TokenName))
         {
@@ -148,7 +168,7 @@ public partial class Query
             f.Bool(b => b.Must(mustQuery));
 
         var recordList = await repository.GetListAsync(Filter, skip: input.SkipCount, limit: input.MaxResultCount,
-        sortType: SortOrder.Descending, sortExp: o => o.ClaimedTime);
+            sortType: SortOrder.Descending, sortExp: o => o.ClaimedTime);
 
         var dataList =
             objectMapper.Map<List<RewardsClaimIndex>, List<ClaimInfoDto>>(recordList.Item2);
@@ -189,5 +209,68 @@ public partial class Query
         return dataList.Where(x => x.StakedTime + x.Period * 1000 < DateTime.UtcNow.ToUtcMilliSeconds())
             .Select(x => x.StakeId)
             .ToList();
+    }
+
+
+    [Name("getAllStakedInfoList")]
+    public static async Task<StakedInfoDtoList> GetAllStakedInfoList(
+        [FromServices] IAElfIndexerClientEntityRepository<TokenStakedIndex, LogEventInfo> repository,
+        [FromServices] IObjectMapper objectMapper,
+        GetAllStakedInfoListInput input)
+    {
+        var mustQuery = new List<Func<QueryContainerDescriptor<TokenStakedIndex>, QueryContainer>>();
+
+        mustQuery.Add(q => q.Term(i => i.Field(f => f.LockState).Value(input.LockState)));
+
+        if (input.FromBlockHeight > 0)
+        {
+            mustQuery.Add(q => q.Range(i => i.Field(f => f.BlockHeight).GreaterThanOrEquals(input.FromBlockHeight)));
+        }
+
+        if (input.ToBlockHeight > 0)
+        {
+            mustQuery.Add(q => q.Range(i => i.Field(f => f.BlockHeight).LessThanOrEquals(input.ToBlockHeight)));
+        }
+
+
+        QueryContainer Filter(QueryContainerDescriptor<TokenStakedIndex> f) =>
+            f.Bool(b => b.Must(mustQuery));
+
+        var recordList = await repository.GetListAsync(Filter);
+
+        var dataList =
+            objectMapper.Map<List<TokenStakedIndex>, List<StakedInfoDto>>(recordList.Item2);
+        return new StakedInfoDtoList
+        {
+            Data = dataList,
+            TotalCount = recordList.Item1
+        };
+    }
+
+    [Name("getTokenPoolStakeInfoList")]
+    public static async Task<TokenPoolStakeInfoListDto> GetTokenPoolStakeInfoList(
+        [FromServices] IAElfIndexerClientEntityRepository<TokenPoolStakeInfoIndex, LogEventInfo> repository,
+        [FromServices] IObjectMapper objectMapper,
+        GetTokenPoolStakeInfoInput input)
+    {
+        var mustQuery = new List<Func<QueryContainerDescriptor<TokenPoolStakeInfoIndex>, QueryContainer>>();
+
+        if (!input.PoolIds.IsNullOrEmpty())
+        {
+            mustQuery.Add(q => q.Terms(i => i.Field(f => f.PoolId).Terms(input.PoolIds)));
+        }
+
+        QueryContainer Filter(QueryContainerDescriptor<TokenPoolStakeInfoIndex> f) =>
+            f.Bool(b => b.Must(mustQuery));
+
+        var recordList = await repository.GetListAsync(Filter);
+
+        var dataList =
+            objectMapper.Map<List<TokenPoolStakeInfoIndex>, List<TokenPoolStakeInfoDto>>(recordList.Item2);
+        return new TokenPoolStakeInfoListDto
+        {
+            Data = dataList,
+            TotalCount = recordList.Item1
+        };
     }
 }

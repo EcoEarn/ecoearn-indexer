@@ -26,4 +26,11 @@ public class TokenStakedIndex : AElfIndexerClientEntity<string>, IIndexBuild
     public long CreateTime { get; set; }
     public long UpdateTime { get; set; }
     public PoolType PoolType { get; set; }
+    public LockState LockState { get; set; }
+}
+
+public enum LockState
+{
+    Locking,
+    Unlock
 }

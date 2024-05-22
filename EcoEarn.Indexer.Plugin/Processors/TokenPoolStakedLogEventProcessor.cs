@@ -19,16 +19,22 @@ public class TokenPoolStakedLogEventProcessor : AElfLogEventProcessorBase<Staked
     private readonly IAElfIndexerClientEntityRepository<TokenStakedIndex, LogEventInfo> _tokenStakeRepository;
     private readonly IAElfIndexerClientEntityRepository<TokenPoolIndex, LogEventInfo> _tokenPoolRepository;
 
+    private readonly IAElfIndexerClientEntityRepository<TokenPoolStakeInfoIndex, LogEventInfo>
+        _tokenPoolStakeRepository;
+
     public TokenPoolStakedLogEventProcessor(ILogger<TokenPoolStakedLogEventProcessor> logger,
         IObjectMapper objectMapper, IOptionsSnapshot<ContractInfoOptions> contractInfoOptions,
         IAElfIndexerClientEntityRepository<TokenStakedIndex, LogEventInfo> tokenStakeRepository,
-        IAElfIndexerClientEntityRepository<TokenPoolIndex, LogEventInfo> tokenPoolRepository) : base(logger)
+        IAElfIndexerClientEntityRepository<TokenPoolIndex, LogEventInfo> tokenPoolRepository,
+        IAElfIndexerClientEntityRepository<TokenPoolStakeInfoIndex, LogEventInfo> tokenPoolStakeRepository) :
+        base(logger)
     {
         _logger = logger;
         _contractInfoOptions = contractInfoOptions.Value;
         _objectMapper = objectMapper;
         _tokenStakeRepository = tokenStakeRepository;
         _tokenPoolRepository = tokenPoolRepository;
+        _tokenPoolStakeRepository = tokenPoolStakeRepository;
     }
 
     public override string GetContractAddress(string chainId)
@@ -43,7 +49,8 @@ public class TokenPoolStakedLogEventProcessor : AElfLogEventProcessorBase<Staked
             _logger.Debug("TokenStaked: {eventValue} context: {context}", JsonConvert.SerializeObject(eventValue),
                 JsonConvert.SerializeObject(context));
             var id = IdGenerateHelper.GetId(eventValue.StakeInfo.PoolId.ToHex(), eventValue.StakeInfo.StakeId.ToHex());
-            
+            var poolId = IdGenerateHelper.GetId(eventValue.StakeInfo.PoolId.ToHex());
+
             var tokenStakedIndex = new TokenStakedIndex
             {
                 Id = id,
@@ -54,22 +61,44 @@ public class TokenPoolStakedLogEventProcessor : AElfLogEventProcessorBase<Staked
                 EarlyStakedAmount = eventValue.StakeInfo.EarlyStakedAmount,
                 ClaimedAmount = eventValue.StakeInfo.ClaimedAmount,
                 StakedBlockNumber = eventValue.StakeInfo.StakedBlockNumber,
-                StakedTime = eventValue.StakeInfo.StakedTime == null ? 0 : eventValue.StakeInfo.StakedTime.ToDateTime().ToUtcMilliSeconds(),
+                StakedTime = eventValue.StakeInfo.StakedTime == null
+                    ? 0
+                    : eventValue.StakeInfo.StakedTime.ToDateTime().ToUtcMilliSeconds(),
                 Period = eventValue.StakeInfo.Period,
                 Account = eventValue.StakeInfo.Account.ToBase58(),
                 BoostedAmount = eventValue.StakeInfo.BoostedAmount,
                 RewardDebt = eventValue.StakeInfo.RewardDebt,
-                WithdrawTime = eventValue.StakeInfo.WithdrawTime == null ? 0 : eventValue.StakeInfo.WithdrawTime.ToDateTime().ToUtcMilliSeconds(),
+                WithdrawTime = eventValue.StakeInfo.UnlockTime == null
+                    ? 0
+                    : eventValue.StakeInfo.UnlockTime.ToDateTime().ToUtcMilliSeconds(),
                 RewardAmount = eventValue.StakeInfo.RewardAmount,
                 LockedRewardAmount = eventValue.StakeInfo.LockedRewardAmount,
-                LastOperationTime = eventValue.StakeInfo.LastOperationTime == null ? 0 : eventValue.StakeInfo.LastOperationTime.ToDateTime().ToUtcMilliSeconds(),
-                UpdateTime = context.BlockTime.ToUtcMilliSeconds()
+                LastOperationTime = eventValue.StakeInfo.LastOperationTime == null
+                    ? 0
+                    : eventValue.StakeInfo.LastOperationTime.ToDateTime().ToUtcMilliSeconds(),
+                UpdateTime = context.BlockTime.ToUtcMilliSeconds(),
+                LockState = LockState.Locking
             };
             var tokenPoolIndex =
                 await _tokenPoolRepository.GetFromBlockStateSetAsync(tokenStakedIndex.PoolId, context.ChainId);
             tokenStakedIndex.PoolType = tokenPoolIndex.PoolType;
             _objectMapper.Map(context, tokenStakedIndex);
             await _tokenStakeRepository.AddOrUpdateAsync(tokenStakedIndex);
+
+            var tokenPoolStakeInfoIndex = new TokenPoolStakeInfoIndex()
+            {
+                Id = poolId,
+                PoolId = eventValue.StakeInfo.PoolId == null ? "" : eventValue.StakeInfo.PoolId.ToHex(),
+                AccTokenPerShare = eventValue.PoolData.AccTokenPerShare == null
+                    ? "0"
+                    : eventValue.PoolData.AccTokenPerShare.Value,
+                TotalStakedAmount = eventValue.PoolData.TotalStakedAmount.ToString(),
+                LastRewardTime = eventValue.PoolData.LastRewardSecond == null
+                    ? 0
+                    : eventValue.PoolData.LastRewardSecond.ToDateTime().ToUtcMilliSeconds(),
+            };
+            _objectMapper.Map(context, tokenPoolStakeInfoIndex);
+            await _tokenPoolStakeRepository.AddOrUpdateAsync(tokenPoolStakeInfoIndex);
         }
         catch (Exception e)
         {

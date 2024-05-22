@@ -58,9 +58,9 @@ public class TokenPoolCreatedLogEventProcessor : AElfLogEventProcessorBase<Token
                 TokenPoolConfig = new TokenPoolConfig()
                 {
                     RewardToken = eventValue.Config.RewardToken,
-                    StartBlockNumber = eventValue.Config.StartBlockNumber,
-                    EndBlockNumber = eventValue.Config.EndBlockNumber,
-                    RewardPerBlock = eventValue.Config.RewardPerBlock,
+                    StartBlockNumber = eventValue.Config.StartTime == null ? 0 : eventValue.Config.StartTime.ToDateTime().ToUtcMilliSeconds(),
+                    EndBlockNumber = eventValue.Config.EndTime == null ? 0 : eventValue.Config.EndTime.ToDateTime().ToUtcMilliSeconds(),
+                    RewardPerBlock = eventValue.Config.RewardPerSecond,
                     UpdateAddress = eventValue.Config.UpdateAddress.ToBase58(),
                     StakingToken = eventValue.Config.StakingToken,
                     FixedBoostFactor = eventValue.Config.FixedBoostFactor,
