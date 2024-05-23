@@ -62,7 +62,7 @@ namespace EcoEarn.Contracts.Points {
             "IAEoCzIKLmFlbGYuSGFzaBIeCgdhY2NvdW50GAIgASgLMg0uYWVsZi5BZGRy",
             "ZXNzEg4KBmFtb3VudBgDIAEoAxIYCgRzZWVkGAQgASgLMgouYWVsZi5IYXNo",
             "EhcKD2V4cGlyYXRpb25fdGltZRgFIAEoAxISCglzaWduYXR1cmUYkE4gASgM",
-            "Ip4DCglDbGFpbUluZm8SHAoIY2xhaW1faWQYASABKAsyCi5hZWxmLkhhc2gS",
+            "IrgDCglDbGFpbUluZm8SHAoIY2xhaW1faWQYASABKAsyCi5hZWxmLkhhc2gS",
             "GwoHcG9vbF9pZBgCIAEoCzIKLmFlbGYuSGFzaBIWCg5jbGFpbWVkX2Ftb3Vu",
             "dBgDIAEoAxIWCg5jbGFpbWVkX3N5bWJvbBgEIAEoCRIcChRjbGFpbWVkX2Js",
             "b2NrX251bWJlchgFIAEoAxIwCgxjbGFpbWVkX3RpbWUYBiABKAsyGi5nb29n",
@@ -71,40 +71,40 @@ namespace EcoEarn.Contracts.Points {
             "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIeCgdhY2NvdW50GAkg",
             "ASgLMg0uYWVsZi5BZGRyZXNzEjQKEGVhcmx5X3N0YWtlX3RpbWUYCiABKAsy",
             "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhwKCHN0YWtlX2lkGAsgASgL",
-            "MgouYWVsZi5IYXNoIl0KD0Vhcmx5U3Rha2VJbnB1dBIbCgdwb29sX2lkGAEg",
-            "ASgLMgouYWVsZi5IYXNoEg4KBnBlcmlvZBgCIAEoAxIdCgljbGFpbV9pZHMY",
-            "AyADKAsyCi5hZWxmLkhhc2giJgoKQ2xhaW1JbmZvcxIYCgRkYXRhGAEgAygL",
-            "MgouQ2xhaW1JbmZvImEKEVJlY292ZXJUb2tlbklucHV0EhsKB3Bvb2xfaWQY",
-            "ASABKAsyCi5hZWxmLkhhc2gSDQoFdG9rZW4YAiABKAkSIAoJcmVjaXBpZW50",
-            "GAMgASgLMg0uYWVsZi5BZGRyZXNzIkoKGVNldFBvaW50c1Bvb2xFbmRUaW1l",
-            "SW5wdXQSGwoHcG9vbF9pZBgBIAEoCzIKLmFlbGYuSGFzaBIQCghlbmRfdGlt",
-            "ZRgCIAEoAyLLAQoWUmVzdGFydFBvaW50c1Bvb2xJbnB1dBIbCgdwb29sX2lk",
-            "GAEgASgLMgouYWVsZi5IYXNoEhQKDHJld2FyZF90b2tlbhgCIAEoCRISCgpz",
-            "dGFydF90aW1lGAMgASgDEhAKCGVuZF90aW1lGAQgASgDEhkKEXJld2FyZF9w",
-            "ZXJfc2Vjb25kGAUgASgDEiUKDnVwZGF0ZV9hZGRyZXNzGAYgASgLMg0uYWVs",
-            "Zi5BZGRyZXNzEhYKDnJlbGVhc2VfcGVyaW9kGAcgASgDImUKH1NldFBvaW50",
-            "c1Bvb2xVcGRhdGVBZGRyZXNzSW5wdXQSGwoHcG9vbF9pZBgBIAEoCzIKLmFl",
-            "bGYuSGFzaBIlCg51cGRhdGVfYWRkcmVzcxgCIAEoCzINLmFlbGYuQWRkcmVz",
-            "cyJcCiVTZXRQb2ludHNQb29sUmV3YXJkUmVsZWFzZVBlcmlvZElucHV0EhsK",
-            "B3Bvb2xfaWQYASABKAsyCi5hZWxmLkhhc2gSFgoOcmVsZWFzZV9wZXJpb2QY",
-            "AiABKAMiWwohU2V0UG9pbnRzUG9vbFJld2FyZFBlclNlY29uZElucHV0EhsK",
-            "B3Bvb2xfaWQYASABKAsyCi5hZWxmLkhhc2gSGQoRcmV3YXJkX3Blcl9zZWNv",
-            "bmQYAiABKAMiTgoRU2V0RGFwcEFkbWluSW5wdXQSGwoHZGFwcF9pZBgBIAEo",
-            "CzIKLmFlbGYuSGFzaBIcCgVhZG1pbhgCIAEoCzINLmFlbGYuQWRkcmVzcyIu",
-            "Cg1XaXRoZHJhd0lucHV0Eh0KCWNsYWltX2lkcxgBIAMoCzIKLmFlbGYuSGFz",
-            "aCIqCglDb25maWdTZXQSFwoGY29uZmlnGAEgASgLMgcuQ29uZmlnOgSguxgB",
-            "Ii4KCEFkbWluU2V0EhwKBWFkbWluGAEgASgLMg0uYWVsZi5BZGRyZXNzOgSg",
-            "uxgBIk0KClJlZ2lzdGVyZWQSGwoHZGFwcF9pZBgBIAEoCzIKLmFlbGYuSGFz",
-            "aBIcCgVhZG1pbhgCIAEoCzINLmFlbGYuQWRkcmVzczoEoLsYASLAAQoRUG9p",
-            "bnRzUG9vbENyZWF0ZWQSGwoHZGFwcF9pZBgBIAEoCzIKLmFlbGYuSGFzaBIh",
-            "CgZjb25maWcYAiABKAsyES5Qb2ludHNQb29sQ29uZmlnEhsKB3Bvb2xfaWQY",
-            "AyABKAsyCi5hZWxmLkhhc2gSEwoLcG9pbnRzX25hbWUYBCABKAkSDgoGYW1v",
-            "dW50GAUgASgDEiMKDHBvb2xfYWRkcmVzcxgGIAEoCzINLmFlbGYuQWRkcmVz",
-            "czoEoLsYASJ3Cg9TbmFwc2hvdFVwZGF0ZWQSGwoHcG9vbF9pZBgBIAEoCzIK",
-            "LmFlbGYuSGFzaBIkChBtZXJrbGVfdHJlZV9yb290GAIgASgLMgouYWVsZi5I",
-            "YXNoEhsKE3VwZGF0ZV9ibG9ja19udW1iZXIYAyABKAM6BKC7GAEiSQoHQ2xh",
-            "aW1lZBIeCgpjbGFpbV9pbmZvGAEgASgLMgouQ2xhaW1JbmZvEhgKBHNlZWQY",
-            "AiABKAsyCi5hZWxmLkhhc2g6BKC7GAEiMwoJV2l0aGRyYXduEiAKC2NsYWlt",
+            "MgouYWVsZi5IYXNoEhgKBHNlZWQYDCABKAsyCi5hZWxmLkhhc2giXQoPRWFy",
+            "bHlTdGFrZUlucHV0EhsKB3Bvb2xfaWQYASABKAsyCi5hZWxmLkhhc2gSDgoG",
+            "cGVyaW9kGAIgASgDEh0KCWNsYWltX2lkcxgDIAMoCzIKLmFlbGYuSGFzaCIm",
+            "CgpDbGFpbUluZm9zEhgKBGRhdGEYASADKAsyCi5DbGFpbUluZm8iYQoRUmVj",
+            "b3ZlclRva2VuSW5wdXQSGwoHcG9vbF9pZBgBIAEoCzIKLmFlbGYuSGFzaBIN",
+            "CgV0b2tlbhgCIAEoCRIgCglyZWNpcGllbnQYAyABKAsyDS5hZWxmLkFkZHJl",
+            "c3MiSgoZU2V0UG9pbnRzUG9vbEVuZFRpbWVJbnB1dBIbCgdwb29sX2lkGAEg",
+            "ASgLMgouYWVsZi5IYXNoEhAKCGVuZF90aW1lGAIgASgDIssBChZSZXN0YXJ0",
+            "UG9pbnRzUG9vbElucHV0EhsKB3Bvb2xfaWQYASABKAsyCi5hZWxmLkhhc2gS",
+            "FAoMcmV3YXJkX3Rva2VuGAIgASgJEhIKCnN0YXJ0X3RpbWUYAyABKAMSEAoI",
+            "ZW5kX3RpbWUYBCABKAMSGQoRcmV3YXJkX3Blcl9zZWNvbmQYBSABKAMSJQoO",
+            "dXBkYXRlX2FkZHJlc3MYBiABKAsyDS5hZWxmLkFkZHJlc3MSFgoOcmVsZWFz",
+            "ZV9wZXJpb2QYByABKAMiZQofU2V0UG9pbnRzUG9vbFVwZGF0ZUFkZHJlc3NJ",
+            "bnB1dBIbCgdwb29sX2lkGAEgASgLMgouYWVsZi5IYXNoEiUKDnVwZGF0ZV9h",
+            "ZGRyZXNzGAIgASgLMg0uYWVsZi5BZGRyZXNzIlwKJVNldFBvaW50c1Bvb2xS",
+            "ZXdhcmRSZWxlYXNlUGVyaW9kSW5wdXQSGwoHcG9vbF9pZBgBIAEoCzIKLmFl",
+            "bGYuSGFzaBIWCg5yZWxlYXNlX3BlcmlvZBgCIAEoAyJbCiFTZXRQb2ludHNQ",
+            "b29sUmV3YXJkUGVyU2Vjb25kSW5wdXQSGwoHcG9vbF9pZBgBIAEoCzIKLmFl",
+            "bGYuSGFzaBIZChFyZXdhcmRfcGVyX3NlY29uZBgCIAEoAyJOChFTZXREYXBw",
+            "QWRtaW5JbnB1dBIbCgdkYXBwX2lkGAEgASgLMgouYWVsZi5IYXNoEhwKBWFk",
+            "bWluGAIgASgLMg0uYWVsZi5BZGRyZXNzIi4KDVdpdGhkcmF3SW5wdXQSHQoJ",
+            "Y2xhaW1faWRzGAEgAygLMgouYWVsZi5IYXNoIioKCUNvbmZpZ1NldBIXCgZj",
+            "b25maWcYASABKAsyBy5Db25maWc6BKC7GAEiLgoIQWRtaW5TZXQSHAoFYWRt",
+            "aW4YASABKAsyDS5hZWxmLkFkZHJlc3M6BKC7GAEiTQoKUmVnaXN0ZXJlZBIb",
+            "CgdkYXBwX2lkGAEgASgLMgouYWVsZi5IYXNoEhwKBWFkbWluGAIgASgLMg0u",
+            "YWVsZi5BZGRyZXNzOgSguxgBIsABChFQb2ludHNQb29sQ3JlYXRlZBIbCgdk",
+            "YXBwX2lkGAEgASgLMgouYWVsZi5IYXNoEiEKBmNvbmZpZxgCIAEoCzIRLlBv",
+            "aW50c1Bvb2xDb25maWcSGwoHcG9vbF9pZBgDIAEoCzIKLmFlbGYuSGFzaBIT",
+            "Cgtwb2ludHNfbmFtZRgEIAEoCRIOCgZhbW91bnQYBSABKAMSIwoMcG9vbF9h",
+            "ZGRyZXNzGAYgASgLMg0uYWVsZi5BZGRyZXNzOgSguxgBIncKD1NuYXBzaG90",
+            "VXBkYXRlZBIbCgdwb29sX2lkGAEgASgLMgouYWVsZi5IYXNoEiQKEG1lcmts",
+            "ZV90cmVlX3Jvb3QYAiABKAsyCi5hZWxmLkhhc2gSGwoTdXBkYXRlX2Jsb2Nr",
+            "X251bWJlchgDIAEoAzoEoLsYASIvCgdDbGFpbWVkEh4KCmNsYWltX2luZm8Y",
+            "ASABKAsyCi5DbGFpbUluZm86BKC7GAEiMwoJV2l0aGRyYXduEiAKC2NsYWlt",
             "X2luZm9zGAEgASgLMgsuQ2xhaW1JbmZvczoEoLsYASJyCgtFYXJseVN0YWtl",
             "ZBIbCgdwb29sX2lkGAEgASgLMgouYWVsZi5IYXNoEg4KBmFtb3VudBgCIAEo",
             "AxIOCgZwZXJpb2QYAyABKAMSIAoLY2xhaW1faW5mb3MYBCABKAsyCy5DbGFp",
@@ -176,7 +176,7 @@ namespace EcoEarn.Contracts.Points {
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Points.Snapshot), global::EcoEarn.Contracts.Points.Snapshot.Parser, new[]{ "PoolId", "BlockNumber", "MerkleTreeRoot" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Points.GetSnapshotInput), global::EcoEarn.Contracts.Points.GetSnapshotInput.Parser, new[]{ "PoolId", "BlockNumber" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Points.ClaimInput), global::EcoEarn.Contracts.Points.ClaimInput.Parser, new[]{ "PoolId", "Account", "Amount", "Seed", "ExpirationTime", "Signature" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Points.ClaimInfo), global::EcoEarn.Contracts.Points.ClaimInfo.Parser, new[]{ "ClaimId", "PoolId", "ClaimedAmount", "ClaimedSymbol", "ClaimedBlockNumber", "ClaimedTime", "UnlockTime", "WithdrawTime", "Account", "EarlyStakeTime", "StakeId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Points.ClaimInfo), global::EcoEarn.Contracts.Points.ClaimInfo.Parser, new[]{ "ClaimId", "PoolId", "ClaimedAmount", "ClaimedSymbol", "ClaimedBlockNumber", "ClaimedTime", "UnlockTime", "WithdrawTime", "Account", "EarlyStakeTime", "StakeId", "Seed" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Points.EarlyStakeInput), global::EcoEarn.Contracts.Points.EarlyStakeInput.Parser, new[]{ "PoolId", "Period", "ClaimIds" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Points.ClaimInfos), global::EcoEarn.Contracts.Points.ClaimInfos.Parser, new[]{ "Data" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Points.RecoverTokenInput), global::EcoEarn.Contracts.Points.RecoverTokenInput.Parser, new[]{ "PoolId", "Token", "Recipient" }, null, null, null, null),
@@ -192,7 +192,7 @@ namespace EcoEarn.Contracts.Points {
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Points.Registered), global::EcoEarn.Contracts.Points.Registered.Parser, new[]{ "DappId", "Admin" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Points.PointsPoolCreated), global::EcoEarn.Contracts.Points.PointsPoolCreated.Parser, new[]{ "DappId", "Config", "PoolId", "PointsName", "Amount", "PoolAddress" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Points.SnapshotUpdated), global::EcoEarn.Contracts.Points.SnapshotUpdated.Parser, new[]{ "PoolId", "MerkleTreeRoot", "UpdateBlockNumber" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Points.Claimed), global::EcoEarn.Contracts.Points.Claimed.Parser, new[]{ "ClaimInfo", "Seed" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Points.Claimed), global::EcoEarn.Contracts.Points.Claimed.Parser, new[]{ "ClaimInfo" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Points.Withdrawn), global::EcoEarn.Contracts.Points.Withdrawn.Parser, new[]{ "ClaimInfos" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Points.EarlyStaked), global::EcoEarn.Contracts.Points.EarlyStaked.Parser, new[]{ "PoolId", "Amount", "Period", "ClaimInfos" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Points.TokenRecovered), global::EcoEarn.Contracts.Points.TokenRecovered.Parser, new[]{ "PoolId", "Token", "Amount", "Account" }, null, null, null, null),
@@ -4183,6 +4183,7 @@ namespace EcoEarn.Contracts.Points {
       account_ = other.account_ != null ? other.account_.Clone() : null;
       earlyStakeTime_ = other.earlyStakeTime_ != null ? other.earlyStakeTime_.Clone() : null;
       stakeId_ = other.stakeId_ != null ? other.stakeId_.Clone() : null;
+      seed_ = other.seed_ != null ? other.seed_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4324,6 +4325,18 @@ namespace EcoEarn.Contracts.Points {
       }
     }
 
+    /// <summary>Field number for the "seed" field.</summary>
+    public const int SeedFieldNumber = 12;
+    private global::AElf.Types.Hash seed_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::AElf.Types.Hash Seed {
+      get { return seed_; }
+      set {
+        seed_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -4350,6 +4363,7 @@ namespace EcoEarn.Contracts.Points {
       if (!object.Equals(Account, other.Account)) return false;
       if (!object.Equals(EarlyStakeTime, other.EarlyStakeTime)) return false;
       if (!object.Equals(StakeId, other.StakeId)) return false;
+      if (!object.Equals(Seed, other.Seed)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4368,6 +4382,7 @@ namespace EcoEarn.Contracts.Points {
       if (account_ != null) hash ^= Account.GetHashCode();
       if (earlyStakeTime_ != null) hash ^= EarlyStakeTime.GetHashCode();
       if (stakeId_ != null) hash ^= StakeId.GetHashCode();
+      if (seed_ != null) hash ^= Seed.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4430,6 +4445,10 @@ namespace EcoEarn.Contracts.Points {
         output.WriteRawTag(90);
         output.WriteMessage(StakeId);
       }
+      if (seed_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(Seed);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4484,6 +4503,10 @@ namespace EcoEarn.Contracts.Points {
         output.WriteRawTag(90);
         output.WriteMessage(StakeId);
       }
+      if (seed_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(Seed);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4526,6 +4549,9 @@ namespace EcoEarn.Contracts.Points {
       }
       if (stakeId_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StakeId);
+      }
+      if (seed_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Seed);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4595,6 +4621,12 @@ namespace EcoEarn.Contracts.Points {
           StakeId = new global::AElf.Types.Hash();
         }
         StakeId.MergeFrom(other.StakeId);
+      }
+      if (other.seed_ != null) {
+        if (seed_ == null) {
+          Seed = new global::AElf.Types.Hash();
+        }
+        Seed.MergeFrom(other.Seed);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4679,6 +4711,13 @@ namespace EcoEarn.Contracts.Points {
             input.ReadMessage(StakeId);
             break;
           }
+          case 98: {
+            if (seed_ == null) {
+              Seed = new global::AElf.Types.Hash();
+            }
+            input.ReadMessage(Seed);
+            break;
+          }
         }
       }
     #endif
@@ -4760,6 +4799,13 @@ namespace EcoEarn.Contracts.Points {
               StakeId = new global::AElf.Types.Hash();
             }
             input.ReadMessage(StakeId);
+            break;
+          }
+          case 98: {
+            if (seed_ == null) {
+              Seed = new global::AElf.Types.Hash();
+            }
+            input.ReadMessage(Seed);
             break;
           }
         }
@@ -8658,7 +8704,6 @@ namespace EcoEarn.Contracts.Points {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Claimed(Claimed other) : this() {
       claimInfo_ = other.claimInfo_ != null ? other.claimInfo_.Clone() : null;
-      seed_ = other.seed_ != null ? other.seed_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -8680,18 +8725,6 @@ namespace EcoEarn.Contracts.Points {
       }
     }
 
-    /// <summary>Field number for the "seed" field.</summary>
-    public const int SeedFieldNumber = 2;
-    private global::AElf.Types.Hash seed_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::AElf.Types.Hash Seed {
-      get { return seed_; }
-      set {
-        seed_ = value;
-      }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -8708,7 +8741,6 @@ namespace EcoEarn.Contracts.Points {
         return true;
       }
       if (!object.Equals(ClaimInfo, other.ClaimInfo)) return false;
-      if (!object.Equals(Seed, other.Seed)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -8717,7 +8749,6 @@ namespace EcoEarn.Contracts.Points {
     public override int GetHashCode() {
       int hash = 1;
       if (claimInfo_ != null) hash ^= ClaimInfo.GetHashCode();
-      if (seed_ != null) hash ^= Seed.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -8740,10 +8771,6 @@ namespace EcoEarn.Contracts.Points {
         output.WriteRawTag(10);
         output.WriteMessage(ClaimInfo);
       }
-      if (seed_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(Seed);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -8758,10 +8785,6 @@ namespace EcoEarn.Contracts.Points {
         output.WriteRawTag(10);
         output.WriteMessage(ClaimInfo);
       }
-      if (seed_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(Seed);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -8774,9 +8797,6 @@ namespace EcoEarn.Contracts.Points {
       int size = 0;
       if (claimInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ClaimInfo);
-      }
-      if (seed_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Seed);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -8795,12 +8815,6 @@ namespace EcoEarn.Contracts.Points {
           ClaimInfo = new global::EcoEarn.Contracts.Points.ClaimInfo();
         }
         ClaimInfo.MergeFrom(other.ClaimInfo);
-      }
-      if (other.seed_ != null) {
-        if (seed_ == null) {
-          Seed = new global::AElf.Types.Hash();
-        }
-        Seed.MergeFrom(other.Seed);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -8824,13 +8838,6 @@ namespace EcoEarn.Contracts.Points {
             input.ReadMessage(ClaimInfo);
             break;
           }
-          case 18: {
-            if (seed_ == null) {
-              Seed = new global::AElf.Types.Hash();
-            }
-            input.ReadMessage(Seed);
-            break;
-          }
         }
       }
     #endif
@@ -8851,13 +8858,6 @@ namespace EcoEarn.Contracts.Points {
               ClaimInfo = new global::EcoEarn.Contracts.Points.ClaimInfo();
             }
             input.ReadMessage(ClaimInfo);
-            break;
-          }
-          case 18: {
-            if (seed_ == null) {
-              Seed = new global::AElf.Types.Hash();
-            }
-            input.ReadMessage(Seed);
             break;
           }
         }

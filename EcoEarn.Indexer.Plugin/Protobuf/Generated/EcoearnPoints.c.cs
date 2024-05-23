@@ -125,7 +125,6 @@ namespace EcoEarn.Contracts.Points {
       return new Claimed
       {
         ClaimInfo = ClaimInfo,
-        Seed = Seed,
       };
     }
   }

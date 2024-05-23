@@ -49,6 +49,7 @@ public class PointsPoolWithdrawnLogEventProcessor : AElfLogEventProcessorBase<Wi
                 {
                     Id = id,
                     ClaimId = claimInfo.ClaimId == null ? "" : claimInfo.ClaimId.ToHex(),
+                    Seed = claimInfo.Seed == null ? "" : claimInfo.Seed.ToHex(),
                     StakeId = claimInfo.StakeId == null ? "" : claimInfo.StakeId.ToHex(),
                     PoolId = claimInfo.PoolId == null ? "" : claimInfo.PoolId.ToHex(),
                     ClaimedAmount = claimInfo.ClaimedAmount.ToString(),
@@ -61,8 +62,7 @@ public class PointsPoolWithdrawnLogEventProcessor : AElfLogEventProcessorBase<Wi
                     EarlyStakeTime = claimInfo.EarlyStakeTime == null ? 0 : claimInfo.EarlyStakeTime.ToDateTime().ToUtcMilliSeconds(),
                     PoolType = PoolType.Points
                 };
-                var oldRewardsClaim = await _repository.GetFromBlockStateSetAsync(id, context.ChainId);
-                rewardsClaim.Seed = oldRewardsClaim.Seed;
+                
                 _objectMapper.Map(context, rewardsClaim);
                 await _repository.AddOrUpdateAsync(rewardsClaim);
             }
