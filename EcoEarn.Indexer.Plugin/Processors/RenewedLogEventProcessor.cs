@@ -11,18 +11,18 @@ using Volo.Abp.ObjectMapping;
 
 namespace EcoEarn.Indexer.Plugin.Processors;
 
-public class TokenPoolStakedLogEventProcessor : AElfLogEventProcessorBase<Staked, LogEventInfo>
+public class RenewedLogEventProcessor : AElfLogEventProcessorBase<Renewed, LogEventInfo>
 {
     private readonly IObjectMapper _objectMapper;
     private readonly ContractInfoOptions _contractInfoOptions;
-    private readonly ILogger<TokenPoolStakedLogEventProcessor> _logger;
+    private readonly ILogger<RenewedLogEventProcessor> _logger;
     private readonly IAElfIndexerClientEntityRepository<TokenStakedIndex, LogEventInfo> _tokenStakeRepository;
     private readonly IAElfIndexerClientEntityRepository<TokenPoolIndex, LogEventInfo> _tokenPoolRepository;
 
     private readonly IAElfIndexerClientEntityRepository<TokenPoolStakeInfoIndex, LogEventInfo>
         _tokenPoolStakeRepository;
 
-    public TokenPoolStakedLogEventProcessor(ILogger<TokenPoolStakedLogEventProcessor> logger,
+    public RenewedLogEventProcessor(ILogger<RenewedLogEventProcessor> logger,
         IObjectMapper objectMapper, IOptionsSnapshot<ContractInfoOptions> contractInfoOptions,
         IAElfIndexerClientEntityRepository<TokenStakedIndex, LogEventInfo> tokenStakeRepository,
         IAElfIndexerClientEntityRepository<TokenPoolIndex, LogEventInfo> tokenPoolRepository,
@@ -42,11 +42,11 @@ public class TokenPoolStakedLogEventProcessor : AElfLogEventProcessorBase<Staked
         return _contractInfoOptions.ContractInfos.First(c => c.ChainId == chainId).EcoEarnTokenContractAddress;
     }
 
-    protected override async Task HandleEventAsync(Staked eventValue, LogEventContext context)
+    protected override async Task HandleEventAsync(Renewed eventValue, LogEventContext context)
     {
         try
         {
-            _logger.Debug("TokenStaked: {eventValue} context: {context}", JsonConvert.SerializeObject(eventValue),
+            _logger.Debug("Renewed: {eventValue} context: {context}", JsonConvert.SerializeObject(eventValue),
                 JsonConvert.SerializeObject(context));
             var id = IdGenerateHelper.GetId(eventValue.StakeInfo.PoolId.ToHex(), eventValue.StakeInfo.StakeId.ToHex());
             var poolId = IdGenerateHelper.GetId(eventValue.StakeInfo.PoolId.ToHex());
@@ -103,7 +103,7 @@ public class TokenPoolStakedLogEventProcessor : AElfLogEventProcessorBase<Staked
         }
         catch (Exception e)
         {
-            _logger.LogError(e, "TokenStaked HandleEventAsync error.");
+            _logger.LogError(e, "Renewed HandleEventAsync error.");
         }
     }
 }

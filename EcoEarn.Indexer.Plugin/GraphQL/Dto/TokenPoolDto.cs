@@ -20,7 +20,6 @@ public class TokenPoolConfigDto
     public long StartBlockNumber { get; set; }
     public long EndBlockNumber { get; set; }
     public long RewardPerBlock { get; set; }
-    public string UpdateAddress { get; set; }
     public string StakingToken { get; set; }
     public long FixedBoostFactor { get; set; }
     public long MinimumAmount { get; set; }
@@ -29,6 +28,7 @@ public class TokenPoolConfigDto
     public string RewardTokenContract { get; set; }
     public string StakeTokenContract { get; set; }
     public long MinimumClaimAmount { get; set; }
+    public long UnlockWindowDuration { get; set; }
 }
 
 public class TokenPoolDtoList

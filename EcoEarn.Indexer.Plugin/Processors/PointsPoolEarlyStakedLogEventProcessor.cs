@@ -61,7 +61,8 @@ public class PointsPoolEarlyStakedLogEventProcessor : AElfLogEventProcessorBase<
                     EarlyStakeTime = claimInfo.EarlyStakeTime == null ? 0 : claimInfo.EarlyStakeTime.ToDateTime().ToUtcMilliSeconds(),
                     PoolType = PoolType.Points
                 };
-
+                var oldRewardsClaim = await _repository.GetFromBlockStateSetAsync(id, context.ChainId);
+                rewardsClaim.Seed = oldRewardsClaim.Seed;
                 _objectMapper.Map(context, rewardsClaim);
                 await _repository.AddOrUpdateAsync(rewardsClaim);
             }

@@ -21,7 +21,6 @@ public class TokenPoolConfig
     public long StartBlockNumber { get; set; }
     public long EndBlockNumber { get; set; }
     public long RewardPerBlock { get; set; }
-    [Keyword] public string UpdateAddress { get; set; }
     [Keyword] public string StakingToken { get; set; }
     public long FixedBoostFactor { get; set; }
     public long MinimumAmount { get; set; }
@@ -30,4 +29,5 @@ public class TokenPoolConfig
     [Keyword] public string RewardTokenContract { get; set; }
     [Keyword] public string StakeTokenContract { get; set; }
     public long MinimumClaimAmount { get; set; }
+    public long UnlockWindowDuration { get; set; }
 }

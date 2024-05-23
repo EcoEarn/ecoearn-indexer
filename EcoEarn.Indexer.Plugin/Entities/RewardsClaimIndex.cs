@@ -8,6 +8,7 @@ public class RewardsClaimIndex : AElfIndexerClientEntity<string>, IIndexBuild
 {
     [Keyword] public string ClaimId { get; set; }
     [Keyword] public string StakeId { get; set; }
+    [Keyword] public string Seed { get; set; }
     [Keyword] public string PoolId { get; set; }
     [Keyword] public string ClaimedAmount { get; set; }
     [Keyword] public string ClaimedSymbol { get; set; }

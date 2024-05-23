@@ -9,6 +9,7 @@ public class ClaimInfoDto
     public string StakeId { get; set; }
     public string PoolId { get; set; }
     public string ClaimedAmount { get; set; }
+    public string Seed { get; set; }
     public string ClaimedSymbol { get; set; }
     public long ClaimedBlockNumber { get; set; }
     public long ClaimedTime { get; set; }

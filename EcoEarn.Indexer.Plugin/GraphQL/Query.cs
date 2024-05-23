@@ -273,4 +273,38 @@ public partial class Query
             TotalCount = recordList.Item1
         };
     }
+
+    [Name("getRealClaimInfoList")]
+    public static async Task<ClaimInfoDtoList> GetRealClaimInfoList(
+        [FromServices] IAElfIndexerClientEntityRepository<RewardsClaimIndex, LogEventInfo> repository,
+        [FromServices] IObjectMapper objectMapper,
+        GetRealClaimInfoInput input)
+    {
+        var mustQuery = new List<Func<QueryContainerDescriptor<RewardsClaimIndex>, QueryContainer>>();
+
+        mustQuery.Add(q => q.Term(i => i.Field(f => f.Account).Value(input.Address)));
+
+        if (!input.Seeds.IsNullOrEmpty())
+        {
+            mustQuery.Add(q => q.Terms(i => i.Field(f => f.Seed).Terms(input.Seeds)));
+        }
+
+        if (!string.IsNullOrEmpty(input.PoolId))
+        {
+            mustQuery.Add(q => q.Term(i => i.Field(f => f.PoolId).Value(input.PoolId)));
+        }
+
+        QueryContainer Filter(QueryContainerDescriptor<RewardsClaimIndex> f) =>
+            f.Bool(b => b.Must(mustQuery));
+
+        var recordList = await repository.GetListAsync(Filter, skip: input.SkipCount, limit: input.MaxResultCount);
+
+        var dataList =
+            objectMapper.Map<List<RewardsClaimIndex>, List<ClaimInfoDto>>(recordList.Item2);
+        return new ClaimInfoDtoList
+        {
+            Data = dataList,
+            TotalCount = recordList.Item1
+        };
+    }
 }

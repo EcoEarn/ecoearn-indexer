@@ -85,7 +85,8 @@ public class TokenPoolEarlyStakedLogEventProcessor : AElfLogEventProcessorBase<E
                     ? 0
                     : eventValue.StakeInfo.LastOperationTime.ToDateTime().ToUtcMilliSeconds(),
                 UpdateTime = context.BlockTime.ToUtcMilliSeconds(),
-                LockState = LockState.Locking
+                LockState = LockState.Locking,
+                StakingPeriod = eventValue.StakeInfo.StakingPeriod
             };
 
             var tokenPool =
@@ -145,9 +146,9 @@ public class TokenPoolEarlyStakedLogEventProcessor : AElfLogEventProcessorBase<E
                     ? "0"
                     : eventValue.PoolData.AccTokenPerShare.Value,
                 TotalStakedAmount = eventValue.PoolData.TotalStakedAmount.ToString(),
-                LastRewardTime = eventValue.PoolData.LastRewardSecond == null
+                LastRewardTime = eventValue.PoolData.LastRewardTime == null
                     ? 0
-                    : eventValue.PoolData.LastRewardSecond.ToDateTime().ToUtcMilliSeconds(),
+                    : eventValue.PoolData.LastRewardTime.ToDateTime().ToUtcMilliSeconds(),
             };
             _objectMapper.Map(context, tokenPoolStakeInfoIndex);
             await _tokenPoolStakeRepository.AddOrUpdateAsync(tokenPoolStakeInfoIndex);

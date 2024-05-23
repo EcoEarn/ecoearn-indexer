@@ -61,7 +61,6 @@ public class TokenPoolCreatedLogEventProcessor : AElfLogEventProcessorBase<Token
                     StartBlockNumber = eventValue.Config.StartTime == null ? 0 : eventValue.Config.StartTime.ToDateTime().ToUtcMilliSeconds(),
                     EndBlockNumber = eventValue.Config.EndTime == null ? 0 : eventValue.Config.EndTime.ToDateTime().ToUtcMilliSeconds(),
                     RewardPerBlock = eventValue.Config.RewardPerSecond,
-                    UpdateAddress = eventValue.Config.UpdateAddress.ToBase58(),
                     StakingToken = eventValue.Config.StakingToken,
                     FixedBoostFactor = eventValue.Config.FixedBoostFactor,
                     MinimumAmount = eventValue.Config.MinimumAmount,
@@ -70,6 +69,7 @@ public class TokenPoolCreatedLogEventProcessor : AElfLogEventProcessorBase<Token
                     RewardTokenContract = eventValue.Config.RewardTokenContract.ToBase58(),
                     StakeTokenContract = eventValue.Config.StakeTokenContract.ToBase58(),
                     MinimumClaimAmount = eventValue.Config.MinimumClaimAmount,
+                    UnlockWindowDuration = eventValue.Config.UnlockWindowDuration,
                 },
                 CreateTime = context.BlockTime.ToUtcMilliSeconds()
             };

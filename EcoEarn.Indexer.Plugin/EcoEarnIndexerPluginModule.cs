@@ -30,6 +30,8 @@ public class EcoEarnIndexerPluginModule : AElfIndexerClientPluginBaseModule<EcoE
         serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, TokenPoolWithdrawnLogEventProcessor>();
         serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, PointsPoolRestartedLogEventProcessor>();
         serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, TokenPoolUnlockedLogEventProcessor>();
+        serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, TokensPoolUnlockWindowDurationSetLogEventProcessor>();
+        serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, RenewedLogEventProcessor>();
         serviceCollection.AddSingleton<IBlockChainDataHandler, EcoEarnTransactionHandler>();
     }
 

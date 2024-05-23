@@ -520,7 +520,7 @@ namespace EcoEarn.Contracts.Points {
     }
     #endregion
 
-    /// <summary>Base class for the contract of EcoEarnPointsContract</summary>
+    // /// <summary>Base class for the contract of EcoEarnPointsContract</summary>
     // public abstract partial class EcoEarnPointsContractBase : AElf.Sdk.CSharp.CSharpSmartContract<EcoEarn.Contracts.Points.EcoEarnPointsContractState>
     // {
     //   public virtual global::Google.Protobuf.WellKnownTypes.Empty Initialize(global::EcoEarn.Contracts.Points.InitializeInput input)
