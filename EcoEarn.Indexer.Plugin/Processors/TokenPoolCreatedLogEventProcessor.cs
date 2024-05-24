@@ -70,6 +70,7 @@ public class TokenPoolCreatedLogEventProcessor : AElfLogEventProcessorBase<Token
                     StakeTokenContract = eventValue.Config.StakeTokenContract.ToBase58(),
                     MinimumClaimAmount = eventValue.Config.MinimumClaimAmount,
                     UnlockWindowDuration = eventValue.Config.UnlockWindowDuration,
+                    MinimumStakeDuration = eventValue.Config.MinimumStakeDuration
                 },
                 CreateTime = context.BlockTime.ToUtcMilliSeconds()
             };

@@ -26,6 +26,7 @@ public class TokenPoolConfig
     public long MinimumAmount { get; set; }
     public long ReleasePeriod { get; set; }
     public long MaximumStakeDuration { get; set; }
+    public long MinimumStakeDuration { get; set; }
     [Keyword] public string RewardTokenContract { get; set; }
     [Keyword] public string StakeTokenContract { get; set; }
     public long MinimumClaimAmount { get; set; }

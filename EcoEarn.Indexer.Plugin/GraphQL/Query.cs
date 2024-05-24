@@ -206,7 +206,7 @@ public partial class Query
         var dataList =
             objectMapper.Map<List<TokenStakedIndex>, List<StakedInfoDto>>(recordList.Item2);
 
-        return dataList.Where(x => x.StakedTime + x.Period * 1000 < DateTime.UtcNow.ToUtcMilliSeconds())
+        return dataList.Where(x => x.LockState == LockState.Unlock)
             .Select(x => x.StakeId)
             .ToList();
     }
