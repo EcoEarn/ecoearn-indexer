@@ -74,21 +74,22 @@ namespace EcoEarn.Contracts.Tokens {
     }
   }
 
-  public partial class TokensPoolRewardReleasePeriodSet : aelf::IEvent<TokensPoolRewardReleasePeriodSet>
+  public partial class TokensPoolRewardConfigSet : aelf::IEvent<TokensPoolRewardConfigSet>
   {
-    public global::System.Collections.Generic.IEnumerable<TokensPoolRewardReleasePeriodSet> GetIndexed()
+    public global::System.Collections.Generic.IEnumerable<TokensPoolRewardConfigSet> GetIndexed()
     {
-      return new List<TokensPoolRewardReleasePeriodSet>
+      return new List<TokensPoolRewardConfigSet>
       {
       };
     }
 
-    public TokensPoolRewardReleasePeriodSet GetNonIndexed()
+    public TokensPoolRewardConfigSet GetNonIndexed()
     {
-      return new TokensPoolRewardReleasePeriodSet
+      return new TokensPoolRewardConfigSet
       {
         PoolId = PoolId,
-        ReleasePeriod = ReleasePeriod,
+        ReleasePeriods = ReleasePeriods,
+        ClaimInterval = ClaimInterval,
       };
     }
   }
@@ -134,27 +135,6 @@ namespace EcoEarn.Contracts.Tokens {
     }
   }
 
-  public partial class EarlyStaked : aelf::IEvent<EarlyStaked>
-  {
-    public global::System.Collections.Generic.IEnumerable<EarlyStaked> GetIndexed()
-    {
-      return new List<EarlyStaked>
-      {
-      };
-    }
-
-    public EarlyStaked GetNonIndexed()
-    {
-      return new EarlyStaked
-      {
-        PoolId = PoolId,
-        StakeInfo = StakeInfo,
-        PoolData = PoolData,
-        ClaimInfos = ClaimInfos,
-      };
-    }
-  }
-
   public partial class Unlocked : aelf::IEvent<Unlocked>
   {
     public global::System.Collections.Generic.IEnumerable<Unlocked> GetIndexed()
@@ -168,9 +148,9 @@ namespace EcoEarn.Contracts.Tokens {
     {
       return new Unlocked
       {
-        StakeId = StakeId,
-        StakedAmount = StakedAmount,
-        EarlyStakedAmount = EarlyStakedAmount,
+        PoolId = PoolId,
+        StakeInfo = StakeInfo,
+        Amount = Amount,
         PoolData = PoolData,
       };
     }
@@ -189,26 +169,9 @@ namespace EcoEarn.Contracts.Tokens {
     {
       return new Claimed
       {
-        StakeId = StakeId,
-        ClaimInfo = ClaimInfo,
-      };
-    }
-  }
-
-  public partial class Withdrawn : aelf::IEvent<Withdrawn>
-  {
-    public global::System.Collections.Generic.IEnumerable<Withdrawn> GetIndexed()
-    {
-      return new List<Withdrawn>
-      {
-      };
-    }
-
-    public Withdrawn GetNonIndexed()
-    {
-      return new Withdrawn
-      {
-        ClaimInfos = ClaimInfos,
+        PoolId = PoolId,
+        Account = Account,
+        Amount = Amount,
       };
     }
   }
@@ -379,7 +342,7 @@ namespace EcoEarn.Contracts.Tokens {
     static readonly aelf::Marshaller<global::EcoEarn.Contracts.Tokens.DappInfo> __Marshaller_DappInfo = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Tokens.DappInfo.Parser.ParseFrom);
     static readonly aelf::Marshaller<global::EcoEarn.Contracts.Tokens.CreateTokensPoolInput> __Marshaller_CreateTokensPoolInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Tokens.CreateTokensPoolInput.Parser.ParseFrom);
     static readonly aelf::Marshaller<global::EcoEarn.Contracts.Tokens.SetTokensPoolEndTimeInput> __Marshaller_SetTokensPoolEndTimeInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Tokens.SetTokensPoolEndTimeInput.Parser.ParseFrom);
-    static readonly aelf::Marshaller<global::EcoEarn.Contracts.Tokens.SetTokensPoolRewardReleasePeriodInput> __Marshaller_SetTokensPoolRewardReleasePeriodInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Tokens.SetTokensPoolRewardReleasePeriodInput.Parser.ParseFrom);
+    static readonly aelf::Marshaller<global::EcoEarn.Contracts.Tokens.SetTokensPoolRewardConfigInput> __Marshaller_SetTokensPoolRewardConfigInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Tokens.SetTokensPoolRewardConfigInput.Parser.ParseFrom);
     static readonly aelf::Marshaller<global::EcoEarn.Contracts.Tokens.SetTokensPoolStakeConfigInput> __Marshaller_SetTokensPoolStakeConfigInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Tokens.SetTokensPoolStakeConfigInput.Parser.ParseFrom);
     static readonly aelf::Marshaller<global::EcoEarn.Contracts.Tokens.GetPoolInfoOutput> __Marshaller_GetPoolInfoOutput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Tokens.GetPoolInfoOutput.Parser.ParseFrom);
     static readonly aelf::Marshaller<global::EcoEarn.Contracts.Tokens.PoolData> __Marshaller_PoolData = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Tokens.PoolData.Parser.ParseFrom);
@@ -389,15 +352,12 @@ namespace EcoEarn.Contracts.Tokens {
     static readonly aelf::Marshaller<global::EcoEarn.Contracts.Tokens.SetTokensPoolRewardPerSecondInput> __Marshaller_SetTokensPoolRewardPerSecondInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Tokens.SetTokensPoolRewardPerSecondInput.Parser.ParseFrom);
     static readonly aelf::Marshaller<global::EcoEarn.Contracts.Tokens.SetTokensPoolUnlockWindowDurationInput> __Marshaller_SetTokensPoolUnlockWindowDurationInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Tokens.SetTokensPoolUnlockWindowDurationInput.Parser.ParseFrom);
     static readonly aelf::Marshaller<global::EcoEarn.Contracts.Tokens.StakeInput> __Marshaller_StakeInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Tokens.StakeInput.Parser.ParseFrom);
-    static readonly aelf::Marshaller<global::EcoEarn.Contracts.Tokens.RenewInput> __Marshaller_RenewInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Tokens.RenewInput.Parser.ParseFrom);
-    static readonly aelf::Marshaller<global::EcoEarn.Contracts.Tokens.EarlyStakeInput> __Marshaller_EarlyStakeInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Tokens.EarlyStakeInput.Parser.ParseFrom);
     static readonly aelf::Marshaller<global::EcoEarn.Contracts.Tokens.StakeForInput> __Marshaller_StakeForInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Tokens.StakeForInput.Parser.ParseFrom);
+    static readonly aelf::Marshaller<global::EcoEarn.Contracts.Tokens.RenewInput> __Marshaller_RenewInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Tokens.RenewInput.Parser.ParseFrom);
     static readonly aelf::Marshaller<global::EcoEarn.Contracts.Tokens.GetStakeInfoOutput> __Marshaller_GetStakeInfoOutput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Tokens.GetStakeInfoOutput.Parser.ParseFrom);
+    static readonly aelf::Marshaller<global::EcoEarn.Contracts.Tokens.GetRewardInput> __Marshaller_GetRewardInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Tokens.GetRewardInput.Parser.ParseFrom);
     static readonly aelf::Marshaller<global::EcoEarn.Contracts.Tokens.GetRewardOutput> __Marshaller_GetRewardOutput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Tokens.GetRewardOutput.Parser.ParseFrom);
     static readonly aelf::Marshaller<global::EcoEarn.Contracts.Tokens.GetUserStakeIdInput> __Marshaller_GetUserStakeIdInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Tokens.GetUserStakeIdInput.Parser.ParseFrom);
-    static readonly aelf::Marshaller<global::EcoEarn.Contracts.Tokens.GetUserStakeCountInput> __Marshaller_GetUserStakeCountInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Tokens.GetUserStakeCountInput.Parser.ParseFrom);
-    static readonly aelf::Marshaller<global::EcoEarn.Contracts.Tokens.ClaimInfo> __Marshaller_ClaimInfo = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Tokens.ClaimInfo.Parser.ParseFrom);
-    static readonly aelf::Marshaller<global::EcoEarn.Contracts.Tokens.WithdrawInput> __Marshaller_WithdrawInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Tokens.WithdrawInput.Parser.ParseFrom);
     static readonly aelf::Marshaller<global::EcoEarn.Contracts.Tokens.RecoverTokenInput> __Marshaller_RecoverTokenInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Tokens.RecoverTokenInput.Parser.ParseFrom);
     static readonly aelf::Marshaller<global::EcoEarn.Contracts.Tokens.InitializeInput> __Marshaller_InitializeInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Tokens.InitializeInput.Parser.ParseFrom);
     static readonly aelf::Marshaller<global::EcoEarn.Contracts.Tokens.Config> __Marshaller_Config = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Tokens.Config.Parser.ParseFrom);
@@ -440,11 +400,11 @@ namespace EcoEarn.Contracts.Tokens {
         __Marshaller_SetTokensPoolEndTimeInput,
         __Marshaller_google_protobuf_Empty);
 
-    static readonly aelf::Method<global::EcoEarn.Contracts.Tokens.SetTokensPoolRewardReleasePeriodInput, global::Google.Protobuf.WellKnownTypes.Empty> __Method_SetTokensPoolRewardReleasePeriod = new aelf::Method<global::EcoEarn.Contracts.Tokens.SetTokensPoolRewardReleasePeriodInput, global::Google.Protobuf.WellKnownTypes.Empty>(
+    static readonly aelf::Method<global::EcoEarn.Contracts.Tokens.SetTokensPoolRewardConfigInput, global::Google.Protobuf.WellKnownTypes.Empty> __Method_SetTokensPoolRewardConfig = new aelf::Method<global::EcoEarn.Contracts.Tokens.SetTokensPoolRewardConfigInput, global::Google.Protobuf.WellKnownTypes.Empty>(
         aelf::MethodType.Action,
         __ServiceName,
-        "SetTokensPoolRewardReleasePeriod",
-        __Marshaller_SetTokensPoolRewardReleasePeriodInput,
+        "SetTokensPoolRewardConfig",
+        __Marshaller_SetTokensPoolRewardConfigInput,
         __Marshaller_google_protobuf_Empty);
 
     static readonly aelf::Method<global::EcoEarn.Contracts.Tokens.SetTokensPoolStakeConfigInput, global::Google.Protobuf.WellKnownTypes.Empty> __Method_SetTokensPoolStakeConfig = new aelf::Method<global::EcoEarn.Contracts.Tokens.SetTokensPoolStakeConfigInput, global::Google.Protobuf.WellKnownTypes.Empty>(
@@ -510,25 +470,18 @@ namespace EcoEarn.Contracts.Tokens {
         __Marshaller_StakeInput,
         __Marshaller_google_protobuf_Empty);
 
-    static readonly aelf::Method<global::EcoEarn.Contracts.Tokens.RenewInput, global::Google.Protobuf.WellKnownTypes.Empty> __Method_Renew = new aelf::Method<global::EcoEarn.Contracts.Tokens.RenewInput, global::Google.Protobuf.WellKnownTypes.Empty>(
-        aelf::MethodType.Action,
-        __ServiceName,
-        "Renew",
-        __Marshaller_RenewInput,
-        __Marshaller_google_protobuf_Empty);
-
-    static readonly aelf::Method<global::EcoEarn.Contracts.Tokens.EarlyStakeInput, global::Google.Protobuf.WellKnownTypes.Empty> __Method_EarlyStake = new aelf::Method<global::EcoEarn.Contracts.Tokens.EarlyStakeInput, global::Google.Protobuf.WellKnownTypes.Empty>(
-        aelf::MethodType.Action,
-        __ServiceName,
-        "EarlyStake",
-        __Marshaller_EarlyStakeInput,
-        __Marshaller_google_protobuf_Empty);
-
     static readonly aelf::Method<global::EcoEarn.Contracts.Tokens.StakeForInput, global::Google.Protobuf.WellKnownTypes.Empty> __Method_StakeFor = new aelf::Method<global::EcoEarn.Contracts.Tokens.StakeForInput, global::Google.Protobuf.WellKnownTypes.Empty>(
         aelf::MethodType.Action,
         __ServiceName,
         "StakeFor",
         __Marshaller_StakeForInput,
+        __Marshaller_google_protobuf_Empty);
+
+    static readonly aelf::Method<global::EcoEarn.Contracts.Tokens.RenewInput, global::Google.Protobuf.WellKnownTypes.Empty> __Method_Renew = new aelf::Method<global::EcoEarn.Contracts.Tokens.RenewInput, global::Google.Protobuf.WellKnownTypes.Empty>(
+        aelf::MethodType.Action,
+        __ServiceName,
+        "Renew",
+        __Marshaller_RenewInput,
         __Marshaller_google_protobuf_Empty);
 
     static readonly aelf::Method<global::AElf.Types.Hash, global::EcoEarn.Contracts.Tokens.GetStakeInfoOutput> __Method_GetStakeInfo = new aelf::Method<global::AElf.Types.Hash, global::EcoEarn.Contracts.Tokens.GetStakeInfoOutput>(
@@ -538,11 +491,11 @@ namespace EcoEarn.Contracts.Tokens {
         __Marshaller_aelf_Hash,
         __Marshaller_GetStakeInfoOutput);
 
-    static readonly aelf::Method<global::AElf.Types.Hash, global::EcoEarn.Contracts.Tokens.GetRewardOutput> __Method_GetReward = new aelf::Method<global::AElf.Types.Hash, global::EcoEarn.Contracts.Tokens.GetRewardOutput>(
+    static readonly aelf::Method<global::EcoEarn.Contracts.Tokens.GetRewardInput, global::EcoEarn.Contracts.Tokens.GetRewardOutput> __Method_GetReward = new aelf::Method<global::EcoEarn.Contracts.Tokens.GetRewardInput, global::EcoEarn.Contracts.Tokens.GetRewardOutput>(
         aelf::MethodType.View,
         __ServiceName,
         "GetReward",
-        __Marshaller_aelf_Hash,
+        __Marshaller_GetRewardInput,
         __Marshaller_GetRewardOutput);
 
     static readonly aelf::Method<global::AElf.Types.Hash, global::Google.Protobuf.WellKnownTypes.Empty> __Method_Unlock = new aelf::Method<global::AElf.Types.Hash, global::Google.Protobuf.WellKnownTypes.Empty>(
@@ -559,32 +512,11 @@ namespace EcoEarn.Contracts.Tokens {
         __Marshaller_GetUserStakeIdInput,
         __Marshaller_aelf_Hash);
 
-    static readonly aelf::Method<global::EcoEarn.Contracts.Tokens.GetUserStakeCountInput, global::Google.Protobuf.WellKnownTypes.Int64Value> __Method_GetUserStakeCount = new aelf::Method<global::EcoEarn.Contracts.Tokens.GetUserStakeCountInput, global::Google.Protobuf.WellKnownTypes.Int64Value>(
-        aelf::MethodType.View,
-        __ServiceName,
-        "GetUserStakeCount",
-        __Marshaller_GetUserStakeCountInput,
-        __Marshaller_google_protobuf_Int64Value);
-
     static readonly aelf::Method<global::AElf.Types.Hash, global::Google.Protobuf.WellKnownTypes.Empty> __Method_Claim = new aelf::Method<global::AElf.Types.Hash, global::Google.Protobuf.WellKnownTypes.Empty>(
         aelf::MethodType.Action,
         __ServiceName,
         "Claim",
         __Marshaller_aelf_Hash,
-        __Marshaller_google_protobuf_Empty);
-
-    static readonly aelf::Method<global::AElf.Types.Hash, global::EcoEarn.Contracts.Tokens.ClaimInfo> __Method_GetClaimInfo = new aelf::Method<global::AElf.Types.Hash, global::EcoEarn.Contracts.Tokens.ClaimInfo>(
-        aelf::MethodType.View,
-        __ServiceName,
-        "GetClaimInfo",
-        __Marshaller_aelf_Hash,
-        __Marshaller_ClaimInfo);
-
-    static readonly aelf::Method<global::EcoEarn.Contracts.Tokens.WithdrawInput, global::Google.Protobuf.WellKnownTypes.Empty> __Method_Withdraw = new aelf::Method<global::EcoEarn.Contracts.Tokens.WithdrawInput, global::Google.Protobuf.WellKnownTypes.Empty>(
-        aelf::MethodType.Action,
-        __ServiceName,
-        "Withdraw",
-        __Marshaller_WithdrawInput,
         __Marshaller_google_protobuf_Empty);
 
     static readonly aelf::Method<global::EcoEarn.Contracts.Tokens.RecoverTokenInput, global::Google.Protobuf.WellKnownTypes.Empty> __Method_RecoverToken = new aelf::Method<global::EcoEarn.Contracts.Tokens.RecoverTokenInput, global::Google.Protobuf.WellKnownTypes.Empty>(
@@ -678,7 +610,7 @@ namespace EcoEarn.Contracts.Tokens {
     //     throw new global::System.NotImplementedException();
     //   }
     //
-    //   public virtual global::Google.Protobuf.WellKnownTypes.Empty SetTokensPoolRewardReleasePeriod(global::EcoEarn.Contracts.Tokens.SetTokensPoolRewardReleasePeriodInput input)
+    //   public virtual global::Google.Protobuf.WellKnownTypes.Empty SetTokensPoolRewardConfig(global::EcoEarn.Contracts.Tokens.SetTokensPoolRewardConfigInput input)
     //   {
     //     throw new global::System.NotImplementedException();
     //   }
@@ -728,17 +660,12 @@ namespace EcoEarn.Contracts.Tokens {
     //     throw new global::System.NotImplementedException();
     //   }
     //
-    //   public virtual global::Google.Protobuf.WellKnownTypes.Empty Renew(global::EcoEarn.Contracts.Tokens.RenewInput input)
-    //   {
-    //     throw new global::System.NotImplementedException();
-    //   }
-    //
-    //   public virtual global::Google.Protobuf.WellKnownTypes.Empty EarlyStake(global::EcoEarn.Contracts.Tokens.EarlyStakeInput input)
-    //   {
-    //     throw new global::System.NotImplementedException();
-    //   }
-    //
     //   public virtual global::Google.Protobuf.WellKnownTypes.Empty StakeFor(global::EcoEarn.Contracts.Tokens.StakeForInput input)
+    //   {
+    //     throw new global::System.NotImplementedException();
+    //   }
+    //
+    //   public virtual global::Google.Protobuf.WellKnownTypes.Empty Renew(global::EcoEarn.Contracts.Tokens.RenewInput input)
     //   {
     //     throw new global::System.NotImplementedException();
     //   }
@@ -748,7 +675,7 @@ namespace EcoEarn.Contracts.Tokens {
     //     throw new global::System.NotImplementedException();
     //   }
     //
-    //   public virtual global::EcoEarn.Contracts.Tokens.GetRewardOutput GetReward(global::AElf.Types.Hash input)
+    //   public virtual global::EcoEarn.Contracts.Tokens.GetRewardOutput GetReward(global::EcoEarn.Contracts.Tokens.GetRewardInput input)
     //   {
     //     throw new global::System.NotImplementedException();
     //   }
@@ -763,22 +690,7 @@ namespace EcoEarn.Contracts.Tokens {
     //     throw new global::System.NotImplementedException();
     //   }
     //
-    //   public virtual global::Google.Protobuf.WellKnownTypes.Int64Value GetUserStakeCount(global::EcoEarn.Contracts.Tokens.GetUserStakeCountInput input)
-    //   {
-    //     throw new global::System.NotImplementedException();
-    //   }
-    //
     //   public virtual global::Google.Protobuf.WellKnownTypes.Empty Claim(global::AElf.Types.Hash input)
-    //   {
-    //     throw new global::System.NotImplementedException();
-    //   }
-    //
-    //   public virtual global::EcoEarn.Contracts.Tokens.ClaimInfo GetClaimInfo(global::AElf.Types.Hash input)
-    //   {
-    //     throw new global::System.NotImplementedException();
-    //   }
-    //
-    //   public virtual global::Google.Protobuf.WellKnownTypes.Empty Withdraw(global::EcoEarn.Contracts.Tokens.WithdrawInput input)
     //   {
     //     throw new global::System.NotImplementedException();
     //   }
@@ -824,7 +736,7 @@ namespace EcoEarn.Contracts.Tokens {
     //       .AddMethod(__Method_GetDappInfo, serviceImpl.GetDappInfo)
     //       .AddMethod(__Method_CreateTokensPool, serviceImpl.CreateTokensPool)
     //       .AddMethod(__Method_SetTokensPoolEndTime, serviceImpl.SetTokensPoolEndTime)
-    //       .AddMethod(__Method_SetTokensPoolRewardReleasePeriod, serviceImpl.SetTokensPoolRewardReleasePeriod)
+    //       .AddMethod(__Method_SetTokensPoolRewardConfig, serviceImpl.SetTokensPoolRewardConfig)
     //       .AddMethod(__Method_SetTokensPoolStakeConfig, serviceImpl.SetTokensPoolStakeConfig)
     //       .AddMethod(__Method_GetPoolInfo, serviceImpl.GetPoolInfo)
     //       .AddMethod(__Method_GetPoolData, serviceImpl.GetPoolData)
@@ -834,17 +746,13 @@ namespace EcoEarn.Contracts.Tokens {
     //       .AddMethod(__Method_SetTokensPoolRewardPerSecond, serviceImpl.SetTokensPoolRewardPerSecond)
     //       .AddMethod(__Method_SetTokensPoolUnlockWindowDuration, serviceImpl.SetTokensPoolUnlockWindowDuration)
     //       .AddMethod(__Method_Stake, serviceImpl.Stake)
-    //       .AddMethod(__Method_Renew, serviceImpl.Renew)
-    //       .AddMethod(__Method_EarlyStake, serviceImpl.EarlyStake)
     //       .AddMethod(__Method_StakeFor, serviceImpl.StakeFor)
+    //       .AddMethod(__Method_Renew, serviceImpl.Renew)
     //       .AddMethod(__Method_GetStakeInfo, serviceImpl.GetStakeInfo)
     //       .AddMethod(__Method_GetReward, serviceImpl.GetReward)
     //       .AddMethod(__Method_Unlock, serviceImpl.Unlock)
     //       .AddMethod(__Method_GetUserStakeId, serviceImpl.GetUserStakeId)
-    //       .AddMethod(__Method_GetUserStakeCount, serviceImpl.GetUserStakeCount)
     //       .AddMethod(__Method_Claim, serviceImpl.Claim)
-    //       .AddMethod(__Method_GetClaimInfo, serviceImpl.GetClaimInfo)
-    //       .AddMethod(__Method_Withdraw, serviceImpl.Withdraw)
     //       .AddMethod(__Method_RecoverToken, serviceImpl.RecoverToken)
     //       .AddMethod(__Method_Initialize, serviceImpl.Initialize)
     //       .AddMethod(__Method_SetConfig, serviceImpl.SetConfig)

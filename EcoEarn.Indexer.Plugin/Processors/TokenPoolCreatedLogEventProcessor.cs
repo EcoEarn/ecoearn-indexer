@@ -64,13 +64,16 @@ public class TokenPoolCreatedLogEventProcessor : AElfLogEventProcessorBase<Token
                     StakingToken = eventValue.Config.StakingToken,
                     FixedBoostFactor = eventValue.Config.FixedBoostFactor,
                     MinimumAmount = eventValue.Config.MinimumAmount,
-                    ReleasePeriod = eventValue.Config.ReleasePeriod,
+                    MinimumStakeDuration = eventValue.Config.MinimumStakeDuration,
                     MaximumStakeDuration = eventValue.Config.MaximumStakeDuration,
+                    MinimumClaimAmount = eventValue.Config.MinimumClaimAmount,
+                    MinimumEarlyStakeAmount = eventValue.Config.MinimumEarlyStakeAmount,
                     RewardTokenContract = eventValue.Config.RewardTokenContract.ToBase58(),
                     StakeTokenContract = eventValue.Config.StakeTokenContract.ToBase58(),
-                    MinimumClaimAmount = eventValue.Config.MinimumClaimAmount,
                     UnlockWindowDuration = eventValue.Config.UnlockWindowDuration,
-                    MinimumStakeDuration = eventValue.Config.MinimumStakeDuration
+                    ReleasePeriod = eventValue.Config.ReleasePeriods.Max(),
+                    ReleasePeriods = eventValue.Config.ReleasePeriods.ToList(),
+                    ClaimInterval = eventValue.Config.ClaimInterval,
                 },
                 CreateTime = context.BlockTime.ToUtcMilliSeconds()
             };

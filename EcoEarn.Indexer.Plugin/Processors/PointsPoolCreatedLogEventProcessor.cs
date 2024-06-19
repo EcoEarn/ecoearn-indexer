@@ -63,7 +63,9 @@ public class PointsPoolCreatedLogEventProcessor : AElfLogEventProcessorBase<Poin
                     EndBlockNumber = eventValue.Config.EndTime == null ? 0 : eventValue.Config.EndTime.ToDateTime().ToUtcMilliSeconds(),
                     RewardPerBlock = eventValue.Config.RewardPerSecond,
                     UpdateAddress = eventValue.Config.UpdateAddress.ToBase58(),
-                    ReleasePeriod = eventValue.Config.ReleasePeriod,
+                    ReleasePeriod = eventValue.Config.ReleasePeriods.Max(),
+                    ReleasePeriods = eventValue.Config.ReleasePeriods.ToList(),
+                    ClaimInterval = eventValue.Config.ClaimInterval,
                 },
                 CreateTime = context.BlockTime.ToUtcMilliSeconds()
             };

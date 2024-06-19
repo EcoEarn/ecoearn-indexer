@@ -8,6 +8,7 @@ using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using Orleans.Runtime;
 using Volo.Abp.ObjectMapping;
+using SubStakeInfo = EcoEarn.Indexer.Plugin.Entities.SubStakeInfo;
 
 namespace EcoEarn.Indexer.Plugin.Processors;
 
@@ -56,29 +57,34 @@ public class TokenPoolStakedLogEventProcessor : AElfLogEventProcessorBase<Staked
                 Id = id,
                 StakeId = eventValue.StakeInfo.StakeId == null ? "" : eventValue.StakeInfo.StakeId.ToHex(),
                 PoolId = eventValue.StakeInfo.PoolId == null ? "" : eventValue.StakeInfo.PoolId.ToHex(),
-                StakingToken = eventValue.StakeInfo.StakingToken,
-                StakedAmount = eventValue.StakeInfo.StakedAmount,
-                EarlyStakedAmount = eventValue.StakeInfo.EarlyStakedAmount,
-                ClaimedAmount = eventValue.StakeInfo.ClaimedAmount,
-                StakedBlockNumber = eventValue.StakeInfo.StakedBlockNumber,
-                StakedTime = eventValue.StakeInfo.StakedTime == null
-                    ? 0
-                    : eventValue.StakeInfo.StakedTime.ToDateTime().ToUtcMilliSeconds(),
-                Period = eventValue.StakeInfo.Period,
                 Account = eventValue.StakeInfo.Account.ToBase58(),
-                BoostedAmount = eventValue.StakeInfo.BoostedAmount,
-                RewardDebt = eventValue.StakeInfo.RewardDebt,
-                WithdrawTime = eventValue.StakeInfo.UnlockTime == null
+                StakingToken = eventValue.StakeInfo.StakingToken,
+                UnlockTime = eventValue.StakeInfo.UnlockTime == null
                     ? 0
                     : eventValue.StakeInfo.UnlockTime.ToDateTime().ToUtcMilliSeconds(),
-                RewardAmount = eventValue.StakeInfo.RewardAmount,
-                LockedRewardAmount = eventValue.StakeInfo.LockedRewardAmount,
                 LastOperationTime = eventValue.StakeInfo.LastOperationTime == null
                     ? 0
                     : eventValue.StakeInfo.LastOperationTime.ToDateTime().ToUtcMilliSeconds(),
+                StakingPeriod = eventValue.StakeInfo.StakingPeriod,
+                LongestReleaseTime = eventValue.StakeInfo.LongestReleaseTime == null
+                    ? 0
+                    : eventValue.StakeInfo.LongestReleaseTime.ToDateTime().ToUtcMilliSeconds(),
+                SubStakeInfos = eventValue.StakeInfo.SubStakeInfos.Select(x => new SubStakeInfo()
+                {
+                    SubStakeId = x.SubStakeId.ToHex(),
+                    StakedAmount = x.StakedAmount,
+                    StakedBlockNumber = x.StakedBlockNumber,
+                    StakedTime = x.StakedTime == null
+                        ? 0
+                        : x.StakedTime.ToDateTime().ToUtcMilliSeconds(),
+                    Period = x.Period,
+                    BoostedAmount = x.BoostedAmount,
+                    RewardDebt = x.RewardDebt,
+                    RewardAmount = x.RewardAmount,
+                    Seed = x.Seed.ToHex(),
+                }).ToList(),
                 UpdateTime = context.BlockTime.ToUtcMilliSeconds(),
                 LockState = LockState.Locking,
-                StakingPeriod = eventValue.StakeInfo.StakingPeriod
             };
             var tokenPoolIndex =
                 await _tokenPoolRepository.GetFromBlockStateSetAsync(tokenStakedIndex.PoolId, context.ChainId);

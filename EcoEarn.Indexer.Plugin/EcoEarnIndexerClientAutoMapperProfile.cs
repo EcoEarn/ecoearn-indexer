@@ -23,5 +23,6 @@ public class EcoEarnIndexerClientAutoMapperProfile : Profile
         CreateMap<TokenStakedIndex, StakedInfoDto>();
         CreateMap<RewardsClaimIndex, ClaimInfoDto>();
         CreateMap<TokenPoolStakeInfoIndex, TokenPoolStakeInfoDto>();
+        CreateMap<SubStakeInfo, SubStakeInfoDto>();
     }
 }

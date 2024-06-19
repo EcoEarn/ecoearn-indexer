@@ -14,7 +14,7 @@ namespace EcoEarn.Indexer.Plugin.GraphQL;
 
 public partial class Query
 {
-    [Name("getConfirmedBlockHeight")]
+    [Name("syncState")]
     public static async Task<SyncStateDto> GetConfirmedBlockHeight([FromServices] IClusterClient clusterClient,
         [FromServices] IAElfIndexerClientInfoProvider clientInfoProvider, SyncStateInput input)
     {
@@ -156,7 +156,7 @@ public partial class Query
         if (input.FilterUnlock)
         {
             mustQuery.Add(q =>
-                q.LongRange(i => i.Field(f => f.UnlockTime).LessThan(DateTime.UtcNow.ToUtcMilliSeconds())));
+                q.LongRange(i => i.Field(f => f.ReleaseTime).LessThan(DateTime.UtcNow.ToUtcMilliSeconds())));
         }
 
         if (input.FilterWithdraw)

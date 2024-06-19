@@ -40,7 +40,7 @@ public class TokenPoolUnlockedLogEventProcessor : AElfLogEventProcessorBase<Unlo
         {
             _logger.Debug("TokenPoolUnlocked: {eventValue} context: {context}", JsonConvert.SerializeObject(eventValue),
                 JsonConvert.SerializeObject(context));
-            var id = IdGenerateHelper.GetId(eventValue.PoolData.PoolId.ToHex(), eventValue.StakeId.ToHex());
+            var id = IdGenerateHelper.GetId(eventValue.PoolData.PoolId.ToHex(), eventValue.StakeInfo.StakeId.ToHex());
             var stakedIndex = await _repository.GetFromBlockStateSetAsync(id, context.ChainId);
             _logger.LogDebug("TokenPoolUnlocked Get Staked Info:{info}", JsonConvert.SerializeObject(stakedIndex));
             stakedIndex.LockState = LockState.Unlock;

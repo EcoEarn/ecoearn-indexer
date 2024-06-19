@@ -11,17 +11,17 @@ using Volo.Abp.ObjectMapping;
 
 namespace EcoEarn.Indexer.Plugin.Processors;
 
-public class TokensPoolRewardReleasePeriodSetLogEventProcessor : AElfLogEventProcessorBase<TokensPoolRewardReleasePeriodSet,
+public class TokensPoolRewardConfigSetLogEventProcessor : AElfLogEventProcessorBase<TokensPoolRewardConfigSet,
     LogEventInfo>
 {
     private readonly IObjectMapper _objectMapper;
     private readonly ContractInfoOptions _contractInfoOptions;
-    private readonly ILogger<TokensPoolRewardReleasePeriodSetLogEventProcessor> _logger;
+    private readonly ILogger<TokensPoolRewardConfigSetLogEventProcessor> _logger;
     private readonly IAElfIndexerClientEntityRepository<RewardsClaimIndex, LogEventInfo> _repository;
     private readonly IAElfIndexerClientEntityRepository<TokenPoolIndex, LogEventInfo> _tokenPoolRepository;
 
-    public TokensPoolRewardReleasePeriodSetLogEventProcessor(
-        ILogger<TokensPoolRewardReleasePeriodSetLogEventProcessor> logger,
+    public TokensPoolRewardConfigSetLogEventProcessor(
+        ILogger<TokensPoolRewardConfigSetLogEventProcessor> logger,
         IObjectMapper objectMapper, IOptionsSnapshot<ContractInfoOptions> contractInfoOptions,
         IAElfIndexerClientEntityRepository<RewardsClaimIndex, LogEventInfo> pointsRewardsClaimRepository,
         IAElfIndexerClientEntityRepository<TokenPoolIndex, LogEventInfo> tokenPoolRepository) :
@@ -39,24 +39,26 @@ public class TokensPoolRewardReleasePeriodSetLogEventProcessor : AElfLogEventPro
         return _contractInfoOptions.ContractInfos.First(c => c.ChainId == chainId).EcoEarnTokenContractAddress;
     }
 
-    protected override async Task HandleEventAsync(TokensPoolRewardReleasePeriodSet eventValue,
+    protected override async Task HandleEventAsync(TokensPoolRewardConfigSet eventValue,
         LogEventContext context)
     {
         try
         {
-            _logger.Debug("TokensPoolRewardReleasePeriodSet: {eventValue} context: {context}",
+            _logger.Debug("TokensPoolRewardConfigSet: {eventValue} context: {context}",
                 JsonConvert.SerializeObject(eventValue),
                 JsonConvert.SerializeObject(context));
             var id = IdGenerateHelper.GetId(eventValue.PoolId.ToHex());
             var tokenPoolIndex = await _tokenPoolRepository.GetFromBlockStateSetAsync(id, context.ChainId);
 
-            tokenPoolIndex.TokenPoolConfig.ReleasePeriod = eventValue.ReleasePeriod;
+            tokenPoolIndex.TokenPoolConfig.ReleasePeriod = eventValue.ReleasePeriods.Data.Max();
+            tokenPoolIndex.TokenPoolConfig.ReleasePeriods = eventValue.ReleasePeriods.Data.ToList();
+            tokenPoolIndex.TokenPoolConfig.ClaimInterval = eventValue.ClaimInterval;
             _objectMapper.Map(context, tokenPoolIndex);
             await _tokenPoolRepository.AddOrUpdateAsync(tokenPoolIndex);
         }
         catch (Exception e)
         {
-            _logger.LogError(e, "TokensPoolRewardReleasePeriodSet HandleEventAsync error.");
+            _logger.LogError(e, "TokensPoolRewardConfigSet HandleEventAsync error.");
         }
     }
 }

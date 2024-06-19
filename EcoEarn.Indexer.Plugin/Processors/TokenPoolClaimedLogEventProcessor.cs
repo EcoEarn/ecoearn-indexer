@@ -16,13 +16,13 @@ public class TokenPoolClaimedLogEventProcessor : AElfLogEventProcessorBase<Claim
     private readonly IObjectMapper _objectMapper;
     private readonly ContractInfoOptions _contractInfoOptions;
     private readonly ILogger<TokenPoolClaimedLogEventProcessor> _logger;
-    private readonly IAElfIndexerClientEntityRepository<RewardsClaimIndex, LogEventInfo> _repository;
+    private readonly IAElfIndexerClientEntityRepository<RewardsClaimRecordIndex, LogEventInfo> _repository;
     private readonly IAElfIndexerClientEntityRepository<TokenPoolIndex, LogEventInfo> _tokenPoolRepository;
 
 
     public TokenPoolClaimedLogEventProcessor(ILogger<TokenPoolClaimedLogEventProcessor> logger,
         IObjectMapper objectMapper, IOptionsSnapshot<ContractInfoOptions> contractInfoOptions,
-        IAElfIndexerClientEntityRepository<RewardsClaimIndex, LogEventInfo> pointsRewardsClaimRepository,
+        IAElfIndexerClientEntityRepository<RewardsClaimRecordIndex, LogEventInfo> pointsRewardsClaimRepository,
         IAElfIndexerClientEntityRepository<TokenPoolIndex, LogEventInfo> tokenPoolRepository) :
         base(logger)
     {
@@ -44,35 +44,22 @@ public class TokenPoolClaimedLogEventProcessor : AElfLogEventProcessorBase<Claim
         {
             _logger.Debug("TokenPoolClaimed: {eventValue} context: {context}", JsonConvert.SerializeObject(eventValue),
                 JsonConvert.SerializeObject(context));
-            var id = IdGenerateHelper.GetId(eventValue.ClaimInfo.ClaimId.ToHex(), eventValue.ClaimInfo.PoolId.ToHex());
-            if (await _repository.GetAsync(id) != null)
-            {
-                _logger.LogWarning("Claimed {id} of Pool {DApp} exists", eventValue.ClaimInfo.ClaimId.ToHex(),
-                    eventValue.ClaimInfo.PoolId.ToHex());
-                return;
-            }
 
-            var rewardsClaimIndex = new RewardsClaimIndex
+            var rewardsClaimRecordIndex = new RewardsClaimRecordIndex
             {
-                Id = id,
-                ClaimId = eventValue.ClaimInfo.ClaimId.ToHex(),
-                StakeId = eventValue.ClaimInfo.StakeId == null ? "" : eventValue.ClaimInfo.StakeId.ToHex(),
-                PoolId = eventValue.ClaimInfo.PoolId.ToHex(),
-                ClaimedAmount = eventValue.ClaimInfo.ClaimedAmount.ToString(),
-                ClaimedSymbol = eventValue.ClaimInfo.ClaimedSymbol,
-                ClaimedBlockNumber = eventValue.ClaimInfo.ClaimedBlockNumber,
-                ClaimedTime = eventValue.ClaimInfo.ClaimedTime == null ? 0 : eventValue.ClaimInfo.ClaimedTime.ToDateTime().ToUtcMilliSeconds(),
-                UnlockTime = eventValue.ClaimInfo.UnlockTime == null ? 0 : eventValue.ClaimInfo.UnlockTime.ToDateTime().ToUtcMilliSeconds(),
-                WithdrawTime = eventValue.ClaimInfo.WithdrawTime == null ? 0 : eventValue.ClaimInfo.WithdrawTime.ToDateTime().ToUtcMilliSeconds(),
-                Account = eventValue.ClaimInfo.Account.ToBase58(),
-                EarlyStakeTime = eventValue.ClaimInfo.EarlyStakeTime == null ? 0 : eventValue.ClaimInfo.EarlyStakeTime.ToDateTime().ToUtcMilliSeconds(),
+                Id = Guid.NewGuid().ToString(),
+                PoolId = eventValue.PoolId.ToHex(),
+                Account = eventValue.Account.ToBase58(),
+                Amount = eventValue.Amount.ToString(),
+                Seed = "",
             };
 
+
             var tokenPoolIndex =
-                await _tokenPoolRepository.GetFromBlockStateSetAsync(rewardsClaimIndex.PoolId, context.ChainId);
-            rewardsClaimIndex.PoolType = tokenPoolIndex.PoolType;
-            _objectMapper.Map(context, rewardsClaimIndex);
-            await _repository.AddOrUpdateAsync(rewardsClaimIndex);
+                await _tokenPoolRepository.GetFromBlockStateSetAsync(rewardsClaimRecordIndex.PoolId, context.ChainId);
+            rewardsClaimRecordIndex.PoolType = tokenPoolIndex.PoolType;
+            _objectMapper.Map(context, rewardsClaimRecordIndex);
+            await _repository.AddOrUpdateAsync(rewardsClaimRecordIndex);
         }
         catch (Exception e)
         {

@@ -29,6 +29,9 @@ public class TokenPoolConfigDto
     public string StakeTokenContract { get; set; }
     public long MinimumClaimAmount { get; set; }
     public long UnlockWindowDuration { get; set; }
+    public List<long> ReleasePeriods { get; set; }
+    public long ClaimInterval { get; set; }
+    public long MinimumEarlyStakeAmount { get; set; }
 }
 
 public class TokenPoolDtoList

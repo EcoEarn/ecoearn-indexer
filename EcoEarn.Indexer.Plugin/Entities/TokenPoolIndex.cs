@@ -25,10 +25,13 @@ public class TokenPoolConfig
     public long FixedBoostFactor { get; set; }
     public long MinimumAmount { get; set; }
     public long ReleasePeriod { get; set; }
+    public List<long> ReleasePeriods { get; set; }
+    public long ClaimInterval { get; set; }
     public long MaximumStakeDuration { get; set; }
     public long MinimumStakeDuration { get; set; }
     [Keyword] public string RewardTokenContract { get; set; }
     [Keyword] public string StakeTokenContract { get; set; }
     public long MinimumClaimAmount { get; set; }
+    public long MinimumEarlyStakeAmount { get; set; }
     public long UnlockWindowDuration { get; set; }
 }

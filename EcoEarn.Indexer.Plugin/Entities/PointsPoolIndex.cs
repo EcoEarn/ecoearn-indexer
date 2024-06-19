@@ -22,5 +22,7 @@ public class PointsPoolConfig
     public long EndBlockNumber { get; set; }
     public long RewardPerBlock { get; set; }
     public long ReleasePeriod { get; set; }
+    public List<long> ReleasePeriods { get; set; }
+    public long ClaimInterval { get; set; }
     [Keyword] public string UpdateAddress { get; set; }
 }

@@ -21,29 +21,31 @@ public class EcoEarnIndexerPluginModule : AElfIndexerClientPluginBaseModule<EcoE
 
         serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, PointsPoolClaimedLogEventProcessor>();
         serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, PointsPoolCreatedLogEventProcessor>();
-        serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, PointsPoolEarlyStakedLogEventProcessor>();
-        serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, PointsPoolWithdrawnLogEventProcessor>();
         serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, PointsPoolEndTimeSetLogEventProcessor>();
         serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, PointsPoolRewardPerSecondSetLogEventProcessor>();
-        serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, PointsPoolRewardReleasePeriodSetLogEventProcessor>();
+        serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, PointsPoolRewardConfigSetLogEventProcessor>();
         serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, PointsPoolUpdateAddressSetLogEventProcessor>();
-        
+        serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, PointsPoolRestartedLogEventProcessor>();
         
         serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, TokenPoolClaimedLogEventProcessor>();
         serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, TokenPoolCreatedLogEventProcessor>();
         serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, TokensPoolEndTimeSetLogEventProcessor>();
         serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, TokensPoolFixedBoostFactorSetLogEventProcessor>();
         serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, TokensPoolRewardPerSecondSetLogEventProcessor>();
-        serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, TokensPoolRewardReleasePeriodSetLogEventProcessor>();
+        serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, TokensPoolRewardConfigSetLogEventProcessor>();
         serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, TokensPoolStakeConfigSetLogEventProcessor>();
-        serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, TokenPoolEarlyStakedLogEventProcessor>();
         serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, TokenPoolStakedLogEventProcessor>();
-        serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, TokenPoolWithdrawnLogEventProcessor>();
-        serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, PointsPoolRestartedLogEventProcessor>();
         serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, TokenPoolUnlockedLogEventProcessor>();
         serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, TokensPoolUnlockWindowDurationSetLogEventProcessor>();
-        serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, RenewedLogEventProcessor>();
-        serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, TokensPoolRewardReleasePeriodSetLogEventProcessor>();
+        serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, TokenPoolRenewedLogEventProcessor>();
+        
+        serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, RewardsClaimedLogEventProcessor>();
+        serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, RewardsEarlyStakedLogEventProcessor>();
+        serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, RewardsWithdrawnLogEventProcessor>();
+
+        serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, LiquidityAddedLogEvenProcessor>();
+        serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, LiquidityRemovedLogEventProcessor>();
+        
         serviceCollection.AddSingleton<IBlockChainDataHandler, EcoEarnTransactionHandler>();
     }
 
