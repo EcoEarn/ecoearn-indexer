@@ -20,10 +20,11 @@ public class RewardsClaimIndex : AElfIndexerClientEntity<string>, IIndexBuild
     public long EarlyStakeTime { get; set; }
     [Keyword] public string Account { get; set; }
     public PoolType PoolType { get; set; }
-    [Keyword] public string WithdrawSeed { get; set; }
-    [Keyword] public string LiquidityId { get; set; }
-    [Keyword] public string ContractAddress { get; set; }
-    [Keyword] public string EarlyStakeSeed { get; set; }
+    [Keyword] public string WithdrawSeed { get; set; } = "";
+    [Keyword] public string LiquidityId { get; set; } = "";
+    [Keyword] public string ContractAddress { get; set; } = "";
+    [Keyword] public string EarlyStakeSeed { get; set; } = "";
+    [Keyword] public string LiquidityAddedSeed { get; set; } = "";
 }
 
 public enum PoolType

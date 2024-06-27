@@ -81,7 +81,7 @@ public class TokenPoolStakedLogEventProcessor : AElfLogEventProcessorBase<Staked
                     BoostedAmount = x.BoostedAmount,
                     RewardDebt = x.RewardDebt,
                     RewardAmount = x.RewardAmount,
-                    Seed = x.Seed.ToHex(),
+                    Seed = x.Seed == null ? "" : x.Seed.ToHex(),
                 }).ToList(),
                 UpdateTime = context.BlockTime.ToUtcMilliSeconds(),
                 LockState = LockState.Locking,

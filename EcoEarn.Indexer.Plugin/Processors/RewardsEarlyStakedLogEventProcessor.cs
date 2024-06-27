@@ -69,6 +69,9 @@ public class RewardsEarlyStakedLogEventProcessor : AElfLogEventProcessorBase<Ear
                     EarlyStakedAmount = claimInfo.EarlyStakedAmount.ToString(),
                     StakeId = claimInfo.StakeId == null ? "" : claimInfo.StakeId.ToHex(),
                     Seed = claimInfo.Seed == null ? "" : claimInfo.Seed.ToHex(),
+                    LiquidityId = claimInfo.LiquidityId == null ? "" : claimInfo.LiquidityId.ToHex(),
+                    ContractAddress = claimInfo.ContractAddress == null ? "" : claimInfo.ContractAddress.ToBase58(),
+                    EarlyStakeSeed = eventValue.Seed == null ? "" : eventValue.Seed.ToHex(),
                 };
 
                 var tokenPoolIndex =

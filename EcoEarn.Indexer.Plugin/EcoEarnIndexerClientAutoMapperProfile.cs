@@ -11,9 +11,11 @@ public class EcoEarnIndexerClientAutoMapperProfile : Profile
     {
         CreateMap<LogEventContext, PointsPoolIndex>();
         CreateMap<LogEventContext, RewardsClaimIndex>();
+        CreateMap<LogEventContext, RewardsClaimRecordIndex>();
         CreateMap<LogEventContext, TokenPoolIndex>();
         CreateMap<LogEventContext, TokenStakedIndex>();
         CreateMap<LogEventContext, TokenPoolStakeInfoIndex>();
+        CreateMap<LogEventContext, LiquidityInfoIndex>();
 
         CreateMap<PointsPoolIndex, PointsPoolDto>();
         CreateMap<PointsPoolConfig, PointsPoolConfigDto>();
@@ -24,5 +26,6 @@ public class EcoEarnIndexerClientAutoMapperProfile : Profile
         CreateMap<RewardsClaimIndex, ClaimInfoDto>();
         CreateMap<TokenPoolStakeInfoIndex, TokenPoolStakeInfoDto>();
         CreateMap<SubStakeInfo, SubStakeInfoDto>();
+        CreateMap<LiquidityInfoIndex, LiquidityInfoDto>();
     }
 }

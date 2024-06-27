@@ -73,7 +73,7 @@ public class TokenPoolCreatedLogEventProcessor : AElfLogEventProcessorBase<Token
                     UnlockWindowDuration = eventValue.Config.UnlockWindowDuration,
                     ReleasePeriod = eventValue.Config.ReleasePeriods.Max(),
                     ReleasePeriods = eventValue.Config.ReleasePeriods.ToList(),
-                    ClaimInterval = eventValue.Config.ClaimInterval,
+                    ClaimInterval = 0,
                 },
                 CreateTime = context.BlockTime.ToUtcMilliSeconds()
             };

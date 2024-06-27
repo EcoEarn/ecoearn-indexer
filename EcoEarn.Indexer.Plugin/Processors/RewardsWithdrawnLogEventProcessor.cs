@@ -70,6 +70,9 @@ public class RewardsWithdrawnLogEventProcessor : AElfLogEventProcessorBase<Withd
                     EarlyStakedAmount = claimInfo.EarlyStakedAmount.ToString(),
                     StakeId = claimInfo.StakeId == null ? "" : claimInfo.StakeId.ToHex(),
                     Seed = claimInfo.Seed == null ? "" : claimInfo.Seed.ToHex(),
+                    LiquidityId = claimInfo.LiquidityId == null ? "" : claimInfo.LiquidityId.ToHex(),
+                    ContractAddress = claimInfo.ContractAddress == null ? "" : claimInfo.ContractAddress.ToBase58(),
+                    WithdrawSeed = eventValue.Seed == null ? "" : eventValue.Seed.ToHex(),
                 };
 
                 var tokenPoolIndex =

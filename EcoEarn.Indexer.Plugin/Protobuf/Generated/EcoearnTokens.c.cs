@@ -112,6 +112,7 @@ namespace EcoEarn.Contracts.Tokens {
         MaximumStakeDuration = MaximumStakeDuration,
         MinimumClaimAmount = MinimumClaimAmount,
         MinimumStakeDuration = MinimumStakeDuration,
+        MinimumEarlyStakeAmount = MinimumEarlyStakeAmount,
       };
     }
   }
@@ -358,6 +359,7 @@ namespace EcoEarn.Contracts.Tokens {
     static readonly aelf::Marshaller<global::EcoEarn.Contracts.Tokens.GetRewardInput> __Marshaller_GetRewardInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Tokens.GetRewardInput.Parser.ParseFrom);
     static readonly aelf::Marshaller<global::EcoEarn.Contracts.Tokens.GetRewardOutput> __Marshaller_GetRewardOutput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Tokens.GetRewardOutput.Parser.ParseFrom);
     static readonly aelf::Marshaller<global::EcoEarn.Contracts.Tokens.GetUserStakeIdInput> __Marshaller_GetUserStakeIdInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Tokens.GetUserStakeIdInput.Parser.ParseFrom);
+    static readonly aelf::Marshaller<global::EcoEarn.Contracts.Tokens.GetUserStakeCountInput> __Marshaller_GetUserStakeCountInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Tokens.GetUserStakeCountInput.Parser.ParseFrom);
     static readonly aelf::Marshaller<global::EcoEarn.Contracts.Tokens.RecoverTokenInput> __Marshaller_RecoverTokenInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Tokens.RecoverTokenInput.Parser.ParseFrom);
     static readonly aelf::Marshaller<global::EcoEarn.Contracts.Tokens.InitializeInput> __Marshaller_InitializeInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Tokens.InitializeInput.Parser.ParseFrom);
     static readonly aelf::Marshaller<global::EcoEarn.Contracts.Tokens.Config> __Marshaller_Config = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Tokens.Config.Parser.ParseFrom);
@@ -511,6 +513,13 @@ namespace EcoEarn.Contracts.Tokens {
         "GetUserStakeId",
         __Marshaller_GetUserStakeIdInput,
         __Marshaller_aelf_Hash);
+
+    static readonly aelf::Method<global::EcoEarn.Contracts.Tokens.GetUserStakeCountInput, global::Google.Protobuf.WellKnownTypes.Int64Value> __Method_GetUserStakeCount = new aelf::Method<global::EcoEarn.Contracts.Tokens.GetUserStakeCountInput, global::Google.Protobuf.WellKnownTypes.Int64Value>(
+        aelf::MethodType.View,
+        __ServiceName,
+        "GetUserStakeCount",
+        __Marshaller_GetUserStakeCountInput,
+        __Marshaller_google_protobuf_Int64Value);
 
     static readonly aelf::Method<global::AElf.Types.Hash, global::Google.Protobuf.WellKnownTypes.Empty> __Method_Claim = new aelf::Method<global::AElf.Types.Hash, global::Google.Protobuf.WellKnownTypes.Empty>(
         aelf::MethodType.Action,
@@ -690,6 +699,11 @@ namespace EcoEarn.Contracts.Tokens {
     //     throw new global::System.NotImplementedException();
     //   }
     //
+    //   public virtual global::Google.Protobuf.WellKnownTypes.Int64Value GetUserStakeCount(global::EcoEarn.Contracts.Tokens.GetUserStakeCountInput input)
+    //   {
+    //     throw new global::System.NotImplementedException();
+    //   }
+    //
     //   public virtual global::Google.Protobuf.WellKnownTypes.Empty Claim(global::AElf.Types.Hash input)
     //   {
     //     throw new global::System.NotImplementedException();
@@ -752,6 +766,7 @@ namespace EcoEarn.Contracts.Tokens {
     //       .AddMethod(__Method_GetReward, serviceImpl.GetReward)
     //       .AddMethod(__Method_Unlock, serviceImpl.Unlock)
     //       .AddMethod(__Method_GetUserStakeId, serviceImpl.GetUserStakeId)
+    //       .AddMethod(__Method_GetUserStakeCount, serviceImpl.GetUserStakeCount)
     //       .AddMethod(__Method_Claim, serviceImpl.Claim)
     //       .AddMethod(__Method_RecoverToken, serviceImpl.RecoverToken)
     //       .AddMethod(__Method_Initialize, serviceImpl.Initialize)

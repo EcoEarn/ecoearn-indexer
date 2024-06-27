@@ -69,11 +69,14 @@ public class RewardsClaimedLogEventProcessor : AElfLogEventProcessorBase<Claimed
                     EarlyStakedAmount = claimInfo.EarlyStakedAmount.ToString(),
                     StakeId = claimInfo.StakeId == null ? "" : claimInfo.StakeId.ToHex(),
                     Seed = claimInfo.Seed == null ? "" : claimInfo.Seed.ToHex(),
+                    LiquidityId = claimInfo.LiquidityId == null ? "" : claimInfo.LiquidityId.ToHex(),
+                    ContractAddress = claimInfo.ContractAddress == null ? "" : claimInfo.ContractAddress.ToBase58(),
                 };
 
                 var tokenPoolIndex =
                     await _tokenPoolRepository.GetFromBlockStateSetAsync(rewardsClaim.PoolId, context.ChainId);
-                rewardsClaim.PoolType = tokenPoolIndex.PoolType;
+                rewardsClaim.PoolType = tokenPoolIndex?.PoolType ?? PoolType.Points;
+
                 _objectMapper.Map(context, rewardsClaim);
                 await _repository.AddOrUpdateAsync(rewardsClaim);
             }

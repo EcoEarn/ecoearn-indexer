@@ -6,6 +6,7 @@ using AElfIndexer.Grains.State.Client;
 using EcoEarn.Indexer.Plugin.Entities;
 using EcoEarn.Indexer.Plugin.GraphQL.Dto;
 using GraphQL;
+using Microsoft.Extensions.Options;
 using Nest;
 using Orleans;
 using Volo.Abp.ObjectMapping;
@@ -286,7 +287,12 @@ public partial class Query
 
         if (!input.Seeds.IsNullOrEmpty())
         {
-            mustQuery.Add(q => q.Terms(i => i.Field(f => f.Seed).Terms(input.Seeds)));
+            var shouldQuery = new List<Func<QueryContainerDescriptor<RewardsClaimIndex>, QueryContainer>>();
+            shouldQuery.Add(q => q.Terms(i => i.Field(f => f.Seed).Terms(input.Seeds)));
+            shouldQuery.Add(q => q.Terms(i => i.Field(f => f.WithdrawSeed).Terms(input.Seeds)));
+            shouldQuery.Add(q => q.Terms(i => i.Field(f => f.EarlyStakeSeed).Terms(input.Seeds)));
+            shouldQuery.Add(q => q.Terms(i => i.Field(f => f.LiquidityAddedSeed).Terms(input.Seeds)));
+            mustQuery.Add(q => q.Bool(b => b.Should(shouldQuery)));
         }
 
         if (!string.IsNullOrEmpty(input.PoolId))
@@ -302,6 +308,77 @@ public partial class Query
         var dataList =
             objectMapper.Map<List<RewardsClaimIndex>, List<ClaimInfoDto>>(recordList.Item2);
         return new ClaimInfoDtoList
+        {
+            Data = dataList,
+            TotalCount = recordList.Item1
+        };
+    }
+
+
+    [Name("getLiquidityInfoList")]
+    public static async Task<LiquidityInfoListDto> GetLiquidityInfoList(
+        [FromServices] IAElfIndexerClientEntityRepository<LiquidityInfoIndex, LogEventInfo> repository,
+        [FromServices] IObjectMapper objectMapper,
+        GetLiquidityInfoInput input)
+    {
+        var mustQuery = new List<Func<QueryContainerDescriptor<LiquidityInfoIndex>, QueryContainer>>();
+
+        mustQuery.Add(q => q.Term(i => i.Field(f => f.LpStatus).Value(input.LpStatus)));
+
+        if (!input.LiquidityIds.IsNullOrEmpty())
+        {
+            mustQuery.Add(q => q.Terms(i => i.Field(f => f.LiquidityId).Terms(input.LiquidityIds)));
+        }
+
+        if (!string.IsNullOrEmpty(input.Address))
+        {
+            mustQuery.Add(q => q.Term(i => i.Field("address.keyword").Value(input.Address)));
+        }
+
+
+        QueryContainer Filter(QueryContainerDescriptor<LiquidityInfoIndex> f) =>
+            f.Bool(b => b.Must(mustQuery));
+
+        var recordList = await repository.GetListAsync(Filter, skip: input.SkipCount, limit: input.MaxResultCount);
+
+        var dataList =
+            objectMapper.Map<List<LiquidityInfoIndex>, List<LiquidityInfoDto>>(recordList.Item2);
+        return new LiquidityInfoListDto
+        {
+            Data = dataList,
+            TotalCount = recordList.Item1
+        };
+    }
+
+
+    [Name("test")]
+    public static async Task<PointsPoolDtoList> GetPointsPoolList(
+        [FromServices] IAElfIndexerClientEntityRepository<PointsPoolIndex, LogEventInfo> repository,
+        [FromServices] IObjectMapper objectMapper,
+        [FromServices] IOptionsSnapshot<PoolBlackListOptions> options,
+        GetPointsPoolListInput input)
+    {
+        var mustQuery = new List<Func<QueryContainerDescriptor<PointsPoolIndex>, QueryContainer>>();
+
+
+        if (string.IsNullOrEmpty(input.Name))
+        {
+            mustQuery.Add(q => q.Term(i => i.Field(f => f.PointsName).Value(input.Name)));
+        }
+
+        if (!input.PoolIds.IsNullOrEmpty())
+        {
+            mustQuery.Add(q => q.Terms(i => i.Field(f => f.PoolId).Terms(input.PoolIds)));
+        }
+
+        QueryContainer Filter(QueryContainerDescriptor<PointsPoolIndex> f) =>
+            f.Bool(b => b.Must(mustQuery));
+
+        var recordList = await repository.GetListAsync(Filter, skip: input.SkipCount, limit: input.MaxResultCount);
+
+        var dataList =
+            objectMapper.Map<List<PointsPoolIndex>, List<PointsPoolDto>>(recordList.Item2);
+        return new PointsPoolDtoList
         {
             Data = dataList,
             TotalCount = recordList.Item1

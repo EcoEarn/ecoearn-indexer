@@ -18,6 +18,7 @@ public class EcoEarnIndexerPluginModule : AElfIndexerClientPluginBaseModule<EcoE
     {
         var configuration = serviceCollection.GetConfiguration();
         Configure<ContractInfoOptions>(configuration.GetSection("ContractInfo"));
+        Configure<PoolBlackListOptions>(configuration.GetSection("PoolBlackList"));
 
         serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, PointsPoolClaimedLogEventProcessor>();
         serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, PointsPoolCreatedLogEventProcessor>();
@@ -45,10 +46,11 @@ public class EcoEarnIndexerPluginModule : AElfIndexerClientPluginBaseModule<EcoE
 
         serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, LiquidityAddedLogEvenProcessor>();
         serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, LiquidityRemovedLogEventProcessor>();
+        serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, LiquidityStakedLogEventProcessor>();
         
         serviceCollection.AddSingleton<IBlockChainDataHandler, EcoEarnTransactionHandler>();
     }
 
     protected override string ClientId => "AElfIndexer_EcoEarn";
-    protected override string Version => "918fcad21b7d464186557002ad3a80ea";
+    protected override string Version => "7d17cde904db40929e04c1beb732afc6";
 }

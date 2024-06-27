@@ -1,4 +1,3 @@
-using System.Globalization;
 using AElfIndexer.Client;
 using AElfIndexer.Client.Handlers;
 using AElfIndexer.Grains.State.Client;
@@ -12,22 +11,28 @@ using Volo.Abp.ObjectMapping;
 
 namespace EcoEarn.Indexer.Plugin.Processors;
 
-public class LiquidityRemovedLogEventProcessor : AElfLogEventProcessorBase<LiquidityRemoved, LogEventInfo>
+public class LiquidityStakedLogEventProcessor : AElfLogEventProcessorBase<LiquidityStaked, LogEventInfo>
 {
     private readonly IObjectMapper _objectMapper;
     private readonly ContractInfoOptions _contractInfoOptions;
-    private readonly ILogger<LiquidityRemovedLogEventProcessor> _logger;
+    private readonly ILogger<LiquidityStakedLogEventProcessor> _logger;
     private readonly IAElfIndexerClientEntityRepository<LiquidityInfoIndex, LogEventInfo> _repository;
+    private readonly IAElfIndexerClientEntityRepository<RewardsClaimIndex, LogEventInfo> _rewardsClaimRepository;
+    private readonly IAElfIndexerClientEntityRepository<TokenPoolIndex, LogEventInfo> _tokenPoolRepository;
 
-    public LiquidityRemovedLogEventProcessor(ILogger<LiquidityRemovedLogEventProcessor> logger,
+    public LiquidityStakedLogEventProcessor(ILogger<LiquidityStakedLogEventProcessor> logger,
         IObjectMapper objectMapper, IOptionsSnapshot<ContractInfoOptions> contractInfoOptions,
-        IAElfIndexerClientEntityRepository<LiquidityInfoIndex, LogEventInfo> repository) :
+        IAElfIndexerClientEntityRepository<LiquidityInfoIndex, LogEventInfo> repository,
+        IAElfIndexerClientEntityRepository<RewardsClaimIndex, LogEventInfo> rewardsClaimRepository,
+        IAElfIndexerClientEntityRepository<TokenPoolIndex, LogEventInfo> tokenPoolRepository) :
         base(logger)
     {
         _logger = logger;
         _contractInfoOptions = contractInfoOptions.Value;
         _objectMapper = objectMapper;
         _repository = repository;
+        _rewardsClaimRepository = rewardsClaimRepository;
+        _tokenPoolRepository = tokenPoolRepository;
     }
 
     public override string GetContractAddress(string chainId)
@@ -35,19 +40,13 @@ public class LiquidityRemovedLogEventProcessor : AElfLogEventProcessorBase<Liqui
         return _contractInfoOptions.ContractInfos.First(c => c.ChainId == chainId).EcoEarnRewardsContractAddress;
     }
 
-    protected override async Task HandleEventAsync(LiquidityRemoved eventValue, LogEventContext context)
+    protected override async Task HandleEventAsync(LiquidityStaked eventValue, LogEventContext context)
     {
         try
         {
-            _logger.Debug("LiquidityRemoved: {eventValue} context: {context}", JsonConvert.SerializeObject(eventValue),
+            _logger.Debug("LiquidityStaked: {eventValue} context: {context}", JsonConvert.SerializeObject(eventValue),
                 JsonConvert.SerializeObject(context));
-            var tokenANewAmount = eventValue.TokenAAmount;
-            var tokenBNewAmount = eventValue.TokenBAmount;
-            var tokenAOldAmount = eventValue.LiquidityInfos.Data.Sum(x => x.TokenAAmount);
-            var tokenBOldAmount = eventValue.LiquidityInfos.Data.Sum(x => x.TokenBAmount);
-            var tokenALossAmountSum = (tokenANewAmount - tokenAOldAmount).ToString();
-            var tokenBLossAmountSum = (tokenBNewAmount - tokenBOldAmount).ToString();
-
+            
             foreach (var liquidityInfo in eventValue.LiquidityInfos.Data)
             {
                 var id = IdGenerateHelper.GetId(liquidityInfo.LiquidityId.ToHex());
@@ -81,14 +80,7 @@ public class LiquidityRemovedLogEventProcessor : AElfLogEventProcessorBase<Liqui
                     TokenAddress = liquidityInfo.TokenAddress == null
                         ? ""
                         : liquidityInfo.TokenAddress.ToBase58(),
-                    LpStatus = LpStatus.Removed,
-                    TokenALossAmount =
-                        (decimal.Parse(liquidityInfo.TokenAAmount.ToString()) /
-                            decimal.Parse(tokenAOldAmount.ToString()) * decimal.Parse(tokenALossAmountSum))
-                        .ToString(CultureInfo.InvariantCulture),
-                    TokenBLossAmount = (decimal.Parse(liquidityInfo.TokenBAmount.ToString()) /
-                            decimal.Parse(tokenBOldAmount.ToString()) * decimal.Parse(tokenBLossAmountSum))
-                        .ToString(CultureInfo.InvariantCulture),
+                    LpStatus = LpStatus.Added,
                 };
 
                 _objectMapper.Map(context, liquidityInfoIndex);
@@ -97,7 +89,7 @@ public class LiquidityRemovedLogEventProcessor : AElfLogEventProcessorBase<Liqui
         }
         catch (Exception e)
         {
-            _logger.LogError(e, "LiquidityRemoved HandleEventAsync error.");
+            _logger.LogError(e, "LiquidityStaked HandleEventAsync error.");
         }
     }
 }
