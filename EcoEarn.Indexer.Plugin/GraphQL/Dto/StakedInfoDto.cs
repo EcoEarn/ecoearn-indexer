@@ -12,7 +12,6 @@ public class StakedInfoDto
     public long UnlockTime { get; set; }
     public long LastOperationTime { get; set; }
     public long StakingPeriod { get; set; }
-    public long LongestReleaseTime { get; set; }
     public List<SubStakeInfoDto> SubStakeInfos { get; set; }
     public long CreateTime { get; set; }
     public long UpdateTime { get; set; }
@@ -31,7 +30,7 @@ public class SubStakeInfoDto
     public long BoostedAmount { get; set; }
     public long RewardDebt { get; set; }
     public long RewardAmount { get; set; }
-    public string Seed { get; set; }
+    public long EarlyStakedAmount { get; set; }
 }
 public class StakedInfoDtoList
 {

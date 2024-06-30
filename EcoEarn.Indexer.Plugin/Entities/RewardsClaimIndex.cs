@@ -7,11 +7,11 @@ namespace EcoEarn.Indexer.Plugin.Entities;
 public class RewardsClaimIndex : AElfIndexerClientEntity<string>, IIndexBuild
 {
     [Keyword] public string ClaimId { get; set; }
-    [Keyword] public string StakeId { get; set; }
+    [Keyword] public string StakeId { get; set; } = "";
     [Keyword] public string Seed { get; set; }
     [Keyword] public string PoolId { get; set; }
     [Keyword] public string ClaimedAmount { get; set; }
-    [Keyword] public string EarlyStakedAmount { get; set; }
+    [Keyword] public string EarlyStakedAmount { get; set; } = "0";
     [Keyword] public string ClaimedSymbol { get; set; }
     public long ClaimedBlockNumber { get; set; }
     public long ClaimedTime { get; set; }

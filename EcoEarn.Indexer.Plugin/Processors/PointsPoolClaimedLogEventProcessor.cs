@@ -17,19 +17,20 @@ public class PointsPoolClaimedLogEventProcessor : AElfLogEventProcessorBase<Clai
     private readonly ContractInfoOptions _contractInfoOptions;
     private readonly ILogger<PointsPoolClaimedLogEventProcessor> _logger;
     private readonly IAElfIndexerClientEntityRepository<RewardsClaimRecordIndex, LogEventInfo> _repository;
-    private readonly IAElfIndexerClientEntityRepository<TokenPoolIndex, LogEventInfo> _tokenPoolRepository;
+    private readonly IAElfIndexerClientEntityRepository<PointsPoolIndex, LogEventInfo> _pointsPoolRepository;
+
 
     public PointsPoolClaimedLogEventProcessor(ILogger<PointsPoolClaimedLogEventProcessor> logger,
         IObjectMapper objectMapper, IOptionsSnapshot<ContractInfoOptions> contractInfoOptions,
         IAElfIndexerClientEntityRepository<RewardsClaimRecordIndex, LogEventInfo> pointsRewardsClaimRepository,
-        IAElfIndexerClientEntityRepository<TokenPoolIndex, LogEventInfo> tokenPoolRepository) :
+        IAElfIndexerClientEntityRepository<PointsPoolIndex, LogEventInfo> pointsPoolRepository) :
         base(logger)
     {
         _logger = logger;
         _contractInfoOptions = contractInfoOptions.Value;
         _objectMapper = objectMapper;
         _repository = pointsRewardsClaimRepository;
-        _tokenPoolRepository = tokenPoolRepository;
+        _pointsPoolRepository = pointsPoolRepository;
     }
 
     public override string GetContractAddress(string chainId)
@@ -43,20 +44,16 @@ public class PointsPoolClaimedLogEventProcessor : AElfLogEventProcessorBase<Clai
         {
             _logger.Debug("PointsPoolClaimed: {eventValue} context: {context}", JsonConvert.SerializeObject(eventValue),
                 JsonConvert.SerializeObject(context));
-            var id = IdGenerateHelper.GetId(eventValue.Seed.ToHex());
-
             var rewardsClaimRecordIndex = new RewardsClaimRecordIndex
             {
-                Id = id,
+                Id = Guid.NewGuid().ToString(),
                 PoolId = eventValue.PoolId.ToHex(),
                 Account = eventValue.Account.ToBase58(),
                 Amount = eventValue.Amount.ToString(),
                 Seed = eventValue.Seed == null ? "" : eventValue.Seed.ToHex(),
+                PoolType = PoolType.Points,
             };
-
-            var tokenPoolIndex =
-                await _tokenPoolRepository.GetFromBlockStateSetAsync(rewardsClaimRecordIndex.PoolId, context.ChainId);
-            rewardsClaimRecordIndex.PoolType = tokenPoolIndex.PoolType;
+            
             _objectMapper.Map(context, rewardsClaimRecordIndex);
             await _repository.AddOrUpdateAsync(rewardsClaimRecordIndex);
         }

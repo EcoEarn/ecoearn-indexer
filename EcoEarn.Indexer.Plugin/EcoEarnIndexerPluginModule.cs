@@ -39,6 +39,7 @@ public class EcoEarnIndexerPluginModule : AElfIndexerClientPluginBaseModule<EcoE
         serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, TokenPoolUnlockedLogEventProcessor>();
         serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, TokensPoolUnlockWindowDurationSetLogEventProcessor>();
         serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, TokenPoolRenewedLogEventProcessor>();
+        serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, TokensPoolMergeIntervalSetLogEventProcessor>();
         
         serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, RewardsClaimedLogEventProcessor>();
         serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, RewardsEarlyStakedLogEventProcessor>();
@@ -52,5 +53,5 @@ public class EcoEarnIndexerPluginModule : AElfIndexerClientPluginBaseModule<EcoE
     }
 
     protected override string ClientId => "AElfIndexer_EcoEarn";
-    protected override string Version => "7d17cde904db40929e04c1beb732afc6";
+    protected override string Version => "879e18b2f2d44230950c7dd000df51b2";
 }

@@ -165,6 +165,12 @@ public partial class Query
             mustQuery.Add(q => q.Term(i => i.Field(f => f.WithdrawTime).Value(0)));
         }
 
+        if (!input.LiquidityIds.IsNullOrEmpty())
+        {
+            mustQuery.Add(q => q.Terms(i => i.Field(f => f.LiquidityId).Terms(input.LiquidityIds)));
+
+        }
+
         QueryContainer Filter(QueryContainerDescriptor<RewardsClaimIndex> f) =>
             f.Bool(b => b.Must(mustQuery));
 

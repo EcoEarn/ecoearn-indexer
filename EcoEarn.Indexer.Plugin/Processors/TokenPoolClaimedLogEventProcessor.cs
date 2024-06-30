@@ -17,20 +17,17 @@ public class TokenPoolClaimedLogEventProcessor : AElfLogEventProcessorBase<Claim
     private readonly ContractInfoOptions _contractInfoOptions;
     private readonly ILogger<TokenPoolClaimedLogEventProcessor> _logger;
     private readonly IAElfIndexerClientEntityRepository<RewardsClaimRecordIndex, LogEventInfo> _repository;
-    private readonly IAElfIndexerClientEntityRepository<TokenPoolIndex, LogEventInfo> _tokenPoolRepository;
 
 
     public TokenPoolClaimedLogEventProcessor(ILogger<TokenPoolClaimedLogEventProcessor> logger,
         IObjectMapper objectMapper, IOptionsSnapshot<ContractInfoOptions> contractInfoOptions,
-        IAElfIndexerClientEntityRepository<RewardsClaimRecordIndex, LogEventInfo> pointsRewardsClaimRepository,
-        IAElfIndexerClientEntityRepository<TokenPoolIndex, LogEventInfo> tokenPoolRepository) :
+        IAElfIndexerClientEntityRepository<RewardsClaimRecordIndex, LogEventInfo> pointsRewardsClaimRepository) :
         base(logger)
     {
         _logger = logger;
         _contractInfoOptions = contractInfoOptions.Value;
         _objectMapper = objectMapper;
         _repository = pointsRewardsClaimRepository;
-        _tokenPoolRepository = tokenPoolRepository;
     }
 
     public override string GetContractAddress(string chainId)
@@ -52,12 +49,8 @@ public class TokenPoolClaimedLogEventProcessor : AElfLogEventProcessorBase<Claim
                 Account = eventValue.Account.ToBase58(),
                 Amount = eventValue.Amount.ToString(),
                 Seed = "",
+                PoolType = PoolType.Token,
             };
-
-
-            var tokenPoolIndex =
-                await _tokenPoolRepository.GetFromBlockStateSetAsync(rewardsClaimRecordIndex.PoolId, context.ChainId);
-            rewardsClaimRecordIndex.PoolType = tokenPoolIndex.PoolType;
             _objectMapper.Map(context, rewardsClaimRecordIndex);
             await _repository.AddOrUpdateAsync(rewardsClaimRecordIndex);
         }

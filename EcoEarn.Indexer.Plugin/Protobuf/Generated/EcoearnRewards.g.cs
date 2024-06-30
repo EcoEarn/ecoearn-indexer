@@ -38,110 +38,111 @@ namespace EcoEarn.Contracts.Rewards {
             "ZG1pbhgCIAEoCzINLmFlbGYuQWRkcmVzcxIbCgZjb25maWcYAyABKAsyCy5E",
             "YXBwQ29uZmlnIlQKFUdldFJld2FyZEFkZHJlc3NJbnB1dBIbCgdkYXBwX2lk",
             "GAEgASgLMgouYWVsZi5IYXNoEh4KB2FjY291bnQYAiABKAsyDS5hZWxmLkFk",
-            "ZHJlc3MinAEKCkNsYWltSW5wdXQSGwoHcG9vbF9pZBgBIAEoCzIKLmFlbGYu",
-            "SGFzaBIeCgdhY2NvdW50GAIgASgLMg0uYWVsZi5BZGRyZXNzEg4KBnN5bWJv",
-            "bBgDIAEoCRIOCgZhbW91bnQYBCABKAMSFwoPcmVsZWFzZV9wZXJpb2RzGAUg",
-            "AygDEhgKBHNlZWQYBiABKAsyCi5hZWxmLkhhc2gi7AMKCUNsYWltSW5mbxIc",
-            "CghjbGFpbV9pZBgBIAEoCzIKLmFlbGYuSGFzaBIbCgdwb29sX2lkGAIgASgL",
-            "MgouYWVsZi5IYXNoEhYKDmNsYWltZWRfYW1vdW50GAMgASgDEhYKDmNsYWlt",
-            "ZWRfc3ltYm9sGAQgASgJEhwKFGNsYWltZWRfYmxvY2tfbnVtYmVyGAUgASgD",
-            "Eh4KB2FjY291bnQYBiABKAsyDS5hZWxmLkFkZHJlc3MSMAoMY2xhaW1lZF90",
-            "aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIwCgxyZWxl",
-            "YXNlX3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjIK",
-            "DndpdGhkcmF3bl90aW1lGAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcBIbChNlYXJseV9zdGFrZWRfYW1vdW50GAogASgDEhwKCHN0YWtlX2lk",
-            "GAsgASgLMgouYWVsZi5IYXNoEiAKDGxpcXVpZGl0eV9pZBgMIAEoCzIKLmFl",
-            "bGYuSGFzaBIYCgRzZWVkGA0gASgLMgouYWVsZi5IYXNoEicKEGNvbnRyYWN0",
-            "X2FkZHJlc3MYDiABKAsyDS5hZWxmLkFkZHJlc3MiJgoKQ2xhaW1JbmZvcxIY",
-            "CgRkYXRhGAEgAygLMgouQ2xhaW1JbmZvIsIBCg1XaXRoZHJhd0lucHV0Eh0K",
-            "CWNsYWltX2lkcxgBIAMoCzIKLmFlbGYuSGFzaBIeCgdhY2NvdW50GAIgASgL",
-            "Mg0uYWVsZi5BZGRyZXNzEg4KBmFtb3VudBgDIAEoAxIYCgRzZWVkGAQgASgL",
-            "MgouYWVsZi5IYXNoEhcKD2V4cGlyYXRpb25fdGltZRgFIAEoAxIbCgdkYXBw",
-            "X2lkGAYgASgLMgouYWVsZi5IYXNoEhIKCXNpZ25hdHVyZRiQTiABKAwi2AEK",
-            "ClN0YWtlSW5wdXQSHQoJY2xhaW1faWRzGAEgAygLMgouYWVsZi5IYXNoEh4K",
-            "B2FjY291bnQYAiABKAsyDS5hZWxmLkFkZHJlc3MSDgoGYW1vdW50GAMgASgD",
-            "EhgKBHNlZWQYBCABKAsyCi5hZWxmLkhhc2gSFwoPZXhwaXJhdGlvbl90aW1l",
-            "GAUgASgDEhsKB3Bvb2xfaWQYBiABKAsyCi5hZWxmLkhhc2gSDgoGcGVyaW9k",
-            "GAcgASgDEhsKB2RhcHBfaWQYCCABKAsyCi5hZWxmLkhhc2giRwoPRWFybHlT",
-            "dGFrZUlucHV0EiAKC3N0YWtlX2lucHV0GAEgASgLMgsuU3Rha2VJbnB1dBIS",
-            "CglzaWduYXR1cmUYkE4gASgMIk4KEVNldERhcHBBZG1pbklucHV0EhsKB2Rh",
-            "cHBfaWQYASABKAsyCi5hZWxmLkhhc2gSHAoFYWRtaW4YAiABKAsyDS5hZWxm",
-            "LkFkZHJlc3MiTgoSU2V0RGFwcENvbmZpZ0lucHV0EhsKB2RhcHBfaWQYASAB",
-            "KAsyCi5hZWxmLkhhc2gSGwoGY29uZmlnGAIgASgLMgsuRGFwcENvbmZpZyIk",
-            "CghIYXNoTGlzdBIYCgRkYXRhGAEgAygLMgouYWVsZi5IYXNoIqkBChlBZGRM",
-            "aXF1aWRpdHlBbmRTdGFrZUlucHV0EiAKC3N0YWtlX2lucHV0GAEgASgLMgsu",
-            "U3Rha2VJbnB1dBITCgt0b2tlbl9hX21pbhgCIAEoAxITCgt0b2tlbl9iX21p",
-            "bhgDIAEoAxIsCghkZWFkbGluZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
-            "aW1lc3RhbXASEgoJc2lnbmF0dXJlGJBOIAEoDCKuAQoUUmVtb3ZlTGlxdWlk",
-            "aXR5SW5wdXQSIQoNbGlxdWlkaXR5X2lkcxgBIAMoCzIKLmFlbGYuSGFzaBIT",
-            "Cgt0b2tlbl9hX21pbhgCIAEoAxITCgt0b2tlbl9iX21pbhgDIAEoAxIsCghk",
-            "ZWFkbGluZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASGwoH",
-            "ZGFwcF9pZBgFIAEoCzIKLmFlbGYuSGFzaCJlChNTdGFrZUxpcXVpZGl0eUlu",
-            "cHV0EiEKDWxpcXVpZGl0eV9pZHMYASADKAsyCi5hZWxmLkhhc2gSGwoHcG9v",
-            "bF9pZBgCIAEoCzIKLmFlbGYuSGFzaBIOCgZwZXJpb2QYAyABKAMi8AMKDUxp",
-            "cXVpZGl0eUluZm8SIAoMbGlxdWlkaXR5X2lkGAEgASgLMgouYWVsZi5IYXNo",
-            "EhwKCHN0YWtlX2lkGAIgASgLMgouYWVsZi5IYXNoEhgKBHNlZWQYAyABKAsy",
-            "Ci5hZWxmLkhhc2gSEQoJbHBfYW1vdW50GAQgASgDEhEKCWxwX3N5bWJvbBgF",
-            "IAEoCRIVCg1yZXdhcmRfc3ltYm9sGAYgASgJEhYKDnRva2VuX2FfYW1vdW50",
-            "GAcgASgDEhYKDnRva2VuX2Ffc3ltYm9sGAggASgJEhYKDnRva2VuX2JfYW1v",
-            "dW50GAkgASgDEhYKDnRva2VuX2Jfc3ltYm9sGAogASgJEi4KCmFkZGVkX3Rp",
-            "bWUYCyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjAKDHJlbW92",
-            "ZWRfdGltZRgMIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASGwoH",
-            "ZGFwcF9pZBgNIAEoCzIKLmFlbGYuSGFzaBIjCgxzd2FwX2FkZHJlc3MYDiAB",
-            "KAsyDS5hZWxmLkFkZHJlc3MSJAoNdG9rZW5fYWRkcmVzcxgPIAEoCzINLmFl",
-            "bGYuQWRkcmVzcxIeCgdhY2NvdW50GBAgASgLMg0uYWVsZi5BZGRyZXNzIi4K",
-            "DkxpcXVpZGl0eUluZm9zEhwKBGRhdGEYASADKAsyDi5MaXF1aWRpdHlJbmZv",
-            "Ii4KCEFkbWluU2V0EhwKBWFkbWluGAEgASgLMg0uYWVsZi5BZGRyZXNzOgSg",
-            "uxgBImoKClJlZ2lzdGVyZWQSGwoHZGFwcF9pZBgBIAEoCzIKLmFlbGYuSGFz",
-            "aBIcCgVhZG1pbhgCIAEoCzINLmFlbGYuQWRkcmVzcxIbCgZjb25maWcYAyAB",
-            "KAsyCy5EYXBwQ29uZmlnOgSguxgBIk8KDURhcHBDb25maWdTZXQSGwoHZGFw",
-            "cF9pZBgBIAEoCzIKLmFlbGYuSGFzaBIbCgZjb25maWcYAiABKAsyCy5EYXBw",
-            "Q29uZmlnOgSguxgBIksKB0NsYWltZWQSIAoLY2xhaW1faW5mb3MYASABKAsy",
-            "Cy5DbGFpbUluZm9zEhgKBHNlZWQYAiABKAsyCi5hZWxmLkhhc2g6BKC7GAEi",
-            "TwoMRGFwcEFkbWluU2V0EhsKB2RhcHBfaWQYASABKAsyCi5hZWxmLkhhc2gS",
-            "HAoFYWRtaW4YAiABKAsyDS5hZWxmLkFkZHJlc3M6BKC7GAEifQoJV2l0aGRy",
-            "YXduEiAKC2NsYWltX2luZm9zGAEgASgLMgsuQ2xhaW1JbmZvcxIeCgdhY2Nv",
-            "dW50GAIgASgLMg0uYWVsZi5BZGRyZXNzEg4KBmFtb3VudBgDIAEoAxIYCgRz",
-            "ZWVkGAQgASgLMgouYWVsZi5IYXNoOgSguxgBIsoBCgtFYXJseVN0YWtlZBIg",
-            "CgtjbGFpbV9pbmZvcxgBIAEoCzILLkNsYWltSW5mb3MSHgoHYWNjb3VudBgC",
-            "IAEoCzINLmFlbGYuQWRkcmVzcxIOCgZhbW91bnQYAyABKAMSGAoEc2VlZBgE",
-            "IAEoCzIKLmFlbGYuSGFzaBIbCgdwb29sX2lkGAUgASgLMgouYWVsZi5IYXNo",
-            "Eg4KBnBlcmlvZBgGIAEoAxIcCghzdGFrZV9pZBgHIAEoCzIKLmFlbGYuSGFz",
-            "aDoEoLsYASLbAQoOTGlxdWlkaXR5QWRkZWQSIAoLY2xhaW1faW5mb3MYASAB",
-            "KAsyCy5DbGFpbUluZm9zEh4KB2FjY291bnQYAiABKAsyDS5hZWxmLkFkZHJl",
-            "c3MSDgoGYW1vdW50GAMgASgDEhsKB3Bvb2xfaWQYBCABKAsyCi5hZWxmLkhh",
-            "c2gSDgoGcGVyaW9kGAUgASgDEhwKCHN0YWtlX2lkGAYgASgLMgouYWVsZi5I",
-            "YXNoEiYKDmxpcXVpZGl0eV9pbmZvGAcgASgLMg4uTGlxdWlkaXR5SW5mbzoE",
-            "oLsYASKFAQoQTGlxdWlkaXR5UmVtb3ZlZBIoCg9saXF1aWRpdHlfaW5mb3MY",
-            "ASABKAsyDy5MaXF1aWRpdHlJbmZvcxIRCglscF9hbW91bnQYAiABKAMSFgoO",
+            "ZHJlc3MiuQEKCkNsYWltSW5wdXQSGwoHZGFwcF9pZBgBIAEoCzIKLmFlbGYu",
+            "SGFzaBIbCgdwb29sX2lkGAIgASgLMgouYWVsZi5IYXNoEh4KB2FjY291bnQY",
+            "AyABKAsyDS5hZWxmLkFkZHJlc3MSDgoGc3ltYm9sGAQgASgJEg4KBmFtb3Vu",
+            "dBgFIAEoAxIXCg9yZWxlYXNlX3BlcmlvZHMYBiADKAMSGAoEc2VlZBgHIAEo",
+            "CzIKLmFlbGYuSGFzaCLbAgoJQ2xhaW1JbmZvEhwKCGNsYWltX2lkGAEgASgL",
+            "MgouYWVsZi5IYXNoEhsKB3Bvb2xfaWQYAiABKAsyCi5hZWxmLkhhc2gSFgoO",
+            "Y2xhaW1lZF9hbW91bnQYAyABKAMSFgoOY2xhaW1lZF9zeW1ib2wYBCABKAkS",
+            "HAoUY2xhaW1lZF9ibG9ja19udW1iZXIYBSABKAMSHgoHYWNjb3VudBgGIAEo",
+            "CzINLmFlbGYuQWRkcmVzcxIwCgxjbGFpbWVkX3RpbWUYByABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wEjAKDHJlbGVhc2VfdGltZRgIIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASGAoEc2VlZBgJIAEoCzIKLmFl",
+            "bGYuSGFzaBInChBjb250cmFjdF9hZGRyZXNzGAogASgLMg0uYWVsZi5BZGRy",
+            "ZXNzIiYKCkNsYWltSW5mb3MSGAoEZGF0YRgBIAMoCzIKLkNsYWltSW5mbyLC",
+            "AQoNV2l0aGRyYXdJbnB1dBIdCgljbGFpbV9pZHMYASADKAsyCi5hZWxmLkhh",
+            "c2gSHgoHYWNjb3VudBgCIAEoCzINLmFlbGYuQWRkcmVzcxIOCgZhbW91bnQY",
+            "AyABKAMSGAoEc2VlZBgEIAEoCzIKLmFlbGYuSGFzaBIXCg9leHBpcmF0aW9u",
+            "X3RpbWUYBSABKAMSGwoHZGFwcF9pZBgGIAEoCzIKLmFlbGYuSGFzaBISCglz",
+            "aWduYXR1cmUYkE4gASgMIpICCgpTdGFrZUlucHV0Eh0KCWNsYWltX2lkcxgB",
+            "IAMoCzIKLmFlbGYuSGFzaBIeCgdhY2NvdW50GAIgASgLMg0uYWVsZi5BZGRy",
+            "ZXNzEg4KBmFtb3VudBgDIAEoAxIYCgRzZWVkGAQgASgLMgouYWVsZi5IYXNo",
+            "EhcKD2V4cGlyYXRpb25fdGltZRgFIAEoAxIbCgdwb29sX2lkGAYgASgLMgou",
+            "YWVsZi5IYXNoEg4KBnBlcmlvZBgHIAEoAxIbCgdkYXBwX2lkGAggASgLMgou",
+            "YWVsZi5IYXNoEjgKFGxvbmdlc3RfcmVsZWFzZV90aW1lGAkgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcCJHCg9FYXJseVN0YWtlSW5wdXQSIAoL",
+            "c3Rha2VfaW5wdXQYASABKAsyCy5TdGFrZUlucHV0EhIKCXNpZ25hdHVyZRiQ",
+            "TiABKAwiTgoRU2V0RGFwcEFkbWluSW5wdXQSGwoHZGFwcF9pZBgBIAEoCzIK",
+            "LmFlbGYuSGFzaBIcCgVhZG1pbhgCIAEoCzINLmFlbGYuQWRkcmVzcyJOChJT",
+            "ZXREYXBwQ29uZmlnSW5wdXQSGwoHZGFwcF9pZBgBIAEoCzIKLmFlbGYuSGFz",
+            "aBIbCgZjb25maWcYAiABKAsyCy5EYXBwQ29uZmlnIiQKCEhhc2hMaXN0EhgK",
+            "BGRhdGEYASADKAsyCi5hZWxmLkhhc2giqQEKGUFkZExpcXVpZGl0eUFuZFN0",
+            "YWtlSW5wdXQSIAoLc3Rha2VfaW5wdXQYASABKAsyCy5TdGFrZUlucHV0EhMK",
+            "C3Rva2VuX2FfbWluGAIgASgDEhMKC3Rva2VuX2JfbWluGAMgASgDEiwKCGRl",
+            "YWRsaW5lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBISCglz",
+            "aWduYXR1cmUYkE4gASgMIsEBChRSZW1vdmVMaXF1aWRpdHlJbnB1dBIhCg1s",
+            "aXF1aWRpdHlfaWRzGAEgAygLMgouYWVsZi5IYXNoEhEKCWxwX2Ftb3VudBgC",
+            "IAEoAxITCgt0b2tlbl9hX21pbhgDIAEoAxITCgt0b2tlbl9iX21pbhgEIAEo",
+            "AxIsCghkZWFkbGluZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXASGwoHZGFwcF9pZBgGIAEoCzIKLmFlbGYuSGFzaCLPAQoTU3Rha2VMaXF1",
+            "aWRpdHlJbnB1dBIhCg1saXF1aWRpdHlfaWRzGAEgAygLMgouYWVsZi5IYXNo",
+            "EhsKB3Bvb2xfaWQYAiABKAsyCi5hZWxmLkhhc2gSEQoJbHBfYW1vdW50GAMg",
+            "ASgDEg4KBnBlcmlvZBgEIAEoAxIbCgdkYXBwX2lkGAUgASgLMgouYWVsZi5I",
+            "YXNoEjgKFGxvbmdlc3RfcmVsZWFzZV90aW1lGAYgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcCKgAwoNTGlxdWlkaXR5SW5mbxIgCgxsaXF1aWRp",
+            "dHlfaWQYASABKAsyCi5hZWxmLkhhc2gSGAoEc2VlZBgCIAEoCzIKLmFlbGYu",
+            "SGFzaBIRCglscF9hbW91bnQYAyABKAMSEQoJbHBfc3ltYm9sGAQgASgJEhUK",
+            "DXJld2FyZF9zeW1ib2wYBSABKAkSFgoOdG9rZW5fYV9hbW91bnQYBiABKAMS",
+            "FgoOdG9rZW5fYV9zeW1ib2wYByABKAkSFgoOdG9rZW5fYl9hbW91bnQYCCAB",
+            "KAMSFgoOdG9rZW5fYl9zeW1ib2wYCSABKAkSLgoKYWRkZWRfdGltZRgKIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASGwoHZGFwcF9pZBgLIAEo",
+            "CzIKLmFlbGYuSGFzaBIjCgxzd2FwX2FkZHJlc3MYDCABKAsyDS5hZWxmLkFk",
+            "ZHJlc3MSJAoNdG9rZW5fYWRkcmVzcxgNIAEoCzINLmFlbGYuQWRkcmVzcxIe",
+            "CgdhY2NvdW50GA4gASgLMg0uYWVsZi5BZGRyZXNzIi4KDkxpcXVpZGl0eUlu",
+            "Zm9zEhwKBGRhdGEYASADKAsyDi5MaXF1aWRpdHlJbmZvIi4KCEFkbWluU2V0",
+            "EhwKBWFkbWluGAEgASgLMg0uYWVsZi5BZGRyZXNzOgSguxgBImoKClJlZ2lz",
+            "dGVyZWQSGwoHZGFwcF9pZBgBIAEoCzIKLmFlbGYuSGFzaBIcCgVhZG1pbhgC",
+            "IAEoCzINLmFlbGYuQWRkcmVzcxIbCgZjb25maWcYAyABKAsyCy5EYXBwQ29u",
+            "ZmlnOgSguxgBIk8KDURhcHBDb25maWdTZXQSGwoHZGFwcF9pZBgBIAEoCzIK",
+            "LmFlbGYuSGFzaBIbCgZjb25maWcYAiABKAsyCy5EYXBwQ29uZmlnOgSguxgB",
+            "IjEKB0NsYWltZWQSIAoLY2xhaW1faW5mb3MYASABKAsyCy5DbGFpbUluZm9z",
+            "OgSguxgBIk8KDERhcHBBZG1pblNldBIbCgdkYXBwX2lkGAEgASgLMgouYWVs",
+            "Zi5IYXNoEhwKBWFkbWluGAIgASgLMg0uYWVsZi5BZGRyZXNzOgSguxgBIpYB",
+            "CglXaXRoZHJhd24SHAoJY2xhaW1faWRzGAEgASgLMgkuSGFzaExpc3QSHgoH",
+            "YWNjb3VudBgCIAEoCzINLmFlbGYuQWRkcmVzcxIOCgZhbW91bnQYAyABKAMS",
+            "GAoEc2VlZBgEIAEoCzIKLmFlbGYuSGFzaBIbCgdkYXBwX2lkGAUgASgLMgou",
+            "YWVsZi5IYXNoOgSguxgBIuMBCgtFYXJseVN0YWtlZBIcCgljbGFpbV9pZHMY",
+            "ASABKAsyCS5IYXNoTGlzdBIeCgdhY2NvdW50GAIgASgLMg0uYWVsZi5BZGRy",
+            "ZXNzEg4KBmFtb3VudBgDIAEoAxIYCgRzZWVkGAQgASgLMgouYWVsZi5IYXNo",
+            "EhsKB3Bvb2xfaWQYBSABKAsyCi5hZWxmLkhhc2gSDgoGcGVyaW9kGAYgASgD",
+            "EhsKB2RhcHBfaWQYByABKAsyCi5hZWxmLkhhc2gSHAoIc3Rha2VfaWQYCCAB",
+            "KAsyCi5hZWxmLkhhc2g6BKC7GAEi1wEKDkxpcXVpZGl0eUFkZGVkEhwKCWNs",
+            "YWltX2lkcxgBIAEoCzIJLkhhc2hMaXN0Eh4KB2FjY291bnQYAiABKAsyDS5h",
+            "ZWxmLkFkZHJlc3MSDgoGYW1vdW50GAMgASgDEhsKB3Bvb2xfaWQYBCABKAsy",
+            "Ci5hZWxmLkhhc2gSDgoGcGVyaW9kGAUgASgDEhwKCHN0YWtlX2lkGAYgASgL",
+            "MgouYWVsZi5IYXNoEiYKDmxpcXVpZGl0eV9pbmZvGAcgASgLMg4uTGlxdWlk",
+            "aXR5SW5mbzoEoLsYASJ9ChBMaXF1aWRpdHlSZW1vdmVkEiAKDWxpcXVpZGl0",
+            "eV9pZHMYASABKAsyCS5IYXNoTGlzdBIRCglscF9hbW91bnQYAiABKAMSFgoO",
             "dG9rZW5fYV9hbW91bnQYAyABKAMSFgoOdG9rZW5fYl9hbW91bnQYBCABKAM6",
-            "BKC7GAEinAEKD0xpcXVpZGl0eVN0YWtlZBIoCg9saXF1aWRpdHlfaW5mb3MY",
-            "ASABKAsyDy5MaXF1aWRpdHlJbmZvcxIbCgdwb29sX2lkGAIgASgLMgouYWVs",
-            "Zi5IYXNoEg4KBmFtb3VudBgDIAEoAxIOCgZwZXJpb2QYBCABKAMSHAoIc3Rh",
-            "a2VfaWQYBSABKAsyCi5hZWxmLkhhc2g6BKC7GAEy0wcKFkVjb0Vhcm5SZXdh",
-            "cmRzQ29udHJhY3QSOAoKSW5pdGlhbGl6ZRIQLkluaXRpYWxpemVJbnB1dBoW",
-            "Lmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIAEjMKCFNldEFkbWluEg0uYWVsZi5B",
-            "ZGRyZXNzGhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IgASOAoIR2V0QWRtaW4S",
-            "Fi5nb29nbGUucHJvdG9idWYuRW1wdHkaDS5hZWxmLkFkZHJlc3MiBYiJ9wEB",
-            "EjQKCFJlZ2lzdGVyEg4uUmVnaXN0ZXJJbnB1dBoWLmdvb2dsZS5wcm90b2J1",
-            "Zi5FbXB0eSIAEjwKDFNldERhcHBBZG1pbhISLlNldERhcHBBZG1pbklucHV0",
-            "GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IgASPgoNU2V0RGFwcENvbmZpZxIT",
-            "LlNldERhcHBDb25maWdJbnB1dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIA",
-            "EisKC0dldERhcHBJbmZvEgouYWVsZi5IYXNoGgkuRGFwcEluZm8iBYiJ9wEB",
-            "EkAKEEdldFJld2FyZEFkZHJlc3MSFi5HZXRSZXdhcmRBZGRyZXNzSW5wdXQa",
-            "DS5hZWxmLkFkZHJlc3MiBYiJ9wEBEi4KBUNsYWltEgsuQ2xhaW1JbnB1dBoW",
-            "Lmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIAEi0KDEdldENsYWltSW5mbxIKLmFl",
-            "bGYuSGFzaBoKLkNsYWltSW5mbyIFiIn3AQESNAoIV2l0aGRyYXcSDi5XaXRo",
-            "ZHJhd0lucHV0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IgASOAoKRWFybHlT",
-            "dGFrZRIQLkVhcmx5U3Rha2VJbnB1dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0",
-            "eSIAEkwKFEFkZExpcXVpZGl0eUFuZFN0YWtlEhouQWRkTGlxdWlkaXR5QW5k",
-            "U3Rha2VJbnB1dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIAEkIKD1JlbW92",
-            "ZUxpcXVpZGl0eRIVLlJlbW92ZUxpcXVpZGl0eUlucHV0GhYuZ29vZ2xlLnBy",
-            "b3RvYnVmLkVtcHR5IgASQAoOU3Rha2VMaXF1aWRpdHkSFC5TdGFrZUxpcXVp",
-            "ZGl0eUlucHV0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IgAaSsrK9gELYWNz",
-            "MTIucHJvdG+yzPYBNUVjb0Vhcm4uQ29udHJhY3RzLlJld2FyZHMuRWNvRWFy",
-            "blJld2FyZHNDb250cmFjdFN0YXRlQhyqAhlFY29FYXJuLkNvbnRyYWN0cy5S",
-            "ZXdhcmRzYgZwcm90bzM="));
+            "BKC7GAEilAEKD0xpcXVpZGl0eVN0YWtlZBIgCg1saXF1aWRpdHlfaWRzGAEg",
+            "ASgLMgkuSGFzaExpc3QSGwoHcG9vbF9pZBgCIAEoCzIKLmFlbGYuSGFzaBIO",
+            "CgZhbW91bnQYAyABKAMSDgoGcGVyaW9kGAQgASgDEhwKCHN0YWtlX2lkGAUg",
+            "ASgLMgouYWVsZi5IYXNoOgSguxgBMooIChZFY29FYXJuUmV3YXJkc0NvbnRy",
+            "YWN0EjgKCkluaXRpYWxpemUSEC5Jbml0aWFsaXplSW5wdXQaFi5nb29nbGUu",
+            "cHJvdG9idWYuRW1wdHkiABIzCghTZXRBZG1pbhINLmFlbGYuQWRkcmVzcxoW",
+            "Lmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIAEjgKCEdldEFkbWluEhYuZ29vZ2xl",
+            "LnByb3RvYnVmLkVtcHR5Gg0uYWVsZi5BZGRyZXNzIgWIifcBARI0CghSZWdp",
+            "c3RlchIOLlJlZ2lzdGVySW5wdXQaFi5nb29nbGUucHJvdG9idWYuRW1wdHki",
+            "ABI8CgxTZXREYXBwQWRtaW4SEi5TZXREYXBwQWRtaW5JbnB1dBoWLmdvb2ds",
+            "ZS5wcm90b2J1Zi5FbXB0eSIAEj4KDVNldERhcHBDb25maWcSEy5TZXREYXBw",
+            "Q29uZmlnSW5wdXQaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiABIrCgtHZXRE",
+            "YXBwSW5mbxIKLmFlbGYuSGFzaBoJLkRhcHBJbmZvIgWIifcBARJAChBHZXRS",
+            "ZXdhcmRBZGRyZXNzEhYuR2V0UmV3YXJkQWRkcmVzc0lucHV0Gg0uYWVsZi5B",
+            "ZGRyZXNzIgWIifcBARIuCgVDbGFpbRILLkNsYWltSW5wdXQaFi5nb29nbGUu",
+            "cHJvdG9idWYuRW1wdHkiABItCgxHZXRDbGFpbUluZm8SCi5hZWxmLkhhc2ga",
+            "Ci5DbGFpbUluZm8iBYiJ9wEBEjQKCFdpdGhkcmF3Eg4uV2l0aGRyYXdJbnB1",
+            "dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIAEjgKCkVhcmx5U3Rha2USEC5F",
+            "YXJseVN0YWtlSW5wdXQaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiABJMChRB",
+            "ZGRMaXF1aWRpdHlBbmRTdGFrZRIaLkFkZExpcXVpZGl0eUFuZFN0YWtlSW5w",
+            "dXQaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiABJCCg9SZW1vdmVMaXF1aWRp",
+            "dHkSFS5SZW1vdmVMaXF1aWRpdHlJbnB1dBoWLmdvb2dsZS5wcm90b2J1Zi5F",
+            "bXB0eSIAEkAKDlN0YWtlTGlxdWlkaXR5EhQuU3Rha2VMaXF1aWRpdHlJbnB1",
+            "dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIAEjUKEEdldExpcXVpZGl0eUlu",
+            "Zm8SCi5hZWxmLkhhc2gaDi5MaXF1aWRpdHlJbmZvIgWIifcBARpKysr2AQth",
+            "Y3MxMi5wcm90b7LM9gE1RWNvRWFybi5Db250cmFjdHMuUmV3YXJkcy5FY29F",
+            "YXJuUmV3YXJkc0NvbnRyYWN0U3RhdGVCHKoCGUVjb0Vhcm4uQ29udHJhY3Rz",
+            "LlJld2FyZHNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::AElf.Types.CoreReflection.Descriptor, global::AElf.OptionsReflection.Descriptor, global::AElf.Standards.ACS12.Acs12Reflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -150,30 +151,30 @@ namespace EcoEarn.Contracts.Rewards {
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Rewards.DappConfig), global::EcoEarn.Contracts.Rewards.DappConfig.Parser, new[]{ "UpdateAddress" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Rewards.DappInfo), global::EcoEarn.Contracts.Rewards.DappInfo.Parser, new[]{ "DappId", "Admin", "Config" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Rewards.GetRewardAddressInput), global::EcoEarn.Contracts.Rewards.GetRewardAddressInput.Parser, new[]{ "DappId", "Account" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Rewards.ClaimInput), global::EcoEarn.Contracts.Rewards.ClaimInput.Parser, new[]{ "PoolId", "Account", "Symbol", "Amount", "ReleasePeriods", "Seed" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Rewards.ClaimInfo), global::EcoEarn.Contracts.Rewards.ClaimInfo.Parser, new[]{ "ClaimId", "PoolId", "ClaimedAmount", "ClaimedSymbol", "ClaimedBlockNumber", "Account", "ClaimedTime", "ReleaseTime", "WithdrawnTime", "EarlyStakedAmount", "StakeId", "LiquidityId", "Seed", "ContractAddress" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Rewards.ClaimInput), global::EcoEarn.Contracts.Rewards.ClaimInput.Parser, new[]{ "DappId", "PoolId", "Account", "Symbol", "Amount", "ReleasePeriods", "Seed" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Rewards.ClaimInfo), global::EcoEarn.Contracts.Rewards.ClaimInfo.Parser, new[]{ "ClaimId", "PoolId", "ClaimedAmount", "ClaimedSymbol", "ClaimedBlockNumber", "Account", "ClaimedTime", "ReleaseTime", "Seed", "ContractAddress" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Rewards.ClaimInfos), global::EcoEarn.Contracts.Rewards.ClaimInfos.Parser, new[]{ "Data" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Rewards.WithdrawInput), global::EcoEarn.Contracts.Rewards.WithdrawInput.Parser, new[]{ "ClaimIds", "Account", "Amount", "Seed", "ExpirationTime", "DappId", "Signature" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Rewards.StakeInput), global::EcoEarn.Contracts.Rewards.StakeInput.Parser, new[]{ "ClaimIds", "Account", "Amount", "Seed", "ExpirationTime", "PoolId", "Period", "DappId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Rewards.StakeInput), global::EcoEarn.Contracts.Rewards.StakeInput.Parser, new[]{ "ClaimIds", "Account", "Amount", "Seed", "ExpirationTime", "PoolId", "Period", "DappId", "LongestReleaseTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Rewards.EarlyStakeInput), global::EcoEarn.Contracts.Rewards.EarlyStakeInput.Parser, new[]{ "StakeInput", "Signature" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Rewards.SetDappAdminInput), global::EcoEarn.Contracts.Rewards.SetDappAdminInput.Parser, new[]{ "DappId", "Admin" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Rewards.SetDappConfigInput), global::EcoEarn.Contracts.Rewards.SetDappConfigInput.Parser, new[]{ "DappId", "Config" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Rewards.HashList), global::EcoEarn.Contracts.Rewards.HashList.Parser, new[]{ "Data" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Rewards.AddLiquidityAndStakeInput), global::EcoEarn.Contracts.Rewards.AddLiquidityAndStakeInput.Parser, new[]{ "StakeInput", "TokenAMin", "TokenBMin", "Deadline", "Signature" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Rewards.RemoveLiquidityInput), global::EcoEarn.Contracts.Rewards.RemoveLiquidityInput.Parser, new[]{ "LiquidityIds", "TokenAMin", "TokenBMin", "Deadline", "DappId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Rewards.StakeLiquidityInput), global::EcoEarn.Contracts.Rewards.StakeLiquidityInput.Parser, new[]{ "LiquidityIds", "PoolId", "Period" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Rewards.LiquidityInfo), global::EcoEarn.Contracts.Rewards.LiquidityInfo.Parser, new[]{ "LiquidityId", "StakeId", "Seed", "LpAmount", "LpSymbol", "RewardSymbol", "TokenAAmount", "TokenASymbol", "TokenBAmount", "TokenBSymbol", "AddedTime", "RemovedTime", "DappId", "SwapAddress", "TokenAddress", "Account" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Rewards.RemoveLiquidityInput), global::EcoEarn.Contracts.Rewards.RemoveLiquidityInput.Parser, new[]{ "LiquidityIds", "LpAmount", "TokenAMin", "TokenBMin", "Deadline", "DappId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Rewards.StakeLiquidityInput), global::EcoEarn.Contracts.Rewards.StakeLiquidityInput.Parser, new[]{ "LiquidityIds", "PoolId", "LpAmount", "Period", "DappId", "LongestReleaseTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Rewards.LiquidityInfo), global::EcoEarn.Contracts.Rewards.LiquidityInfo.Parser, new[]{ "LiquidityId", "Seed", "LpAmount", "LpSymbol", "RewardSymbol", "TokenAAmount", "TokenASymbol", "TokenBAmount", "TokenBSymbol", "AddedTime", "DappId", "SwapAddress", "TokenAddress", "Account" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Rewards.LiquidityInfos), global::EcoEarn.Contracts.Rewards.LiquidityInfos.Parser, new[]{ "Data" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Rewards.AdminSet), global::EcoEarn.Contracts.Rewards.AdminSet.Parser, new[]{ "Admin" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Rewards.Registered), global::EcoEarn.Contracts.Rewards.Registered.Parser, new[]{ "DappId", "Admin", "Config" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Rewards.DappConfigSet), global::EcoEarn.Contracts.Rewards.DappConfigSet.Parser, new[]{ "DappId", "Config" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Rewards.Claimed), global::EcoEarn.Contracts.Rewards.Claimed.Parser, new[]{ "ClaimInfos", "Seed" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Rewards.Claimed), global::EcoEarn.Contracts.Rewards.Claimed.Parser, new[]{ "ClaimInfos" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Rewards.DappAdminSet), global::EcoEarn.Contracts.Rewards.DappAdminSet.Parser, new[]{ "DappId", "Admin" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Rewards.Withdrawn), global::EcoEarn.Contracts.Rewards.Withdrawn.Parser, new[]{ "ClaimInfos", "Account", "Amount", "Seed" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Rewards.EarlyStaked), global::EcoEarn.Contracts.Rewards.EarlyStaked.Parser, new[]{ "ClaimInfos", "Account", "Amount", "Seed", "PoolId", "Period", "StakeId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Rewards.LiquidityAdded), global::EcoEarn.Contracts.Rewards.LiquidityAdded.Parser, new[]{ "ClaimInfos", "Account", "Amount", "PoolId", "Period", "StakeId", "LiquidityInfo" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Rewards.LiquidityRemoved), global::EcoEarn.Contracts.Rewards.LiquidityRemoved.Parser, new[]{ "LiquidityInfos", "LpAmount", "TokenAAmount", "TokenBAmount" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Rewards.LiquidityStaked), global::EcoEarn.Contracts.Rewards.LiquidityStaked.Parser, new[]{ "LiquidityInfos", "PoolId", "Amount", "Period", "StakeId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Rewards.Withdrawn), global::EcoEarn.Contracts.Rewards.Withdrawn.Parser, new[]{ "ClaimIds", "Account", "Amount", "Seed", "DappId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Rewards.EarlyStaked), global::EcoEarn.Contracts.Rewards.EarlyStaked.Parser, new[]{ "ClaimIds", "Account", "Amount", "Seed", "PoolId", "Period", "DappId", "StakeId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Rewards.LiquidityAdded), global::EcoEarn.Contracts.Rewards.LiquidityAdded.Parser, new[]{ "ClaimIds", "Account", "Amount", "PoolId", "Period", "StakeId", "LiquidityInfo" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Rewards.LiquidityRemoved), global::EcoEarn.Contracts.Rewards.LiquidityRemoved.Parser, new[]{ "LiquidityIds", "LpAmount", "TokenAAmount", "TokenBAmount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::EcoEarn.Contracts.Rewards.LiquidityStaked), global::EcoEarn.Contracts.Rewards.LiquidityStaked.Parser, new[]{ "LiquidityIds", "PoolId", "Amount", "Period", "StakeId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1526,6 +1527,7 @@ namespace EcoEarn.Contracts.Rewards {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ClaimInput(ClaimInput other) : this() {
+      dappId_ = other.dappId_ != null ? other.dappId_.Clone() : null;
       poolId_ = other.poolId_ != null ? other.poolId_.Clone() : null;
       account_ = other.account_ != null ? other.account_.Clone() : null;
       symbol_ = other.symbol_;
@@ -1541,8 +1543,20 @@ namespace EcoEarn.Contracts.Rewards {
       return new ClaimInput(this);
     }
 
+    /// <summary>Field number for the "dapp_id" field.</summary>
+    public const int DappIdFieldNumber = 1;
+    private global::AElf.Types.Hash dappId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::AElf.Types.Hash DappId {
+      get { return dappId_; }
+      set {
+        dappId_ = value;
+      }
+    }
+
     /// <summary>Field number for the "pool_id" field.</summary>
-    public const int PoolIdFieldNumber = 1;
+    public const int PoolIdFieldNumber = 2;
     private global::AElf.Types.Hash poolId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1554,7 +1568,7 @@ namespace EcoEarn.Contracts.Rewards {
     }
 
     /// <summary>Field number for the "account" field.</summary>
-    public const int AccountFieldNumber = 2;
+    public const int AccountFieldNumber = 3;
     private global::AElf.Types.Address account_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1566,7 +1580,7 @@ namespace EcoEarn.Contracts.Rewards {
     }
 
     /// <summary>Field number for the "symbol" field.</summary>
-    public const int SymbolFieldNumber = 3;
+    public const int SymbolFieldNumber = 4;
     private string symbol_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1578,7 +1592,7 @@ namespace EcoEarn.Contracts.Rewards {
     }
 
     /// <summary>Field number for the "amount" field.</summary>
-    public const int AmountFieldNumber = 4;
+    public const int AmountFieldNumber = 5;
     private long amount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1590,9 +1604,9 @@ namespace EcoEarn.Contracts.Rewards {
     }
 
     /// <summary>Field number for the "release_periods" field.</summary>
-    public const int ReleasePeriodsFieldNumber = 5;
+    public const int ReleasePeriodsFieldNumber = 6;
     private static readonly pb::FieldCodec<long> _repeated_releasePeriods_codec
-        = pb::FieldCodec.ForInt64(42);
+        = pb::FieldCodec.ForInt64(50);
     private readonly pbc::RepeatedField<long> releasePeriods_ = new pbc::RepeatedField<long>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1601,7 +1615,7 @@ namespace EcoEarn.Contracts.Rewards {
     }
 
     /// <summary>Field number for the "seed" field.</summary>
-    public const int SeedFieldNumber = 6;
+    public const int SeedFieldNumber = 7;
     private global::AElf.Types.Hash seed_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1627,6 +1641,7 @@ namespace EcoEarn.Contracts.Rewards {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (!object.Equals(DappId, other.DappId)) return false;
       if (!object.Equals(PoolId, other.PoolId)) return false;
       if (!object.Equals(Account, other.Account)) return false;
       if (Symbol != other.Symbol) return false;
@@ -1640,6 +1655,7 @@ namespace EcoEarn.Contracts.Rewards {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (dappId_ != null) hash ^= DappId.GetHashCode();
       if (poolId_ != null) hash ^= PoolId.GetHashCode();
       if (account_ != null) hash ^= Account.GetHashCode();
       if (Symbol.Length != 0) hash ^= Symbol.GetHashCode();
@@ -1664,25 +1680,29 @@ namespace EcoEarn.Contracts.Rewards {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (poolId_ != null) {
+      if (dappId_ != null) {
         output.WriteRawTag(10);
+        output.WriteMessage(DappId);
+      }
+      if (poolId_ != null) {
+        output.WriteRawTag(18);
         output.WriteMessage(PoolId);
       }
       if (account_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(26);
         output.WriteMessage(Account);
       }
       if (Symbol.Length != 0) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(34);
         output.WriteString(Symbol);
       }
       if (Amount != 0L) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(40);
         output.WriteInt64(Amount);
       }
       releasePeriods_.WriteTo(output, _repeated_releasePeriods_codec);
       if (seed_ != null) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(58);
         output.WriteMessage(Seed);
       }
       if (_unknownFields != null) {
@@ -1695,25 +1715,29 @@ namespace EcoEarn.Contracts.Rewards {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (poolId_ != null) {
+      if (dappId_ != null) {
         output.WriteRawTag(10);
+        output.WriteMessage(DappId);
+      }
+      if (poolId_ != null) {
+        output.WriteRawTag(18);
         output.WriteMessage(PoolId);
       }
       if (account_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(26);
         output.WriteMessage(Account);
       }
       if (Symbol.Length != 0) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(34);
         output.WriteString(Symbol);
       }
       if (Amount != 0L) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(40);
         output.WriteInt64(Amount);
       }
       releasePeriods_.WriteTo(ref output, _repeated_releasePeriods_codec);
       if (seed_ != null) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(58);
         output.WriteMessage(Seed);
       }
       if (_unknownFields != null) {
@@ -1726,6 +1750,9 @@ namespace EcoEarn.Contracts.Rewards {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (dappId_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DappId);
+      }
       if (poolId_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PoolId);
       }
@@ -1753,6 +1780,12 @@ namespace EcoEarn.Contracts.Rewards {
     public void MergeFrom(ClaimInput other) {
       if (other == null) {
         return;
+      }
+      if (other.dappId_ != null) {
+        if (dappId_ == null) {
+          DappId = new global::AElf.Types.Hash();
+        }
+        DappId.MergeFrom(other.DappId);
       }
       if (other.poolId_ != null) {
         if (poolId_ == null) {
@@ -1795,33 +1828,40 @@ namespace EcoEarn.Contracts.Rewards {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
+            if (dappId_ == null) {
+              DappId = new global::AElf.Types.Hash();
+            }
+            input.ReadMessage(DappId);
+            break;
+          }
+          case 18: {
             if (poolId_ == null) {
               PoolId = new global::AElf.Types.Hash();
             }
             input.ReadMessage(PoolId);
             break;
           }
-          case 18: {
+          case 26: {
             if (account_ == null) {
               Account = new global::AElf.Types.Address();
             }
             input.ReadMessage(Account);
             break;
           }
-          case 26: {
+          case 34: {
             Symbol = input.ReadString();
             break;
           }
-          case 32: {
+          case 40: {
             Amount = input.ReadInt64();
             break;
           }
-          case 42:
-          case 40: {
+          case 50:
+          case 48: {
             releasePeriods_.AddEntriesFrom(input, _repeated_releasePeriods_codec);
             break;
           }
-          case 50: {
+          case 58: {
             if (seed_ == null) {
               Seed = new global::AElf.Types.Hash();
             }
@@ -1844,33 +1884,40 @@ namespace EcoEarn.Contracts.Rewards {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
+            if (dappId_ == null) {
+              DappId = new global::AElf.Types.Hash();
+            }
+            input.ReadMessage(DappId);
+            break;
+          }
+          case 18: {
             if (poolId_ == null) {
               PoolId = new global::AElf.Types.Hash();
             }
             input.ReadMessage(PoolId);
             break;
           }
-          case 18: {
+          case 26: {
             if (account_ == null) {
               Account = new global::AElf.Types.Address();
             }
             input.ReadMessage(Account);
             break;
           }
-          case 26: {
+          case 34: {
             Symbol = input.ReadString();
             break;
           }
-          case 32: {
+          case 40: {
             Amount = input.ReadInt64();
             break;
           }
-          case 42:
-          case 40: {
+          case 50:
+          case 48: {
             releasePeriods_.AddEntriesFrom(ref input, _repeated_releasePeriods_codec);
             break;
           }
-          case 50: {
+          case 58: {
             if (seed_ == null) {
               Seed = new global::AElf.Types.Hash();
             }
@@ -1926,10 +1973,6 @@ namespace EcoEarn.Contracts.Rewards {
       account_ = other.account_ != null ? other.account_.Clone() : null;
       claimedTime_ = other.claimedTime_ != null ? other.claimedTime_.Clone() : null;
       releaseTime_ = other.releaseTime_ != null ? other.releaseTime_.Clone() : null;
-      withdrawnTime_ = other.withdrawnTime_ != null ? other.withdrawnTime_.Clone() : null;
-      earlyStakedAmount_ = other.earlyStakedAmount_;
-      stakeId_ = other.stakeId_ != null ? other.stakeId_.Clone() : null;
-      liquidityId_ = other.liquidityId_ != null ? other.liquidityId_.Clone() : null;
       seed_ = other.seed_ != null ? other.seed_.Clone() : null;
       contractAddress_ = other.contractAddress_ != null ? other.contractAddress_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -2037,56 +2080,8 @@ namespace EcoEarn.Contracts.Rewards {
       }
     }
 
-    /// <summary>Field number for the "withdrawn_time" field.</summary>
-    public const int WithdrawnTimeFieldNumber = 9;
-    private global::Google.Protobuf.WellKnownTypes.Timestamp withdrawnTime_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Protobuf.WellKnownTypes.Timestamp WithdrawnTime {
-      get { return withdrawnTime_; }
-      set {
-        withdrawnTime_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "early_staked_amount" field.</summary>
-    public const int EarlyStakedAmountFieldNumber = 10;
-    private long earlyStakedAmount_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long EarlyStakedAmount {
-      get { return earlyStakedAmount_; }
-      set {
-        earlyStakedAmount_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "stake_id" field.</summary>
-    public const int StakeIdFieldNumber = 11;
-    private global::AElf.Types.Hash stakeId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::AElf.Types.Hash StakeId {
-      get { return stakeId_; }
-      set {
-        stakeId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "liquidity_id" field.</summary>
-    public const int LiquidityIdFieldNumber = 12;
-    private global::AElf.Types.Hash liquidityId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::AElf.Types.Hash LiquidityId {
-      get { return liquidityId_; }
-      set {
-        liquidityId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "seed" field.</summary>
-    public const int SeedFieldNumber = 13;
+    public const int SeedFieldNumber = 9;
     private global::AElf.Types.Hash seed_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2098,7 +2093,7 @@ namespace EcoEarn.Contracts.Rewards {
     }
 
     /// <summary>Field number for the "contract_address" field.</summary>
-    public const int ContractAddressFieldNumber = 14;
+    public const int ContractAddressFieldNumber = 10;
     private global::AElf.Types.Address contractAddress_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2132,10 +2127,6 @@ namespace EcoEarn.Contracts.Rewards {
       if (!object.Equals(Account, other.Account)) return false;
       if (!object.Equals(ClaimedTime, other.ClaimedTime)) return false;
       if (!object.Equals(ReleaseTime, other.ReleaseTime)) return false;
-      if (!object.Equals(WithdrawnTime, other.WithdrawnTime)) return false;
-      if (EarlyStakedAmount != other.EarlyStakedAmount) return false;
-      if (!object.Equals(StakeId, other.StakeId)) return false;
-      if (!object.Equals(LiquidityId, other.LiquidityId)) return false;
       if (!object.Equals(Seed, other.Seed)) return false;
       if (!object.Equals(ContractAddress, other.ContractAddress)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -2153,10 +2144,6 @@ namespace EcoEarn.Contracts.Rewards {
       if (account_ != null) hash ^= Account.GetHashCode();
       if (claimedTime_ != null) hash ^= ClaimedTime.GetHashCode();
       if (releaseTime_ != null) hash ^= ReleaseTime.GetHashCode();
-      if (withdrawnTime_ != null) hash ^= WithdrawnTime.GetHashCode();
-      if (EarlyStakedAmount != 0L) hash ^= EarlyStakedAmount.GetHashCode();
-      if (stakeId_ != null) hash ^= StakeId.GetHashCode();
-      if (liquidityId_ != null) hash ^= LiquidityId.GetHashCode();
       if (seed_ != null) hash ^= Seed.GetHashCode();
       if (contractAddress_ != null) hash ^= ContractAddress.GetHashCode();
       if (_unknownFields != null) {
@@ -2209,28 +2196,12 @@ namespace EcoEarn.Contracts.Rewards {
         output.WriteRawTag(66);
         output.WriteMessage(ReleaseTime);
       }
-      if (withdrawnTime_ != null) {
-        output.WriteRawTag(74);
-        output.WriteMessage(WithdrawnTime);
-      }
-      if (EarlyStakedAmount != 0L) {
-        output.WriteRawTag(80);
-        output.WriteInt64(EarlyStakedAmount);
-      }
-      if (stakeId_ != null) {
-        output.WriteRawTag(90);
-        output.WriteMessage(StakeId);
-      }
-      if (liquidityId_ != null) {
-        output.WriteRawTag(98);
-        output.WriteMessage(LiquidityId);
-      }
       if (seed_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(74);
         output.WriteMessage(Seed);
       }
       if (contractAddress_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(82);
         output.WriteMessage(ContractAddress);
       }
       if (_unknownFields != null) {
@@ -2275,28 +2246,12 @@ namespace EcoEarn.Contracts.Rewards {
         output.WriteRawTag(66);
         output.WriteMessage(ReleaseTime);
       }
-      if (withdrawnTime_ != null) {
-        output.WriteRawTag(74);
-        output.WriteMessage(WithdrawnTime);
-      }
-      if (EarlyStakedAmount != 0L) {
-        output.WriteRawTag(80);
-        output.WriteInt64(EarlyStakedAmount);
-      }
-      if (stakeId_ != null) {
-        output.WriteRawTag(90);
-        output.WriteMessage(StakeId);
-      }
-      if (liquidityId_ != null) {
-        output.WriteRawTag(98);
-        output.WriteMessage(LiquidityId);
-      }
       if (seed_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(74);
         output.WriteMessage(Seed);
       }
       if (contractAddress_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(82);
         output.WriteMessage(ContractAddress);
       }
       if (_unknownFields != null) {
@@ -2332,18 +2287,6 @@ namespace EcoEarn.Contracts.Rewards {
       }
       if (releaseTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReleaseTime);
-      }
-      if (withdrawnTime_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(WithdrawnTime);
-      }
-      if (EarlyStakedAmount != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(EarlyStakedAmount);
-      }
-      if (stakeId_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StakeId);
-      }
-      if (liquidityId_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LiquidityId);
       }
       if (seed_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Seed);
@@ -2401,27 +2344,6 @@ namespace EcoEarn.Contracts.Rewards {
           ReleaseTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         ReleaseTime.MergeFrom(other.ReleaseTime);
-      }
-      if (other.withdrawnTime_ != null) {
-        if (withdrawnTime_ == null) {
-          WithdrawnTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-        }
-        WithdrawnTime.MergeFrom(other.WithdrawnTime);
-      }
-      if (other.EarlyStakedAmount != 0L) {
-        EarlyStakedAmount = other.EarlyStakedAmount;
-      }
-      if (other.stakeId_ != null) {
-        if (stakeId_ == null) {
-          StakeId = new global::AElf.Types.Hash();
-        }
-        StakeId.MergeFrom(other.StakeId);
-      }
-      if (other.liquidityId_ != null) {
-        if (liquidityId_ == null) {
-          LiquidityId = new global::AElf.Types.Hash();
-        }
-        LiquidityId.MergeFrom(other.LiquidityId);
       }
       if (other.seed_ != null) {
         if (seed_ == null) {
@@ -2498,38 +2420,13 @@ namespace EcoEarn.Contracts.Rewards {
             break;
           }
           case 74: {
-            if (withdrawnTime_ == null) {
-              WithdrawnTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(WithdrawnTime);
-            break;
-          }
-          case 80: {
-            EarlyStakedAmount = input.ReadInt64();
-            break;
-          }
-          case 90: {
-            if (stakeId_ == null) {
-              StakeId = new global::AElf.Types.Hash();
-            }
-            input.ReadMessage(StakeId);
-            break;
-          }
-          case 98: {
-            if (liquidityId_ == null) {
-              LiquidityId = new global::AElf.Types.Hash();
-            }
-            input.ReadMessage(LiquidityId);
-            break;
-          }
-          case 106: {
             if (seed_ == null) {
               Seed = new global::AElf.Types.Hash();
             }
             input.ReadMessage(Seed);
             break;
           }
-          case 114: {
+          case 82: {
             if (contractAddress_ == null) {
               ContractAddress = new global::AElf.Types.Address();
             }
@@ -2599,38 +2496,13 @@ namespace EcoEarn.Contracts.Rewards {
             break;
           }
           case 74: {
-            if (withdrawnTime_ == null) {
-              WithdrawnTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(WithdrawnTime);
-            break;
-          }
-          case 80: {
-            EarlyStakedAmount = input.ReadInt64();
-            break;
-          }
-          case 90: {
-            if (stakeId_ == null) {
-              StakeId = new global::AElf.Types.Hash();
-            }
-            input.ReadMessage(StakeId);
-            break;
-          }
-          case 98: {
-            if (liquidityId_ == null) {
-              LiquidityId = new global::AElf.Types.Hash();
-            }
-            input.ReadMessage(LiquidityId);
-            break;
-          }
-          case 106: {
             if (seed_ == null) {
               Seed = new global::AElf.Types.Hash();
             }
             input.ReadMessage(Seed);
             break;
           }
-          case 114: {
+          case 82: {
             if (contractAddress_ == null) {
               ContractAddress = new global::AElf.Types.Address();
             }
@@ -3291,6 +3163,7 @@ namespace EcoEarn.Contracts.Rewards {
       poolId_ = other.poolId_ != null ? other.poolId_.Clone() : null;
       period_ = other.period_;
       dappId_ = other.dappId_ != null ? other.dappId_.Clone() : null;
+      longestReleaseTime_ = other.longestReleaseTime_ != null ? other.longestReleaseTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3395,6 +3268,18 @@ namespace EcoEarn.Contracts.Rewards {
       }
     }
 
+    /// <summary>Field number for the "longest_release_time" field.</summary>
+    public const int LongestReleaseTimeFieldNumber = 9;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp longestReleaseTime_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp LongestReleaseTime {
+      get { return longestReleaseTime_; }
+      set {
+        longestReleaseTime_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3418,6 +3303,7 @@ namespace EcoEarn.Contracts.Rewards {
       if (!object.Equals(PoolId, other.PoolId)) return false;
       if (Period != other.Period) return false;
       if (!object.Equals(DappId, other.DappId)) return false;
+      if (!object.Equals(LongestReleaseTime, other.LongestReleaseTime)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3433,6 +3319,7 @@ namespace EcoEarn.Contracts.Rewards {
       if (poolId_ != null) hash ^= PoolId.GetHashCode();
       if (Period != 0L) hash ^= Period.GetHashCode();
       if (dappId_ != null) hash ^= DappId.GetHashCode();
+      if (longestReleaseTime_ != null) hash ^= LongestReleaseTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3480,6 +3367,10 @@ namespace EcoEarn.Contracts.Rewards {
         output.WriteRawTag(66);
         output.WriteMessage(DappId);
       }
+      if (longestReleaseTime_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(LongestReleaseTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3519,6 +3410,10 @@ namespace EcoEarn.Contracts.Rewards {
         output.WriteRawTag(66);
         output.WriteMessage(DappId);
       }
+      if (longestReleaseTime_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(LongestReleaseTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3550,6 +3445,9 @@ namespace EcoEarn.Contracts.Rewards {
       }
       if (dappId_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DappId);
+      }
+      if (longestReleaseTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LongestReleaseTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3596,6 +3494,12 @@ namespace EcoEarn.Contracts.Rewards {
           DappId = new global::AElf.Types.Hash();
         }
         DappId.MergeFrom(other.DappId);
+      }
+      if (other.longestReleaseTime_ != null) {
+        if (longestReleaseTime_ == null) {
+          LongestReleaseTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        LongestReleaseTime.MergeFrom(other.LongestReleaseTime);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3656,6 +3560,13 @@ namespace EcoEarn.Contracts.Rewards {
             input.ReadMessage(DappId);
             break;
           }
+          case 74: {
+            if (longestReleaseTime_ == null) {
+              LongestReleaseTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(LongestReleaseTime);
+            break;
+          }
         }
       }
     #endif
@@ -3713,6 +3624,13 @@ namespace EcoEarn.Contracts.Rewards {
               DappId = new global::AElf.Types.Hash();
             }
             input.ReadMessage(DappId);
+            break;
+          }
+          case 74: {
+            if (longestReleaseTime_ == null) {
+              LongestReleaseTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(LongestReleaseTime);
             break;
           }
         }
@@ -5013,6 +4931,7 @@ namespace EcoEarn.Contracts.Rewards {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RemoveLiquidityInput(RemoveLiquidityInput other) : this() {
       liquidityIds_ = other.liquidityIds_.Clone();
+      lpAmount_ = other.lpAmount_;
       tokenAMin_ = other.tokenAMin_;
       tokenBMin_ = other.tokenBMin_;
       deadline_ = other.deadline_ != null ? other.deadline_.Clone() : null;
@@ -5037,8 +4956,20 @@ namespace EcoEarn.Contracts.Rewards {
       get { return liquidityIds_; }
     }
 
+    /// <summary>Field number for the "lp_amount" field.</summary>
+    public const int LpAmountFieldNumber = 2;
+    private long lpAmount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long LpAmount {
+      get { return lpAmount_; }
+      set {
+        lpAmount_ = value;
+      }
+    }
+
     /// <summary>Field number for the "token_a_min" field.</summary>
-    public const int TokenAMinFieldNumber = 2;
+    public const int TokenAMinFieldNumber = 3;
     private long tokenAMin_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5050,7 +4981,7 @@ namespace EcoEarn.Contracts.Rewards {
     }
 
     /// <summary>Field number for the "token_b_min" field.</summary>
-    public const int TokenBMinFieldNumber = 3;
+    public const int TokenBMinFieldNumber = 4;
     private long tokenBMin_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5062,7 +4993,7 @@ namespace EcoEarn.Contracts.Rewards {
     }
 
     /// <summary>Field number for the "deadline" field.</summary>
-    public const int DeadlineFieldNumber = 4;
+    public const int DeadlineFieldNumber = 5;
     private global::Google.Protobuf.WellKnownTypes.Timestamp deadline_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5074,7 +5005,7 @@ namespace EcoEarn.Contracts.Rewards {
     }
 
     /// <summary>Field number for the "dapp_id" field.</summary>
-    public const int DappIdFieldNumber = 5;
+    public const int DappIdFieldNumber = 6;
     private global::AElf.Types.Hash dappId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5101,6 +5032,7 @@ namespace EcoEarn.Contracts.Rewards {
         return true;
       }
       if(!liquidityIds_.Equals(other.liquidityIds_)) return false;
+      if (LpAmount != other.LpAmount) return false;
       if (TokenAMin != other.TokenAMin) return false;
       if (TokenBMin != other.TokenBMin) return false;
       if (!object.Equals(Deadline, other.Deadline)) return false;
@@ -5113,6 +5045,7 @@ namespace EcoEarn.Contracts.Rewards {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= liquidityIds_.GetHashCode();
+      if (LpAmount != 0L) hash ^= LpAmount.GetHashCode();
       if (TokenAMin != 0L) hash ^= TokenAMin.GetHashCode();
       if (TokenBMin != 0L) hash ^= TokenBMin.GetHashCode();
       if (deadline_ != null) hash ^= Deadline.GetHashCode();
@@ -5136,20 +5069,24 @@ namespace EcoEarn.Contracts.Rewards {
       output.WriteRawMessage(this);
     #else
       liquidityIds_.WriteTo(output, _repeated_liquidityIds_codec);
-      if (TokenAMin != 0L) {
+      if (LpAmount != 0L) {
         output.WriteRawTag(16);
+        output.WriteInt64(LpAmount);
+      }
+      if (TokenAMin != 0L) {
+        output.WriteRawTag(24);
         output.WriteInt64(TokenAMin);
       }
       if (TokenBMin != 0L) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(32);
         output.WriteInt64(TokenBMin);
       }
       if (deadline_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(42);
         output.WriteMessage(Deadline);
       }
       if (dappId_ != null) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(50);
         output.WriteMessage(DappId);
       }
       if (_unknownFields != null) {
@@ -5163,20 +5100,24 @@ namespace EcoEarn.Contracts.Rewards {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       liquidityIds_.WriteTo(ref output, _repeated_liquidityIds_codec);
-      if (TokenAMin != 0L) {
+      if (LpAmount != 0L) {
         output.WriteRawTag(16);
+        output.WriteInt64(LpAmount);
+      }
+      if (TokenAMin != 0L) {
+        output.WriteRawTag(24);
         output.WriteInt64(TokenAMin);
       }
       if (TokenBMin != 0L) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(32);
         output.WriteInt64(TokenBMin);
       }
       if (deadline_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(42);
         output.WriteMessage(Deadline);
       }
       if (dappId_ != null) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(50);
         output.WriteMessage(DappId);
       }
       if (_unknownFields != null) {
@@ -5190,6 +5131,9 @@ namespace EcoEarn.Contracts.Rewards {
     public int CalculateSize() {
       int size = 0;
       size += liquidityIds_.CalculateSize(_repeated_liquidityIds_codec);
+      if (LpAmount != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(LpAmount);
+      }
       if (TokenAMin != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(TokenAMin);
       }
@@ -5215,6 +5159,9 @@ namespace EcoEarn.Contracts.Rewards {
         return;
       }
       liquidityIds_.Add(other.liquidityIds_);
+      if (other.LpAmount != 0L) {
+        LpAmount = other.LpAmount;
+      }
       if (other.TokenAMin != 0L) {
         TokenAMin = other.TokenAMin;
       }
@@ -5253,21 +5200,25 @@ namespace EcoEarn.Contracts.Rewards {
             break;
           }
           case 16: {
-            TokenAMin = input.ReadInt64();
+            LpAmount = input.ReadInt64();
             break;
           }
           case 24: {
+            TokenAMin = input.ReadInt64();
+            break;
+          }
+          case 32: {
             TokenBMin = input.ReadInt64();
             break;
           }
-          case 34: {
+          case 42: {
             if (deadline_ == null) {
               Deadline = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(Deadline);
             break;
           }
-          case 42: {
+          case 50: {
             if (dappId_ == null) {
               DappId = new global::AElf.Types.Hash();
             }
@@ -5294,21 +5245,25 @@ namespace EcoEarn.Contracts.Rewards {
             break;
           }
           case 16: {
-            TokenAMin = input.ReadInt64();
+            LpAmount = input.ReadInt64();
             break;
           }
           case 24: {
+            TokenAMin = input.ReadInt64();
+            break;
+          }
+          case 32: {
             TokenBMin = input.ReadInt64();
             break;
           }
-          case 34: {
+          case 42: {
             if (deadline_ == null) {
               Deadline = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(Deadline);
             break;
           }
-          case 42: {
+          case 50: {
             if (dappId_ == null) {
               DappId = new global::AElf.Types.Hash();
             }
@@ -5358,7 +5313,10 @@ namespace EcoEarn.Contracts.Rewards {
     public StakeLiquidityInput(StakeLiquidityInput other) : this() {
       liquidityIds_ = other.liquidityIds_.Clone();
       poolId_ = other.poolId_ != null ? other.poolId_.Clone() : null;
+      lpAmount_ = other.lpAmount_;
       period_ = other.period_;
+      dappId_ = other.dappId_ != null ? other.dappId_.Clone() : null;
+      longestReleaseTime_ = other.longestReleaseTime_ != null ? other.longestReleaseTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5391,8 +5349,20 @@ namespace EcoEarn.Contracts.Rewards {
       }
     }
 
+    /// <summary>Field number for the "lp_amount" field.</summary>
+    public const int LpAmountFieldNumber = 3;
+    private long lpAmount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long LpAmount {
+      get { return lpAmount_; }
+      set {
+        lpAmount_ = value;
+      }
+    }
+
     /// <summary>Field number for the "period" field.</summary>
-    public const int PeriodFieldNumber = 3;
+    public const int PeriodFieldNumber = 4;
     private long period_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5400,6 +5370,30 @@ namespace EcoEarn.Contracts.Rewards {
       get { return period_; }
       set {
         period_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "dapp_id" field.</summary>
+    public const int DappIdFieldNumber = 5;
+    private global::AElf.Types.Hash dappId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::AElf.Types.Hash DappId {
+      get { return dappId_; }
+      set {
+        dappId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "longest_release_time" field.</summary>
+    public const int LongestReleaseTimeFieldNumber = 6;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp longestReleaseTime_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp LongestReleaseTime {
+      get { return longestReleaseTime_; }
+      set {
+        longestReleaseTime_ = value;
       }
     }
 
@@ -5420,7 +5414,10 @@ namespace EcoEarn.Contracts.Rewards {
       }
       if(!liquidityIds_.Equals(other.liquidityIds_)) return false;
       if (!object.Equals(PoolId, other.PoolId)) return false;
+      if (LpAmount != other.LpAmount) return false;
       if (Period != other.Period) return false;
+      if (!object.Equals(DappId, other.DappId)) return false;
+      if (!object.Equals(LongestReleaseTime, other.LongestReleaseTime)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5430,7 +5427,10 @@ namespace EcoEarn.Contracts.Rewards {
       int hash = 1;
       hash ^= liquidityIds_.GetHashCode();
       if (poolId_ != null) hash ^= PoolId.GetHashCode();
+      if (LpAmount != 0L) hash ^= LpAmount.GetHashCode();
       if (Period != 0L) hash ^= Period.GetHashCode();
+      if (dappId_ != null) hash ^= DappId.GetHashCode();
+      if (longestReleaseTime_ != null) hash ^= LongestReleaseTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5454,9 +5454,21 @@ namespace EcoEarn.Contracts.Rewards {
         output.WriteRawTag(18);
         output.WriteMessage(PoolId);
       }
-      if (Period != 0L) {
+      if (LpAmount != 0L) {
         output.WriteRawTag(24);
+        output.WriteInt64(LpAmount);
+      }
+      if (Period != 0L) {
+        output.WriteRawTag(32);
         output.WriteInt64(Period);
+      }
+      if (dappId_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(DappId);
+      }
+      if (longestReleaseTime_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(LongestReleaseTime);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -5473,9 +5485,21 @@ namespace EcoEarn.Contracts.Rewards {
         output.WriteRawTag(18);
         output.WriteMessage(PoolId);
       }
-      if (Period != 0L) {
+      if (LpAmount != 0L) {
         output.WriteRawTag(24);
+        output.WriteInt64(LpAmount);
+      }
+      if (Period != 0L) {
+        output.WriteRawTag(32);
         output.WriteInt64(Period);
+      }
+      if (dappId_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(DappId);
+      }
+      if (longestReleaseTime_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(LongestReleaseTime);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -5491,8 +5515,17 @@ namespace EcoEarn.Contracts.Rewards {
       if (poolId_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PoolId);
       }
+      if (LpAmount != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(LpAmount);
+      }
       if (Period != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(Period);
+      }
+      if (dappId_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DappId);
+      }
+      if (longestReleaseTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LongestReleaseTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5513,8 +5546,23 @@ namespace EcoEarn.Contracts.Rewards {
         }
         PoolId.MergeFrom(other.PoolId);
       }
+      if (other.LpAmount != 0L) {
+        LpAmount = other.LpAmount;
+      }
       if (other.Period != 0L) {
         Period = other.Period;
+      }
+      if (other.dappId_ != null) {
+        if (dappId_ == null) {
+          DappId = new global::AElf.Types.Hash();
+        }
+        DappId.MergeFrom(other.DappId);
+      }
+      if (other.longestReleaseTime_ != null) {
+        if (longestReleaseTime_ == null) {
+          LongestReleaseTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        LongestReleaseTime.MergeFrom(other.LongestReleaseTime);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -5543,7 +5591,25 @@ namespace EcoEarn.Contracts.Rewards {
             break;
           }
           case 24: {
+            LpAmount = input.ReadInt64();
+            break;
+          }
+          case 32: {
             Period = input.ReadInt64();
+            break;
+          }
+          case 42: {
+            if (dappId_ == null) {
+              DappId = new global::AElf.Types.Hash();
+            }
+            input.ReadMessage(DappId);
+            break;
+          }
+          case 50: {
+            if (longestReleaseTime_ == null) {
+              LongestReleaseTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(LongestReleaseTime);
             break;
           }
         }
@@ -5573,7 +5639,25 @@ namespace EcoEarn.Contracts.Rewards {
             break;
           }
           case 24: {
+            LpAmount = input.ReadInt64();
+            break;
+          }
+          case 32: {
             Period = input.ReadInt64();
+            break;
+          }
+          case 42: {
+            if (dappId_ == null) {
+              DappId = new global::AElf.Types.Hash();
+            }
+            input.ReadMessage(DappId);
+            break;
+          }
+          case 50: {
+            if (longestReleaseTime_ == null) {
+              LongestReleaseTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(LongestReleaseTime);
             break;
           }
         }
@@ -5618,7 +5702,6 @@ namespace EcoEarn.Contracts.Rewards {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LiquidityInfo(LiquidityInfo other) : this() {
       liquidityId_ = other.liquidityId_ != null ? other.liquidityId_.Clone() : null;
-      stakeId_ = other.stakeId_ != null ? other.stakeId_.Clone() : null;
       seed_ = other.seed_ != null ? other.seed_.Clone() : null;
       lpAmount_ = other.lpAmount_;
       lpSymbol_ = other.lpSymbol_;
@@ -5628,7 +5711,6 @@ namespace EcoEarn.Contracts.Rewards {
       tokenBAmount_ = other.tokenBAmount_;
       tokenBSymbol_ = other.tokenBSymbol_;
       addedTime_ = other.addedTime_ != null ? other.addedTime_.Clone() : null;
-      removedTime_ = other.removedTime_ != null ? other.removedTime_.Clone() : null;
       dappId_ = other.dappId_ != null ? other.dappId_.Clone() : null;
       swapAddress_ = other.swapAddress_ != null ? other.swapAddress_.Clone() : null;
       tokenAddress_ = other.tokenAddress_ != null ? other.tokenAddress_.Clone() : null;
@@ -5654,20 +5736,8 @@ namespace EcoEarn.Contracts.Rewards {
       }
     }
 
-    /// <summary>Field number for the "stake_id" field.</summary>
-    public const int StakeIdFieldNumber = 2;
-    private global::AElf.Types.Hash stakeId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::AElf.Types.Hash StakeId {
-      get { return stakeId_; }
-      set {
-        stakeId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "seed" field.</summary>
-    public const int SeedFieldNumber = 3;
+    public const int SeedFieldNumber = 2;
     private global::AElf.Types.Hash seed_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5679,7 +5749,7 @@ namespace EcoEarn.Contracts.Rewards {
     }
 
     /// <summary>Field number for the "lp_amount" field.</summary>
-    public const int LpAmountFieldNumber = 4;
+    public const int LpAmountFieldNumber = 3;
     private long lpAmount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5691,7 +5761,7 @@ namespace EcoEarn.Contracts.Rewards {
     }
 
     /// <summary>Field number for the "lp_symbol" field.</summary>
-    public const int LpSymbolFieldNumber = 5;
+    public const int LpSymbolFieldNumber = 4;
     private string lpSymbol_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5703,7 +5773,7 @@ namespace EcoEarn.Contracts.Rewards {
     }
 
     /// <summary>Field number for the "reward_symbol" field.</summary>
-    public const int RewardSymbolFieldNumber = 6;
+    public const int RewardSymbolFieldNumber = 5;
     private string rewardSymbol_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5715,7 +5785,7 @@ namespace EcoEarn.Contracts.Rewards {
     }
 
     /// <summary>Field number for the "token_a_amount" field.</summary>
-    public const int TokenAAmountFieldNumber = 7;
+    public const int TokenAAmountFieldNumber = 6;
     private long tokenAAmount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5727,7 +5797,7 @@ namespace EcoEarn.Contracts.Rewards {
     }
 
     /// <summary>Field number for the "token_a_symbol" field.</summary>
-    public const int TokenASymbolFieldNumber = 8;
+    public const int TokenASymbolFieldNumber = 7;
     private string tokenASymbol_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5739,7 +5809,7 @@ namespace EcoEarn.Contracts.Rewards {
     }
 
     /// <summary>Field number for the "token_b_amount" field.</summary>
-    public const int TokenBAmountFieldNumber = 9;
+    public const int TokenBAmountFieldNumber = 8;
     private long tokenBAmount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5751,7 +5821,7 @@ namespace EcoEarn.Contracts.Rewards {
     }
 
     /// <summary>Field number for the "token_b_symbol" field.</summary>
-    public const int TokenBSymbolFieldNumber = 10;
+    public const int TokenBSymbolFieldNumber = 9;
     private string tokenBSymbol_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5763,7 +5833,7 @@ namespace EcoEarn.Contracts.Rewards {
     }
 
     /// <summary>Field number for the "added_time" field.</summary>
-    public const int AddedTimeFieldNumber = 11;
+    public const int AddedTimeFieldNumber = 10;
     private global::Google.Protobuf.WellKnownTypes.Timestamp addedTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5774,20 +5844,8 @@ namespace EcoEarn.Contracts.Rewards {
       }
     }
 
-    /// <summary>Field number for the "removed_time" field.</summary>
-    public const int RemovedTimeFieldNumber = 12;
-    private global::Google.Protobuf.WellKnownTypes.Timestamp removedTime_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Protobuf.WellKnownTypes.Timestamp RemovedTime {
-      get { return removedTime_; }
-      set {
-        removedTime_ = value;
-      }
-    }
-
     /// <summary>Field number for the "dapp_id" field.</summary>
-    public const int DappIdFieldNumber = 13;
+    public const int DappIdFieldNumber = 11;
     private global::AElf.Types.Hash dappId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5799,7 +5857,7 @@ namespace EcoEarn.Contracts.Rewards {
     }
 
     /// <summary>Field number for the "swap_address" field.</summary>
-    public const int SwapAddressFieldNumber = 14;
+    public const int SwapAddressFieldNumber = 12;
     private global::AElf.Types.Address swapAddress_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5811,7 +5869,7 @@ namespace EcoEarn.Contracts.Rewards {
     }
 
     /// <summary>Field number for the "token_address" field.</summary>
-    public const int TokenAddressFieldNumber = 15;
+    public const int TokenAddressFieldNumber = 13;
     private global::AElf.Types.Address tokenAddress_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5823,7 +5881,7 @@ namespace EcoEarn.Contracts.Rewards {
     }
 
     /// <summary>Field number for the "account" field.</summary>
-    public const int AccountFieldNumber = 16;
+    public const int AccountFieldNumber = 14;
     private global::AElf.Types.Address account_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5850,7 +5908,6 @@ namespace EcoEarn.Contracts.Rewards {
         return true;
       }
       if (!object.Equals(LiquidityId, other.LiquidityId)) return false;
-      if (!object.Equals(StakeId, other.StakeId)) return false;
       if (!object.Equals(Seed, other.Seed)) return false;
       if (LpAmount != other.LpAmount) return false;
       if (LpSymbol != other.LpSymbol) return false;
@@ -5860,7 +5917,6 @@ namespace EcoEarn.Contracts.Rewards {
       if (TokenBAmount != other.TokenBAmount) return false;
       if (TokenBSymbol != other.TokenBSymbol) return false;
       if (!object.Equals(AddedTime, other.AddedTime)) return false;
-      if (!object.Equals(RemovedTime, other.RemovedTime)) return false;
       if (!object.Equals(DappId, other.DappId)) return false;
       if (!object.Equals(SwapAddress, other.SwapAddress)) return false;
       if (!object.Equals(TokenAddress, other.TokenAddress)) return false;
@@ -5873,7 +5929,6 @@ namespace EcoEarn.Contracts.Rewards {
     public override int GetHashCode() {
       int hash = 1;
       if (liquidityId_ != null) hash ^= LiquidityId.GetHashCode();
-      if (stakeId_ != null) hash ^= StakeId.GetHashCode();
       if (seed_ != null) hash ^= Seed.GetHashCode();
       if (LpAmount != 0L) hash ^= LpAmount.GetHashCode();
       if (LpSymbol.Length != 0) hash ^= LpSymbol.GetHashCode();
@@ -5883,7 +5938,6 @@ namespace EcoEarn.Contracts.Rewards {
       if (TokenBAmount != 0L) hash ^= TokenBAmount.GetHashCode();
       if (TokenBSymbol.Length != 0) hash ^= TokenBSymbol.GetHashCode();
       if (addedTime_ != null) hash ^= AddedTime.GetHashCode();
-      if (removedTime_ != null) hash ^= RemovedTime.GetHashCode();
       if (dappId_ != null) hash ^= DappId.GetHashCode();
       if (swapAddress_ != null) hash ^= SwapAddress.GetHashCode();
       if (tokenAddress_ != null) hash ^= TokenAddress.GetHashCode();
@@ -5910,64 +5964,56 @@ namespace EcoEarn.Contracts.Rewards {
         output.WriteRawTag(10);
         output.WriteMessage(LiquidityId);
       }
-      if (stakeId_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(StakeId);
-      }
       if (seed_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(18);
         output.WriteMessage(Seed);
       }
       if (LpAmount != 0L) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(24);
         output.WriteInt64(LpAmount);
       }
       if (LpSymbol.Length != 0) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(34);
         output.WriteString(LpSymbol);
       }
       if (RewardSymbol.Length != 0) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(42);
         output.WriteString(RewardSymbol);
       }
       if (TokenAAmount != 0L) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(48);
         output.WriteInt64(TokenAAmount);
       }
       if (TokenASymbol.Length != 0) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(58);
         output.WriteString(TokenASymbol);
       }
       if (TokenBAmount != 0L) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(64);
         output.WriteInt64(TokenBAmount);
       }
       if (TokenBSymbol.Length != 0) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(74);
         output.WriteString(TokenBSymbol);
       }
       if (addedTime_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(82);
         output.WriteMessage(AddedTime);
       }
-      if (removedTime_ != null) {
-        output.WriteRawTag(98);
-        output.WriteMessage(RemovedTime);
-      }
       if (dappId_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(90);
         output.WriteMessage(DappId);
       }
       if (swapAddress_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(98);
         output.WriteMessage(SwapAddress);
       }
       if (tokenAddress_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(106);
         output.WriteMessage(TokenAddress);
       }
       if (account_ != null) {
-        output.WriteRawTag(130, 1);
+        output.WriteRawTag(114);
         output.WriteMessage(Account);
       }
       if (_unknownFields != null) {
@@ -5984,64 +6030,56 @@ namespace EcoEarn.Contracts.Rewards {
         output.WriteRawTag(10);
         output.WriteMessage(LiquidityId);
       }
-      if (stakeId_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(StakeId);
-      }
       if (seed_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(18);
         output.WriteMessage(Seed);
       }
       if (LpAmount != 0L) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(24);
         output.WriteInt64(LpAmount);
       }
       if (LpSymbol.Length != 0) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(34);
         output.WriteString(LpSymbol);
       }
       if (RewardSymbol.Length != 0) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(42);
         output.WriteString(RewardSymbol);
       }
       if (TokenAAmount != 0L) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(48);
         output.WriteInt64(TokenAAmount);
       }
       if (TokenASymbol.Length != 0) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(58);
         output.WriteString(TokenASymbol);
       }
       if (TokenBAmount != 0L) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(64);
         output.WriteInt64(TokenBAmount);
       }
       if (TokenBSymbol.Length != 0) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(74);
         output.WriteString(TokenBSymbol);
       }
       if (addedTime_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(82);
         output.WriteMessage(AddedTime);
       }
-      if (removedTime_ != null) {
-        output.WriteRawTag(98);
-        output.WriteMessage(RemovedTime);
-      }
       if (dappId_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(90);
         output.WriteMessage(DappId);
       }
       if (swapAddress_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(98);
         output.WriteMessage(SwapAddress);
       }
       if (tokenAddress_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(106);
         output.WriteMessage(TokenAddress);
       }
       if (account_ != null) {
-        output.WriteRawTag(130, 1);
+        output.WriteRawTag(114);
         output.WriteMessage(Account);
       }
       if (_unknownFields != null) {
@@ -6056,9 +6094,6 @@ namespace EcoEarn.Contracts.Rewards {
       int size = 0;
       if (liquidityId_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(LiquidityId);
-      }
-      if (stakeId_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StakeId);
       }
       if (seed_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Seed);
@@ -6087,9 +6122,6 @@ namespace EcoEarn.Contracts.Rewards {
       if (addedTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(AddedTime);
       }
-      if (removedTime_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RemovedTime);
-      }
       if (dappId_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DappId);
       }
@@ -6100,7 +6132,7 @@ namespace EcoEarn.Contracts.Rewards {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TokenAddress);
       }
       if (account_ != null) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Account);
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Account);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -6119,12 +6151,6 @@ namespace EcoEarn.Contracts.Rewards {
           LiquidityId = new global::AElf.Types.Hash();
         }
         LiquidityId.MergeFrom(other.LiquidityId);
-      }
-      if (other.stakeId_ != null) {
-        if (stakeId_ == null) {
-          StakeId = new global::AElf.Types.Hash();
-        }
-        StakeId.MergeFrom(other.StakeId);
       }
       if (other.seed_ != null) {
         if (seed_ == null) {
@@ -6158,12 +6184,6 @@ namespace EcoEarn.Contracts.Rewards {
           AddedTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         AddedTime.MergeFrom(other.AddedTime);
-      }
-      if (other.removedTime_ != null) {
-        if (removedTime_ == null) {
-          RemovedTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-        }
-        RemovedTime.MergeFrom(other.RemovedTime);
       }
       if (other.dappId_ != null) {
         if (dappId_ == null) {
@@ -6212,83 +6232,69 @@ namespace EcoEarn.Contracts.Rewards {
             break;
           }
           case 18: {
-            if (stakeId_ == null) {
-              StakeId = new global::AElf.Types.Hash();
-            }
-            input.ReadMessage(StakeId);
-            break;
-          }
-          case 26: {
             if (seed_ == null) {
               Seed = new global::AElf.Types.Hash();
             }
             input.ReadMessage(Seed);
             break;
           }
-          case 32: {
+          case 24: {
             LpAmount = input.ReadInt64();
             break;
           }
-          case 42: {
+          case 34: {
             LpSymbol = input.ReadString();
             break;
           }
-          case 50: {
+          case 42: {
             RewardSymbol = input.ReadString();
             break;
           }
-          case 56: {
+          case 48: {
             TokenAAmount = input.ReadInt64();
             break;
           }
-          case 66: {
+          case 58: {
             TokenASymbol = input.ReadString();
             break;
           }
-          case 72: {
+          case 64: {
             TokenBAmount = input.ReadInt64();
             break;
           }
-          case 82: {
+          case 74: {
             TokenBSymbol = input.ReadString();
             break;
           }
-          case 90: {
+          case 82: {
             if (addedTime_ == null) {
               AddedTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(AddedTime);
             break;
           }
-          case 98: {
-            if (removedTime_ == null) {
-              RemovedTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(RemovedTime);
-            break;
-          }
-          case 106: {
+          case 90: {
             if (dappId_ == null) {
               DappId = new global::AElf.Types.Hash();
             }
             input.ReadMessage(DappId);
             break;
           }
-          case 114: {
+          case 98: {
             if (swapAddress_ == null) {
               SwapAddress = new global::AElf.Types.Address();
             }
             input.ReadMessage(SwapAddress);
             break;
           }
-          case 122: {
+          case 106: {
             if (tokenAddress_ == null) {
               TokenAddress = new global::AElf.Types.Address();
             }
             input.ReadMessage(TokenAddress);
             break;
           }
-          case 130: {
+          case 114: {
             if (account_ == null) {
               Account = new global::AElf.Types.Address();
             }
@@ -6318,83 +6324,69 @@ namespace EcoEarn.Contracts.Rewards {
             break;
           }
           case 18: {
-            if (stakeId_ == null) {
-              StakeId = new global::AElf.Types.Hash();
-            }
-            input.ReadMessage(StakeId);
-            break;
-          }
-          case 26: {
             if (seed_ == null) {
               Seed = new global::AElf.Types.Hash();
             }
             input.ReadMessage(Seed);
             break;
           }
-          case 32: {
+          case 24: {
             LpAmount = input.ReadInt64();
             break;
           }
-          case 42: {
+          case 34: {
             LpSymbol = input.ReadString();
             break;
           }
-          case 50: {
+          case 42: {
             RewardSymbol = input.ReadString();
             break;
           }
-          case 56: {
+          case 48: {
             TokenAAmount = input.ReadInt64();
             break;
           }
-          case 66: {
+          case 58: {
             TokenASymbol = input.ReadString();
             break;
           }
-          case 72: {
+          case 64: {
             TokenBAmount = input.ReadInt64();
             break;
           }
-          case 82: {
+          case 74: {
             TokenBSymbol = input.ReadString();
             break;
           }
-          case 90: {
+          case 82: {
             if (addedTime_ == null) {
               AddedTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(AddedTime);
             break;
           }
-          case 98: {
-            if (removedTime_ == null) {
-              RemovedTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(RemovedTime);
-            break;
-          }
-          case 106: {
+          case 90: {
             if (dappId_ == null) {
               DappId = new global::AElf.Types.Hash();
             }
             input.ReadMessage(DappId);
             break;
           }
-          case 114: {
+          case 98: {
             if (swapAddress_ == null) {
               SwapAddress = new global::AElf.Types.Address();
             }
             input.ReadMessage(SwapAddress);
             break;
           }
-          case 122: {
+          case 106: {
             if (tokenAddress_ == null) {
               TokenAddress = new global::AElf.Types.Address();
             }
             input.ReadMessage(TokenAddress);
             break;
           }
-          case 130: {
+          case 114: {
             if (account_ == null) {
               Account = new global::AElf.Types.Address();
             }
@@ -7356,7 +7348,6 @@ namespace EcoEarn.Contracts.Rewards {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Claimed(Claimed other) : this() {
       claimInfos_ = other.claimInfos_ != null ? other.claimInfos_.Clone() : null;
-      seed_ = other.seed_ != null ? other.seed_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -7378,18 +7369,6 @@ namespace EcoEarn.Contracts.Rewards {
       }
     }
 
-    /// <summary>Field number for the "seed" field.</summary>
-    public const int SeedFieldNumber = 2;
-    private global::AElf.Types.Hash seed_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::AElf.Types.Hash Seed {
-      get { return seed_; }
-      set {
-        seed_ = value;
-      }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -7406,7 +7385,6 @@ namespace EcoEarn.Contracts.Rewards {
         return true;
       }
       if (!object.Equals(ClaimInfos, other.ClaimInfos)) return false;
-      if (!object.Equals(Seed, other.Seed)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -7415,7 +7393,6 @@ namespace EcoEarn.Contracts.Rewards {
     public override int GetHashCode() {
       int hash = 1;
       if (claimInfos_ != null) hash ^= ClaimInfos.GetHashCode();
-      if (seed_ != null) hash ^= Seed.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -7438,10 +7415,6 @@ namespace EcoEarn.Contracts.Rewards {
         output.WriteRawTag(10);
         output.WriteMessage(ClaimInfos);
       }
-      if (seed_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(Seed);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -7456,10 +7429,6 @@ namespace EcoEarn.Contracts.Rewards {
         output.WriteRawTag(10);
         output.WriteMessage(ClaimInfos);
       }
-      if (seed_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(Seed);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -7472,9 +7441,6 @@ namespace EcoEarn.Contracts.Rewards {
       int size = 0;
       if (claimInfos_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ClaimInfos);
-      }
-      if (seed_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Seed);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -7493,12 +7459,6 @@ namespace EcoEarn.Contracts.Rewards {
           ClaimInfos = new global::EcoEarn.Contracts.Rewards.ClaimInfos();
         }
         ClaimInfos.MergeFrom(other.ClaimInfos);
-      }
-      if (other.seed_ != null) {
-        if (seed_ == null) {
-          Seed = new global::AElf.Types.Hash();
-        }
-        Seed.MergeFrom(other.Seed);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -7522,13 +7482,6 @@ namespace EcoEarn.Contracts.Rewards {
             input.ReadMessage(ClaimInfos);
             break;
           }
-          case 18: {
-            if (seed_ == null) {
-              Seed = new global::AElf.Types.Hash();
-            }
-            input.ReadMessage(Seed);
-            break;
-          }
         }
       }
     #endif
@@ -7549,13 +7502,6 @@ namespace EcoEarn.Contracts.Rewards {
               ClaimInfos = new global::EcoEarn.Contracts.Rewards.ClaimInfos();
             }
             input.ReadMessage(ClaimInfos);
-            break;
-          }
-          case 18: {
-            if (seed_ == null) {
-              Seed = new global::AElf.Types.Hash();
-            }
-            input.ReadMessage(Seed);
             break;
           }
         }
@@ -7843,10 +7789,11 @@ namespace EcoEarn.Contracts.Rewards {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Withdrawn(Withdrawn other) : this() {
-      claimInfos_ = other.claimInfos_ != null ? other.claimInfos_.Clone() : null;
+      claimIds_ = other.claimIds_ != null ? other.claimIds_.Clone() : null;
       account_ = other.account_ != null ? other.account_.Clone() : null;
       amount_ = other.amount_;
       seed_ = other.seed_ != null ? other.seed_.Clone() : null;
+      dappId_ = other.dappId_ != null ? other.dappId_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -7856,15 +7803,15 @@ namespace EcoEarn.Contracts.Rewards {
       return new Withdrawn(this);
     }
 
-    /// <summary>Field number for the "claim_infos" field.</summary>
-    public const int ClaimInfosFieldNumber = 1;
-    private global::EcoEarn.Contracts.Rewards.ClaimInfos claimInfos_;
+    /// <summary>Field number for the "claim_ids" field.</summary>
+    public const int ClaimIdsFieldNumber = 1;
+    private global::EcoEarn.Contracts.Rewards.HashList claimIds_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EcoEarn.Contracts.Rewards.ClaimInfos ClaimInfos {
-      get { return claimInfos_; }
+    public global::EcoEarn.Contracts.Rewards.HashList ClaimIds {
+      get { return claimIds_; }
       set {
-        claimInfos_ = value;
+        claimIds_ = value;
       }
     }
 
@@ -7904,6 +7851,18 @@ namespace EcoEarn.Contracts.Rewards {
       }
     }
 
+    /// <summary>Field number for the "dapp_id" field.</summary>
+    public const int DappIdFieldNumber = 5;
+    private global::AElf.Types.Hash dappId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::AElf.Types.Hash DappId {
+      get { return dappId_; }
+      set {
+        dappId_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -7919,10 +7878,11 @@ namespace EcoEarn.Contracts.Rewards {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(ClaimInfos, other.ClaimInfos)) return false;
+      if (!object.Equals(ClaimIds, other.ClaimIds)) return false;
       if (!object.Equals(Account, other.Account)) return false;
       if (Amount != other.Amount) return false;
       if (!object.Equals(Seed, other.Seed)) return false;
+      if (!object.Equals(DappId, other.DappId)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -7930,10 +7890,11 @@ namespace EcoEarn.Contracts.Rewards {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (claimInfos_ != null) hash ^= ClaimInfos.GetHashCode();
+      if (claimIds_ != null) hash ^= ClaimIds.GetHashCode();
       if (account_ != null) hash ^= Account.GetHashCode();
       if (Amount != 0L) hash ^= Amount.GetHashCode();
       if (seed_ != null) hash ^= Seed.GetHashCode();
+      if (dappId_ != null) hash ^= DappId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -7952,9 +7913,9 @@ namespace EcoEarn.Contracts.Rewards {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (claimInfos_ != null) {
+      if (claimIds_ != null) {
         output.WriteRawTag(10);
-        output.WriteMessage(ClaimInfos);
+        output.WriteMessage(ClaimIds);
       }
       if (account_ != null) {
         output.WriteRawTag(18);
@@ -7967,6 +7928,10 @@ namespace EcoEarn.Contracts.Rewards {
       if (seed_ != null) {
         output.WriteRawTag(34);
         output.WriteMessage(Seed);
+      }
+      if (dappId_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(DappId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -7978,9 +7943,9 @@ namespace EcoEarn.Contracts.Rewards {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (claimInfos_ != null) {
+      if (claimIds_ != null) {
         output.WriteRawTag(10);
-        output.WriteMessage(ClaimInfos);
+        output.WriteMessage(ClaimIds);
       }
       if (account_ != null) {
         output.WriteRawTag(18);
@@ -7994,6 +7959,10 @@ namespace EcoEarn.Contracts.Rewards {
         output.WriteRawTag(34);
         output.WriteMessage(Seed);
       }
+      if (dappId_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(DappId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -8004,8 +7973,8 @@ namespace EcoEarn.Contracts.Rewards {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (claimInfos_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ClaimInfos);
+      if (claimIds_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ClaimIds);
       }
       if (account_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Account);
@@ -8015,6 +7984,9 @@ namespace EcoEarn.Contracts.Rewards {
       }
       if (seed_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Seed);
+      }
+      if (dappId_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DappId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -8028,11 +8000,11 @@ namespace EcoEarn.Contracts.Rewards {
       if (other == null) {
         return;
       }
-      if (other.claimInfos_ != null) {
-        if (claimInfos_ == null) {
-          ClaimInfos = new global::EcoEarn.Contracts.Rewards.ClaimInfos();
+      if (other.claimIds_ != null) {
+        if (claimIds_ == null) {
+          ClaimIds = new global::EcoEarn.Contracts.Rewards.HashList();
         }
-        ClaimInfos.MergeFrom(other.ClaimInfos);
+        ClaimIds.MergeFrom(other.ClaimIds);
       }
       if (other.account_ != null) {
         if (account_ == null) {
@@ -8048,6 +8020,12 @@ namespace EcoEarn.Contracts.Rewards {
           Seed = new global::AElf.Types.Hash();
         }
         Seed.MergeFrom(other.Seed);
+      }
+      if (other.dappId_ != null) {
+        if (dappId_ == null) {
+          DappId = new global::AElf.Types.Hash();
+        }
+        DappId.MergeFrom(other.DappId);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -8065,10 +8043,10 @@ namespace EcoEarn.Contracts.Rewards {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            if (claimInfos_ == null) {
-              ClaimInfos = new global::EcoEarn.Contracts.Rewards.ClaimInfos();
+            if (claimIds_ == null) {
+              ClaimIds = new global::EcoEarn.Contracts.Rewards.HashList();
             }
-            input.ReadMessage(ClaimInfos);
+            input.ReadMessage(ClaimIds);
             break;
           }
           case 18: {
@@ -8087,6 +8065,13 @@ namespace EcoEarn.Contracts.Rewards {
               Seed = new global::AElf.Types.Hash();
             }
             input.ReadMessage(Seed);
+            break;
+          }
+          case 42: {
+            if (dappId_ == null) {
+              DappId = new global::AElf.Types.Hash();
+            }
+            input.ReadMessage(DappId);
             break;
           }
         }
@@ -8105,10 +8090,10 @@ namespace EcoEarn.Contracts.Rewards {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            if (claimInfos_ == null) {
-              ClaimInfos = new global::EcoEarn.Contracts.Rewards.ClaimInfos();
+            if (claimIds_ == null) {
+              ClaimIds = new global::EcoEarn.Contracts.Rewards.HashList();
             }
-            input.ReadMessage(ClaimInfos);
+            input.ReadMessage(ClaimIds);
             break;
           }
           case 18: {
@@ -8127,6 +8112,13 @@ namespace EcoEarn.Contracts.Rewards {
               Seed = new global::AElf.Types.Hash();
             }
             input.ReadMessage(Seed);
+            break;
+          }
+          case 42: {
+            if (dappId_ == null) {
+              DappId = new global::AElf.Types.Hash();
+            }
+            input.ReadMessage(DappId);
             break;
           }
         }
@@ -8170,12 +8162,13 @@ namespace EcoEarn.Contracts.Rewards {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EarlyStaked(EarlyStaked other) : this() {
-      claimInfos_ = other.claimInfos_ != null ? other.claimInfos_.Clone() : null;
+      claimIds_ = other.claimIds_ != null ? other.claimIds_.Clone() : null;
       account_ = other.account_ != null ? other.account_.Clone() : null;
       amount_ = other.amount_;
       seed_ = other.seed_ != null ? other.seed_.Clone() : null;
       poolId_ = other.poolId_ != null ? other.poolId_.Clone() : null;
       period_ = other.period_;
+      dappId_ = other.dappId_ != null ? other.dappId_.Clone() : null;
       stakeId_ = other.stakeId_ != null ? other.stakeId_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -8186,15 +8179,15 @@ namespace EcoEarn.Contracts.Rewards {
       return new EarlyStaked(this);
     }
 
-    /// <summary>Field number for the "claim_infos" field.</summary>
-    public const int ClaimInfosFieldNumber = 1;
-    private global::EcoEarn.Contracts.Rewards.ClaimInfos claimInfos_;
+    /// <summary>Field number for the "claim_ids" field.</summary>
+    public const int ClaimIdsFieldNumber = 1;
+    private global::EcoEarn.Contracts.Rewards.HashList claimIds_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EcoEarn.Contracts.Rewards.ClaimInfos ClaimInfos {
-      get { return claimInfos_; }
+    public global::EcoEarn.Contracts.Rewards.HashList ClaimIds {
+      get { return claimIds_; }
       set {
-        claimInfos_ = value;
+        claimIds_ = value;
       }
     }
 
@@ -8258,8 +8251,20 @@ namespace EcoEarn.Contracts.Rewards {
       }
     }
 
+    /// <summary>Field number for the "dapp_id" field.</summary>
+    public const int DappIdFieldNumber = 7;
+    private global::AElf.Types.Hash dappId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::AElf.Types.Hash DappId {
+      get { return dappId_; }
+      set {
+        dappId_ = value;
+      }
+    }
+
     /// <summary>Field number for the "stake_id" field.</summary>
-    public const int StakeIdFieldNumber = 7;
+    public const int StakeIdFieldNumber = 8;
     private global::AElf.Types.Hash stakeId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8285,12 +8290,13 @@ namespace EcoEarn.Contracts.Rewards {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(ClaimInfos, other.ClaimInfos)) return false;
+      if (!object.Equals(ClaimIds, other.ClaimIds)) return false;
       if (!object.Equals(Account, other.Account)) return false;
       if (Amount != other.Amount) return false;
       if (!object.Equals(Seed, other.Seed)) return false;
       if (!object.Equals(PoolId, other.PoolId)) return false;
       if (Period != other.Period) return false;
+      if (!object.Equals(DappId, other.DappId)) return false;
       if (!object.Equals(StakeId, other.StakeId)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -8299,12 +8305,13 @@ namespace EcoEarn.Contracts.Rewards {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (claimInfos_ != null) hash ^= ClaimInfos.GetHashCode();
+      if (claimIds_ != null) hash ^= ClaimIds.GetHashCode();
       if (account_ != null) hash ^= Account.GetHashCode();
       if (Amount != 0L) hash ^= Amount.GetHashCode();
       if (seed_ != null) hash ^= Seed.GetHashCode();
       if (poolId_ != null) hash ^= PoolId.GetHashCode();
       if (Period != 0L) hash ^= Period.GetHashCode();
+      if (dappId_ != null) hash ^= DappId.GetHashCode();
       if (stakeId_ != null) hash ^= StakeId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -8324,9 +8331,9 @@ namespace EcoEarn.Contracts.Rewards {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (claimInfos_ != null) {
+      if (claimIds_ != null) {
         output.WriteRawTag(10);
-        output.WriteMessage(ClaimInfos);
+        output.WriteMessage(ClaimIds);
       }
       if (account_ != null) {
         output.WriteRawTag(18);
@@ -8348,8 +8355,12 @@ namespace EcoEarn.Contracts.Rewards {
         output.WriteRawTag(48);
         output.WriteInt64(Period);
       }
-      if (stakeId_ != null) {
+      if (dappId_ != null) {
         output.WriteRawTag(58);
+        output.WriteMessage(DappId);
+      }
+      if (stakeId_ != null) {
+        output.WriteRawTag(66);
         output.WriteMessage(StakeId);
       }
       if (_unknownFields != null) {
@@ -8362,9 +8373,9 @@ namespace EcoEarn.Contracts.Rewards {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (claimInfos_ != null) {
+      if (claimIds_ != null) {
         output.WriteRawTag(10);
-        output.WriteMessage(ClaimInfos);
+        output.WriteMessage(ClaimIds);
       }
       if (account_ != null) {
         output.WriteRawTag(18);
@@ -8386,8 +8397,12 @@ namespace EcoEarn.Contracts.Rewards {
         output.WriteRawTag(48);
         output.WriteInt64(Period);
       }
-      if (stakeId_ != null) {
+      if (dappId_ != null) {
         output.WriteRawTag(58);
+        output.WriteMessage(DappId);
+      }
+      if (stakeId_ != null) {
+        output.WriteRawTag(66);
         output.WriteMessage(StakeId);
       }
       if (_unknownFields != null) {
@@ -8400,8 +8415,8 @@ namespace EcoEarn.Contracts.Rewards {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (claimInfos_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ClaimInfos);
+      if (claimIds_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ClaimIds);
       }
       if (account_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Account);
@@ -8418,6 +8433,9 @@ namespace EcoEarn.Contracts.Rewards {
       if (Period != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(Period);
       }
+      if (dappId_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DappId);
+      }
       if (stakeId_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StakeId);
       }
@@ -8433,11 +8451,11 @@ namespace EcoEarn.Contracts.Rewards {
       if (other == null) {
         return;
       }
-      if (other.claimInfos_ != null) {
-        if (claimInfos_ == null) {
-          ClaimInfos = new global::EcoEarn.Contracts.Rewards.ClaimInfos();
+      if (other.claimIds_ != null) {
+        if (claimIds_ == null) {
+          ClaimIds = new global::EcoEarn.Contracts.Rewards.HashList();
         }
-        ClaimInfos.MergeFrom(other.ClaimInfos);
+        ClaimIds.MergeFrom(other.ClaimIds);
       }
       if (other.account_ != null) {
         if (account_ == null) {
@@ -8463,6 +8481,12 @@ namespace EcoEarn.Contracts.Rewards {
       if (other.Period != 0L) {
         Period = other.Period;
       }
+      if (other.dappId_ != null) {
+        if (dappId_ == null) {
+          DappId = new global::AElf.Types.Hash();
+        }
+        DappId.MergeFrom(other.DappId);
+      }
       if (other.stakeId_ != null) {
         if (stakeId_ == null) {
           StakeId = new global::AElf.Types.Hash();
@@ -8485,10 +8509,10 @@ namespace EcoEarn.Contracts.Rewards {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            if (claimInfos_ == null) {
-              ClaimInfos = new global::EcoEarn.Contracts.Rewards.ClaimInfos();
+            if (claimIds_ == null) {
+              ClaimIds = new global::EcoEarn.Contracts.Rewards.HashList();
             }
-            input.ReadMessage(ClaimInfos);
+            input.ReadMessage(ClaimIds);
             break;
           }
           case 18: {
@@ -8521,6 +8545,13 @@ namespace EcoEarn.Contracts.Rewards {
             break;
           }
           case 58: {
+            if (dappId_ == null) {
+              DappId = new global::AElf.Types.Hash();
+            }
+            input.ReadMessage(DappId);
+            break;
+          }
+          case 66: {
             if (stakeId_ == null) {
               StakeId = new global::AElf.Types.Hash();
             }
@@ -8543,10 +8574,10 @@ namespace EcoEarn.Contracts.Rewards {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            if (claimInfos_ == null) {
-              ClaimInfos = new global::EcoEarn.Contracts.Rewards.ClaimInfos();
+            if (claimIds_ == null) {
+              ClaimIds = new global::EcoEarn.Contracts.Rewards.HashList();
             }
-            input.ReadMessage(ClaimInfos);
+            input.ReadMessage(ClaimIds);
             break;
           }
           case 18: {
@@ -8579,6 +8610,13 @@ namespace EcoEarn.Contracts.Rewards {
             break;
           }
           case 58: {
+            if (dappId_ == null) {
+              DappId = new global::AElf.Types.Hash();
+            }
+            input.ReadMessage(DappId);
+            break;
+          }
+          case 66: {
             if (stakeId_ == null) {
               StakeId = new global::AElf.Types.Hash();
             }
@@ -8626,7 +8664,7 @@ namespace EcoEarn.Contracts.Rewards {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LiquidityAdded(LiquidityAdded other) : this() {
-      claimInfos_ = other.claimInfos_ != null ? other.claimInfos_.Clone() : null;
+      claimIds_ = other.claimIds_ != null ? other.claimIds_.Clone() : null;
       account_ = other.account_ != null ? other.account_.Clone() : null;
       amount_ = other.amount_;
       poolId_ = other.poolId_ != null ? other.poolId_.Clone() : null;
@@ -8642,15 +8680,15 @@ namespace EcoEarn.Contracts.Rewards {
       return new LiquidityAdded(this);
     }
 
-    /// <summary>Field number for the "claim_infos" field.</summary>
-    public const int ClaimInfosFieldNumber = 1;
-    private global::EcoEarn.Contracts.Rewards.ClaimInfos claimInfos_;
+    /// <summary>Field number for the "claim_ids" field.</summary>
+    public const int ClaimIdsFieldNumber = 1;
+    private global::EcoEarn.Contracts.Rewards.HashList claimIds_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EcoEarn.Contracts.Rewards.ClaimInfos ClaimInfos {
-      get { return claimInfos_; }
+    public global::EcoEarn.Contracts.Rewards.HashList ClaimIds {
+      get { return claimIds_; }
       set {
-        claimInfos_ = value;
+        claimIds_ = value;
       }
     }
 
@@ -8741,7 +8779,7 @@ namespace EcoEarn.Contracts.Rewards {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(ClaimInfos, other.ClaimInfos)) return false;
+      if (!object.Equals(ClaimIds, other.ClaimIds)) return false;
       if (!object.Equals(Account, other.Account)) return false;
       if (Amount != other.Amount) return false;
       if (!object.Equals(PoolId, other.PoolId)) return false;
@@ -8755,7 +8793,7 @@ namespace EcoEarn.Contracts.Rewards {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (claimInfos_ != null) hash ^= ClaimInfos.GetHashCode();
+      if (claimIds_ != null) hash ^= ClaimIds.GetHashCode();
       if (account_ != null) hash ^= Account.GetHashCode();
       if (Amount != 0L) hash ^= Amount.GetHashCode();
       if (poolId_ != null) hash ^= PoolId.GetHashCode();
@@ -8780,9 +8818,9 @@ namespace EcoEarn.Contracts.Rewards {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (claimInfos_ != null) {
+      if (claimIds_ != null) {
         output.WriteRawTag(10);
-        output.WriteMessage(ClaimInfos);
+        output.WriteMessage(ClaimIds);
       }
       if (account_ != null) {
         output.WriteRawTag(18);
@@ -8818,9 +8856,9 @@ namespace EcoEarn.Contracts.Rewards {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (claimInfos_ != null) {
+      if (claimIds_ != null) {
         output.WriteRawTag(10);
-        output.WriteMessage(ClaimInfos);
+        output.WriteMessage(ClaimIds);
       }
       if (account_ != null) {
         output.WriteRawTag(18);
@@ -8856,8 +8894,8 @@ namespace EcoEarn.Contracts.Rewards {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (claimInfos_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ClaimInfos);
+      if (claimIds_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ClaimIds);
       }
       if (account_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Account);
@@ -8889,11 +8927,11 @@ namespace EcoEarn.Contracts.Rewards {
       if (other == null) {
         return;
       }
-      if (other.claimInfos_ != null) {
-        if (claimInfos_ == null) {
-          ClaimInfos = new global::EcoEarn.Contracts.Rewards.ClaimInfos();
+      if (other.claimIds_ != null) {
+        if (claimIds_ == null) {
+          ClaimIds = new global::EcoEarn.Contracts.Rewards.HashList();
         }
-        ClaimInfos.MergeFrom(other.ClaimInfos);
+        ClaimIds.MergeFrom(other.ClaimIds);
       }
       if (other.account_ != null) {
         if (account_ == null) {
@@ -8941,10 +8979,10 @@ namespace EcoEarn.Contracts.Rewards {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            if (claimInfos_ == null) {
-              ClaimInfos = new global::EcoEarn.Contracts.Rewards.ClaimInfos();
+            if (claimIds_ == null) {
+              ClaimIds = new global::EcoEarn.Contracts.Rewards.HashList();
             }
-            input.ReadMessage(ClaimInfos);
+            input.ReadMessage(ClaimIds);
             break;
           }
           case 18: {
@@ -8999,10 +9037,10 @@ namespace EcoEarn.Contracts.Rewards {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            if (claimInfos_ == null) {
-              ClaimInfos = new global::EcoEarn.Contracts.Rewards.ClaimInfos();
+            if (claimIds_ == null) {
+              ClaimIds = new global::EcoEarn.Contracts.Rewards.HashList();
             }
-            input.ReadMessage(ClaimInfos);
+            input.ReadMessage(ClaimIds);
             break;
           }
           case 18: {
@@ -9082,7 +9120,7 @@ namespace EcoEarn.Contracts.Rewards {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LiquidityRemoved(LiquidityRemoved other) : this() {
-      liquidityInfos_ = other.liquidityInfos_ != null ? other.liquidityInfos_.Clone() : null;
+      liquidityIds_ = other.liquidityIds_ != null ? other.liquidityIds_.Clone() : null;
       lpAmount_ = other.lpAmount_;
       tokenAAmount_ = other.tokenAAmount_;
       tokenBAmount_ = other.tokenBAmount_;
@@ -9095,15 +9133,15 @@ namespace EcoEarn.Contracts.Rewards {
       return new LiquidityRemoved(this);
     }
 
-    /// <summary>Field number for the "liquidity_infos" field.</summary>
-    public const int LiquidityInfosFieldNumber = 1;
-    private global::EcoEarn.Contracts.Rewards.LiquidityInfos liquidityInfos_;
+    /// <summary>Field number for the "liquidity_ids" field.</summary>
+    public const int LiquidityIdsFieldNumber = 1;
+    private global::EcoEarn.Contracts.Rewards.HashList liquidityIds_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EcoEarn.Contracts.Rewards.LiquidityInfos LiquidityInfos {
-      get { return liquidityInfos_; }
+    public global::EcoEarn.Contracts.Rewards.HashList LiquidityIds {
+      get { return liquidityIds_; }
       set {
-        liquidityInfos_ = value;
+        liquidityIds_ = value;
       }
     }
 
@@ -9158,7 +9196,7 @@ namespace EcoEarn.Contracts.Rewards {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(LiquidityInfos, other.LiquidityInfos)) return false;
+      if (!object.Equals(LiquidityIds, other.LiquidityIds)) return false;
       if (LpAmount != other.LpAmount) return false;
       if (TokenAAmount != other.TokenAAmount) return false;
       if (TokenBAmount != other.TokenBAmount) return false;
@@ -9169,7 +9207,7 @@ namespace EcoEarn.Contracts.Rewards {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (liquidityInfos_ != null) hash ^= LiquidityInfos.GetHashCode();
+      if (liquidityIds_ != null) hash ^= LiquidityIds.GetHashCode();
       if (LpAmount != 0L) hash ^= LpAmount.GetHashCode();
       if (TokenAAmount != 0L) hash ^= TokenAAmount.GetHashCode();
       if (TokenBAmount != 0L) hash ^= TokenBAmount.GetHashCode();
@@ -9191,9 +9229,9 @@ namespace EcoEarn.Contracts.Rewards {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (liquidityInfos_ != null) {
+      if (liquidityIds_ != null) {
         output.WriteRawTag(10);
-        output.WriteMessage(LiquidityInfos);
+        output.WriteMessage(LiquidityIds);
       }
       if (LpAmount != 0L) {
         output.WriteRawTag(16);
@@ -9217,9 +9255,9 @@ namespace EcoEarn.Contracts.Rewards {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (liquidityInfos_ != null) {
+      if (liquidityIds_ != null) {
         output.WriteRawTag(10);
-        output.WriteMessage(LiquidityInfos);
+        output.WriteMessage(LiquidityIds);
       }
       if (LpAmount != 0L) {
         output.WriteRawTag(16);
@@ -9243,8 +9281,8 @@ namespace EcoEarn.Contracts.Rewards {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (liquidityInfos_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LiquidityInfos);
+      if (liquidityIds_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LiquidityIds);
       }
       if (LpAmount != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(LpAmount);
@@ -9267,11 +9305,11 @@ namespace EcoEarn.Contracts.Rewards {
       if (other == null) {
         return;
       }
-      if (other.liquidityInfos_ != null) {
-        if (liquidityInfos_ == null) {
-          LiquidityInfos = new global::EcoEarn.Contracts.Rewards.LiquidityInfos();
+      if (other.liquidityIds_ != null) {
+        if (liquidityIds_ == null) {
+          LiquidityIds = new global::EcoEarn.Contracts.Rewards.HashList();
         }
-        LiquidityInfos.MergeFrom(other.LiquidityInfos);
+        LiquidityIds.MergeFrom(other.LiquidityIds);
       }
       if (other.LpAmount != 0L) {
         LpAmount = other.LpAmount;
@@ -9298,10 +9336,10 @@ namespace EcoEarn.Contracts.Rewards {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            if (liquidityInfos_ == null) {
-              LiquidityInfos = new global::EcoEarn.Contracts.Rewards.LiquidityInfos();
+            if (liquidityIds_ == null) {
+              LiquidityIds = new global::EcoEarn.Contracts.Rewards.HashList();
             }
-            input.ReadMessage(LiquidityInfos);
+            input.ReadMessage(LiquidityIds);
             break;
           }
           case 16: {
@@ -9332,10 +9370,10 @@ namespace EcoEarn.Contracts.Rewards {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            if (liquidityInfos_ == null) {
-              LiquidityInfos = new global::EcoEarn.Contracts.Rewards.LiquidityInfos();
+            if (liquidityIds_ == null) {
+              LiquidityIds = new global::EcoEarn.Contracts.Rewards.HashList();
             }
-            input.ReadMessage(LiquidityInfos);
+            input.ReadMessage(LiquidityIds);
             break;
           }
           case 16: {
@@ -9391,7 +9429,7 @@ namespace EcoEarn.Contracts.Rewards {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LiquidityStaked(LiquidityStaked other) : this() {
-      liquidityInfos_ = other.liquidityInfos_ != null ? other.liquidityInfos_.Clone() : null;
+      liquidityIds_ = other.liquidityIds_ != null ? other.liquidityIds_.Clone() : null;
       poolId_ = other.poolId_ != null ? other.poolId_.Clone() : null;
       amount_ = other.amount_;
       period_ = other.period_;
@@ -9405,15 +9443,15 @@ namespace EcoEarn.Contracts.Rewards {
       return new LiquidityStaked(this);
     }
 
-    /// <summary>Field number for the "liquidity_infos" field.</summary>
-    public const int LiquidityInfosFieldNumber = 1;
-    private global::EcoEarn.Contracts.Rewards.LiquidityInfos liquidityInfos_;
+    /// <summary>Field number for the "liquidity_ids" field.</summary>
+    public const int LiquidityIdsFieldNumber = 1;
+    private global::EcoEarn.Contracts.Rewards.HashList liquidityIds_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EcoEarn.Contracts.Rewards.LiquidityInfos LiquidityInfos {
-      get { return liquidityInfos_; }
+    public global::EcoEarn.Contracts.Rewards.HashList LiquidityIds {
+      get { return liquidityIds_; }
       set {
-        liquidityInfos_ = value;
+        liquidityIds_ = value;
       }
     }
 
@@ -9480,7 +9518,7 @@ namespace EcoEarn.Contracts.Rewards {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(LiquidityInfos, other.LiquidityInfos)) return false;
+      if (!object.Equals(LiquidityIds, other.LiquidityIds)) return false;
       if (!object.Equals(PoolId, other.PoolId)) return false;
       if (Amount != other.Amount) return false;
       if (Period != other.Period) return false;
@@ -9492,7 +9530,7 @@ namespace EcoEarn.Contracts.Rewards {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (liquidityInfos_ != null) hash ^= LiquidityInfos.GetHashCode();
+      if (liquidityIds_ != null) hash ^= LiquidityIds.GetHashCode();
       if (poolId_ != null) hash ^= PoolId.GetHashCode();
       if (Amount != 0L) hash ^= Amount.GetHashCode();
       if (Period != 0L) hash ^= Period.GetHashCode();
@@ -9515,9 +9553,9 @@ namespace EcoEarn.Contracts.Rewards {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (liquidityInfos_ != null) {
+      if (liquidityIds_ != null) {
         output.WriteRawTag(10);
-        output.WriteMessage(LiquidityInfos);
+        output.WriteMessage(LiquidityIds);
       }
       if (poolId_ != null) {
         output.WriteRawTag(18);
@@ -9545,9 +9583,9 @@ namespace EcoEarn.Contracts.Rewards {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (liquidityInfos_ != null) {
+      if (liquidityIds_ != null) {
         output.WriteRawTag(10);
-        output.WriteMessage(LiquidityInfos);
+        output.WriteMessage(LiquidityIds);
       }
       if (poolId_ != null) {
         output.WriteRawTag(18);
@@ -9575,8 +9613,8 @@ namespace EcoEarn.Contracts.Rewards {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (liquidityInfos_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LiquidityInfos);
+      if (liquidityIds_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LiquidityIds);
       }
       if (poolId_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PoolId);
@@ -9602,11 +9640,11 @@ namespace EcoEarn.Contracts.Rewards {
       if (other == null) {
         return;
       }
-      if (other.liquidityInfos_ != null) {
-        if (liquidityInfos_ == null) {
-          LiquidityInfos = new global::EcoEarn.Contracts.Rewards.LiquidityInfos();
+      if (other.liquidityIds_ != null) {
+        if (liquidityIds_ == null) {
+          LiquidityIds = new global::EcoEarn.Contracts.Rewards.HashList();
         }
-        LiquidityInfos.MergeFrom(other.LiquidityInfos);
+        LiquidityIds.MergeFrom(other.LiquidityIds);
       }
       if (other.poolId_ != null) {
         if (poolId_ == null) {
@@ -9642,10 +9680,10 @@ namespace EcoEarn.Contracts.Rewards {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            if (liquidityInfos_ == null) {
-              LiquidityInfos = new global::EcoEarn.Contracts.Rewards.LiquidityInfos();
+            if (liquidityIds_ == null) {
+              LiquidityIds = new global::EcoEarn.Contracts.Rewards.HashList();
             }
-            input.ReadMessage(LiquidityInfos);
+            input.ReadMessage(LiquidityIds);
             break;
           }
           case 18: {
@@ -9686,10 +9724,10 @@ namespace EcoEarn.Contracts.Rewards {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            if (liquidityInfos_ == null) {
-              LiquidityInfos = new global::EcoEarn.Contracts.Rewards.LiquidityInfos();
+            if (liquidityIds_ == null) {
+              LiquidityIds = new global::EcoEarn.Contracts.Rewards.HashList();
             }
-            input.ReadMessage(LiquidityInfos);
+            input.ReadMessage(LiquidityIds);
             break;
           }
           case 18: {

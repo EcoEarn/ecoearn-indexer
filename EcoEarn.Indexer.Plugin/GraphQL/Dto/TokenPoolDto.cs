@@ -30,8 +30,8 @@ public class TokenPoolConfigDto
     public long MinimumClaimAmount { get; set; }
     public long UnlockWindowDuration { get; set; }
     public List<long> ReleasePeriods { get; set; }
-    public long ClaimInterval { get; set; }
-    public long MinimumEarlyStakeAmount { get; set; }
+    public long MergeInterval { get; set; }
+    public long MinimumAddLiquidityAmount { get; set; }
 }
 
 public class TokenPoolDtoList

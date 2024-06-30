@@ -52,7 +52,6 @@ public class TokensPoolRewardConfigSetLogEventProcessor : AElfLogEventProcessorB
 
             tokenPoolIndex.TokenPoolConfig.ReleasePeriod = eventValue.ReleasePeriods.Data.Max();
             tokenPoolIndex.TokenPoolConfig.ReleasePeriods = eventValue.ReleasePeriods.Data.ToList();
-            tokenPoolIndex.TokenPoolConfig.ClaimInterval = eventValue.ClaimInterval;
             _objectMapper.Map(context, tokenPoolIndex);
             await _tokenPoolRepository.AddOrUpdateAsync(tokenPoolIndex);
         }

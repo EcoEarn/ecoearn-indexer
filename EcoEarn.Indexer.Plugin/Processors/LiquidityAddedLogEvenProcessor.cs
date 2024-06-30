@@ -18,13 +18,11 @@ public class LiquidityAddedLogEvenProcessor : AElfLogEventProcessorBase<Liquidit
     private readonly ILogger<LiquidityAddedLogEvenProcessor> _logger;
     private readonly IAElfIndexerClientEntityRepository<LiquidityInfoIndex, LogEventInfo> _repository;
     private readonly IAElfIndexerClientEntityRepository<RewardsClaimIndex, LogEventInfo> _rewardsClaimRepository;
-    private readonly IAElfIndexerClientEntityRepository<TokenPoolIndex, LogEventInfo> _tokenPoolRepository;
 
     public LiquidityAddedLogEvenProcessor(ILogger<LiquidityAddedLogEvenProcessor> logger,
         IObjectMapper objectMapper, IOptionsSnapshot<ContractInfoOptions> contractInfoOptions,
         IAElfIndexerClientEntityRepository<LiquidityInfoIndex, LogEventInfo> repository,
-        IAElfIndexerClientEntityRepository<RewardsClaimIndex, LogEventInfo> rewardsClaimRepository,
-        IAElfIndexerClientEntityRepository<TokenPoolIndex, LogEventInfo> tokenPoolRepository) :
+        IAElfIndexerClientEntityRepository<RewardsClaimIndex, LogEventInfo> rewardsClaimRepository) :
         base(logger)
     {
         _logger = logger;
@@ -32,7 +30,6 @@ public class LiquidityAddedLogEvenProcessor : AElfLogEventProcessorBase<Liquidit
         _objectMapper = objectMapper;
         _repository = repository;
         _rewardsClaimRepository = rewardsClaimRepository;
-        _tokenPoolRepository = tokenPoolRepository;
     }
 
     public override string GetContractAddress(string chainId)
@@ -55,7 +52,6 @@ public class LiquidityAddedLogEvenProcessor : AElfLogEventProcessorBase<Liquidit
                 LiquidityId = eventValue.LiquidityInfo.LiquidityId == null
                     ? ""
                     : eventValue.LiquidityInfo.LiquidityId.ToHex(),
-                StakeId = eventValue.LiquidityInfo.StakeId == null ? "" : eventValue.LiquidityInfo.StakeId.ToHex(),
                 Seed = eventValue.LiquidityInfo.Seed == null ? "" : eventValue.LiquidityInfo.Seed.ToHex(),
                 LpAmount = eventValue.LiquidityInfo.LpAmount,
                 LpSymbol = eventValue.LiquidityInfo.LpSymbol,
@@ -67,9 +63,6 @@ public class LiquidityAddedLogEvenProcessor : AElfLogEventProcessorBase<Liquidit
                 AddedTime = eventValue.LiquidityInfo.AddedTime == null
                     ? 0
                     : eventValue.LiquidityInfo.AddedTime.ToDateTime().ToUtcMilliSeconds(),
-                RemovedTime = eventValue.LiquidityInfo.RemovedTime == null
-                    ? 0
-                    : eventValue.LiquidityInfo.RemovedTime.ToDateTime().ToUtcMilliSeconds(),
                 DappId = eventValue.LiquidityInfo.DappId == null ? "" : eventValue.LiquidityInfo.DappId.ToHex(),
                 SwapAddress = eventValue.LiquidityInfo.SwapAddress == null
                     ? ""
@@ -83,42 +76,16 @@ public class LiquidityAddedLogEvenProcessor : AElfLogEventProcessorBase<Liquidit
             _objectMapper.Map(context, liquidityInfoIndex);
             await _repository.AddOrUpdateAsync(liquidityInfoIndex);
 
-            foreach (var claimInfo in eventValue.ClaimInfos.Data)
+            foreach (var claimInfoId in eventValue.ClaimIds.Data)
             {
-                var claimId = IdGenerateHelper.GetId(claimInfo.ClaimId.ToHex(),
-                    claimInfo.PoolId.ToHex());
-
-                var rewardsClaim = new RewardsClaimIndex
-                {
-                    Id = claimId,
-                    ClaimId = claimInfo.ClaimId == null ? "" : claimInfo.ClaimId.ToHex(),
-                    PoolId = claimInfo.PoolId == null ? "" : claimInfo.PoolId.ToHex(),
-                    ClaimedAmount = claimInfo.ClaimedAmount.ToString(),
-                    ClaimedSymbol = claimInfo.ClaimedSymbol,
-                    ClaimedBlockNumber = claimInfo.ClaimedBlockNumber,
-                    Account = claimInfo.Account.ToBase58(),
-                    ClaimedTime = claimInfo.ClaimedTime == null
-                        ? 0
-                        : claimInfo.ClaimedTime.ToDateTime().ToUtcMilliSeconds(),
-                    ReleaseTime = claimInfo.ReleaseTime == null
-                        ? 0
-                        : claimInfo.ReleaseTime.ToDateTime().ToUtcMilliSeconds(),
-                    WithdrawTime = claimInfo.WithdrawnTime == null
-                        ? 0
-                        : claimInfo.WithdrawnTime.ToDateTime().ToUtcMilliSeconds(),
-                    EarlyStakedAmount = claimInfo.EarlyStakedAmount.ToString(),
-                    StakeId = claimInfo.StakeId == null ? "" : claimInfo.StakeId.ToHex(),
-                    Seed = claimInfo.Seed == null ? "" : claimInfo.Seed.ToHex(),
-                    LiquidityId = claimInfo.LiquidityId == null ? "" : claimInfo.LiquidityId.ToHex(),
-                    ContractAddress = claimInfo.ContractAddress == null ? "" : claimInfo.ContractAddress.ToBase58(),
-                    LiquidityAddedSeed = eventValue.LiquidityInfo.Seed == null
-                        ? ""
-                        : eventValue.LiquidityInfo.Seed.ToHex(),
-                };
-
-                var tokenPoolIndex =
-                    await _tokenPoolRepository.GetFromBlockStateSetAsync(rewardsClaim.PoolId, context.ChainId);
-                rewardsClaim.PoolType = tokenPoolIndex.PoolType;
+                var claimId = IdGenerateHelper.GetId(claimInfoId.ToHex());
+                var rewardsClaim = await _rewardsClaimRepository.GetFromBlockStateSetAsync(claimId, context.ChainId);
+                rewardsClaim.LiquidityAddedSeed = eventValue.LiquidityInfo.Seed == null
+                    ? ""
+                    : eventValue.LiquidityInfo.Seed.ToHex();
+                rewardsClaim.LiquidityId = eventValue.LiquidityInfo.LiquidityId == null
+                    ? ""
+                    : eventValue.LiquidityInfo.LiquidityId.ToHex();
                 _objectMapper.Map(context, rewardsClaim);
                 await _rewardsClaimRepository.AddOrUpdateAsync(rewardsClaim);
             }

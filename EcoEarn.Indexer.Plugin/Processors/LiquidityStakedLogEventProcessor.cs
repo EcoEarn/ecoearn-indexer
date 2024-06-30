@@ -46,43 +46,14 @@ public class LiquidityStakedLogEventProcessor : AElfLogEventProcessorBase<Liquid
         {
             _logger.Debug("LiquidityStaked: {eventValue} context: {context}", JsonConvert.SerializeObject(eventValue),
                 JsonConvert.SerializeObject(context));
-            
-            foreach (var liquidityInfo in eventValue.LiquidityInfos.Data)
+
+            foreach (var liquidityId in eventValue.LiquidityIds.Data)
             {
-                var id = IdGenerateHelper.GetId(liquidityInfo.LiquidityId.ToHex());
-
-                var liquidityInfoIndex = new LiquidityInfoIndex
-                {
-                    Id = id,
-                    Address = liquidityInfo.Account == null ? "" : liquidityInfo.Account.ToBase58(),
-                    LiquidityId = liquidityInfo.LiquidityId == null
-                        ? ""
-                        : liquidityInfo.LiquidityId.ToHex(),
-                    StakeId = liquidityInfo.StakeId == null ? "" : liquidityInfo.StakeId.ToHex(),
-                    Seed = liquidityInfo.Seed == null ? "" : liquidityInfo.Seed.ToHex(),
-                    LpAmount = liquidityInfo.LpAmount,
-                    LpSymbol = liquidityInfo.LpSymbol,
-                    RewardSymbol = liquidityInfo.RewardSymbol,
-                    TokenAAmount = liquidityInfo.TokenAAmount,
-                    TokenASymbol = liquidityInfo.TokenASymbol,
-                    TokenBAmount = liquidityInfo.TokenBAmount,
-                    TokenBSymbol = liquidityInfo.TokenBSymbol,
-                    AddedTime = liquidityInfo.AddedTime == null
-                        ? 0
-                        : liquidityInfo.AddedTime.ToDateTime().ToUtcMilliSeconds(),
-                    RemovedTime = liquidityInfo.RemovedTime == null
-                        ? 0
-                        : liquidityInfo.RemovedTime.ToDateTime().ToUtcMilliSeconds(),
-                    DappId = liquidityInfo.DappId == null ? "" : liquidityInfo.DappId.ToHex(),
-                    SwapAddress = liquidityInfo.SwapAddress == null
-                        ? ""
-                        : liquidityInfo.SwapAddress.ToBase58(),
-                    TokenAddress = liquidityInfo.TokenAddress == null
-                        ? ""
-                        : liquidityInfo.TokenAddress.ToBase58(),
-                    LpStatus = LpStatus.Added,
-                };
-
+                var id = IdGenerateHelper.GetId(liquidityId.ToHex());
+                var liquidityInfoIndex = await _repository.GetFromBlockStateSetAsync(id, context.ChainId);
+                liquidityInfoIndex.StakeId = eventValue.StakeId == null ? "" : eventValue.StakeId.ToHex();
+                liquidityInfoIndex.LpStatus = LpStatus.Added;
+                
                 _objectMapper.Map(context, liquidityInfoIndex);
                 await _repository.AddOrUpdateAsync(liquidityInfoIndex);
             }

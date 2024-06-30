@@ -16,7 +16,6 @@ public class LiquidityInfoDto
     public long TokenBAmount { get; set; }
     public string TokenBSymbol { get; set; }
     public long AddedTime { get; set; }
-    public long RemovedTime { get; set; }
     public string DappId { get; set; }
     public string SwapAddress { get; set; }
     public string TokenAddress { get; set; }

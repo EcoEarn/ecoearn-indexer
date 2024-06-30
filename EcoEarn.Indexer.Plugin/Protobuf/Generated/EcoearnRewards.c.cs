@@ -84,7 +84,6 @@ namespace EcoEarn.Contracts.Rewards {
       return new Claimed
       {
         ClaimInfos = ClaimInfos,
-        Seed = Seed,
       };
     }
   }
@@ -121,10 +120,11 @@ namespace EcoEarn.Contracts.Rewards {
     {
       return new Withdrawn
       {
-        ClaimInfos = ClaimInfos,
+        ClaimIds = ClaimIds,
         Account = Account,
         Amount = Amount,
         Seed = Seed,
+        DappId = DappId,
       };
     }
   }
@@ -142,12 +142,13 @@ namespace EcoEarn.Contracts.Rewards {
     {
       return new EarlyStaked
       {
-        ClaimInfos = ClaimInfos,
+        ClaimIds = ClaimIds,
         Account = Account,
         Amount = Amount,
         Seed = Seed,
         PoolId = PoolId,
         Period = Period,
+        DappId = DappId,
         StakeId = StakeId,
       };
     }
@@ -166,7 +167,7 @@ namespace EcoEarn.Contracts.Rewards {
     {
       return new LiquidityAdded
       {
-        ClaimInfos = ClaimInfos,
+        ClaimIds = ClaimIds,
         Account = Account,
         Amount = Amount,
         PoolId = PoolId,
@@ -190,7 +191,7 @@ namespace EcoEarn.Contracts.Rewards {
     {
       return new LiquidityRemoved
       {
-        LiquidityInfos = LiquidityInfos,
+        LiquidityIds = LiquidityIds,
         LpAmount = LpAmount,
         TokenAAmount = TokenAAmount,
         TokenBAmount = TokenBAmount,
@@ -211,7 +212,7 @@ namespace EcoEarn.Contracts.Rewards {
     {
       return new LiquidityStaked
       {
-        LiquidityInfos = LiquidityInfos,
+        LiquidityIds = LiquidityIds,
         PoolId = PoolId,
         Amount = Amount,
         Period = Period,
@@ -242,6 +243,7 @@ namespace EcoEarn.Contracts.Rewards {
     static readonly aelf::Marshaller<global::EcoEarn.Contracts.Rewards.AddLiquidityAndStakeInput> __Marshaller_AddLiquidityAndStakeInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Rewards.AddLiquidityAndStakeInput.Parser.ParseFrom);
     static readonly aelf::Marshaller<global::EcoEarn.Contracts.Rewards.RemoveLiquidityInput> __Marshaller_RemoveLiquidityInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Rewards.RemoveLiquidityInput.Parser.ParseFrom);
     static readonly aelf::Marshaller<global::EcoEarn.Contracts.Rewards.StakeLiquidityInput> __Marshaller_StakeLiquidityInput = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Rewards.StakeLiquidityInput.Parser.ParseFrom);
+    static readonly aelf::Marshaller<global::EcoEarn.Contracts.Rewards.LiquidityInfo> __Marshaller_LiquidityInfo = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::EcoEarn.Contracts.Rewards.LiquidityInfo.Parser.ParseFrom);
     #endregion
 
     #region Methods
@@ -350,6 +352,13 @@ namespace EcoEarn.Contracts.Rewards {
         __Marshaller_StakeLiquidityInput,
         __Marshaller_google_protobuf_Empty);
 
+    static readonly aelf::Method<global::AElf.Types.Hash, global::EcoEarn.Contracts.Rewards.LiquidityInfo> __Method_GetLiquidityInfo = new aelf::Method<global::AElf.Types.Hash, global::EcoEarn.Contracts.Rewards.LiquidityInfo>(
+        aelf::MethodType.View,
+        __ServiceName,
+        "GetLiquidityInfo",
+        __Marshaller_aelf_Hash,
+        __Marshaller_LiquidityInfo);
+
     #endregion
 
     #region Descriptors
@@ -371,7 +380,7 @@ namespace EcoEarn.Contracts.Rewards {
     }
     #endregion
 
-    // /// <summary>Base class for the contract of EcoEarnRewardsContract</summary>
+    /// <summary>Base class for the contract of EcoEarnRewardsContract</summary>
     // public abstract partial class EcoEarnRewardsContractBase : AElf.Sdk.CSharp.CSharpSmartContract<EcoEarn.Contracts.Rewards.EcoEarnRewardsContractState>
     // {
     //   public virtual global::Google.Protobuf.WellKnownTypes.Empty Initialize(global::EcoEarn.Contracts.Rewards.InitializeInput input)
@@ -449,6 +458,11 @@ namespace EcoEarn.Contracts.Rewards {
     //     throw new global::System.NotImplementedException();
     //   }
     //
+    //   public virtual global::EcoEarn.Contracts.Rewards.LiquidityInfo GetLiquidityInfo(global::AElf.Types.Hash input)
+    //   {
+    //     throw new global::System.NotImplementedException();
+    //   }
+    //
     // }
     //
     // public static aelf::ServerServiceDefinition BindService(EcoEarnRewardsContractBase serviceImpl)
@@ -469,7 +483,8 @@ namespace EcoEarn.Contracts.Rewards {
     //       .AddMethod(__Method_EarlyStake, serviceImpl.EarlyStake)
     //       .AddMethod(__Method_AddLiquidityAndStake, serviceImpl.AddLiquidityAndStake)
     //       .AddMethod(__Method_RemoveLiquidity, serviceImpl.RemoveLiquidity)
-    //       .AddMethod(__Method_StakeLiquidity, serviceImpl.StakeLiquidity).Build();
+    //       .AddMethod(__Method_StakeLiquidity, serviceImpl.StakeLiquidity)
+    //       .AddMethod(__Method_GetLiquidityInfo, serviceImpl.GetLiquidityInfo).Build();
     // }
 
   }

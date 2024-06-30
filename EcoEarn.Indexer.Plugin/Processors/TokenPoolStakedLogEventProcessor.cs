@@ -66,14 +66,12 @@ public class TokenPoolStakedLogEventProcessor : AElfLogEventProcessorBase<Staked
                     ? 0
                     : eventValue.StakeInfo.LastOperationTime.ToDateTime().ToUtcMilliSeconds(),
                 StakingPeriod = eventValue.StakeInfo.StakingPeriod,
-                LongestReleaseTime = eventValue.StakeInfo.LongestReleaseTime == null
-                    ? 0
-                    : eventValue.StakeInfo.LongestReleaseTime.ToDateTime().ToUtcMilliSeconds(),
                 SubStakeInfos = eventValue.StakeInfo.SubStakeInfos.Select(x => new SubStakeInfo()
                 {
                     SubStakeId = x.SubStakeId.ToHex(),
                     StakedAmount = x.StakedAmount,
                     StakedBlockNumber = x.StakedBlockNumber,
+                    EarlyStakedAmount = x.EarlyStakedAmount,
                     StakedTime = x.StakedTime == null
                         ? 0
                         : x.StakedTime.ToDateTime().ToUtcMilliSeconds(),
@@ -81,7 +79,6 @@ public class TokenPoolStakedLogEventProcessor : AElfLogEventProcessorBase<Staked
                     BoostedAmount = x.BoostedAmount,
                     RewardDebt = x.RewardDebt,
                     RewardAmount = x.RewardAmount,
-                    Seed = x.Seed == null ? "" : x.Seed.ToHex(),
                 }).ToList(),
                 UpdateTime = context.BlockTime.ToUtcMilliSeconds(),
                 LockState = LockState.Locking,

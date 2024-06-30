@@ -18,7 +18,6 @@ public class LiquidityInfoIndex : AElfIndexerClientEntity<string>, IIndexBuild
     public long TokenBAmount { get; set; }
     [Keyword] public string TokenBSymbol { get; set; }
     public long AddedTime { get; set; }
-    public long RemovedTime { get; set; }
     [Keyword] public string DappId { get; set; }
     [Keyword] public string SwapAddress { get; set; }
     [Keyword] public string TokenAddress { get; set; }

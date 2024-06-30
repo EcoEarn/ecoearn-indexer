@@ -67,13 +67,13 @@ public class TokenPoolCreatedLogEventProcessor : AElfLogEventProcessorBase<Token
                     MinimumStakeDuration = eventValue.Config.MinimumStakeDuration,
                     MaximumStakeDuration = eventValue.Config.MaximumStakeDuration,
                     MinimumClaimAmount = eventValue.Config.MinimumClaimAmount,
-                    MinimumEarlyStakeAmount = eventValue.Config.MinimumEarlyStakeAmount,
+                    MinimumAddLiquidityAmount = eventValue.Config.MinimumAddLiquidityAmount,
                     RewardTokenContract = eventValue.Config.RewardTokenContract.ToBase58(),
                     StakeTokenContract = eventValue.Config.StakeTokenContract.ToBase58(),
                     UnlockWindowDuration = eventValue.Config.UnlockWindowDuration,
                     ReleasePeriod = eventValue.Config.ReleasePeriods.Max(),
                     ReleasePeriods = eventValue.Config.ReleasePeriods.ToList(),
-                    ClaimInterval = 0,
+                    MergeInterval = eventValue.Config.MergeInterval,
                 },
                 CreateTime = context.BlockTime.ToUtcMilliSeconds()
             };

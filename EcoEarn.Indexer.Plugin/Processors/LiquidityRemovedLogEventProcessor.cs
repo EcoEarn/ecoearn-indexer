@@ -39,57 +39,34 @@ public class LiquidityRemovedLogEventProcessor : AElfLogEventProcessorBase<Liqui
     {
         try
         {
+            var tokenAOldAmount = 0L;
+            var tokenBOldAmount = 0L;
+            foreach (var liquidityId in eventValue.LiquidityIds.Data)
+            {
+                var id = IdGenerateHelper.GetId(liquidityId.ToHex());
+                var liquidityInfoIndex = await _repository.GetFromBlockStateSetAsync(id, context.ChainId);
+                tokenAOldAmount += liquidityInfoIndex.TokenAAmount;
+                tokenBOldAmount += liquidityInfoIndex.TokenBAmount;
+            }
+
             _logger.Debug("LiquidityRemoved: {eventValue} context: {context}", JsonConvert.SerializeObject(eventValue),
                 JsonConvert.SerializeObject(context));
             var tokenANewAmount = eventValue.TokenAAmount;
             var tokenBNewAmount = eventValue.TokenBAmount;
-            var tokenAOldAmount = eventValue.LiquidityInfos.Data.Sum(x => x.TokenAAmount);
-            var tokenBOldAmount = eventValue.LiquidityInfos.Data.Sum(x => x.TokenBAmount);
             var tokenALossAmountSum = (tokenANewAmount - tokenAOldAmount).ToString();
             var tokenBLossAmountSum = (tokenBNewAmount - tokenBOldAmount).ToString();
 
-            foreach (var liquidityInfo in eventValue.LiquidityInfos.Data)
+            foreach (var liquidityId in eventValue.LiquidityIds.Data)
             {
-                var id = IdGenerateHelper.GetId(liquidityInfo.LiquidityId.ToHex());
-
-                var liquidityInfoIndex = new LiquidityInfoIndex
-                {
-                    Id = id,
-                    Address = liquidityInfo.Account == null ? "" : liquidityInfo.Account.ToBase58(),
-                    LiquidityId = liquidityInfo.LiquidityId == null
-                        ? ""
-                        : liquidityInfo.LiquidityId.ToHex(),
-                    StakeId = liquidityInfo.StakeId == null ? "" : liquidityInfo.StakeId.ToHex(),
-                    Seed = liquidityInfo.Seed == null ? "" : liquidityInfo.Seed.ToHex(),
-                    LpAmount = liquidityInfo.LpAmount,
-                    LpSymbol = liquidityInfo.LpSymbol,
-                    RewardSymbol = liquidityInfo.RewardSymbol,
-                    TokenAAmount = liquidityInfo.TokenAAmount,
-                    TokenASymbol = liquidityInfo.TokenASymbol,
-                    TokenBAmount = liquidityInfo.TokenBAmount,
-                    TokenBSymbol = liquidityInfo.TokenBSymbol,
-                    AddedTime = liquidityInfo.AddedTime == null
-                        ? 0
-                        : liquidityInfo.AddedTime.ToDateTime().ToUtcMilliSeconds(),
-                    RemovedTime = liquidityInfo.RemovedTime == null
-                        ? 0
-                        : liquidityInfo.RemovedTime.ToDateTime().ToUtcMilliSeconds(),
-                    DappId = liquidityInfo.DappId == null ? "" : liquidityInfo.DappId.ToHex(),
-                    SwapAddress = liquidityInfo.SwapAddress == null
-                        ? ""
-                        : liquidityInfo.SwapAddress.ToBase58(),
-                    TokenAddress = liquidityInfo.TokenAddress == null
-                        ? ""
-                        : liquidityInfo.TokenAddress.ToBase58(),
-                    LpStatus = LpStatus.Removed,
-                    TokenALossAmount =
-                        (decimal.Parse(liquidityInfo.TokenAAmount.ToString()) /
-                            decimal.Parse(tokenAOldAmount.ToString()) * decimal.Parse(tokenALossAmountSum))
-                        .ToString(CultureInfo.InvariantCulture),
-                    TokenBLossAmount = (decimal.Parse(liquidityInfo.TokenBAmount.ToString()) /
-                            decimal.Parse(tokenBOldAmount.ToString()) * decimal.Parse(tokenBLossAmountSum))
-                        .ToString(CultureInfo.InvariantCulture),
-                };
+                var id = IdGenerateHelper.GetId(liquidityId.ToHex());
+                var liquidityInfoIndex = await _repository.GetFromBlockStateSetAsync(id, context.ChainId);
+                liquidityInfoIndex.LpStatus = LpStatus.Removed;
+                liquidityInfoIndex.TokenALossAmount = (decimal.Parse(liquidityInfoIndex.TokenAAmount.ToString()) /
+                        decimal.Parse(tokenAOldAmount.ToString()) * decimal.Parse(tokenALossAmountSum))
+                    .ToString(CultureInfo.InvariantCulture);
+                liquidityInfoIndex.TokenBLossAmount = (decimal.Parse(liquidityInfoIndex.TokenBAmount.ToString()) /
+                        decimal.Parse(tokenBOldAmount.ToString()) * decimal.Parse(tokenBLossAmountSum))
+                    .ToString(CultureInfo.InvariantCulture);
 
                 _objectMapper.Map(context, liquidityInfoIndex);
                 await _repository.AddOrUpdateAsync(liquidityInfoIndex);

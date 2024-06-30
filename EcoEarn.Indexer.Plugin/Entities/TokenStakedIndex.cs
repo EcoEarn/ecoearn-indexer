@@ -13,7 +13,6 @@ public class TokenStakedIndex : AElfIndexerClientEntity<string>, IIndexBuild
     public long UnlockTime { get; set; }
     public long LastOperationTime { get; set; }
     public long StakingPeriod { get; set; }
-    public long LongestReleaseTime { get; set; }
     public List<SubStakeInfo> SubStakeInfos { get; set; }
     
     public long CreateTime { get; set; }
@@ -28,12 +27,12 @@ public class SubStakeInfo
     [Keyword] public string SubStakeId { get; set; }
     public long StakedAmount { get; set; }
     public long StakedBlockNumber { get; set; }
+    public long EarlyStakedAmount { get; set; }
     public long StakedTime { get; set; }
     public long Period { get; set; }
     public long BoostedAmount { get; set; }
     public long RewardDebt { get; set; }
     public long RewardAmount { get; set; }
-    [Keyword] public string Seed { get; set; }
 }
 
 public enum LockState

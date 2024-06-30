@@ -45,8 +45,7 @@ public class RewardsClaimedLogEventProcessor : AElfLogEventProcessorBase<Claimed
         {
             try
             {
-                var id = IdGenerateHelper.GetId(claimInfo.ClaimId.ToHex(),
-                    claimInfo.PoolId.ToHex());
+                var id = IdGenerateHelper.GetId(claimInfo.ClaimId.ToHex());
 
                 var rewardsClaim = new RewardsClaimIndex
                 {
@@ -63,13 +62,7 @@ public class RewardsClaimedLogEventProcessor : AElfLogEventProcessorBase<Claimed
                     ReleaseTime = claimInfo.ReleaseTime == null
                         ? 0
                         : claimInfo.ReleaseTime.ToDateTime().ToUtcMilliSeconds(),
-                    WithdrawTime = claimInfo.WithdrawnTime == null
-                        ? 0
-                        : claimInfo.WithdrawnTime.ToDateTime().ToUtcMilliSeconds(),
-                    EarlyStakedAmount = claimInfo.EarlyStakedAmount.ToString(),
-                    StakeId = claimInfo.StakeId == null ? "" : claimInfo.StakeId.ToHex(),
                     Seed = claimInfo.Seed == null ? "" : claimInfo.Seed.ToHex(),
-                    LiquidityId = claimInfo.LiquidityId == null ? "" : claimInfo.LiquidityId.ToHex(),
                     ContractAddress = claimInfo.ContractAddress == null ? "" : claimInfo.ContractAddress.ToBase58(),
                 };
 
