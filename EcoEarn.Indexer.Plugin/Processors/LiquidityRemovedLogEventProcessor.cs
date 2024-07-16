@@ -53,20 +53,22 @@ public class LiquidityRemovedLogEventProcessor : AElfLogEventProcessorBase<Liqui
                 JsonConvert.SerializeObject(context));
             var tokenANewAmount = eventValue.TokenAAmount;
             var tokenBNewAmount = eventValue.TokenBAmount;
-            var tokenALossAmountSum = (tokenANewAmount - tokenAOldAmount).ToString();
-            var tokenBLossAmountSum = (tokenBNewAmount - tokenBOldAmount).ToString();
+            var tokenALossAmountSum = tokenANewAmount - tokenAOldAmount;
+            var tokenBLossAmountSum = tokenBNewAmount - tokenBOldAmount;
 
             foreach (var liquidityId in eventValue.LiquidityIds.Data)
             {
                 var id = IdGenerateHelper.GetId(liquidityId.ToHex());
                 var liquidityInfoIndex = await _repository.GetFromBlockStateSetAsync(id, context.ChainId);
                 liquidityInfoIndex.LpStatus = LpStatus.Removed;
-                liquidityInfoIndex.TokenALossAmount = (decimal.Parse(liquidityInfoIndex.TokenAAmount.ToString()) /
-                        decimal.Parse(tokenAOldAmount.ToString()) * decimal.Parse(tokenALossAmountSum))
-                    .ToString(CultureInfo.InvariantCulture);
-                liquidityInfoIndex.TokenBLossAmount = (decimal.Parse(liquidityInfoIndex.TokenBAmount.ToString()) /
-                        decimal.Parse(tokenBOldAmount.ToString()) * decimal.Parse(tokenBLossAmountSum))
-                    .ToString(CultureInfo.InvariantCulture);
+
+                var tokenALossAmount =
+                    -((decimal)liquidityInfoIndex.TokenAAmount / tokenAOldAmount) * tokenALossAmountSum;
+                var tokenBLossAmount =
+                    -((decimal)liquidityInfoIndex.TokenBAmount / tokenBOldAmount) * tokenBLossAmountSum;
+
+                liquidityInfoIndex.TokenALossAmount = Math.Ceiling(tokenALossAmount).ToString(CultureInfo.InvariantCulture);
+                liquidityInfoIndex.TokenBLossAmount = Math.Ceiling(tokenBLossAmount).ToString(CultureInfo.InvariantCulture);
 
                 _objectMapper.Map(context, liquidityInfoIndex);
                 await _repository.AddOrUpdateAsync(liquidityInfoIndex);

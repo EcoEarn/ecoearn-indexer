@@ -7,7 +7,7 @@ namespace EcoEarn.Indexer.Plugin.Entities;
 public class LiquidityInfoIndex : AElfIndexerClientEntity<string>, IIndexBuild
 {
     [Keyword] public string LiquidityId { get; set; }
-    [Keyword] public string StakeId { get; set; }
+    [Keyword] public string StakeId { get; set; } = "";
     [Keyword] public string Address { get; set; }
     [Keyword] public string Seed { get; set; }
     public long LpAmount { get; set; }

@@ -53,6 +53,7 @@ public class LiquidityAddedLogEvenProcessor : AElfLogEventProcessorBase<Liquidit
                     ? ""
                     : eventValue.LiquidityInfo.LiquidityId.ToHex(),
                 Seed = eventValue.LiquidityInfo.Seed == null ? "" : eventValue.LiquidityInfo.Seed.ToHex(),
+                StakeId = eventValue.StakeId == null ? "" : eventValue.StakeId.ToHex(),
                 LpAmount = eventValue.LiquidityInfo.LpAmount,
                 LpSymbol = eventValue.LiquidityInfo.LpSymbol,
                 RewardSymbol = eventValue.LiquidityInfo.RewardSymbol,

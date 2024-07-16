@@ -185,6 +185,45 @@ public partial class Query
             TotalCount = recordList.Item1
         };
     }
+    
+    [Name("getClaimInfoCount")]
+    public static async Task<long> GetClaimInfoCount(
+        [FromServices] IAElfIndexerClientEntityRepository<RewardsClaimIndex, LogEventInfo> repository,
+        [FromServices] IObjectMapper objectMapper,
+        GetClaimInfoInput input)
+    {
+        var mustQuery = new List<Func<QueryContainerDescriptor<RewardsClaimIndex>, QueryContainer>>();
+
+        mustQuery.Add(q => q.Term(i => i.Field(f => f.Account).Value(input.Address)));
+
+        if (input.PoolType != PoolType.All)
+        {
+            mustQuery.Add(q => q.Term(i => i.Field(f => f.PoolType).Value(input.PoolType)));
+        }
+
+        if (input.FilterUnlock)
+        {
+            mustQuery.Add(q =>
+                q.LongRange(i => i.Field(f => f.ReleaseTime).LessThan(DateTime.UtcNow.ToUtcMilliSeconds())));
+        }
+
+        if (input.FilterWithdraw)
+        {
+            mustQuery.Add(q => q.Term(i => i.Field(f => f.WithdrawTime).Value(0)));
+        }
+
+        if (!input.LiquidityIds.IsNullOrEmpty())
+        {
+            mustQuery.Add(q => q.Terms(i => i.Field(f => f.LiquidityId).Terms(input.LiquidityIds)));
+
+        }
+
+        QueryContainer Filter(QueryContainerDescriptor<RewardsClaimIndex> f) =>
+            f.Bool(b => b.Must(mustQuery));
+
+        var countResponse = await repository.CountAsync(Filter);
+        return countResponse.Count;
+    }
 
     [Name("getUnLockedStakeIdsAsync")]
     public static async Task<List<string>> GetUnLockedStakeIdsAsync(
@@ -338,7 +377,7 @@ public partial class Query
 
         if (!string.IsNullOrEmpty(input.Address))
         {
-            mustQuery.Add(q => q.Term(i => i.Field("address.keyword").Value(input.Address)));
+            mustQuery.Add(q => q.Term(i => i.Field(f => f.Address).Value(input.Address)));
         }
 
 
