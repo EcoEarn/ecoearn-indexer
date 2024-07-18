@@ -18,15 +18,20 @@ public class TokenPoolUnlockedLogEventProcessor : AElfLogEventProcessorBase<Unlo
     private readonly ILogger<TokenPoolUnlockedLogEventProcessor> _logger;
     private readonly IAElfIndexerClientEntityRepository<TokenStakedIndex, LogEventInfo> _repository;
 
+    private readonly IAElfIndexerClientEntityRepository<TokenPoolStakeInfoIndex, LogEventInfo>
+        _tokenPoolStakeRepository;
+
     public TokenPoolUnlockedLogEventProcessor(ILogger<TokenPoolUnlockedLogEventProcessor> logger,
         IObjectMapper objectMapper, IOptionsSnapshot<ContractInfoOptions> contractInfoOptions,
-        IAElfIndexerClientEntityRepository<TokenStakedIndex, LogEventInfo> repository) :
+        IAElfIndexerClientEntityRepository<TokenStakedIndex, LogEventInfo> repository,
+        IAElfIndexerClientEntityRepository<TokenPoolStakeInfoIndex, LogEventInfo> tokenPoolStakeRepository) :
         base(logger)
     {
         _logger = logger;
         _contractInfoOptions = contractInfoOptions.Value;
         _objectMapper = objectMapper;
         _repository = repository;
+        _tokenPoolStakeRepository = tokenPoolStakeRepository;
     }
 
     public override string GetContractAddress(string chainId)
@@ -46,6 +51,21 @@ public class TokenPoolUnlockedLogEventProcessor : AElfLogEventProcessorBase<Unlo
             stakedIndex.LockState = LockState.Unlock;
             _objectMapper.Map(context, stakedIndex);
             await _repository.AddOrUpdateAsync(stakedIndex);
+            
+            var tokenPoolStakeInfoIndex = new TokenPoolStakeInfoIndex()
+            {
+                Id = eventValue.StakeInfo.PoolId == null ? "" : eventValue.StakeInfo.PoolId.ToHex(),
+                PoolId = eventValue.StakeInfo.PoolId == null ? "" : eventValue.StakeInfo.PoolId.ToHex(),
+                AccTokenPerShare = eventValue.PoolData.AccTokenPerShare == null
+                    ? "0"
+                    : eventValue.PoolData.AccTokenPerShare.Value,
+                TotalStakedAmount = eventValue.PoolData.TotalStakedAmount.ToString(),
+                LastRewardTime = eventValue.PoolData.LastRewardTime == null
+                    ? 0
+                    : eventValue.PoolData.LastRewardTime.ToDateTime().ToUtcMilliSeconds(),
+            };
+            _objectMapper.Map(context, tokenPoolStakeInfoIndex);
+            await _tokenPoolStakeRepository.AddOrUpdateAsync(tokenPoolStakeInfoIndex);
         }
         catch (Exception e)
         {
