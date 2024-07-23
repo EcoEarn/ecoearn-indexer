@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1112FA9B-F58E-4AAE-889C-98E6603AF1F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoEarn.Indexer.Plugin", "EcoEarn.Indexer.Plugin\EcoEarn.Indexer.Plugin.csproj", "{14920AAA-A844-4EF4-89BA-2DD9E70D2074}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{14920AAA-A844-4EF4-89BA-2DD9E70D2074}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14920AAA-A844-4EF4-89BA-2DD9E70D2074}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14920AAA-A844-4EF4-89BA-2DD9E70D2074}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14920AAA-A844-4EF4-89BA-2DD9E70D2074}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{14920AAA-A844-4EF4-89BA-2DD9E70D2074} = {1112FA9B-F58E-4AAE-889C-98E6603AF1F6}
+	EndGlobalSection
+EndGlobal
