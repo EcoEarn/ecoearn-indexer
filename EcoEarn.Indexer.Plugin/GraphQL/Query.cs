@@ -6,7 +6,6 @@ using AElfIndexer.Grains.State.Client;
 using EcoEarn.Indexer.Plugin.Entities;
 using EcoEarn.Indexer.Plugin.GraphQL.Dto;
 using GraphQL;
-using Microsoft.Extensions.Options;
 using Nest;
 using Orleans;
 using Volo.Abp.ObjectMapping;
@@ -168,7 +167,6 @@ public partial class Query
         if (!input.LiquidityIds.IsNullOrEmpty())
         {
             mustQuery.Add(q => q.Terms(i => i.Field(f => f.LiquidityId).Terms(input.LiquidityIds)));
-
         }
 
         QueryContainer Filter(QueryContainerDescriptor<RewardsClaimIndex> f) =>
@@ -185,7 +183,7 @@ public partial class Query
             TotalCount = recordList.Item1
         };
     }
-    
+
     [Name("getClaimInfoCount")]
     public static async Task<long> GetClaimInfoCount(
         [FromServices] IAElfIndexerClientEntityRepository<RewardsClaimIndex, LogEventInfo> repository,
@@ -215,7 +213,6 @@ public partial class Query
         if (!input.LiquidityIds.IsNullOrEmpty())
         {
             mustQuery.Add(q => q.Terms(i => i.Field(f => f.LiquidityId).Terms(input.LiquidityIds)));
-
         }
 
         QueryContainer Filter(QueryContainerDescriptor<RewardsClaimIndex> f) =>
@@ -384,7 +381,8 @@ public partial class Query
         QueryContainer Filter(QueryContainerDescriptor<LiquidityInfoIndex> f) =>
             f.Bool(b => b.Must(mustQuery));
 
-        var recordList = await repository.GetListAsync(Filter, skip: input.SkipCount, limit: input.MaxResultCount);
+        var recordList = await repository.GetListAsync(Filter, skip: input.SkipCount, limit: input.MaxResultCount,
+            sortType: SortOrder.Ascending, sortExp: o => o.AddedTime);
 
         var dataList =
             objectMapper.Map<List<LiquidityInfoIndex>, List<LiquidityInfoDto>>(recordList.Item2);
@@ -396,34 +394,58 @@ public partial class Query
     }
 
 
-    [Name("test")]
-    public static async Task<PointsPoolDtoList> GetPointsPoolList(
-        [FromServices] IAElfIndexerClientEntityRepository<PointsPoolIndex, LogEventInfo> repository,
+    [Name("getRewardsInfoList")]
+    public static async Task<RewardsInfoListDto> GetRewardsInfoList(
+        [FromServices] IAElfIndexerClientEntityRepository<RewardsInfoIndex, LogEventInfo> repository,
         [FromServices] IObjectMapper objectMapper,
-        [FromServices] IOptionsSnapshot<PoolBlackListOptions> options,
-        GetPointsPoolListInput input)
+        RewardsInfoInput input)
     {
-        var mustQuery = new List<Func<QueryContainerDescriptor<PointsPoolIndex>, QueryContainer>>();
+        var mustQuery = new List<Func<QueryContainerDescriptor<RewardsInfoIndex>, QueryContainer>>();
 
+        mustQuery.Add(q => q.Term(i => i.Field(f => f.Account).Value(input.Address)));
 
-        if (string.IsNullOrEmpty(input.Name))
+        if (input.PoolType != PoolType.All)
         {
-            mustQuery.Add(q => q.Term(i => i.Field(f => f.PointsName).Value(input.Name)));
+            mustQuery.Add(q => q.Term(i => i.Field(f => f.PoolType).Value(input.PoolType)));
         }
 
-        if (!input.PoolIds.IsNullOrEmpty())
-        {
-            mustQuery.Add(q => q.Terms(i => i.Field(f => f.PoolId).Terms(input.PoolIds)));
-        }
-
-        QueryContainer Filter(QueryContainerDescriptor<PointsPoolIndex> f) =>
+        QueryContainer Filter(QueryContainerDescriptor<RewardsInfoIndex> f) =>
             f.Bool(b => b.Must(mustQuery));
 
         var recordList = await repository.GetListAsync(Filter, skip: input.SkipCount, limit: input.MaxResultCount);
 
         var dataList =
-            objectMapper.Map<List<PointsPoolIndex>, List<PointsPoolDto>>(recordList.Item2);
-        return new PointsPoolDtoList
+            objectMapper.Map<List<RewardsInfoIndex>, List<RewardsInfoDto>>(recordList.Item2);
+        return new RewardsInfoListDto
+        {
+            Data = dataList,
+            TotalCount = recordList.Item1
+        };
+    }
+
+    [Name("getMergedRewardsList")]
+    public static async Task<MergeRewardsListDto> GetMergedRewardsList(
+        [FromServices] IAElfIndexerClientEntityRepository<RewardsMergeIndex, LogEventInfo> repository,
+        [FromServices] IObjectMapper objectMapper,
+        MergeRewardsInput input)
+    {
+        var mustQuery = new List<Func<QueryContainerDescriptor<RewardsMergeIndex>, QueryContainer>>();
+
+        mustQuery.Add(q => q.Term(i => i.Field(f => f.Account).Value(input.Address)));
+
+        if (input.PoolType != PoolType.All)
+        {
+            mustQuery.Add(q => q.Term(i => i.Field(f => f.PoolType).Value(input.PoolType)));
+        }
+
+        QueryContainer Filter(QueryContainerDescriptor<RewardsMergeIndex> f) =>
+            f.Bool(b => b.Must(mustQuery));
+
+        var recordList = await repository.GetListAsync(Filter, skip: input.SkipCount, limit: input.MaxResultCount);
+
+        var dataList =
+            objectMapper.Map<List<RewardsMergeIndex>, List<MergeRewardsDto>>(recordList.Item2);
+        return new MergeRewardsListDto
         {
             Data = dataList,
             TotalCount = recordList.Item1

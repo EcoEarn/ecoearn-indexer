@@ -5,6 +5,7 @@ using EcoEarn.Contracts.Rewards;
 using EcoEarn.Indexer.Plugin.Entities;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Nest;
 using Newtonsoft.Json;
 using Orleans.Runtime;
 using Volo.Abp.ObjectMapping;
@@ -15,14 +16,20 @@ public class RewardsClaimedLogEventProcessor : AElfLogEventProcessorBase<Claimed
 {
     private readonly IObjectMapper _objectMapper;
     private readonly ContractInfoOptions _contractInfoOptions;
+    private readonly RewardsMergeInfoOptions _rewardsMergeInfoOptions;
     private readonly ILogger<RewardsClaimedLogEventProcessor> _logger;
     private readonly IAElfIndexerClientEntityRepository<RewardsClaimIndex, LogEventInfo> _repository;
     private readonly IAElfIndexerClientEntityRepository<TokenPoolIndex, LogEventInfo> _tokenPoolRepository;
+    private readonly IAElfIndexerClientEntityRepository<RewardsMergeIndex, LogEventInfo> _mergeRewardsRepository;
+    private readonly IAElfIndexerClientEntityRepository<RewardsInfoIndex, LogEventInfo> _rewardsInfoRepository;
 
     public RewardsClaimedLogEventProcessor(ILogger<RewardsClaimedLogEventProcessor> logger,
         IObjectMapper objectMapper, IOptionsSnapshot<ContractInfoOptions> contractInfoOptions,
         IAElfIndexerClientEntityRepository<RewardsClaimIndex, LogEventInfo> pointsRewardsClaimRepository,
-        IAElfIndexerClientEntityRepository<TokenPoolIndex, LogEventInfo> tokenPoolRepository) :
+        IAElfIndexerClientEntityRepository<TokenPoolIndex, LogEventInfo> tokenPoolRepository,
+        IAElfIndexerClientEntityRepository<RewardsMergeIndex, LogEventInfo> mergeRewardsRepository,
+        IOptionsSnapshot<RewardsMergeInfoOptions> rewardsMergeInfoOptions,
+        IAElfIndexerClientEntityRepository<RewardsInfoIndex, LogEventInfo> rewardsInfoRepository) :
         base(logger)
     {
         _logger = logger;
@@ -30,6 +37,9 @@ public class RewardsClaimedLogEventProcessor : AElfLogEventProcessorBase<Claimed
         _objectMapper = objectMapper;
         _repository = pointsRewardsClaimRepository;
         _tokenPoolRepository = tokenPoolRepository;
+        _mergeRewardsRepository = mergeRewardsRepository;
+        _rewardsInfoRepository = rewardsInfoRepository;
+        _rewardsMergeInfoOptions = rewardsMergeInfoOptions.Value;
     }
 
     public override string GetContractAddress(string chainId)
@@ -41,6 +51,33 @@ public class RewardsClaimedLogEventProcessor : AElfLogEventProcessorBase<Claimed
     {
         _logger.Debug("RewardsClaimed: {eventValue} context: {context}",
             JsonConvert.SerializeObject(eventValue), JsonConvert.SerializeObject(context));
+        var now = DateTime.UtcNow.ToUtcMilliSeconds();
+
+        var poolIdHash = eventValue.ClaimInfos.Data.First()?.PoolId;
+        var poolId = poolIdHash == null ? "" : poolIdHash.ToHex();
+        var address = eventValue.ClaimInfos.Data.First()?.Account;
+        var account = address == null ? "" : address.ToBase58();
+        var tokenPoolIndex =
+            await _tokenPoolRepository.GetFromBlockStateSetAsync(poolId, context.ChainId);
+        var poolType = tokenPoolIndex?.PoolType ?? PoolType.Points;
+
+        var mergedRewardsList = await GetMergedRewardsList(account, poolType);
+        var releasedClaimedIds = mergedRewardsList
+            .Where(x => x.ReleaseTime <= now)
+            .SelectMany(x => x.MergeClaimInfos.Select(m => m.ClaimId))
+            .ToList();
+
+        var reMergeRewardsList = mergedRewardsList.Where(x => x.ReleaseTime > now).ToList();
+        foreach (var rewardsMergeIndex in reMergeRewardsList)
+        {
+            _objectMapper.Map(context, rewardsMergeIndex);
+            await _mergeRewardsRepository.DeleteAsync(rewardsMergeIndex);
+        }
+
+        var unWithdrawRewardsList = await GetUnWithdrawRewardsList(account, poolType);
+        var unReleasedRewardsList = unWithdrawRewardsList.Where(x => !releasedClaimedIds.Contains(x.ClaimId)).ToList();
+
+        var newRewardsList = new List<RewardsClaimIndex>();
         foreach (var claimInfo in eventValue.ClaimInfos.Data)
         {
             try
@@ -64,19 +101,167 @@ public class RewardsClaimedLogEventProcessor : AElfLogEventProcessorBase<Claimed
                         : claimInfo.ReleaseTime.ToDateTime().ToUtcMilliSeconds(),
                     Seed = claimInfo.Seed == null ? "" : claimInfo.Seed.ToHex(),
                     ContractAddress = claimInfo.ContractAddress == null ? "" : claimInfo.ContractAddress.ToBase58(),
+                    PoolType = poolType
                 };
-
-                var tokenPoolIndex =
-                    await _tokenPoolRepository.GetFromBlockStateSetAsync(rewardsClaim.PoolId, context.ChainId);
-                rewardsClaim.PoolType = tokenPoolIndex?.PoolType ?? PoolType.Points;
-
                 _objectMapper.Map(context, rewardsClaim);
                 await _repository.AddOrUpdateAsync(rewardsClaim);
+                newRewardsList.Add(rewardsClaim);
             }
             catch (Exception e)
             {
                 _logger.LogError(e, "RewardsClaimed HandleEventAsync error.");
             }
         }
+
+        unReleasedRewardsList.AddRange(newRewardsList);
+        var rewardsMergeList = MergeRewards(unReleasedRewardsList, _rewardsMergeInfoOptions.MergeDays, now);
+        foreach (var rewardsMergeIndex in rewardsMergeList)
+        {
+            _objectMapper.Map(context, rewardsMergeIndex);
+            await _mergeRewardsRepository.AddOrUpdateAsync(rewardsMergeIndex);
+        }
+
+        var rewardsInfoIndex = _objectMapper.Map<RewardsClaimIndex, RewardsInfoIndex>(newRewardsList.First());
+        var amountSum = newRewardsList.Sum(x => long.Parse(x.ClaimedAmount));
+        rewardsInfoIndex.ClaimedAmount = amountSum.ToString();
+        _objectMapper.Map(context, rewardsInfoIndex);
+        await _rewardsInfoRepository.AddOrUpdateAsync(rewardsInfoIndex);
+    }
+
+    private List<RewardsMergeIndex> MergeRewards(List<RewardsClaimIndex> rewards, double mergeDays, long now)
+    {
+        rewards = rewards.OrderBy(r => r.ReleaseTime).ToList();
+        var mergedRewards = new List<RewardsMergeIndex>();
+
+        RewardsMergeIndex currentMerge = null;
+
+        foreach (var reward in rewards)
+        {
+            if (currentMerge == null)
+            {
+                currentMerge = new RewardsMergeIndex
+                {
+                    Amount = reward.ClaimedAmount,
+                    ReleaseTime = reward.ReleaseTime,
+                    MergeClaimInfos = new List<MergeClaimInfo>
+                    {
+                        new()
+                        {
+                            ClaimId = reward.ClaimId,
+                            ClaimedAmount = reward.ClaimedAmount
+                        }
+                    }
+                };
+            }
+            else
+            {
+                var currentReleaseDate = DateTimeOffset.FromUnixTimeMilliseconds(currentMerge.ReleaseTime);
+                var rewardReleaseDate = DateTimeOffset.FromUnixTimeMilliseconds(reward.ReleaseTime);
+                var daysDifference = (rewardReleaseDate - currentReleaseDate).TotalDays;
+
+                if (daysDifference <= mergeDays)
+                {
+                    currentMerge.Amount =
+                        (long.Parse(currentMerge.Amount) + long.Parse(reward.ClaimedAmount)).ToString();
+                    currentMerge.ReleaseTime = reward.ReleaseTime;
+                    currentMerge.MergeClaimInfos.Add(new MergeClaimInfo
+                    {
+                        ClaimId = reward.ClaimId,
+                        ClaimedAmount = reward.ClaimedAmount
+                    });
+                }
+                else
+                {
+                    mergedRewards.Add(currentMerge);
+                    currentMerge = new RewardsMergeIndex
+                    {
+                        Amount = reward.ClaimedAmount,
+                        ReleaseTime = reward.ReleaseTime,
+                        MergeClaimInfos = new List<MergeClaimInfo>
+                        {
+                            new()
+                            {
+                                ClaimId = reward.ClaimId,
+                                ClaimedAmount = reward.ClaimedAmount
+                            }
+                        }
+                    };
+                }
+            }
+
+            currentMerge.Account = reward.Account;
+            currentMerge.PoolType = reward.PoolType;
+            currentMerge.CreateTime = now;
+            currentMerge.Id = Guid.NewGuid().ToString();
+        }
+
+        if (currentMerge != null)
+        {
+            mergedRewards.Add(currentMerge);
+        }
+
+        return mergedRewards;
+    }
+
+    private async Task<List<RewardsClaimIndex>> GetUnWithdrawRewardsList(string address, PoolType poolType)
+    {
+        var res = new List<RewardsClaimIndex>();
+        var skipCount = 0;
+        var maxResultCount = 5000;
+        List<RewardsClaimIndex> list;
+        do
+        {
+            var mustQuery = new List<Func<QueryContainerDescriptor<RewardsClaimIndex>, QueryContainer>>();
+
+            mustQuery.Add(q => q.Term(i => i.Field(f => f.Account).Value(address)));
+            mustQuery.Add(q => q.Term(i => i.Field(f => f.PoolType).Value(poolType)));
+            mustQuery.Add(q => q.Term(i => i.Field(f => f.WithdrawTime).Value(0)));
+
+            QueryContainer Filter(QueryContainerDescriptor<RewardsClaimIndex> f) => f.Bool(b => b.Must(mustQuery));
+
+            var recordList = await _repository.GetListAsync(Filter, skip: skipCount, limit: maxResultCount,
+                sortType: SortOrder.Descending, sortExp: o => o.ClaimedTime);
+            list = recordList.Item2;
+            var count = list.Count;
+            res.AddRange(list);
+            if (list.IsNullOrEmpty() || count < maxResultCount)
+            {
+                break;
+            }
+
+            skipCount += count;
+        } while (!list.IsNullOrEmpty());
+
+        return res;
+    }
+
+    private async Task<List<RewardsMergeIndex>> GetMergedRewardsList(string address, PoolType poolType)
+    {
+        var res = new List<RewardsMergeIndex>();
+        var skipCount = 0;
+        var maxResultCount = 5000;
+        List<RewardsMergeIndex> list;
+        do
+        {
+            var mustQuery = new List<Func<QueryContainerDescriptor<RewardsMergeIndex>, QueryContainer>>();
+
+            mustQuery.Add(q => q.Term(i => i.Field(f => f.Account).Value(address)));
+            mustQuery.Add(q => q.Term(i => i.Field(f => f.PoolType).Value(poolType)));
+            QueryContainer Filter(QueryContainerDescriptor<RewardsMergeIndex> f) => f.Bool(b => b.Must(mustQuery));
+
+            var recordList = await _mergeRewardsRepository.GetListAsync(Filter, skip: skipCount, limit: maxResultCount,
+                sortType: SortOrder.Descending, sortExp: o => o.CreateTime);
+            list = recordList.Item2;
+            var count = list.Count;
+            res.AddRange(list);
+            if (list.IsNullOrEmpty() || count < maxResultCount)
+            {
+                break;
+            }
+
+            skipCount += count;
+        } while (!list.IsNullOrEmpty());
+
+        return res;
     }
 }

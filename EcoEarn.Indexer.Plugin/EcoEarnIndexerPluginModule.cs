@@ -19,6 +19,7 @@ public class EcoEarnIndexerPluginModule : AElfIndexerClientPluginBaseModule<EcoE
         var configuration = serviceCollection.GetConfiguration();
         Configure<ContractInfoOptions>(configuration.GetSection("ContractInfo"));
         Configure<PoolBlackListOptions>(configuration.GetSection("PoolBlackList"));
+        Configure<RewardsMergeInfoOptions>(configuration.GetSection("RewardsMergeInfo"));
 
         serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, PointsPoolClaimedLogEventProcessor>();
         serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, PointsPoolCreatedLogEventProcessor>();
@@ -53,5 +54,5 @@ public class EcoEarnIndexerPluginModule : AElfIndexerClientPluginBaseModule<EcoE
     }
 
     protected override string ClientId => "AElfIndexer_EcoEarn";
-    protected override string Version => "";
+    protected override string Version => "879e18b2f2d44230950c7dd000df51b2";
 }
