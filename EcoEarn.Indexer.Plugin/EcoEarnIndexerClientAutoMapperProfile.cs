@@ -33,5 +33,7 @@ public class EcoEarnIndexerClientAutoMapperProfile : Profile
         CreateMap<RewardsInfoIndex, RewardsInfoDto>();
         CreateMap<RewardsMergeIndex, MergeRewardsDto>();
         CreateMap<MergeClaimInfo, MergeClaimInfoDto>();
+        CreateMap<LiquidityAddedInfo, LiquidityAddedInfoDto>();
+        CreateMap<EarlyStakeInfo, EarlyStakeInfoDto>();
     }
 }

@@ -24,6 +24,7 @@ public class LiquidityInfoIndex : AElfIndexerClientEntity<string>, IIndexBuild
     [Keyword] public string TokenALossAmount { get; set; } = "0";
     [Keyword] public string TokenBLossAmount { get; set; } = "0";
     public LpStatus LpStatus { get; set; }
+    public long RemovedTime { get; set; }
 }
 
 public enum LpStatus

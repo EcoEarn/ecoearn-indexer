@@ -166,7 +166,9 @@ public partial class Query
 
         if (!input.LiquidityIds.IsNullOrEmpty())
         {
-            mustQuery.Add(q => q.Terms(i => i.Field(f => f.LiquidityId).Terms(input.LiquidityIds)));
+            mustQuery.Add(n =>
+                n.Nested(n => n.Path("LiquidityAddedInfos").Query(q =>
+                    q.Terms(i => i.Field("LiquidityAddedInfos.liquidityId").Terms(input.LiquidityIds)))));
         }
 
         QueryContainer Filter(QueryContainerDescriptor<RewardsClaimIndex> f) =>
@@ -212,7 +214,9 @@ public partial class Query
 
         if (!input.LiquidityIds.IsNullOrEmpty())
         {
-            mustQuery.Add(q => q.Terms(i => i.Field(f => f.LiquidityId).Terms(input.LiquidityIds)));
+            mustQuery.Add(n =>
+                n.Nested(n => n.Path("LiquidityAddedInfos").Query(q =>
+                    q.Terms(i => i.Field("LiquidityAddedInfos.liquidityId").Terms(input.LiquidityIds)))));
         }
 
         QueryContainer Filter(QueryContainerDescriptor<RewardsClaimIndex> f) =>
@@ -332,8 +336,12 @@ public partial class Query
             var shouldQuery = new List<Func<QueryContainerDescriptor<RewardsClaimIndex>, QueryContainer>>();
             shouldQuery.Add(q => q.Terms(i => i.Field(f => f.Seed).Terms(input.Seeds)));
             shouldQuery.Add(q => q.Terms(i => i.Field(f => f.WithdrawSeed).Terms(input.Seeds)));
-            shouldQuery.Add(q => q.Terms(i => i.Field(f => f.EarlyStakeSeed).Terms(input.Seeds)));
-            shouldQuery.Add(q => q.Terms(i => i.Field(f => f.LiquidityAddedSeed).Terms(input.Seeds)));
+            shouldQuery.Add(n =>
+                n.Nested(n => n.Path("EarlyStakeInfos").Query(q =>
+                    q.Terms(i => i.Field("EarlyStakeInfos.earlyStakeSeed").Terms(input.Seeds)))));
+            shouldQuery.Add(n =>
+                n.Nested(n => n.Path("LiquidityAddedInfos").Query(q =>
+                    q.Terms(i => i.Field("LiquidityAddedInfos.liquidityAddedSeed").Terms(input.Seeds)))));
             mustQuery.Add(q => q.Bool(b => b.Should(shouldQuery)));
         }
 

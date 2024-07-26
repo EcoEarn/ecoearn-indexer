@@ -22,6 +22,7 @@ public class LiquidityInfoDto
     public string TokenALossAmount { get; set; }
     public string TokenBLossAmount { get; set; }
     public LpStatus LpStatus { get; set; }
+    public long RemovedTime { get; set; }
 }
 
 public class LiquidityInfoListDto
