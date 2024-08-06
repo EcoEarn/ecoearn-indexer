@@ -6,7 +6,6 @@ public class ClaimInfoDto
 {
     public string Id { get; set; }
     public string ClaimId { get; set; }
-    public string StakeId { get; set; }
     public string PoolId { get; set; }
     public string ClaimedAmount { get; set; }
     public string Seed { get; set; }
@@ -21,10 +20,9 @@ public class ClaimInfoDto
     public PoolType PoolType { get; set; }
     public LockState LockState { get; set; }
     public string WithdrawSeed { get; set; }
-    public string LiquidityId { get; set; }
     public string ContractAddress { get; set; }
-    public string EarlyStakeSeed { get; set; }
-    public string LiquidityAddedSeed { get; set; }
+    public List<LiquidityAddedInfoDto> LiquidityAddedInfos { get; set; }
+    public List<EarlyStakeInfoDto> EarlyStakeInfos { get; set; }
 }
 
 public class ClaimInfoDtoList
@@ -32,4 +30,20 @@ public class ClaimInfoDtoList
     public long TotalCount { get; set; }
 
     public List<ClaimInfoDto> Data { get; set; }
+}
+
+public class LiquidityAddedInfoDto
+{
+    public string LiquidityAddedSeed { get; set; }
+    public string LiquidityId { get; set; }
+    public string TokenALossAmount { get; set; }
+    public string TokenBLossAmount { get; set; }
+    public long AddedTime { get; set; }
+}
+
+public class EarlyStakeInfoDto
+{
+    public string EarlyStakeSeed { get; set; }
+    public string StakeId { get; set; }
+    public long StakeTime { get; set; }
 }

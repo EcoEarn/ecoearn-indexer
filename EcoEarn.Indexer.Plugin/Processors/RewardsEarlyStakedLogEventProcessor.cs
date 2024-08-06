@@ -44,8 +44,14 @@ public class RewardsEarlyStakedLogEventProcessor : AElfLogEventProcessorBase<Ear
             {
                 var id = IdGenerateHelper.GetId(claimId.ToHex());
                 var rewardsClaim = await _claimRepository.GetFromBlockStateSetAsync(id, context.ChainId);
-                rewardsClaim.StakeId = eventValue.StakeId == null ? "" : eventValue.StakeId.ToHex();
-                rewardsClaim.EarlyStakeSeed = eventValue.Seed == null ? "" : eventValue.Seed.ToHex();
+                var rewardsClaimEarlyStakeInfos = rewardsClaim.EarlyStakeInfos;
+                rewardsClaimEarlyStakeInfos.Add(new EarlyStakeInfo()
+                {
+                    EarlyStakeSeed = eventValue.Seed == null ? "" : eventValue.Seed.ToHex(),
+                    StakeId = eventValue.StakeId == null ? "" : eventValue.StakeId.ToHex(),
+                    StakeTime = context.BlockTime.ToUtcMilliSeconds()
+                });
+
                 _objectMapper.Map(context, rewardsClaim);
                 await _claimRepository.AddOrUpdateAsync(rewardsClaim);
             }

@@ -19,6 +19,7 @@ public class EcoEarnIndexerPluginModule : AElfIndexerClientPluginBaseModule<EcoE
         var configuration = serviceCollection.GetConfiguration();
         Configure<ContractInfoOptions>(configuration.GetSection("ContractInfo"));
         Configure<PoolBlackListOptions>(configuration.GetSection("PoolBlackList"));
+        Configure<RewardsMergeInfoOptions>(configuration.GetSection("RewardsMergeInfo"));
 
         serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, PointsPoolClaimedLogEventProcessor>();
         serviceCollection.AddSingleton<IAElfLogEventProcessor<LogEventInfo>, PointsPoolCreatedLogEventProcessor>();

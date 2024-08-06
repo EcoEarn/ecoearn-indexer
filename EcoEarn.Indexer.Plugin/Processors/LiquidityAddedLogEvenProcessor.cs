@@ -81,12 +81,20 @@ public class LiquidityAddedLogEvenProcessor : AElfLogEventProcessorBase<Liquidit
             {
                 var claimId = IdGenerateHelper.GetId(claimInfoId.ToHex());
                 var rewardsClaim = await _rewardsClaimRepository.GetFromBlockStateSetAsync(claimId, context.ChainId);
-                rewardsClaim.LiquidityAddedSeed = eventValue.LiquidityInfo.Seed == null
-                    ? ""
-                    : eventValue.LiquidityInfo.Seed.ToHex();
-                rewardsClaim.LiquidityId = eventValue.LiquidityInfo.LiquidityId == null
-                    ? ""
-                    : eventValue.LiquidityInfo.LiquidityId.ToHex();
+                var rewardsClaimLiquidityAddedInfos = rewardsClaim.LiquidityAddedInfos;
+                rewardsClaimLiquidityAddedInfos.Add(new LiquidityAddedInfo
+                {
+                    LiquidityAddedSeed = eventValue.LiquidityInfo.Seed == null
+                        ? ""
+                        : eventValue.LiquidityInfo.Seed.ToHex(),
+                    LiquidityId = eventValue.LiquidityInfo.LiquidityId == null
+                        ? ""
+                        : eventValue.LiquidityInfo.LiquidityId.ToHex(),
+                    AddedTime = eventValue.LiquidityInfo.AddedTime == null
+                        ? 0
+                        : eventValue.LiquidityInfo.AddedTime.ToDateTime().ToUtcMilliSeconds()
+                });
+
                 _objectMapper.Map(context, rewardsClaim);
                 await _rewardsClaimRepository.AddOrUpdateAsync(rewardsClaim);
             }
