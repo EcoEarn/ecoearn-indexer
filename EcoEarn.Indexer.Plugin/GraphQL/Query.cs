@@ -420,7 +420,8 @@ public partial class Query
         QueryContainer Filter(QueryContainerDescriptor<RewardsInfoIndex> f) =>
             f.Bool(b => b.Must(mustQuery));
 
-        var recordList = await repository.GetListAsync(Filter, skip: input.SkipCount, limit: input.MaxResultCount);
+        var recordList = await repository.GetListAsync(Filter, skip: input.SkipCount, limit: input.MaxResultCount,
+            sortType: SortOrder.Descending, sortExp: o => o.ClaimedTime);
 
         var dataList =
             objectMapper.Map<List<RewardsInfoIndex>, List<RewardsInfoDto>>(recordList.Item2);

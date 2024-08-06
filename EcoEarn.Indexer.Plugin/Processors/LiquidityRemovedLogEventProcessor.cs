@@ -98,10 +98,8 @@ public class LiquidityRemovedLogEventProcessor : AElfLogEventProcessorBase<Liqui
                     var rewardsLossBSum = rewardsClaimIndex.LiquidityAddedInfos
                         .Select(x => BigInteger.Parse(x.TokenBLossAmount))
                         .Aggregate(BigInteger.Zero, (acc, num) => acc + num).ToString();
-                    var lastAddedA = BigInteger.Parse(rewardsLossASum) +
-                                     BigInteger.Parse(rewardsClaimIndex.ClaimedAmount);
-                    var lastAddedB = BigInteger.Parse(rewardsLossBSum) +
-                                     BigInteger.Parse(rewardsClaimIndex.ClaimedAmount);
+                    var lastAddedA = BigInteger.Parse(rewardsClaimIndex.ClaimedAmount) - BigInteger.Parse(rewardsLossASum);
+                    var lastAddedB = BigInteger.Parse(rewardsClaimIndex.ClaimedAmount) - BigInteger.Parse(rewardsLossBSum);
                     var lossARate = double.Parse(lastAddedA.ToString()) /
                                     double.Parse(liquidityInfoIndex.TokenAAmount.ToString());
                     var lossBRate = double.Parse(lastAddedB.ToString()) /
