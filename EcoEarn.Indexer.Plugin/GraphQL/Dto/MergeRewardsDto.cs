@@ -6,6 +6,8 @@ public class MergeRewardsDto
 {
     public string Amount { get; set; }
     public string Account { get; set; }
+    public string PoolId { get; set; }
+    public string DappId { get; set; }
     public PoolType PoolType { get; set; }
     public List<MergeClaimInfoDto> MergeClaimInfos { get; set; }
     public long ReleaseTime { get; set; }

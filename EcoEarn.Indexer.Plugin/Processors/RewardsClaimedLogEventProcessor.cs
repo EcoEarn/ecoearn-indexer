@@ -22,6 +22,7 @@ public class RewardsClaimedLogEventProcessor : AElfLogEventProcessorBase<Claimed
     private readonly IAElfIndexerClientEntityRepository<TokenPoolIndex, LogEventInfo> _tokenPoolRepository;
     private readonly IAElfIndexerClientEntityRepository<RewardsMergeIndex, LogEventInfo> _mergeRewardsRepository;
     private readonly IAElfIndexerClientEntityRepository<RewardsInfoIndex, LogEventInfo> _rewardsInfoRepository;
+    private readonly IAElfIndexerClientEntityRepository<PointsPoolIndex, LogEventInfo> _pointsPoolRepository;
 
     public RewardsClaimedLogEventProcessor(ILogger<RewardsClaimedLogEventProcessor> logger,
         IObjectMapper objectMapper, IOptionsSnapshot<ContractInfoOptions> contractInfoOptions,
@@ -29,7 +30,8 @@ public class RewardsClaimedLogEventProcessor : AElfLogEventProcessorBase<Claimed
         IAElfIndexerClientEntityRepository<TokenPoolIndex, LogEventInfo> tokenPoolRepository,
         IAElfIndexerClientEntityRepository<RewardsMergeIndex, LogEventInfo> mergeRewardsRepository,
         IOptionsSnapshot<RewardsMergeInfoOptions> rewardsMergeInfoOptions,
-        IAElfIndexerClientEntityRepository<RewardsInfoIndex, LogEventInfo> rewardsInfoRepository) :
+        IAElfIndexerClientEntityRepository<RewardsInfoIndex, LogEventInfo> rewardsInfoRepository,
+        IAElfIndexerClientEntityRepository<PointsPoolIndex, LogEventInfo> pointsPoolRepository) :
         base(logger)
     {
         _logger = logger;
@@ -39,6 +41,7 @@ public class RewardsClaimedLogEventProcessor : AElfLogEventProcessorBase<Claimed
         _tokenPoolRepository = tokenPoolRepository;
         _mergeRewardsRepository = mergeRewardsRepository;
         _rewardsInfoRepository = rewardsInfoRepository;
+        _pointsPoolRepository = pointsPoolRepository;
         _rewardsMergeInfoOptions = rewardsMergeInfoOptions.Value;
     }
 
@@ -57,11 +60,24 @@ public class RewardsClaimedLogEventProcessor : AElfLogEventProcessorBase<Claimed
         var poolId = poolIdHash == null ? "" : poolIdHash.ToHex();
         var address = eventValue.ClaimInfos.Data.First()?.Account;
         var account = address == null ? "" : address.ToBase58();
-        var tokenPoolIndex =
-            await _tokenPoolRepository.GetFromBlockStateSetAsync(poolId, context.ChainId);
-        var poolType = tokenPoolIndex?.PoolType ?? PoolType.Points;
 
-        var mergedRewardsList = await GetMergedRewardsList(account, poolType);
+        var poolType = PoolType.Points;
+        string dappId;
+        var pointsPoolIndex =
+            await _pointsPoolRepository.GetFromBlockStateSetAsync(poolId, context.ChainId);
+        if (pointsPoolIndex != null)
+        {
+            dappId = pointsPoolIndex.DappId;
+        }
+        else
+        {
+            var tokenPoolIndex =
+                await _tokenPoolRepository.GetFromBlockStateSetAsync(poolId, context.ChainId);
+            poolType = tokenPoolIndex.PoolType;
+            dappId = tokenPoolIndex.DappId;
+        }
+
+        var mergedRewardsList = await GetMergedRewardsList(account, poolId, poolType, dappId);
         var releasedClaimedIds = mergedRewardsList
             .Where(x => x.ReleaseTime <= now)
             .SelectMany(x => x.MergeClaimInfos.Select(m => m.ClaimId))
@@ -74,7 +90,7 @@ public class RewardsClaimedLogEventProcessor : AElfLogEventProcessorBase<Claimed
             await _mergeRewardsRepository.DeleteAsync(rewardsMergeIndex);
         }
 
-        var unWithdrawRewardsList = await GetUnWithdrawRewardsList(account, poolType);
+        var unWithdrawRewardsList = await GetUnWithdrawRewardsList(account, poolId, poolType, dappId);
         var unReleasedRewardsList = unWithdrawRewardsList.Where(x => !releasedClaimedIds.Contains(x.ClaimId)).ToList();
 
         var newRewardsList = new List<RewardsClaimIndex>();
@@ -89,6 +105,7 @@ public class RewardsClaimedLogEventProcessor : AElfLogEventProcessorBase<Claimed
                     Id = id,
                     ClaimId = claimInfo.ClaimId == null ? "" : claimInfo.ClaimId.ToHex(),
                     PoolId = claimInfo.PoolId == null ? "" : claimInfo.PoolId.ToHex(),
+                    DappId = dappId,
                     ClaimedAmount = claimInfo.ClaimedAmount.ToString(),
                     ClaimedSymbol = claimInfo.ClaimedSymbol,
                     ClaimedBlockNumber = claimInfo.ClaimedBlockNumber,
@@ -193,6 +210,8 @@ public class RewardsClaimedLogEventProcessor : AElfLogEventProcessorBase<Claimed
             currentMerge.PoolType = reward.PoolType;
             currentMerge.CreateTime = now;
             currentMerge.Id = Guid.NewGuid().ToString();
+            currentMerge.DappId = reward.DappId;
+            currentMerge.PoolId = reward.PoolId;
         }
 
         if (currentMerge != null)
@@ -203,7 +222,8 @@ public class RewardsClaimedLogEventProcessor : AElfLogEventProcessorBase<Claimed
         return mergedRewards;
     }
 
-    private async Task<List<RewardsClaimIndex>> GetUnWithdrawRewardsList(string address, PoolType poolType)
+    private async Task<List<RewardsClaimIndex>> GetUnWithdrawRewardsList(string address, string poolId, PoolType poolType,
+        string dappId)
     {
         var res = new List<RewardsClaimIndex>();
         var skipCount = 0;
@@ -214,7 +234,15 @@ public class RewardsClaimedLogEventProcessor : AElfLogEventProcessorBase<Claimed
             var mustQuery = new List<Func<QueryContainerDescriptor<RewardsClaimIndex>, QueryContainer>>();
 
             mustQuery.Add(q => q.Term(i => i.Field(f => f.Account).Value(address)));
-            mustQuery.Add(q => q.Term(i => i.Field(f => f.PoolType).Value(poolType)));
+            if (poolType == PoolType.Points)
+            {
+                mustQuery.Add(q => q.Term(i => i.Field(f => f.DappId).Value(dappId)));
+                mustQuery.Add(q => q.Term(i => i.Field(f => f.PoolType).Value(poolType)));
+            }
+            else
+            {
+                mustQuery.Add(q => q.Term(i => i.Field(f => f.PoolId).Value(poolId)));
+            }
             mustQuery.Add(q => q.Term(i => i.Field(f => f.WithdrawTime).Value(0)));
 
             QueryContainer Filter(QueryContainerDescriptor<RewardsClaimIndex> f) => f.Bool(b => b.Must(mustQuery));
@@ -235,7 +263,8 @@ public class RewardsClaimedLogEventProcessor : AElfLogEventProcessorBase<Claimed
         return res;
     }
 
-    private async Task<List<RewardsMergeIndex>> GetMergedRewardsList(string address, PoolType poolType)
+    private async Task<List<RewardsMergeIndex>> GetMergedRewardsList(string address, string poolId, PoolType poolType,
+        string dappId)
     {
         var res = new List<RewardsMergeIndex>();
         var skipCount = 0;
@@ -246,7 +275,16 @@ public class RewardsClaimedLogEventProcessor : AElfLogEventProcessorBase<Claimed
             var mustQuery = new List<Func<QueryContainerDescriptor<RewardsMergeIndex>, QueryContainer>>();
 
             mustQuery.Add(q => q.Term(i => i.Field(f => f.Account).Value(address)));
-            mustQuery.Add(q => q.Term(i => i.Field(f => f.PoolType).Value(poolType)));
+            if (poolType == PoolType.Points)
+            {
+                mustQuery.Add(q => q.Term(i => i.Field(f => f.DappId).Value(dappId)));
+                mustQuery.Add(q => q.Term(i => i.Field(f => f.PoolType).Value(poolType)));
+            }
+            else
+            {
+                mustQuery.Add(q => q.Term(i => i.Field(f => f.PoolId).Value(poolId)));
+            }
+
             QueryContainer Filter(QueryContainerDescriptor<RewardsMergeIndex> f) => f.Bool(b => b.Must(mustQuery));
 
             var recordList = await _mergeRewardsRepository.GetListAsync(Filter, skip: skipCount, limit: maxResultCount,

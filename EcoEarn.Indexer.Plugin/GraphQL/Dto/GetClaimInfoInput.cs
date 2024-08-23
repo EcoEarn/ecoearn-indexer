@@ -10,4 +10,6 @@ public class GetClaimInfoInput : PagedResultRequestDto
     public bool FilterWithdraw { get; set; }
     public string Address { get; set; }
     public List<string> LiquidityIds { get; set; }
+    public List<string> PoolIds { get; set; }
+    public List<string> DappIds { get; set; }
 }

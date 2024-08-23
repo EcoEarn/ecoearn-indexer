@@ -37,9 +37,14 @@ public partial class Query
     {
         var mustQuery = new List<Func<QueryContainerDescriptor<PointsPoolIndex>, QueryContainer>>();
 
-        if (string.IsNullOrEmpty(input.Name))
+        if (!string.IsNullOrEmpty(input.Name))
         {
             mustQuery.Add(q => q.Term(i => i.Field(f => f.PointsName).Value(input.Name)));
+        }
+        
+        if (!string.IsNullOrEmpty(input.DappId))
+        {
+            mustQuery.Add(q => q.Term(i => i.Field(f => f.DappId).Value(input.DappId)));
         }
 
         if (!input.PoolIds.IsNullOrEmpty())
@@ -145,12 +150,40 @@ public partial class Query
         GetClaimInfoInput input)
     {
         var mustQuery = new List<Func<QueryContainerDescriptor<RewardsClaimIndex>, QueryContainer>>();
-
         mustQuery.Add(q => q.Term(i => i.Field(f => f.Account).Value(input.Address)));
-
         if (input.PoolType != PoolType.All)
         {
-            mustQuery.Add(q => q.Term(i => i.Field(f => f.PoolType).Value(input.PoolType)));
+            if (!input.PoolIds.IsNullOrEmpty())
+            {
+                mustQuery.Add(q => q.Terms(i => i.Field(f => f.PoolId).Terms(input.PoolIds)));
+            }
+
+            if (!input.DappIds.IsNullOrEmpty())
+            {
+                mustQuery.Add(q => q.Terms(i => i.Field(f => f.DappId).Terms(input.DappIds)));
+                mustQuery.Add(q => q.Term(i => i.Field(f => f.PoolType).Value(PoolType.Points)));
+            }
+        }
+        else
+        {
+            var shouldQuery = new List<Func<QueryContainerDescriptor<RewardsClaimIndex>, QueryContainer>>();
+            if (!input.PoolIds.IsNullOrEmpty())
+            {
+                shouldQuery.Add(q => q.Terms(i => i.Field(f => f.PoolId).Terms(input.PoolIds)));
+            }
+
+            if (!input.DappIds.IsNullOrEmpty())
+            {
+                var must = new List<Func<QueryContainerDescriptor<RewardsClaimIndex>, QueryContainer>>();
+                must.Add(q => q.Terms(i => i.Field(f => f.DappId).Terms(input.DappIds)));
+                must.Add(q => q.Term(i => i.Field(f => f.PoolType).Value(PoolType.Points)));
+                shouldQuery.Add(q => q.Bool(b => b.Must(must)));
+            }
+
+            if (shouldQuery.Count != 0)
+            {
+                mustQuery.Add(q => q.Bool(b => b.Should(shouldQuery)));
+            }
         }
 
         if (input.FilterUnlock)
@@ -170,7 +203,7 @@ public partial class Query
                 n.Nested(n => n.Path("LiquidityAddedInfos").Query(q =>
                     q.Terms(i => i.Field("LiquidityAddedInfos.liquidityId").Terms(input.LiquidityIds)))));
         }
-
+        
         QueryContainer Filter(QueryContainerDescriptor<RewardsClaimIndex> f) =>
             f.Bool(b => b.Must(mustQuery));
 
@@ -415,8 +448,16 @@ public partial class Query
         if (input.PoolType != PoolType.All)
         {
             mustQuery.Add(q => q.Term(i => i.Field(f => f.PoolType).Value(input.PoolType)));
+            if (input.PoolType == PoolType.Points)
+            {
+                mustQuery.Add(q => q.Term(i => i.Field(f => f.DappId).Value(input.Id)));
+            }
+            else
+            {
+                mustQuery.Add(q => q.Term(i => i.Field(f => f.PoolId).Value(input.Id)));
+            }
         }
-
+        
         QueryContainer Filter(QueryContainerDescriptor<RewardsInfoIndex> f) =>
             f.Bool(b => b.Must(mustQuery));
 
@@ -444,7 +485,33 @@ public partial class Query
 
         if (input.PoolType != PoolType.All)
         {
-            mustQuery.Add(q => q.Term(i => i.Field(f => f.PoolType).Value(input.PoolType)));
+            if (!input.PoolIds.IsNullOrEmpty())
+            {
+                mustQuery.Add(q => q.Terms(i => i.Field(f => f.PoolId).Terms(input.PoolIds)));
+            }
+
+            if (!input.DappIds.IsNullOrEmpty())
+            {
+                mustQuery.Add(q => q.Terms(i => i.Field(f => f.DappId).Terms(input.DappIds)));
+                mustQuery.Add(q => q.Term(i => i.Field(f => f.PoolType).Value(PoolType.Points)));
+            }
+        }
+        else
+        {
+            var shouldQuery = new List<Func<QueryContainerDescriptor<RewardsMergeIndex>, QueryContainer>>();
+            if (!input.PoolIds.IsNullOrEmpty())
+            {
+                shouldQuery.Add(q => q.Terms(i => i.Field(f => f.PoolId).Terms(input.PoolIds)));
+            }
+
+            if (!input.DappIds.IsNullOrEmpty())
+            {
+                var must = new List<Func<QueryContainerDescriptor<RewardsMergeIndex>, QueryContainer>>();
+                must.Add(q => q.Terms(i => i.Field(f => f.DappId).Terms(input.DappIds)));
+                must.Add(q => q.Term(i => i.Field(f => f.PoolType).Value(PoolType.Points)));
+                shouldQuery.Add(q => q.Bool(b => b.Must(must)));
+            }
+            mustQuery.Add(q => q.Bool(b => b.Should(shouldQuery)));
         }
 
         QueryContainer Filter(QueryContainerDescriptor<RewardsMergeIndex> f) =>

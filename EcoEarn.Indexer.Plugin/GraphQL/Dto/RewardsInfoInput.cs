@@ -7,4 +7,5 @@ public class RewardsInfoInput : PagedResultRequestDto
 {
     public string Address { get; set; }
     public PoolType PoolType { get; set; }
+    public string Id { get; set; }
 }

@@ -8,6 +8,7 @@ public class RewardsInfoDto
     public string StakeId { get; set; }
     public string Seed { get; set; }
     public string PoolId { get; set; }
+    public string DappId { get; set; }
     public string ClaimedAmount { get; set; }
     public string ClaimedSymbol { get; set; }
     public long ClaimedTime { get; set; }

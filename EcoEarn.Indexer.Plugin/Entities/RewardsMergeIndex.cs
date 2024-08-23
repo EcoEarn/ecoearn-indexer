@@ -8,6 +8,8 @@ public class RewardsMergeIndex : AElfIndexerClientEntity<string>, IIndexBuild
 {
     [Keyword] public string Amount { get; set; }
     [Keyword] public string Account { get; set; }
+    [Keyword] public string PoolId { get; set; } = "";
+    [Keyword] public string DappId { get; set; } = "";
     public PoolType PoolType { get; set; }
     public List<MergeClaimInfo> MergeClaimInfos { get; set; }
     public long ReleaseTime { get; set; }
