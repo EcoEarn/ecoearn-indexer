@@ -70,10 +70,14 @@ public class TokenPoolCreatedLogEventProcessor : AElfLogEventProcessorBase<Token
                     MinimumAddLiquidityAmount = eventValue.Config.MinimumAddLiquidityAmount,
                     RewardTokenContract = eventValue.Config.RewardTokenContract.ToBase58(),
                     StakeTokenContract = eventValue.Config.StakeTokenContract.ToBase58(),
-                    UnlockWindowDuration = eventValue.Config.UnlockWindowDuration,
+                    SwapContract = eventValue.Config.SwapContract == null ? "" : eventValue.Config.SwapContract.ToBase58(),
+                    UnlockWindowDuration = eventValue.Config.UnstakeWindowDuration,
                     ReleasePeriod = eventValue.Config.ReleasePeriods.Max(),
                     ReleasePeriods = eventValue.Config.ReleasePeriods.ToList(),
                     MergeInterval = eventValue.Config.MergeInterval,
+                    StakeAddress = eventValue.AddressInfo.StakeAddress.ToBase58(),
+                    RewardAddress = eventValue.AddressInfo.RewardAddress.ToBase58(),
+                    LpRate = eventValue.Config.LpRate
                 },
                 CreateTime = context.BlockTime.ToUtcMilliSeconds()
             };

@@ -54,5 +54,5 @@ public class EcoEarnIndexerPluginModule : AElfIndexerClientPluginBaseModule<EcoE
     }
 
     protected override string ClientId => "AElfIndexer_EcoEarn";
-    protected override string Version => "f8eadff6a6554f2f8035ab4006ee5ae1";
+    protected override string Version => "";
 }

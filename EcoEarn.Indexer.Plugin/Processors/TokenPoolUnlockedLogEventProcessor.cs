@@ -11,7 +11,7 @@ using Volo.Abp.ObjectMapping;
 
 namespace EcoEarn.Indexer.Plugin.Processors;
 
-public class TokenPoolUnlockedLogEventProcessor : AElfLogEventProcessorBase<Unlocked, LogEventInfo>
+public class TokenPoolUnlockedLogEventProcessor : AElfLogEventProcessorBase<Unstaked, LogEventInfo>
 {
     private readonly IObjectMapper _objectMapper;
     private readonly ContractInfoOptions _contractInfoOptions;
@@ -39,7 +39,7 @@ public class TokenPoolUnlockedLogEventProcessor : AElfLogEventProcessorBase<Unlo
         return _contractInfoOptions.ContractInfos.First(c => c.ChainId == chainId).EcoEarnTokenContractAddress;
     }
 
-    protected override async Task HandleEventAsync(Unlocked eventValue, LogEventContext context)
+    protected override async Task HandleEventAsync(Unstaked eventValue, LogEventContext context)
     {
         try
         {
