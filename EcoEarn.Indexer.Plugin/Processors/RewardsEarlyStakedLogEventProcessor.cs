@@ -11,7 +11,7 @@ using Volo.Abp.ObjectMapping;
 
 namespace EcoEarn.Indexer.Plugin.Processors;
 
-public class RewardsEarlyStakedLogEventProcessor : AElfLogEventProcessorBase<EarlyStaked, LogEventInfo>
+public class RewardsEarlyStakedLogEventProcessor : AElfLogEventProcessorBase<RewardsStaked, LogEventInfo>
 {
     private readonly IObjectMapper _objectMapper;
     private readonly ContractInfoOptions _contractInfoOptions;
@@ -34,7 +34,7 @@ public class RewardsEarlyStakedLogEventProcessor : AElfLogEventProcessorBase<Ear
         return _contractInfoOptions.ContractInfos.First(c => c.ChainId == chainId).EcoEarnRewardsContractAddress;
     }
 
-    protected override async Task HandleEventAsync(EarlyStaked eventValue, LogEventContext context)
+    protected override async Task HandleEventAsync(RewardsStaked eventValue, LogEventContext context)
     {
         _logger.Debug("EarlyStaked: {eventValue} context: {context}",
             JsonConvert.SerializeObject(eventValue), JsonConvert.SerializeObject(context));

@@ -12,7 +12,7 @@ using Volo.Abp.ObjectMapping;
 namespace EcoEarn.Indexer.Plugin.Processors;
 
 public class
-    TokensPoolUnlockWindowDurationSetLogEventProcessor : AElfLogEventProcessorBase<TokensPoolUnlockWindowDurationSet,
+    TokensPoolUnlockWindowDurationSetLogEventProcessor : AElfLogEventProcessorBase<TokensPoolUnstakeWindowDurationSet,
     LogEventInfo>
 {
     private readonly IObjectMapper _objectMapper;
@@ -40,7 +40,7 @@ public class
         return _contractInfoOptions.ContractInfos.First(c => c.ChainId == chainId).EcoEarnTokenContractAddress;
     }
 
-    protected override async Task HandleEventAsync(TokensPoolUnlockWindowDurationSet eventValue,
+    protected override async Task HandleEventAsync(TokensPoolUnstakeWindowDurationSet eventValue,
         LogEventContext context)
     {
         try
@@ -51,7 +51,7 @@ public class
             var id = IdGenerateHelper.GetId(eventValue.PoolId.ToHex());
             var tokenPoolIndex = await _tokenPoolRepository.GetFromBlockStateSetAsync(id, context.ChainId);
 
-            tokenPoolIndex.TokenPoolConfig.UnlockWindowDuration = eventValue.UnlockWindowDuration;
+            tokenPoolIndex.TokenPoolConfig.UnlockWindowDuration = eventValue.UnstakeWindowDuration;
             _objectMapper.Map(context, tokenPoolIndex);
             await _tokenPoolRepository.AddOrUpdateAsync(tokenPoolIndex);
         }

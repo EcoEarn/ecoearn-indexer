@@ -31,7 +31,11 @@ public class TokenPoolConfig
     public long MinimumStakeDuration { get; set; }
     [Keyword] public string RewardTokenContract { get; set; }
     [Keyword] public string StakeTokenContract { get; set; }
+    [Keyword] public string SwapContract { get; set; } = "";
     public long MinimumClaimAmount { get; set; }
     public long MinimumAddLiquidityAmount { get; set; }
     public long UnlockWindowDuration { get; set; }
+    [Keyword] public string StakeAddress { get; set; } = "";
+    [Keyword] public string RewardAddress { get; set; } = "";
+    public long LpRate { get; set; }
 }

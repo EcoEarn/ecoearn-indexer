@@ -10,6 +10,7 @@ public class RewardsInfoIndex : AElfIndexerClientEntity<string>, IIndexBuild
     [Keyword] public string StakeId { get; set; } = "";
     [Keyword] public string Seed { get; set; }
     [Keyword] public string PoolId { get; set; }
+    [Keyword] public string DappId { get; set; }
     [Keyword] public string ClaimedAmount { get; set; }
     [Keyword] public string ClaimedSymbol { get; set; }
     public long ClaimedTime { get; set; }

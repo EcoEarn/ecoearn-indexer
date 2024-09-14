@@ -27,11 +27,14 @@ public class TokenPoolConfigDto
     public long MaximumStakeDuration { get; set; }
     public string RewardTokenContract { get; set; }
     public string StakeTokenContract { get; set; }
+    public string SwapContract { get; set; }
     public long MinimumClaimAmount { get; set; }
     public long UnlockWindowDuration { get; set; }
     public List<long> ReleasePeriods { get; set; }
     public long MergeInterval { get; set; }
     public long MinimumAddLiquidityAmount { get; set; }
+    public string StakeAddress { get; set; }
+    public string RewardAddress { get; set; }
 }
 
 public class TokenPoolDtoList

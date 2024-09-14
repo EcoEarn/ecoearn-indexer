@@ -59,9 +59,9 @@ public class TokenPoolRenewedLogEventProcessor : AElfLogEventProcessorBase<Renew
                 PoolId = eventValue.StakeInfo.PoolId == null ? "" : eventValue.StakeInfo.PoolId.ToHex(),
                 Account = eventValue.StakeInfo.Account.ToBase58(),
                 StakingToken = eventValue.StakeInfo.StakingToken,
-                UnlockTime = eventValue.StakeInfo.UnlockTime == null
+                UnlockTime = eventValue.StakeInfo.UnstakeTime == null
                     ? 0
-                    : eventValue.StakeInfo.UnlockTime.ToDateTime().ToUtcMilliSeconds(),
+                    : eventValue.StakeInfo.UnstakeTime.ToDateTime().ToUtcMilliSeconds(),
                 LastOperationTime = eventValue.StakeInfo.LastOperationTime == null
                     ? 0
                     : eventValue.StakeInfo.LastOperationTime.ToDateTime().ToUtcMilliSeconds(),
@@ -71,7 +71,7 @@ public class TokenPoolRenewedLogEventProcessor : AElfLogEventProcessorBase<Renew
                     SubStakeId = x.SubStakeId.ToHex(),
                     StakedAmount = x.StakedAmount,
                     StakedBlockNumber = x.StakedBlockNumber,
-                    EarlyStakedAmount = x.EarlyStakedAmount,
+                    EarlyStakedAmount = x.RewardsStakedAmount,
                     StakedTime = x.StakedTime == null
                         ? 0
                         : x.StakedTime.ToDateTime().ToUtcMilliSeconds(),
